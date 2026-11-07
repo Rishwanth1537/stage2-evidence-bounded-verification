@@ -173,6 +173,9 @@ class GuardedToolResponse(BaseModel):
     factual_score: Optional[float] = None
     degraded:     bool = Field(default=False, description="True if verifier ran in degraded mode.")
     degraded_reasons: list[str] = Field(default_factory=list, description="Reasons for degradation.")
+    decision:     Optional[str] = Field(default=None, description="Gate decision: ALLOW, WARN, ASK, BLOCK.")
+    check_results: Optional[list[dict]] = Field(default=None, description="Per-check evaluation details.")
+    clarification_request: Optional[dict] = Field(default=None, description="Structured clarification details when decision is ASK.")
 
 
 # ── MCP tool definitions ─────────────────────────────────────────────────────
@@ -207,6 +210,9 @@ async def execute_financial_transfer(request: GuardedTransferRequest) -> Guarded
         factual_score=result.factual_score,
         degraded=result.degraded,
         degraded_reasons=result.degraded_reasons,
+        decision=result.decision.value if result.decision else None,
+        check_results=[c.model_dump() for c in result.check_results] if result.check_results else None,
+        clarification_request=result.clarification_request.model_dump() if result.clarification_request else None,
     )
 
 
@@ -240,6 +246,9 @@ async def execute_service_deploy(request: GuardedDeployRequest) -> GuardedToolRe
         factual_score=result.factual_score,
         degraded=result.degraded,
         degraded_reasons=result.degraded_reasons,
+        decision=result.decision.value if result.decision else None,
+        check_results=[c.model_dump() for c in result.check_results] if result.check_results else None,
+        clarification_request=result.clarification_request.model_dump() if result.clarification_request else None,
     )
 
 
@@ -272,6 +281,9 @@ async def execute_database_delete(request: GuardedDeleteRequest) -> GuardedToolR
         factual_score=result.factual_score,
         degraded=result.degraded,
         degraded_reasons=result.degraded_reasons,
+        decision=result.decision.value if result.decision else None,
+        check_results=[c.model_dump() for c in result.check_results] if result.check_results else None,
+        clarification_request=result.clarification_request.model_dump() if result.clarification_request else None,
     )
 
 

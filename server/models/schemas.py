@@ -12,6 +12,53 @@ class HallucinationType(str, Enum):
     CONTENT = "content"
 
 
+class Decision(str, Enum):
+    """Overall gate decision on a tool call."""
+    ALLOW = "ALLOW"
+    WARN = "WARN"
+    ASK = "ASK"
+    BLOCK = "BLOCK"
+
+
+class CheckTier(str, Enum):
+    """
+    Tier of authority for an individual verification check:
+    - ORACLE_EXACT: Outcome decided by an authoritative contract; a failure is definitely wrong.
+    - COVERAGE_BOUNDED: Compared against an imperfect reference; failure means unsupported, not wrong.
+    - UNCHECKABLE: Value cannot be checked against reference or contract (e.g. booleans, nulls).
+    """
+    ORACLE_EXACT = "ORACLE_EXACT"
+    COVERAGE_BOUNDED = "COVERAGE_BOUNDED"
+    UNCHECKABLE = "UNCHECKABLE"
+
+
+class CheckOutcome(str, Enum):
+    """Outcome of an individual verification check."""
+    PASS = "PASS"
+    FAIL = "FAIL"
+    ABSTAIN = "ABSTAIN"
+
+
+class CheckResult(BaseModel):
+    """Structured result of an individual verification check."""
+    check_id: str = Field(..., description="Unique check identifier (e.g. schema_type, arg_ground_number)")
+    tier: CheckTier = Field(..., description="Authoritative tier of this check")
+    outcome: CheckOutcome = Field(..., description="PASS, FAIL, or ABSTAIN")
+    evidence_tier: Optional[str] = Field(default=None, description="Evidence rung (E1..E5)")
+    arg_path: Optional[str] = Field(default=None, description="Argument name or path checked")
+    reason: str = Field(default="", description="Human-readable explanation of outcome")
+    details: Dict[str, Any] = Field(default_factory=dict, description="Arbitrary check-specific metadata")
+
+
+class ClarificationRequest(BaseModel):
+    """Structured clarification request returned when decision is ASK."""
+    arguments: Dict[str, Any] = Field(default_factory=dict, description="Arguments requiring clarification")
+    values: Dict[str, Any] = Field(default_factory=dict, description="Proposed argument values")
+    unsupported_reasons: List[str] = Field(default_factory=list, description="Why each argument value is unsupported")
+    missing_evidence_tier: Optional[str] = Field(default="E1", description="Evidence tier that was missing")
+    details: Dict[str, Any] = Field(default_factory=dict, description="Additional context or suggested valid schema options")
+
+
 class MismatchedSpan(BaseModel):
     span: str
     issue: str
@@ -39,6 +86,8 @@ class VerifyResponse(BaseModel):
     session_mean_score: Optional[float] = None
     degraded: bool = Field(default=False, description="True if any verification step ran in degraded mode.")
     degraded_reasons: List[str] = Field(default_factory=list, description="Reasons for degradation.")
+    decision: Optional[Decision] = Field(default=None, description="ALLOW, WARN, ASK, BLOCK")
+    check_results: List[CheckResult] = Field(default_factory=list, description="Structured check results")
 
 
 class SchemaAlignmentRequest(BaseModel):
@@ -56,6 +105,8 @@ class SchemaAlignmentResponse(BaseModel):
     session_mean_score: Optional[float] = None
     degraded: bool = Field(default=False, description="True if any verification step ran in degraded mode.")
     degraded_reasons: List[str] = Field(default_factory=list, description="Reasons for degradation.")
+    decision: Optional[Decision] = Field(default=None, description="ALLOW, WARN, ASK, BLOCK")
+    check_results: List[CheckResult] = Field(default_factory=list, description="Structured check results")
 
 
 class ArgumentGroundingRequest(BaseModel):
@@ -84,3 +135,5 @@ class ArgumentGroundingResponse(BaseModel):
     feedback: str
     degraded: bool = Field(default=False, description="True if any verification step ran in degraded mode.")
     degraded_reasons: List[str] = Field(default_factory=list, description="Reasons for degradation.")
+    decision: Optional[Decision] = Field(default=None, description="ALLOW, WARN, ASK, BLOCK")
+    check_results: List[CheckResult] = Field(default_factory=list, description="Structured check results")
