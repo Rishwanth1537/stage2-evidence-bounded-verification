@@ -1,0 +1,101 @@
+{
+ "haiku": {
+  "n": 168,
+  "n_correct": 82,
+  "n_wrong": 86,
+  "without": {
+   "fbr": 0.329,
+   "det": 0.5
+  },
+  "with": {
+   "fbr": 0.244,
+   "det": 0.663
+  },
+  "without_or_contract": {
+   "fbr": 0.439,
+   "det": 0.663
+  },
+  "with_or_contract": {
+   "fbr": 0.317,
+   "det": 0.756
+  },
+  "contract_only": {
+   "fbr": 0.159,
+   "det": 0.256
+  },
+  "mcnemar_with_vs_without": {
+   "only_a_correct": 30,
+   "only_b_correct": 9,
+   "p": 0.0011
+  },
+  "judge_misses_without": 43,
+  "of_those_caught_by_with_schema": 15,
+  "of_those_caught_by_contract": 14
+ },
+ "sonnet": {
+  "n": 168,
+  "n_correct": 82,
+  "n_wrong": 86,
+  "without": {
+   "fbr": 0.11,
+   "det": 0.512
+  },
+  "with": {
+   "fbr": 0.183,
+   "det": 0.709
+  },
+  "without_or_contract": {
+   "fbr": 0.268,
+   "det": 0.698
+  },
+  "with_or_contract": {
+   "fbr": 0.244,
+   "det": 0.744
+  },
+  "contract_only": {
+   "fbr": 0.159,
+   "det": 0.256
+  },
+  "mcnemar_with_vs_without": {
+   "only_a_correct": 26,
+   "only_b_correct": 15,
+   "p": 0.1173
+  },
+  "judge_misses_without": 42,
+  "of_those_caught_by_with_schema": 23,
+  "of_those_caught_by_contract": 16
+ },
+ "opus": {
+  "n": 168,
+  "n_correct": 82,
+  "n_wrong": 86,
+  "without": {
+   "fbr": 0.195,
+   "det": 0.535
+  },
+  "with": {
+   "fbr": 0.146,
+   "det": 0.721
+  },
+  "without_or_contract": {
+   "fbr": 0.317,
+   "det": 0.709
+  },
+  "with_or_contract": {
+   "fbr": 0.207,
+   "det": 0.756
+  },
+  "contract_only": {
+   "fbr": 0.159,
+   "det": 0.256
+  },
+  "mcnemar_with_vs_without": {
+   "only_a_correct": 33,
+   "only_b_correct": 13,
+   "p": 0.0045
+  },
+  "judge_misses_without": 40,
+  "of_those_caught_by_with_schema": 20,
+  "of_those_caught_by_contract": 15
+ }
+}

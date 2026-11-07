@@ -1,0 +1,155 @@
+{
+ "n_instances": 19443,
+ "n_slots": 856,
+ "n_wrong": 790,
+ "n_lone": 177,
+ "n_systematic": 613,
+ "wrong_rate": 0.0406,
+ "auroc_all_wrong": 0.93,
+ "auroc_lone": 0.996,
+ "auroc_systematic": 0.911,
+ "auroc_all_ci95": [
+  0.858,
+  0.977
+ ],
+ "auroc_lone_ci95": [
+  0.994,
+  0.998
+ ],
+ "tpr_at_fbr": {
+  "0.01": {
+   "lone_errors_only": [
+    0.921,
+    0.01
+   ],
+   "all_wrong": [
+    0.353,
+    0.01
+   ]
+  },
+  "0.05": {
+   "lone_errors_only": [
+    1.0,
+    0.049
+   ],
+   "all_wrong": [
+    0.709,
+    0.049
+   ]
+  },
+  "0.1": {
+   "lone_errors_only": [
+    1.0,
+    0.099
+   ],
+   "all_wrong": [
+    0.916,
+    0.099
+   ]
+  }
+ },
+ "plurality_vote": {
+  "fbr": 0.01,
+  "tpr_all_wrong": 0.362,
+  "tpr_lone": 1.0,
+  "tpr_systematic": 0.178
+ },
+ "error_phi_mean": {
+  "within_family": 0.726,
+  "n_within": 86,
+  "cross_family": 0.73,
+  "n_cross": 349
+ },
+ "per_model_wrong_rate": {
+  "DeepSeek-R1-0528": {
+   "wrong_rate": 0.0397
+  },
+  "DeepSeek-V3-0324": {
+   "wrong_rate": 0.0399
+  },
+  "DeepSeek-V3.2-Exp-thinking-off": {
+   "wrong_rate": 0.0418
+  },
+  "DeepSeek-V3.2-Exp-thinking-on": {
+   "wrong_rate": 0.0359
+  },
+  "Kimi-K2-Instruct": {
+   "wrong_rate": 0.0374
+  },
+  "Kimi-K2-Instruct-0905": {
+   "wrong_rate": 0.0313
+  },
+  "Qwen3-235B-A22B-FP8": {
+   "wrong_rate": 0.0426
+  },
+  "Qwen3-235B-A22B-Instruct-2507-FP8": {
+   "wrong_rate": 0.0392
+  },
+  "Qwen3-235B-A22B-Thinking-2507-FP8": {
+   "wrong_rate": 0.0402
+  },
+  "Qwen3-Coder-480B-A35B-Instruct-FP8": {
+   "wrong_rate": 0.0451
+  },
+  "claude-4-opus-thinking-off": {
+   "wrong_rate": 0.039
+  },
+  "claude-4-opus-thinking-on-10k": {
+   "wrong_rate": 0.0384
+  },
+  "claude-4-sonnet-thinking-off": {
+   "wrong_rate": 0.0345
+  },
+  "claude-4-sonnet-thinking-on-10k": {
+   "wrong_rate": 0.0446
+  },
+  "claude-4.5-sonnet-thinking-off": {
+   "wrong_rate": 0.0398
+  },
+  "claude-4.5-sonnet-thinking-on-10k": {
+   "wrong_rate": 0.035
+  },
+  "gemini-2.5-flash-thinking-off": {
+   "wrong_rate": 0.0399
+  },
+  "gemini-2.5-flash-thinking-on": {
+   "wrong_rate": 0.0359
+  },
+  "gemini-2.5-pro-thinking-on": {
+   "wrong_rate": 0.0404
+  },
+  "gpt-4.1": {
+   "wrong_rate": 0.0412
+  },
+  "gpt-4.1-mini": {
+   "wrong_rate": 0.0401
+  },
+  "gpt-4.1-nano": {
+   "wrong_rate": 0.0421
+  },
+  "gpt-4o-20240806": {
+   "wrong_rate": 0.0346
+  },
+  "gpt-4o-mini": {
+   "wrong_rate": 0.0426
+  },
+  "gpt-5": {
+   "wrong_rate": 0.0476
+  },
+  "gpt-5-nano": {
+   "wrong_rate": 0.0539
+  },
+  "gpt-oss-120b": {
+   "wrong_rate": 0.0345
+  },
+  "gpt-oss-20b": {
+   "wrong_rate": 0.0433
+  },
+  "o3-high": {
+   "wrong_rate": 0.056
+  },
+  "o4-mini-high": {
+   "wrong_rate": 0.0432
+  }
+ }
+}

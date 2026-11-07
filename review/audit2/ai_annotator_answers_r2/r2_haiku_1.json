@@ -1,0 +1,17 @@
+[
+  {"audit_id": "B003", "q1": "yes", "q2": "only the user", "notes": "Rule 2: excludeInactive=true is a filter the user never mentioned, no definition is available and it is not a documented default."},
+  {"audit_id": "B012", "q1": "yes", "q2": "tool definition", "notes": "Rule 1: location 'Berkeley' does not follow the required 'City, State' format."},
+  {"audit_id": "B018", "q1": "yes", "q2": "tool definition", "notes": "Rule 1: to_city 'Los Angeles' does not follow the required 'City, State' format."},
+  {"audit_id": "B019", "q1": "acceptable alternative", "q2": "", "notes": "Rule 4: 2598960 is the sensible total for 5-card poker hands that the royal-flush probability requires; the benchmark's 52 would give a nonsensical 4/52 probability."},
+  {"audit_id": "B037", "q1": "yes", "q2": "conversation", "notes": "Rule 2: include_tools=true was not requested (the user asked about the tech stack) and is not the documented default false."},
+  {"audit_id": "B040", "q1": "no", "q2": "", "notes": "Rule 5: value follows the 'YYYY-MM-DD HH:mm:ss' format and matches the stated availability date and time."},
+  {"audit_id": "B052", "q1": "yes", "q2": "conversation", "notes": "Rule 3: the user named 2019 as an alternative year, but the agent used 'dontcare'."},
+  {"audit_id": "B063", "q1": "yes", "q2": "system state", "notes": "Rule 5 considered: the arguments match the user's request, but the system response says the order is not delivered and cannot be exchanged, so the call is wrong for the system state."},
+  {"audit_id": "B065", "q1": "yes", "q2": "tool definition", "notes": "Rule 1: city 'Burlingame' omits the state, and the definition's example and format use 'City, State'."},
+  {"audit_id": "B070", "q1": "yes", "q2": "tool definition", "notes": "Rule 1: city 'San Lorenzo' omits the state, and the definition's example and format use 'City, State'."},
+  {"audit_id": "B074", "q1": "yes", "q2": "tool definition", "notes": "Rule 1: where_to 'Philadelphia' omits the state, and the definition's format requires 'City, State'."},
+  {"audit_id": "B077", "q1": "no", "q2": "", "notes": "Rule 5: query 'Beijing' is a sensible reading of the user's 'where is beijing' request."},
+  {"audit_id": "B088", "q1": "yes", "q2": "tool definition", "notes": "Rule 1: location 'San Francisco' omits the state, and the definition's format requires 'City, State'."},
+  {"audit_id": "B094", "q1": "yes", "q2": "tool definition", "notes": "Rule 1: location 'San Ramon' omits the state, and the definition's format requires 'City, State'."},
+  {"audit_id": "B098", "q1": "yes", "q2": "system state", "notes": "Rule 5 considered: nonfree_baggages=0 assumes the cabin upgrade succeeded, but the reservation state shown still reads basic_economy."}
+]

@@ -1,0 +1,259 @@
+{
+ "n_calls": 5427,
+ "n_wrong": 686,
+ "wrong_rate": 0.1264,
+ "contract_coverage": 1.0,
+ "contract_flag_rate_correct": 0.046,
+ "contract_flag_rate_wrong": 0.191,
+ "auroc": {
+  "consensus": 0.891,
+  "contract": 0.572,
+  "combined": 0.877
+ },
+ "wrong_calls_with_no_signal": {
+  "n": 46,
+  "share": 0.067
+ },
+ "by_alpha": {
+  "0.05": {
+   "consensus": {
+    "ask_rate_on_correct_mean": 0.049,
+    "ask_rate_p05_p95": [
+     0.023,
+     0.091
+    ],
+    "share_of_splits_within_alpha": 0.617,
+    "wrong_caught_mean": 0.49,
+    "wrong_caught_p05_p95": [
+     0.352,
+     0.654
+    ]
+   },
+   "consensus_pac": {
+    "ask_rate_on_correct_mean": 0.044,
+    "ask_rate_p05_p95": [
+     0.018,
+     0.09
+    ],
+    "share_of_splits_within_alpha": 0.724,
+    "wrong_caught_mean": 0.47,
+    "wrong_caught_p05_p95": [
+     0.331,
+     0.636
+    ]
+   },
+   "consensus_cluster": {
+    "ask_rate_on_correct_mean": 0.0,
+    "ask_rate_p05_p95": [
+     0.0,
+     0.0
+    ],
+    "share_of_splits_within_alpha": 1.0,
+    "wrong_caught_mean": 0.0,
+    "wrong_caught_p05_p95": [
+     0.0,
+     0.0
+    ]
+   },
+   "consensus_boot": {
+    "ask_rate_on_correct_mean": 0.005,
+    "ask_rate_p05_p95": [
+     0.0,
+     0.013
+    ],
+    "share_of_splits_within_alpha": 1.0,
+    "wrong_caught_mean": 0.14,
+    "wrong_caught_p05_p95": [
+     0.0,
+     0.272
+    ]
+   },
+   "combined": {
+    "ask_rate_on_correct_mean": 0.045,
+    "ask_rate_p05_p95": [
+     0.004,
+     0.095
+    ],
+    "share_of_splits_within_alpha": 0.538,
+    "wrong_caught_mean": 0.297,
+    "wrong_caught_p05_p95": [
+     0.085,
+     0.551
+    ]
+   },
+   "contract": {
+    "ask_rate_on_correct_mean": 0.046,
+    "ask_rate_p05_p95": [
+     0.022,
+     0.071
+    ],
+    "share_of_splits_within_alpha": 0.612,
+    "wrong_caught_mean": 0.192,
+    "wrong_caught_p05_p95": [
+     0.078,
+     0.302
+    ]
+   }
+  },
+  "0.1": {
+   "consensus": {
+    "ask_rate_on_correct_mean": 0.097,
+    "ask_rate_p05_p95": [
+     0.042,
+     0.17
+    ],
+    "share_of_splits_within_alpha": 0.59,
+    "wrong_caught_mean": 0.649,
+    "wrong_caught_p05_p95": [
+     0.48,
+     0.829
+    ]
+   },
+   "consensus_pac": {
+    "ask_rate_on_correct_mean": 0.09,
+    "ask_rate_p05_p95": [
+     0.041,
+     0.165
+    ],
+    "share_of_splits_within_alpha": 0.662,
+    "wrong_caught_mean": 0.628,
+    "wrong_caught_p05_p95": [
+     0.463,
+     0.797
+    ]
+   },
+   "consensus_cluster": {
+    "ask_rate_on_correct_mean": 0.0,
+    "ask_rate_p05_p95": [
+     0.0,
+     0.0
+    ],
+    "share_of_splits_within_alpha": 1.0,
+    "wrong_caught_mean": 0.0,
+    "wrong_caught_p05_p95": [
+     0.0,
+     0.0
+    ]
+   },
+   "consensus_boot": {
+    "ask_rate_on_correct_mean": 0.023,
+    "ask_rate_p05_p95": [
+     0.005,
+     0.055
+    ],
+    "share_of_splits_within_alpha": 0.998,
+    "wrong_caught_mean": 0.327,
+    "wrong_caught_p05_p95": [
+     0.195,
+     0.47
+    ]
+   },
+   "combined": {
+    "ask_rate_on_correct_mean": 0.097,
+    "ask_rate_p05_p95": [
+     0.041,
+     0.164
+    ],
+    "share_of_splits_within_alpha": 0.576,
+    "wrong_caught_mean": 0.58,
+    "wrong_caught_p05_p95": [
+     0.417,
+     0.749
+    ]
+   },
+   "contract": {
+    "ask_rate_on_correct_mean": 0.045,
+    "ask_rate_p05_p95": [
+     0.022,
+     0.071
+    ],
+    "share_of_splits_within_alpha": 1.0,
+    "wrong_caught_mean": 0.185,
+    "wrong_caught_p05_p95": [
+     0.066,
+     0.297
+    ]
+   }
+  },
+  "0.2": {
+   "consensus": {
+    "ask_rate_on_correct_mean": 0.192,
+    "ask_rate_p05_p95": [
+     0.106,
+     0.278
+    ],
+    "share_of_splits_within_alpha": 0.566,
+    "wrong_caught_mean": 0.854,
+    "wrong_caught_p05_p95": [
+     0.716,
+     0.969
+    ]
+   },
+   "consensus_pac": {
+    "ask_rate_on_correct_mean": 0.181,
+    "ask_rate_p05_p95": [
+     0.099,
+     0.269
+    ],
+    "share_of_splits_within_alpha": 0.615,
+    "wrong_caught_mean": 0.838,
+    "wrong_caught_p05_p95": [
+     0.694,
+     0.964
+    ]
+   },
+   "consensus_cluster": {
+    "ask_rate_on_correct_mean": 0.035,
+    "ask_rate_p05_p95": [
+     0.012,
+     0.078
+    ],
+    "share_of_splits_within_alpha": 1.0,
+    "wrong_caught_mean": 0.408,
+    "wrong_caught_p05_p95": [
+     0.267,
+     0.564
+    ]
+   },
+   "consensus_boot": {
+    "ask_rate_on_correct_mean": 0.085,
+    "ask_rate_p05_p95": [
+     0.033,
+     0.157
+    ],
+    "share_of_splits_within_alpha": 0.995,
+    "wrong_caught_mean": 0.613,
+    "wrong_caught_p05_p95": [
+     0.433,
+     0.796
+    ]
+   },
+   "combined": {
+    "ask_rate_on_correct_mean": 0.192,
+    "ask_rate_p05_p95": [
+     0.118,
+     0.287
+    ],
+    "share_of_splits_within_alpha": 0.568,
+    "wrong_caught_mean": 0.825,
+    "wrong_caught_p05_p95": [
+     0.659,
+     0.971
+    ]
+   },
+   "contract": {
+    "ask_rate_on_correct_mean": 0.047,
+    "ask_rate_p05_p95": [
+     0.023,
+     0.071
+    ],
+    "share_of_splits_within_alpha": 1.0,
+    "wrong_caught_mean": 0.188,
+    "wrong_caught_p05_p95": [
+     0.076,
+     0.295
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,4178 @@
+[
+{
+"wrong": false,
+"own": 0.9799461960792542,
+"contrast": 0.9799461960792542,
+"has_other": false,
+"name": "version",
+"value": "5.5"
+},
+{
+"wrong": false,
+"own": 0.6294993758201599,
+"contrast": -0.3477283716201782,
+"has_other": true,
+"name": "limit",
+"value": "50"
+},
+{
+"wrong": false,
+"own": 0.005166272632777691,
+"contrast": 0.005166272632777691,
+"has_other": false,
+"name": "tenant_id",
+"value": "12345-tenant-id"
+},
+{
+"wrong": false,
+"own": 0.9843919277191162,
+"contrast": 0.03029775619506836,
+"has_other": true,
+"name": "city",
+"value": "Marshall"
+},
+{
+"wrong": false,
+"own": 0.06250188499689102,
+"contrast": -0.904681883752346,
+"has_other": true,
+"name": "city",
+"value": "Chicago"
+},
+{
+"wrong": false,
+"own": 0.9558289051055908,
+"contrast": 0.5750864446163177,
+"has_other": true,
+"name": "date",
+"value": "2023-0101"
+},
+{
+"wrong": false,
+"own": 0.9861749410629272,
+"contrast": 0.47888660430908203,
+"has_other": true,
+"name": "city",
+"value": "Lafayette"
+},
+{
+"wrong": false,
+"own": 0.9700690507888794,
+"contrast": 0.015225827693939209,
+"has_other": true,
+"name": "where_to",
+"value": "Paris"
+},
+{
+"wrong": false,
+"own": 0.9895265102386475,
+"contrast": 0.810835674405098,
+"has_other": true,
+"name": "keyword",
+"value": "Son's latest goal"
+},
+{
+"wrong": false,
+"own": 0.8033607602119446,
+"contrast": 0.8033607602119446,
+"has_other": false,
+"name": "keyword",
+"value": "\ubc15\uc9c0\uc131"
+},
+{
+"wrong": false,
+"own": 0.9977523684501648,
+"contrast": 0.9977523684501648,
+"has_other": false,
+"name": "project_name",
+"value": "portfolio-web"
+},
+{
+"wrong": false,
+"own": 0.9976376295089722,
+"contrast": 0.9976376295089722,
+"has_other": false,
+"name": "project_name",
+"value": "e-commerce-web"
+},
+{
+"wrong": false,
+"own": 0.8258726596832275,
+"contrast": 0.8258726596832275,
+"has_other": false,
+"name": "keyword",
+"value": "sikhae"
+},
+{
+"wrong": false,
+"own": 0.9661825895309448,
+"contrast": 0.7821657955646515,
+"has_other": true,
+"name": "experience_or_education_name",
+"value": "internship at Sebelas Maret University"
+},
+{
+"wrong": false,
+"own": 0.997729480266571,
+"contrast": 0.997729480266571,
+"has_other": false,
+"name": "employee_id",
+"value": "Adriel"
+},
+{
+"wrong": false,
+"own": 0.9925150275230408,
+"contrast": 0.9925150275230408,
+"has_other": false,
+"name": "keyword",
+"value": "\uc2a4\ud14c\uc774\ud06c"
+},
+{
+"wrong": false,
+"own": 0.9961940050125122,
+"contrast": 0.9961940050125122,
+"has_other": false,
+"name": "project_name",
+"value": "car-rental"
+},
+{
+"wrong": false,
+"own": 0.767345666885376,
+"contrast": 0.767345666885376,
+"has_other": false,
+"name": "person_id",
+"value": "1234"
+},
+{
+"wrong": false,
+"own": 0.9964519739151001,
+"contrast": 0.9964519739151001,
+"has_other": false,
+"name": "img_path",
+"value": "./yoha.jpg"
+},
+{
+"wrong": false,
+"own": 0.986732542514801,
+"contrast": 0.9232704862952232,
+"has_other": true,
+"name": "tag",
+"value": "environment"
+},
+{
+"wrong": false,
+"own": 0.9391742944717407,
+"contrast": 0.6909567415714264,
+"has_other": true,
+"name": "uuid",
+"value": "123e4567-e89b-12d3-a456-426614174000"
+},
+{
+"wrong": false,
+"own": 0.15544483065605164,
+"contrast": 0.15544483065605164,
+"has_other": false,
+"name": "id_no",
+"value": "123"
+},
+{
+"wrong": true,
+"own": 0.22466613352298737,
+"contrast": 0.22466613352298737,
+"has_other": false,
+"name": "name",
+"value": "123"
+},
+{
+"wrong": false,
+"own": 0.8188844919204712,
+"contrast": 0.8188844919204712,
+"has_other": false,
+"name": "uuid",
+"value": "123e4567-e89b-12d3-a456-426614174000"
+},
+{
+"wrong": false,
+"own": 0.005588449537754059,
+"contrast": 6.411084905266762e-05,
+"has_other": true,
+"name": "rating",
+"value": "4.2"
+},
+{
+"wrong": true,
+"own": 0.9759823083877563,
+"contrast": 0.10642474889755249,
+"has_other": true,
+"name": "where_to",
+"value": "Long Beach"
+},
+{
+"wrong": false,
+"own": 0.011262543499469757,
+"contrast": -0.01660335622727871,
+"has_other": true,
+"name": "rating",
+"value": "3.9"
+},
+{
+"wrong": true,
+"own": 0.011262543499469757,
+"contrast": -0.01660335622727871,
+"has_other": true,
+"name": "rating",
+"value": "3.9"
+},
+{
+"wrong": false,
+"own": 0.9668748378753662,
+"contrast": 0.37518882751464844,
+"has_other": true,
+"name": "rating",
+"value": "4.2"
+},
+{
+"wrong": false,
+"own": 0.031659550964832306,
+"contrast": -0.04156426340341568,
+"has_other": true,
+"name": "number_of_adults",
+"value": "2"
+},
+{
+"wrong": true,
+"own": 0.9502025842666626,
+"contrast": -0.02811676263809204,
+"has_other": true,
+"name": "where_to",
+"value": "Rio de Janeiro"
+},
+{
+"wrong": true,
+"own": 0.9848679900169373,
+"contrast": 0.9848679900169373,
+"has_other": false,
+"name": "location",
+"value": "London"
+},
+{
+"wrong": false,
+"own": 0.9766591191291809,
+"contrast": 0.9766591191291809,
+"has_other": false,
+"name": "location",
+"value": "Phoenix, AZ"
+},
+{
+"wrong": false,
+"own": 0.982670247554779,
+"contrast": 0.22034382820129395,
+"has_other": true,
+"name": "directed_by",
+"value": "Jordan Peele"
+},
+{
+"wrong": false,
+"own": 0.9452619552612305,
+"contrast": 0.9230072721838951,
+"has_other": true,
+"name": "cast",
+"value": "Lupita Nyong'o"
+},
+{
+"wrong": false,
+"own": 0.7110822796821594,
+"contrast": 0.7110822796821594,
+"has_other": false,
+"name": "cast",
+"value": "Daniel Camp"
+},
+{
+"wrong": false,
+"own": 0.9772660136222839,
+"contrast": 0.6957692205905914,
+"has_other": true,
+"name": "genre",
+"value": "Mystery"
+},
+{
+"wrong": false,
+"own": 0.9311699271202087,
+"contrast": 0.8717304281890392,
+"has_other": true,
+"name": "cast",
+"value": "Hattie Morahan"
+},
+{
+"wrong": false,
+"own": 0.9797684550285339,
+"contrast": 0.8115923553705215,
+"has_other": true,
+"name": "directed_by",
+"value": "Gavin Hood"
+},
+{
+"wrong": true,
+"own": 0.0001691008365014568,
+"contrast": -0.05927039809466805,
+"has_other": true,
+"name": "directed_by",
+"value": "Hattie Morahan"
+},
+{
+"wrong": false,
+"own": 0.9676656126976013,
+"contrast": 0.9676656126976013,
+"has_other": false,
+"name": "cast",
+"value": "Zoe Margaret Colletti"
+},
+{
+"wrong": true,
+"own": 0.0005833528121002018,
+"contrast": 0.0005833528121002018,
+"has_other": false,
+"name": "directed_by",
+"value": "Zoe Margaret Colletti"
+},
+{
+"wrong": false,
+"own": 0.6125832796096802,
+"contrast": 0.49120739847421646,
+"has_other": true,
+"name": "directed_by",
+"value": "Steven Spielberg"
+},
+{
+"wrong": false,
+"own": 0.9817463159561157,
+"contrast": 0.3824179768562317,
+"has_other": true,
+"name": "cast",
+"value": "James Keane"
+},
+{
+"wrong": true,
+"own": 0.06531218439340591,
+"contrast": 0.06531218439340591,
+"has_other": false,
+"name": "genre",
+"value": "Science"
+},
+{
+"wrong": false,
+"own": 0.9891316890716553,
+"contrast": 0.34613460302352905,
+"has_other": true,
+"name": "genre",
+"value": "Pop"
+},
+{
+"wrong": false,
+"own": 0.9922989010810852,
+"contrast": 0.002992868423461914,
+"has_other": true,
+"name": "album",
+"value": "Ores Aixmis"
+},
+{
+"wrong": true,
+"own": 0.9732031226158142,
+"contrast": -0.019095778465270996,
+"has_other": true,
+"name": "artist",
+"value": "Ores Aixmis"
+},
+{
+"wrong": true,
+"own": 0.9864507913589478,
+"contrast": 0.0005695819854736328,
+"has_other": true,
+"name": "year",
+"value": "19"
+},
+{
+"wrong": false,
+"own": 0.9897263646125793,
+"contrast": 0.021908223628997803,
+"has_other": true,
+"name": "artist",
+"value": "Eric Church"
+},
+{
+"wrong": false,
+"own": 0.9951307773590088,
+"contrast": 0.022842347621917725,
+"has_other": true,
+"name": "album",
+"value": "Chief"
+},
+{
+"wrong": true,
+"own": 0.993423581123352,
+"contrast": 0.797072246670723,
+"has_other": true,
+"name": "genre",
+"value": "Hillbilly"
+},
+{
+"wrong": false,
+"own": 0.992893397808075,
+"contrast": 0.05840408802032471,
+"has_other": true,
+"name": "genre",
+"value": "Pop"
+},
+{
+"wrong": false,
+"own": 0.9909132719039917,
+"contrast": -0.0008203983306884766,
+"has_other": true,
+"name": "year",
+"value": "2013"
+},
+{
+"wrong": false,
+"own": 0.9237197041511536,
+"contrast": 0.0031768083572387695,
+"has_other": true,
+"name": "artist",
+"value": "Justin Bieber"
+},
+{
+"wrong": true,
+"own": 0.438021719455719,
+"contrast": -0.5537119507789612,
+"has_other": true,
+"name": "album",
+"value": "2013"
+},
+{
+"wrong": false,
+"own": 0.9634959101676941,
+"contrast": -0.006991982460021973,
+"has_other": true,
+"name": "artist",
+"value": "Vybz Kartel"
+},
+{
+"wrong": false,
+"own": 0.9117034673690796,
+"contrast": 0.28914815187454224,
+"has_other": true,
+"name": "genre",
+"value": "Reggae"
+},
+{
+"wrong": false,
+"own": 0.08314941078424454,
+"contrast": -0.7646262869238853,
+"has_other": true,
+"name": "year",
+"value": "2019"
+},
+{
+"wrong": true,
+"own": 0.03532544896006584,
+"contrast": -0.8763780184090137,
+"has_other": true,
+"name": "album",
+"value": "Reggae"
+},
+{
+"wrong": false,
+"own": 0.9730380773544312,
+"contrast": 0.9730380773544312,
+"has_other": false,
+"name": "location",
+"value": "Letterkenny,Ireland"
+},
+{
+"wrong": false,
+"own": 0.9957156777381897,
+"contrast": 0.9957156777381897,
+"has_other": false,
+"name": "artist",
+"value": "Pitbull"
+},
+{
+"wrong": false,
+"own": 0.9591570496559143,
+"contrast": 0.9591570496559143,
+"has_other": false,
+"name": "cast",
+"value": "Ving Rhames"
+},
+{
+"wrong": true,
+"own": 0.0026008894201368093,
+"contrast": -0.24847822287119925,
+"has_other": true,
+"name": "directed_by",
+"value": "Ving Rhames"
+},
+{
+"wrong": false,
+"own": 0.983151912689209,
+"contrast": 0.055789172649383545,
+"has_other": true,
+"name": "genre",
+"value": "Comedy-drama"
+},
+{
+"wrong": false,
+"own": 0.9923272728919983,
+"contrast": 0.1267969012260437,
+"has_other": true,
+"name": "cast",
+"value": "Josh Barclay Caras"
+},
+{
+"wrong": false,
+"own": 0.9872632622718811,
+"contrast": 0.7763071358203888,
+"has_other": true,
+"name": "directed_by",
+"value": "Gene Stupnitsky"
+},
+{
+"wrong": false,
+"own": 0.9945029020309448,
+"contrast": 0.5540129840373993,
+"has_other": true,
+"name": "directed_by",
+"value": "Jim Henson"
+},
+{
+"wrong": false,
+"own": 0.994151771068573,
+"contrast": 0.03562659025192261,
+"has_other": true,
+"name": "cast",
+"value": "Danny John-Jules"
+},
+{
+"wrong": true,
+"own": 0.9966739416122437,
+"contrast": 0.5561840236186981,
+"has_other": true,
+"name": "director",
+"value": "Jim Henson"
+},
+{
+"wrong": false,
+"own": 0.9917312264442444,
+"contrast": 0.7568722367286682,
+"has_other": true,
+"name": "genre",
+"value": "Drama"
+},
+{
+"wrong": true,
+"own": 0.9888994097709656,
+"contrast": 0.7593912333250046,
+"has_other": true,
+"name": "city",
+"value": "Santa Rosa"
+},
+{
+"wrong": false,
+"own": 0.9963979721069336,
+"contrast": 0.9963979721069336,
+"has_other": false,
+"name": "user_id",
+"value": "U123456"
+},
+{
+"wrong": true,
+"own": 0.980172336101532,
+"contrast": 0.980172336101532,
+"has_other": false,
+"name": "city",
+"value": "Alameda"
+},
+{
+"wrong": true,
+"own": 0.9882993698120117,
+"contrast": 0.9882993698120117,
+"has_other": false,
+"name": "city",
+"value": "Corte Madera"
+},
+{
+"wrong": true,
+"own": 0.9619386196136475,
+"contrast": 0.9619386196136475,
+"has_other": false,
+"name": "city",
+"value": "San Lorenzo"
+},
+{
+"wrong": true,
+"own": 0.8959088921546936,
+"contrast": 0.8959088921546936,
+"has_other": false,
+"name": "city",
+"value": "Austin"
+},
+{
+"wrong": true,
+"own": 0.9866020679473877,
+"contrast": 0.9866020679473877,
+"has_other": false,
+"name": "city",
+"value": "Berkeley"
+},
+{
+"wrong": true,
+"own": 0.9576257467269897,
+"contrast": 0.9576257467269897,
+"has_other": false,
+"name": "city",
+"value": "Rohnert Park"
+},
+{
+"wrong": false,
+"own": 0.9637806415557861,
+"contrast": 0.11347681283950806,
+"has_other": true,
+"name": "event_type",
+"value": "Music"
+},
+{
+"wrong": false,
+"own": 0.9653380513191223,
+"contrast": 0.041934072971343994,
+"has_other": true,
+"name": "date",
+"value": "2023-05-02"
+},
+{
+"wrong": true,
+"own": 0.021240876987576485,
+"contrast": -0.9089083801954985,
+"has_other": true,
+"name": "city",
+"value": "San Diego"
+},
+{
+"wrong": false,
+"own": 0.9572899341583252,
+"contrast": -0.006889820098876953,
+"has_other": true,
+"name": "event_type",
+"value": "Theater"
+},
+{
+"wrong": true,
+"own": 0.3528265655040741,
+"contrast": -0.6046722829341888,
+"has_other": true,
+"name": "city",
+"value": "Chicago"
+},
+{
+"wrong": false,
+"own": 0.9882233738899231,
+"contrast": 0.003130793571472168,
+"has_other": true,
+"name": "destination",
+"value": "123 Beijing Street, San Francisco"
+},
+{
+"wrong": false,
+"own": 0.9111781716346741,
+"contrast": 0.25891196727752686,
+"has_other": true,
+"name": "number_of_seats",
+"value": "1"
+},
+{
+"wrong": false,
+"own": 0.9897637367248535,
+"contrast": 0.045122504234313965,
+"has_other": true,
+"name": "ride_type",
+"value": "Regular"
+},
+{
+"wrong": true,
+"own": 0.9926217794418335,
+"contrast": 0.09244370460510254,
+"has_other": true,
+"name": "destination",
+"value": "China Station Restaurant, 123 Beijing Street, San Francisco"
+},
+{
+"wrong": false,
+"own": 0.99227374792099,
+"contrast": 0.99227374792099,
+"has_other": false,
+"name": "destination",
+"value": "2508 University Avenue, Palo Alto"
+},
+{
+"wrong": true,
+"own": 0.990292489528656,
+"contrast": 0.990292489528656,
+"has_other": false,
+"name": "destination",
+"value": "2508 University Avenue, Palo Alto, CA"
+},
+{
+"wrong": false,
+"own": 0.9888494610786438,
+"contrast": 0.7647601813077927,
+"has_other": true,
+"name": "destination",
+"value": "123 Park Branham Apartments, San Jose"
+},
+{
+"wrong": false,
+"own": 0.037726711481809616,
+"contrast": -0.9296297915279865,
+"has_other": true,
+"name": "number_of_seats",
+"value": "2"
+},
+{
+"wrong": true,
+"own": 0.9730600714683533,
+"contrast": 0.11913657188415527,
+"has_other": true,
+"name": "ride_type",
+"value": "Shared"
+},
+{
+"wrong": false,
+"own": 0.994550883769989,
+"contrast": -0.0006933212280273438,
+"has_other": true,
+"name": "movie_name",
+"value": "After The Wedding"
+},
+{
+"wrong": false,
+"own": 0.9943113327026367,
+"contrast": 0.007323503494262695,
+"has_other": true,
+"name": "number_of_tickets",
+"value": "2"
+},
+{
+"wrong": false,
+"own": 0.9966511130332947,
+"contrast": 0.00021523237228393555,
+"has_other": true,
+"name": "show_date",
+"value": "2023-04-22"
+},
+{
+"wrong": false,
+"own": 0.9881163835525513,
+"contrast": -0.005124092102050781,
+"has_other": true,
+"name": "show_time",
+"value": "19:00"
+},
+{
+"wrong": true,
+"own": 0.9961975812911987,
+"contrast": 0.004941701889038086,
+"has_other": true,
+"name": "location",
+"value": "Berkeley"
+},
+{
+"wrong": false,
+"own": 0.9857322573661804,
+"contrast": -0.0031149983406066895,
+"has_other": true,
+"name": "movie_name",
+"value": "Space Adventure"
+},
+{
+"wrong": false,
+"own": 0.5478219389915466,
+"contrast": 0.11831885576248169,
+"has_other": true,
+"name": "number_of_tickets",
+"value": "2"
+},
+{
+"wrong": false,
+"own": 0.9942626357078552,
+"contrast": 0.0002955794334411621,
+"has_other": true,
+"name": "location",
+"value": "San Jose, CA"
+},
+{
+"wrong": false,
+"own": 0.9717748165130615,
+"contrast": -0.0113716721534729,
+"has_other": true,
+"name": "show_time",
+"value": "23:00"
+},
+{
+"wrong": true,
+"own": 0.9890895485877991,
+"contrast": 0.004462242126464844,
+"has_other": true,
+"name": "show_date",
+"value": "2023.10.2"
+},
+{
+"wrong": true,
+"own": 0.11901840567588806,
+"contrast": 0.11901840567588806,
+"has_other": false,
+"name": "location",
+"value": "San Jose"
+},
+{
+"wrong": false,
+"own": 0.9942672848701477,
+"contrast": 0.004907071590423584,
+"has_other": true,
+"name": "theater_name",
+"value": "Regal Crow Canyon"
+},
+{
+"wrong": false,
+"own": 0.9641855359077454,
+"contrast": 0.0016717314720153809,
+"has_other": true,
+"name": "show_type",
+"value": "regular"
+},
+{
+"wrong": true,
+"own": 0.9944444298744202,
+"contrast": 0.03864568471908569,
+"has_other": true,
+"name": "location",
+"value": "San Ramon"
+},
+{
+"wrong": false,
+"own": 0.026869917288422585,
+"contrast": -0.013309085741639137,
+"has_other": true,
+"name": "genre",
+"value": "Drama"
+},
+{
+"wrong": false,
+"own": 0.9876624345779419,
+"contrast": 0.009140729904174805,
+"has_other": true,
+"name": "theater_name",
+"value": "Century 20 Oakridge and XD"
+},
+{
+"wrong": true,
+"own": 0.9924350380897522,
+"contrast": 0.04099404811859131,
+"has_other": true,
+"name": "location",
+"value": "San Jose"
+},
+{
+"wrong": true,
+"own": 0.9900406002998352,
+"contrast": 0.010357499122619629,
+"has_other": true,
+"name": "theater_name",
+"value": "Century 20 Oakridge"
+},
+{
+"wrong": false,
+"own": 0.9921993613243103,
+"contrast": 0.0003688335418701172,
+"has_other": true,
+"name": "movie_name",
+"value": "Eternal Warriors"
+},
+{
+"wrong": false,
+"own": 0.9905941486358643,
+"contrast": 0.0027785897254943848,
+"has_other": true,
+"name": "number_of_tickets",
+"value": "3"
+},
+{
+"wrong": false,
+"own": 0.9953216910362244,
+"contrast": 0.0017203092575073242,
+"has_other": true,
+"name": "show_date",
+"value": "2023-04-15"
+},
+{
+"wrong": false,
+"own": 0.9633708000183105,
+"contrast": -0.01458597183227539,
+"has_other": true,
+"name": "show_time",
+"value": "19:00"
+},
+{
+"wrong": true,
+"own": 0.9922095537185669,
+"contrast": 0.0025936365127563477,
+"has_other": true,
+"name": "location",
+"value": "Los Angeles"
+},
+{
+"wrong": false,
+"own": 0.10700401663780212,
+"contrast": -0.8504648506641388,
+"has_other": true,
+"name": "pickup_time",
+"value": "12:30"
+},
+{
+"wrong": true,
+"own": 0.43128374218940735,
+"contrast": -0.5438441336154938,
+"has_other": true,
+"name": "pickup_time",
+"value": "12:30 PM"
+},
+{
+"wrong": false,
+"own": 0.9689711332321167,
+"contrast": 0.025397419929504395,
+"has_other": true,
+"name": "color",
+"value": "red"
+},
+{
+"wrong": false,
+"own": 0.014285222627222538,
+"contrast": -0.05757258739322424,
+"has_other": true,
+"name": "size",
+"value": "medium"
+},
+{
+"wrong": true,
+"own": 0.021647300571203232,
+"contrast": -0.5352993346750736,
+"has_other": true,
+"name": "color",
+"value": "medium red"
+},
+{
+"wrong": true,
+"own": 0.9418845176696777,
+"contrast": -0.008535981178283691,
+"has_other": true,
+"name": "size",
+"value": "skirt"
+},
+{
+"wrong": true,
+"own": 0.9123161435127258,
+"contrast": 0.47757187485694885,
+"has_other": true,
+"name": "location",
+"value": "London"
+},
+{
+"wrong": false,
+"own": 0.9758657217025757,
+"contrast": 0.0012096762657165527,
+"has_other": true,
+"name": "category",
+"value": "Theme Park"
+},
+{
+"wrong": false,
+"own": 0.9927258491516113,
+"contrast": 0.044084370136260986,
+"has_other": true,
+"name": "origin_airport",
+"value": "JFK"
+},
+{
+"wrong": false,
+"own": 0.9778757095336914,
+"contrast": 0.9341049678623676,
+"has_other": true,
+"name": "destination_airport",
+"value": "LAX"
+},
+{
+"wrong": false,
+"own": 0.9883411526679993,
+"contrast": 0.10167062282562256,
+"has_other": true,
+"name": "genre",
+"value": "Electropop"
+},
+{
+"wrong": false,
+"own": 0.014943595975637436,
+"contrast": -0.49166345968842506,
+"has_other": true,
+"name": "year",
+"value": "2014"
+},
+{
+"wrong": true,
+"own": 0.02810049243271351,
+"contrast": -0.9602406602352858,
+"has_other": true,
+"name": "artist",
+"value": "Electropop"
+},
+{
+"wrong": false,
+"own": 0.9819239974021912,
+"contrast": 0.9819239974021912,
+"has_other": false,
+"name": "genre",
+"value": "Reggae"
+},
+{
+"wrong": true,
+"own": 0.05508063733577728,
+"contrast": -0.9268433600664139,
+"has_other": true,
+"name": "artist",
+"value": "Reggae"
+},
+{
+"wrong": false,
+"own": 0.9768999814987183,
+"contrast": 0.02785271406173706,
+"has_other": true,
+"name": "event_type",
+"value": "Music"
+},
+{
+"wrong": true,
+"own": 0.9463598132133484,
+"contrast": -0.021098792552947998,
+"has_other": true,
+"name": "city",
+"value": "New York"
+},
+{
+"wrong": false,
+"own": 0.9750534296035767,
+"contrast": 0.03499990701675415,
+"has_other": true,
+"name": "event_type",
+"value": "Theater"
+},
+{
+"wrong": false,
+"own": 0.9864625334739685,
+"contrast": 0.020585060119628906,
+"has_other": true,
+"name": "city",
+"value": "Oakland, CA"
+},
+{
+"wrong": true,
+"own": 0.9802740812301636,
+"contrast": 0.32198411226272583,
+"has_other": true,
+"name": "date",
+"value": "2023.4.11"
+},
+{
+"wrong": false,
+"own": 0.9977108240127563,
+"contrast": 0.11480039358139038,
+"has_other": true,
+"name": "order_id",
+"value": "#123"
+},
+{
+"wrong": false,
+"own": 0.9909430146217346,
+"contrast": 0.01219850778579712,
+"has_other": true,
+"name": "product",
+"value": "sneakers"
+},
+{
+"wrong": true,
+"own": 0.9970974922180176,
+"contrast": 0.7276532351970673,
+"has_other": true,
+"name": "order_id",
+"value": "123"
+},
+{
+"wrong": false,
+"own": 0.6974472999572754,
+"contrast": -0.27173399925231934,
+"has_other": true,
+"name": "genre",
+"value": "Supernatural"
+},
+{
+"wrong": false,
+"own": 0.029477976262569427,
+"contrast": 0.026505930349230766,
+"has_other": true,
+"name": "show_type",
+"value": "regular"
+},
+{
+"wrong": true,
+"own": 0.038912415504455566,
+"contrast": -0.9008686542510986,
+"has_other": true,
+"name": "location",
+"value": "Los Angeles"
+},
+{
+"wrong": false,
+"own": 0.9749367237091064,
+"contrast": 0.8905579373240471,
+"has_other": true,
+"name": "event_type",
+"value": "Theater"
+},
+{
+"wrong": false,
+"own": 0.08749732375144958,
+"contrast": -0.3593995273113251,
+"has_other": true,
+"name": "city",
+"value": "Chicago, IL"
+},
+{
+"wrong": false,
+"own": 0.9797583818435669,
+"contrast": 0.9571572840213776,
+"has_other": true,
+"name": "event_type",
+"value": "Music"
+},
+{
+"wrong": true,
+"own": 0.9836817979812622,
+"contrast": 0.03478449583053589,
+"has_other": true,
+"name": "city",
+"value": "Philadelphia"
+},
+{
+"wrong": false,
+"own": 0.99479079246521,
+"contrast": 0.03554314374923706,
+"has_other": true,
+"name": "city",
+"value": "Belvedere, CA"
+},
+{
+"wrong": false,
+"own": 0.9871358275413513,
+"contrast": 0.06194216012954712,
+"has_other": true,
+"name": "event_type",
+"value": "Music"
+},
+{
+"wrong": false,
+"own": 0.9968825578689575,
+"contrast": 0.011941730976104736,
+"has_other": true,
+"name": "intent",
+"value": "rent"
+},
+{
+"wrong": false,
+"own": 0.5782875418663025,
+"contrast": -0.41445326805114746,
+"has_other": true,
+"name": "number_of_beds",
+"value": "3"
+},
+{
+"wrong": false,
+"own": 0.9569674134254456,
+"contrast": 0.9365334454923868,
+"has_other": true,
+"name": "number_of_baths",
+"value": "2"
+},
+{
+"wrong": true,
+"own": 0.9949200749397278,
+"contrast": -0.0019267797470092773,
+"has_other": true,
+"name": "area",
+"value": "Fremont"
+},
+{
+"wrong": false,
+"own": 0.9528935551643372,
+"contrast": 0.011250615119934082,
+"has_other": true,
+"name": "intent",
+"value": "rent"
+},
+{
+"wrong": true,
+"own": 0.9463686347007751,
+"contrast": -0.024834275245666504,
+"has_other": true,
+"name": "area",
+"value": "San Francisco"
+},
+{
+"wrong": true,
+"own": 0.878623366355896,
+"contrast": -0.1096528172492981,
+"has_other": true,
+"name": "city",
+"value": "London"
+},
+{
+"wrong": false,
+"own": 0.5879833698272705,
+"contrast": -0.35477858781814575,
+"has_other": true,
+"name": "event_type",
+"value": "Theater"
+},
+{
+"wrong": false,
+"own": 0.03182472661137581,
+"contrast": -0.936499934643507,
+"has_other": true,
+"name": "city",
+"value": "Los Angeles"
+},
+{
+"wrong": true,
+"own": 0.9772696495056152,
+"contrast": 0.9772696495056152,
+"has_other": false,
+"name": "city",
+"value": "Berkeley"
+},
+{
+"wrong": true,
+"own": 0.9880229234695435,
+"contrast": 0.9880229234695435,
+"has_other": false,
+"name": "city",
+"value": "San Jose"
+},
+{
+"wrong": false,
+"own": 0.9900577664375305,
+"contrast": 0.14200520515441895,
+"has_other": true,
+"name": "genre",
+"value": "Sci-fi"
+},
+{
+"wrong": false,
+"own": 0.9902578592300415,
+"contrast": 0.24623513221740723,
+"has_other": true,
+"name": "star_rating",
+"value": "4"
+},
+{
+"wrong": true,
+"own": 0.9909690022468567,
+"contrast": 0.011095702648162842,
+"has_other": true,
+"name": "location",
+"value": "Nairobi, Kenya"
+},
+{
+"wrong": false,
+"own": 0.9716492891311646,
+"contrast": 0.020825982093811035,
+"has_other": true,
+"name": "event_type",
+"value": "Music"
+},
+{
+"wrong": false,
+"own": 0.9890156388282776,
+"contrast": 0.018795013427734375,
+"has_other": true,
+"name": "city",
+"value": "Portland, OR"
+},
+{
+"wrong": false,
+"own": 0.9705730080604553,
+"contrast": 0.022340834140777588,
+"has_other": true,
+"name": "event_type",
+"value": "Theater"
+},
+{
+"wrong": false,
+"own": 0.990948498249054,
+"contrast": 0.010722756385803223,
+"has_other": true,
+"name": "city",
+"value": "Long Beach, CA"
+},
+{
+"wrong": false,
+"own": 0.9814855456352234,
+"contrast": 0.5197655856609344,
+"has_other": true,
+"name": "payment_method",
+"value": "debit card"
+},
+{
+"wrong": false,
+"own": 0.052945151925086975,
+"contrast": -0.7666666358709335,
+"has_other": true,
+"name": "amount",
+"value": "154"
+},
+{
+"wrong": false,
+"own": 0.979330837726593,
+"contrast": 0.5669579207897186,
+"has_other": true,
+"name": "receiver",
+"value": "JohnDoe@example.com"
+},
+{
+"wrong": false,
+"own": 0.9592069387435913,
+"contrast": 0.5384920239448547,
+"has_other": true,
+"name": "amount",
+"value": "150.25"
+},
+{
+"wrong": false,
+"own": 0.04797211289405823,
+"contrast": -0.8156293332576752,
+"has_other": true,
+"name": "receiver",
+"value": "johndoe@example.com"
+},
+{
+"wrong": false,
+"own": 0.984029233455658,
+"contrast": 0.24574053287506104,
+"has_other": true,
+"name": "amount",
+"value": "83"
+},
+{
+"wrong": false,
+"own": 0.9659522175788879,
+"contrast": 0.8476317003369331,
+"has_other": true,
+"name": "payment_method",
+"value": "debit card"
+},
+{
+"wrong": false,
+"own": 0.9200358390808105,
+"contrast": 0.8892745804041624,
+"has_other": true,
+"name": "receiver",
+"value": "Rachel"
+},
+{
+"wrong": true,
+"own": 0.10803527384996414,
+"contrast": 0.04173019528388977,
+"has_other": true,
+"name": "receiver",
+"value": "Rachel's account"
+},
+{
+"wrong": false,
+"own": 0.9951233267784119,
+"contrast": 0.027489304542541504,
+"has_other": true,
+"name": "restaurant_id",
+"value": "McDonald's"
+},
+{
+"wrong": true,
+"own": 0.9953749775886536,
+"contrast": 0.0217399001121521,
+"has_other": true,
+"name": "restaurant_id",
+"value": "McDonald"
+},
+{
+"wrong": false,
+"own": 0.9921349287033081,
+"contrast": 0.3443832993507385,
+"has_other": true,
+"name": "artist",
+"value": "Cody Johnson"
+},
+{
+"wrong": false,
+"own": 0.9804357290267944,
+"contrast": 0.02275151014328003,
+"has_other": true,
+"name": "year",
+"value": "2019"
+},
+{
+"wrong": false,
+"own": 0.9890207648277283,
+"contrast": 0.46631360054016113,
+"has_other": true,
+"name": "album",
+"value": "Gotta Be Me"
+},
+{
+"wrong": false,
+"own": 0.9771038889884949,
+"contrast": 0.966942124068737,
+"has_other": true,
+"name": "artist",
+"value": "Little Mix"
+},
+{
+"wrong": false,
+"own": 0.9931021928787231,
+"contrast": 0.9892996351700276,
+"has_other": true,
+"name": "album",
+"value": "Get Weird"
+},
+{
+"wrong": true,
+"own": 0.010161764919757843,
+"contrast": -0.47707708925008774,
+"has_other": true,
+"name": "album",
+"value": "Little Mix"
+},
+{
+"wrong": false,
+"own": 0.995913565158844,
+"contrast": 0.9479586444795132,
+"has_other": true,
+"name": "host",
+"value": "http://plgah.ca"
+},
+{
+"wrong": false,
+"own": 0.9915446043014526,
+"contrast": 0.9889195929281414,
+"has_other": true,
+"name": "username",
+"value": "pascal"
+},
+{
+"wrong": false,
+"own": 0.9901913404464722,
+"contrast": 0.9722517244517803,
+"has_other": true,
+"name": "password",
+"value": "123123"
+},
+{
+"wrong": false,
+"own": 0.9813727140426636,
+"contrast": 0.4919086694717407,
+"has_other": true,
+"name": "database",
+"value": "finance_db"
+},
+{
+"wrong": true,
+"own": 0.9960935711860657,
+"contrast": 0.9926186329685152,
+"has_other": true,
+"name": "host",
+"value": "plgah.ca"
+},
+{
+"wrong": false,
+"own": 0.9961888194084167,
+"contrast": 0.9755855314433575,
+"has_other": true,
+"name": "host",
+"value": "http://plgah.ca"
+},
+{
+"wrong": false,
+"own": 0.9968422651290894,
+"contrast": 0.9928342248313129,
+"has_other": true,
+"name": "username",
+"value": "pascal"
+},
+{
+"wrong": false,
+"own": 0.9925258159637451,
+"contrast": 0.9875617786310613,
+"has_other": true,
+"name": "password",
+"value": "securepassword123"
+},
+{
+"wrong": false,
+"own": 0.9970542192459106,
+"contrast": 0.02858412265777588,
+"has_other": true,
+"name": "database",
+"value": "maindb"
+},
+{
+"wrong": true,
+"own": 0.9944040775299072,
+"contrast": 0.9924667032901198,
+"has_other": true,
+"name": "host",
+"value": "plgah.ca"
+},
+{
+"wrong": false,
+"own": 0.9865111112594604,
+"contrast": 0.7897450923919678,
+"has_other": true,
+"name": "directed_by",
+"value": "Riley Stearns"
+},
+{
+"wrong": false,
+"own": 0.9677587151527405,
+"contrast": 0.8985802084207535,
+"has_other": true,
+"name": "cast",
+"value": "Steve Terada"
+},
+{
+"wrong": false,
+"own": 0.928192138671875,
+"contrast": 0.7900715917348862,
+"has_other": true,
+"name": "directed_by",
+"value": "Wes Anderson"
+},
+{
+"wrong": false,
+"own": 0.9321924448013306,
+"contrast": 0.054044902324676514,
+"has_other": true,
+"name": "cast",
+"value": "Leland Orser"
+},
+{
+"wrong": true,
+"own": 0.027258506044745445,
+"contrast": -0.8508890364319086,
+"has_other": true,
+"name": "directed_by",
+"value": "Leland Orser"
+},
+{
+"wrong": false,
+"own": 0.9770798683166504,
+"contrast": 0.9770798683166504,
+"has_other": false,
+"name": "cast",
+"value": "Jack Carson"
+},
+{
+"wrong": true,
+"own": 0.05826880782842636,
+"contrast": 0.05826880782842636,
+"has_other": false,
+"name": "directed_by",
+"value": "Jack Carson"
+},
+{
+"wrong": false,
+"own": 0.9519145488739014,
+"contrast": -0.016723155975341797,
+"has_other": true,
+"name": "cast",
+"value": "Utkarsh Ambudkar"
+},
+{
+"wrong": true,
+"own": 0.017797650769352913,
+"contrast": -0.9508400540798903,
+"has_other": true,
+"name": "directed_by",
+"value": "Utkarsh Ambudkar"
+},
+{
+"wrong": false,
+"own": 0.9667274355888367,
+"contrast": 0.9667274355888367,
+"has_other": false,
+"name": "cast",
+"value": "Javier Bardem"
+},
+{
+"wrong": true,
+"own": 0.0007320394506677985,
+"contrast": 0.0007320394506677985,
+"has_other": false,
+"name": "directed_by",
+"value": "Javier Bardem"
+},
+{
+"wrong": false,
+"own": 0.9879599809646606,
+"contrast": 0.2568647861480713,
+"has_other": true,
+"name": "directed_by",
+"value": "Satoshi Kon"
+},
+{
+"wrong": false,
+"own": 0.9753695130348206,
+"contrast": 0.7914295494556427,
+"has_other": true,
+"name": "genre",
+"value": "Anime"
+},
+{
+"wrong": false,
+"own": 0.9665851593017578,
+"contrast": 0.8751436918973923,
+"has_other": true,
+"name": "cast",
+"value": "Akiko Kawase"
+},
+{
+"wrong": false,
+"own": 0.9466232657432556,
+"contrast": 0.9466232657432556,
+"has_other": false,
+"name": "cast",
+"value": "Katsunosuke Hori"
+},
+{
+"wrong": true,
+"own": 0.018108993768692017,
+"contrast": 0.018108993768692017,
+"has_other": false,
+"name": "directed_by",
+"value": "Katsunosuke Hori"
+},
+{
+"wrong": false,
+"own": 0.9601153135299683,
+"contrast": 0.9601153135299683,
+"has_other": false,
+"name": "cast",
+"value": "Nikita Mehta"
+},
+{
+"wrong": false,
+"own": 0.9851495027542114,
+"contrast": 0.9851495027542114,
+"has_other": false,
+"name": "cast",
+"value": "Pete Davidson"
+},
+{
+"wrong": true,
+"own": 0.022303996607661247,
+"contrast": -0.9628455061465502,
+"has_other": true,
+"name": "directed_by",
+"value": "Pete Davidson"
+},
+{
+"wrong": false,
+"own": 0.9968839287757874,
+"contrast": 0.0006181001663208008,
+"has_other": true,
+"name": "nickname",
+"value": "EnterpriseDB"
+},
+{
+"wrong": false,
+"own": 0.990665078163147,
+"contrast": 0.04195237159729004,
+"has_other": true,
+"name": "host",
+"value": "db.company.com"
+},
+{
+"wrong": false,
+"own": 0.9958587288856506,
+"contrast": 0.00587540864944458,
+"has_other": true,
+"name": "database",
+"value": "sales_data"
+},
+{
+"wrong": false,
+"own": 0.9956547021865845,
+"contrast": 0.017186224460601807,
+"has_other": true,
+"name": "username",
+"value": "dbadmin"
+},
+{
+"wrong": false,
+"own": 0.9829280972480774,
+"contrast": 0.9253222346305847,
+"has_other": true,
+"name": "password",
+"value": "secure*pwd123"
+},
+{
+"wrong": false,
+"own": 0.03175703436136246,
+"contrast": 0.009475959464907646,
+"has_other": true,
+"name": "rating",
+"value": "4.1"
+},
+{
+"wrong": true,
+"own": 0.9650874733924866,
+"contrast": 0.0861138105392456,
+"has_other": true,
+"name": "where_to",
+"value": "Philadelphia"
+},
+{
+"wrong": true,
+"own": 0.898789644241333,
+"contrast": 0.898789644241333,
+"has_other": false,
+"name": "where_to",
+"value": "Paris"
+},
+{
+"wrong": true,
+"own": 0.6290510296821594,
+"contrast": 0.6290510296821594,
+"has_other": false,
+"name": "city",
+"value": "New York"
+},
+{
+"wrong": false,
+"own": 0.9756143093109131,
+"contrast": -0.015115678310394287,
+"has_other": true,
+"name": "stylist_name",
+"value": "John's Barber Shop"
+},
+{
+"wrong": false,
+"own": 0.9542022943496704,
+"contrast": 0.03703576326370239,
+"has_other": true,
+"name": "starring",
+"value": "Ani Sava"
+},
+{
+"wrong": true,
+"own": 0.957524299621582,
+"contrast": 0.957524299621582,
+"has_other": false,
+"name": "city",
+"value": "Burlingame"
+},
+{
+"wrong": false,
+"own": 0.9589009881019592,
+"contrast": 0.8508647382259369,
+"has_other": true,
+"name": "type",
+"value": "Family Counselor"
+},
+{
+"wrong": true,
+"own": 0.8796674013137817,
+"contrast": 0.0041425228118896484,
+"has_other": true,
+"name": "city",
+"value": "New York"
+},
+{
+"wrong": false,
+"own": 0.9967136383056641,
+"contrast": 0.003726184368133545,
+"has_other": true,
+"name": "property_name",
+"value": "Northridge Apartments"
+},
+{
+"wrong": true,
+"own": 0.9934700727462769,
+"contrast": 0.9934700727462769,
+"has_other": false,
+"name": "city",
+"value": "Sunol"
+},
+{
+"wrong": true,
+"own": 0.9881389737129211,
+"contrast": 0.03987699747085571,
+"has_other": true,
+"name": "city",
+"value": "New Delhi, India"
+},
+{
+"wrong": false,
+"own": 0.9968210458755493,
+"contrast": -0.0009039044380187988,
+"has_other": true,
+"name": "host",
+"value": "http://plga.ca"
+},
+{
+"wrong": false,
+"own": 0.00039716207538731396,
+"contrast": -0.0007342722674366087,
+"has_other": true,
+"name": "api_key",
+"value": "1234324"
+},
+{
+"wrong": true,
+"own": 0.9966081380844116,
+"contrast": 0.0022054314613342285,
+"has_other": true,
+"name": "name",
+"value": "plga"
+},
+{
+"wrong": false,
+"own": 0.9497643113136292,
+"contrast": -0.017548680305480957,
+"has_other": true,
+"name": "new_alarm_name",
+"value": "Leave for home"
+},
+{
+"wrong": false,
+"own": 0.9520920515060425,
+"contrast": -0.034644901752471924,
+"has_other": true,
+"name": "event_name",
+"value": "Brockhampton"
+},
+{
+"wrong": false,
+"own": 0.006605413742363453,
+"contrast": 0.0015093497931957245,
+"has_other": true,
+"name": "number_of_tickets",
+"value": "4"
+},
+{
+"wrong": true,
+"own": 0.9878829121589661,
+"contrast": 0.046389102935791016,
+"has_other": true,
+"name": "city",
+"value": "Berkeley"
+},
+{
+"wrong": false,
+"own": 0.994892954826355,
+"contrast": 0.009421050548553467,
+"has_other": true,
+"name": "album",
+"value": "Isolation"
+},
+{
+"wrong": false,
+"own": 0.9930291771888733,
+"contrast": 0.9445199631154537,
+"has_other": true,
+"name": "genre",
+"value": "Funk"
+},
+{
+"wrong": true,
+"own": 0.1279057264328003,
+"contrast": -0.8669872283935547,
+"has_other": true,
+"name": "artist",
+"value": "Isolation"
+},
+{
+"wrong": false,
+"own": 0.43417513370513916,
+"contrast": -0.5261977910995483,
+"has_other": true,
+"name": "artist",
+"value": "Get Scared"
+},
+{
+"wrong": false,
+"own": 0.9752349257469177,
+"contrast": 0.8701006099581718,
+"has_other": true,
+"name": "genre",
+"value": "Rock"
+},
+{
+"wrong": true,
+"own": 0.9918439984321594,
+"contrast": 0.9619152173399925,
+"has_other": true,
+"name": "genre",
+"value": "Rock-and-roll"
+},
+{
+"wrong": false,
+"own": 0.9832951426506042,
+"contrast": 0.9549421984702349,
+"has_other": true,
+"name": "track",
+"value": "Bohemian Rhapsody"
+},
+{
+"wrong": false,
+"own": 0.9881608486175537,
+"contrast": 0.016598105430603027,
+"has_other": true,
+"name": "artist",
+"value": "Sabaton"
+},
+{
+"wrong": false,
+"own": 0.9720468521118164,
+"contrast": 0.19785040616989136,
+"has_other": true,
+"name": "genre",
+"value": "Metal"
+},
+{
+"wrong": false,
+"own": 0.0006185246747918427,
+"contrast": -0.04119832086144015,
+"has_other": true,
+"name": "year",
+"value": "2019"
+},
+{
+"wrong": true,
+"own": 0.048520464450120926,
+"contrast": -0.9235263876616955,
+"has_other": true,
+"name": "album",
+"value": "Metal"
+},
+{
+"wrong": false,
+"own": 0.9954078793525696,
+"contrast": 0.03222823143005371,
+"has_other": true,
+"name": "album",
+"value": "Reincarnation"
+},
+{
+"wrong": false,
+"own": 0.9950597286224365,
+"contrast": 0.23576921224594116,
+"has_other": true,
+"name": "genre",
+"value": "Reggaeton"
+},
+{
+"wrong": true,
+"own": 0.18873026967048645,
+"contrast": -0.5516235530376434,
+"has_other": true,
+"name": "artist",
+"value": "19. I"
+},
+{
+"wrong": true,
+"own": 0.99265056848526,
+"contrast": 0.03232216835021973,
+"has_other": true,
+"name": "album",
+"value": "Reincarnation is nice"
+},
+{
+"wrong": false,
+"own": 0.9965986609458923,
+"contrast": 0.02135854959487915,
+"has_other": true,
+"name": "album",
+"value": "Run"
+},
+{
+"wrong": true,
+"own": 0.9959235191345215,
+"contrast": 0.986277112737298,
+"has_other": true,
+"name": "artist",
+"value": "Electropp"
+},
+{
+"wrong": false,
+"own": 0.019625790417194366,
+"contrast": 0.017669731751084328,
+"has_other": true,
+"name": "category",
+"value": "Japanese"
+},
+{
+"wrong": true,
+"own": 0.20688869059085846,
+"contrast": 0.08669456839561462,
+"has_other": true,
+"name": "location",
+"value": "San Francisco"
+},
+{
+"wrong": false,
+"own": 0.9969269633293152,
+"contrast": 0.001533210277557373,
+"has_other": true,
+"name": "from_city",
+"value": "Fresno, CA"
+},
+{
+"wrong": true,
+"own": 0.08830209821462631,
+"contrast": -0.6737287417054176,
+"has_other": true,
+"name": "to_city",
+"value": "Los Angeles"
+},
+{
+"wrong": false,
+"own": 0.9592710137367249,
+"contrast": -0.034853994846343994,
+"has_other": true,
+"name": "from_city",
+"value": "Berkeley, CA"
+},
+{
+"wrong": false,
+"own": 0.9442280530929565,
+"contrast": -0.04678833484649658,
+"has_other": true,
+"name": "to_city",
+"value": "Portland, OR"
+},
+{
+"wrong": false,
+"own": 0.9857302904129028,
+"contrast": -0.0048400163650512695,
+"has_other": true,
+"name": "departure_time",
+"value": "09:00"
+},
+{
+"wrong": false,
+"own": 0.9956679344177246,
+"contrast": 0.010088324546813965,
+"has_other": true,
+"name": "departure_date",
+"value": "03/07/2023"
+},
+{
+"wrong": false,
+"own": 0.9839942455291748,
+"contrast": 0.005774259567260742,
+"has_other": true,
+"name": "category",
+"value": "one-stop"
+},
+{
+"wrong": true,
+"own": 0.9905135631561279,
+"contrast": 0.022943496704101562,
+"has_other": true,
+"name": "from_city",
+"value": "San Francisco"
+},
+{
+"wrong": true,
+"own": 0.9734011888504028,
+"contrast": -0.005721032619476318,
+"has_other": true,
+"name": "to_city",
+"value": "Los Angeles"
+},
+{
+"wrong": false,
+"own": 0.0004282259615138173,
+"contrast": -0.0023348728427663445,
+"has_other": true,
+"name": "journey_start_time",
+"value": "09:00"
+},
+{
+"wrong": false,
+"own": 0.9866798520088196,
+"contrast": -0.005851149559020996,
+"has_other": true,
+"name": "to",
+"value": "Portland, OR"
+},
+{
+"wrong": false,
+"own": 0.9867088794708252,
+"contrast": 0.007174968719482422,
+"has_other": true,
+"name": "journey_start_time",
+"value": "10:00"
+},
+{
+"wrong": false,
+"own": 0.8954340815544128,
+"contrast": 0.8922095652669668,
+"has_other": true,
+"name": "genre",
+"value": "Supernatural"
+},
+{
+"wrong": true,
+"own": 0.10338778793811798,
+"contrast": -0.48591844737529755,
+"has_other": true,
+"name": "location",
+"value": "San Francisco"
+},
+{
+"wrong": false,
+"own": 0.002755436347797513,
+"contrast": -0.9742206602822989,
+"has_other": true,
+"name": "_from",
+"value": "New York, NY"
+},
+{
+"wrong": false,
+"own": 0.00028186998679302633,
+"contrast": -0.11899063774035312,
+"has_other": true,
+"name": "province_id",
+"value": "1"
+},
+{
+"wrong": false,
+"own": 0.9946234226226807,
+"contrast": 0.006821930408477783,
+"has_other": true,
+"name": "district_name",
+"value": "Chatuchak"
+},
+{
+"wrong": false,
+"own": 0.02354368008673191,
+"contrast": -0.22569254599511623,
+"has_other": true,
+"name": "province_id",
+"value": "2"
+},
+{
+"wrong": false,
+"own": 0.9956352114677429,
+"contrast": 0.009525120258331299,
+"has_other": true,
+"name": "district_name",
+"value": "Hang Dong"
+},
+{
+"wrong": false,
+"own": 0.9966230392456055,
+"contrast": 0.8227991908788681,
+"has_other": true,
+"name": "host",
+"value": "example.org"
+},
+{
+"wrong": false,
+"own": 0.991081714630127,
+"contrast": 0.9515352100133896,
+"has_other": true,
+"name": "port",
+"value": "5432"
+},
+{
+"wrong": false,
+"own": 0.9929488897323608,
+"contrast": 0.989340525586158,
+"has_other": true,
+"name": "database",
+"value": "inventory"
+},
+{
+"wrong": false,
+"own": 0.9962140917778015,
+"contrast": 0.9938289220444858,
+"has_other": true,
+"name": "username",
+"value": "admin"
+},
+{
+"wrong": false,
+"own": 0.9872848391532898,
+"contrast": 0.9241992607712746,
+"has_other": true,
+"name": "password",
+"value": "secret"
+},
+{
+"wrong": false,
+"own": 0.9865100979804993,
+"contrast": 0.9865100979804993,
+"has_other": false,
+"name": "service_id",
+"value": "35"
+},
+{
+"wrong": false,
+"own": 0.030144497752189636,
+"contrast": 0.030144497752189636,
+"has_other": false,
+"name": "sub_district_name",
+"value": "Phra Khanong"
+},
+{
+"wrong": true,
+"own": 0.02237601950764656,
+"contrast": 0.010118911042809486,
+"has_other": true,
+"name": "district_name",
+"value": "Phra Khanong Subdistrict"
+},
+{
+"wrong": false,
+"own": 0.0009885599138215184,
+"contrast": 0.000702572229783982,
+"has_other": true,
+"name": "district_name",
+"value": "Ratchathewi"
+},
+{
+"wrong": false,
+"own": 0.9857659339904785,
+"contrast": 0.010025203227996826,
+"has_other": true,
+"name": "alarm_time",
+"value": "2023-04-02 07:30:00"
+},
+{
+"wrong": false,
+"own": 0.9376789331436157,
+"contrast": -0.045330822467803955,
+"has_other": true,
+"name": "purpose",
+"value": "wake me up for a meeting"
+},
+{
+"wrong": false,
+"own": 0.8737964034080505,
+"contrast": 0.8737964034080505,
+"has_other": false,
+"name": "uuid",
+"value": "123e4567-e89b-12d3-a456-426614174000"
+},
+{
+"wrong": false,
+"own": 0.3889475166797638,
+"contrast": -0.5698350369930267,
+"has_other": true,
+"name": "purpose",
+"value": "brush my teeth"
+},
+{
+"wrong": false,
+"own": 0.9937892556190491,
+"contrast": 0.9937892556190491,
+"has_other": false,
+"name": "query",
+"value": "baby shark"
+},
+{
+"wrong": false,
+"own": 0.9896681308746338,
+"contrast": 0.9896681308746338,
+"has_other": false,
+"name": "query",
+"value": "With You"
+},
+{
+"wrong": true,
+"own": 0.019409457221627235,
+"contrast": 0.019409457221627235,
+"has_other": false,
+"name": "location",
+"value": "nyc"
+},
+{
+"wrong": false,
+"own": 0.9788137674331665,
+"contrast": 0.9788137674331665,
+"has_other": false,
+"name": "query",
+"value": "where is beijing"
+},
+{
+"wrong": false,
+"own": 0.9931568503379822,
+"contrast": 0.010851383209228516,
+"has_other": true,
+"name": "loc",
+"value": "2020 Addison Street, Berkeley, CA"
+},
+{
+"wrong": false,
+"own": 0.028027072548866272,
+"contrast": -0.7565300315618515,
+"has_other": true,
+"name": "time",
+"value": "10"
+},
+{
+"wrong": true,
+"own": 0.9861996173858643,
+"contrast": 0.05356168746948242,
+"has_other": true,
+"name": "loc",
+"value": "Addison Street, Berkeley, CA"
+},
+{
+"wrong": false,
+"own": 0.9950044751167297,
+"contrast": 0.9272350966930389,
+"has_other": true,
+"name": "district_name",
+"value": "Lat Phrao"
+},
+{
+"wrong": false,
+"own": 0.985770583152771,
+"contrast": 0.10825586318969727,
+"has_other": true,
+"name": "district_name",
+"value": "Ekthai"
+},
+{
+"wrong": true,
+"own": 0.2080172598361969,
+"contrast": -0.007140457630157471,
+"has_other": true,
+"name": "province_id",
+"value": "2"
+},
+{
+"wrong": false,
+"own": 0.9981572031974792,
+"contrast": 0.0061380863189697266,
+"has_other": true,
+"name": "service_name",
+"value": "fdsa"
+},
+{
+"wrong": false,
+"own": 0.99114990234375,
+"contrast": 0.002766907215118408,
+"has_other": true,
+"name": "location",
+"value": "Mariposa, CA"
+},
+{
+"wrong": false,
+"own": 0.9933991432189941,
+"contrast": 0.9863668922334909,
+"has_other": true,
+"name": "prompt_message",
+"value": "Please enter the Wi-Fi network name you wish to connect to:"
+},
+{
+"wrong": false,
+"own": 0.8715318441390991,
+"contrast": 0.7430882453918457,
+"has_other": true,
+"name": "purchase_amount",
+"value": "999"
+},
+{
+"wrong": false,
+"own": 0.008147540502250195,
+"contrast": -0.0158041724935174,
+"has_other": true,
+"name": "clean_hello",
+"value": "['hello']"
+},
+{
+"wrong": false,
+"own": 0.15223737061023712,
+"contrast": -0.03721950948238373,
+"has_other": true,
+"name": "faq_link_accounts_start",
+"value": "['link my account', 'connect my accounts']"
+},
+{
+"wrong": true,
+"own": 0.7440831065177917,
+"contrast": 0.5733965188264847,
+"has_other": true,
+"name": "clean_hello",
+"value": "['link my account', 'connect my accounts', 'hello']"
+},
+{
+"wrong": false,
+"own": 0.060487184673547745,
+"contrast": -0.07419997081160545,
+"has_other": true,
+"name": "pma_income_requirements_start",
+"value": "['Can I use bonuses or commissions as part of my income for a loan application?', 'Will my income be verified during the loan application process?', 'Is there a minimum income threshold for loan approval?']"
+},
+{
+"wrong": false,
+"own": 0.04317684471607208,
+"contrast": 0.00530305877327919,
+"has_other": true,
+"name": "payment_information_start",
+"value": "['How much do I owe on my home equity loan?']"
+},
+{
+"wrong": false,
+"own": 0.025333799421787262,
+"contrast": -0.06349773705005646,
+"has_other": true,
+"name": "faq_auto_withdraw_start",
+"value": "['Can I schedule automatic withdrawals for different dates?']"
+},
+{
+"wrong": true,
+"own": 0.062434837222099304,
+"contrast": -0.0752577930688858,
+"has_other": true,
+"name": "pma_income_requirements_start",
+"value": "['Can I use bonuses or commissions as part of my income for a loan application?', 'Is there a minimum income threshold for loan approval?', 'Will my income be verified during the loan application process?']"
+},
+{
+"wrong": false,
+"own": 0.9954699277877808,
+"contrast": 0.9954699277877808,
+"has_other": false,
+"name": "url",
+"value": "https://example.com/device-connector-versions.json"
+},
+{
+"wrong": false,
+"own": 0.0006491575622931123,
+"contrast": -0.00020064576528966427,
+"has_other": true,
+"name": "url",
+"value": "https://api.insights.com/groups"
+},
+{
+"wrong": false,
+"own": 0.9790600538253784,
+"contrast": -0.00976330041885376,
+"has_other": true,
+"name": "identifier",
+"value": "Alice-One-one-One"
+},
+{
+"wrong": true,
+"own": 0.99277263879776,
+"contrast": 0.030822336673736572,
+"has_other": true,
+"name": "url",
+"value": "https://{ip}/sedgeapi/v1/cisco-nir/api/api/v1/anomalies/summary"
+},
+{
+"wrong": false,
+"own": 0.993378758430481,
+"contrast": 0.08844935894012451,
+"has_other": true,
+"name": "command",
+"value": "docker --version"
+},
+{
+"wrong": false,
+"own": 0.9952686429023743,
+"contrast": 0.9952686429023743,
+"has_other": false,
+"name": "command",
+"value": "shutdown /s /t 0"
+},
+{
+"wrong": false,
+"own": 0.9946480393409729,
+"contrast": 0.9946480393409729,
+"has_other": false,
+"name": "command",
+"value": "del \"%userprofile%\\Desktop\\putty.lnk\""
+},
+{
+"wrong": true,
+"own": 0.9903711676597595,
+"contrast": 0.003966629505157471,
+"has_other": true,
+"name": "location",
+"value": "Lang Son"
+},
+{
+"wrong": false,
+"own": 0.9800674319267273,
+"contrast": 0.9800674319267273,
+"has_other": false,
+"name": "items",
+"value": "['Blue square', 'Red square', 'Green square', 'Yellow square', 'Superman logo', 'Iron Man logo', 'Hulk logo', 'Batman logo', 'Fist', 'Bat', 'Face mask', 'Outline']"
+},
+{
+"wrong": true,
+"own": 0.9220553636550903,
+"contrast": 0.9220553636550903,
+"has_other": false,
+"name": "items",
+"value": "['Superman logo', 'Iron Man logo', 'Hulk logo', 'Batman logo', 'Fist', 'Bat', 'Face mask', 'Outline']"
+},
+{
+"wrong": false,
+"own": 0.931907057762146,
+"contrast": 0.931907057762146,
+"has_other": false,
+"name": "items",
+"value": "['red logo', 'yellow rectangle', 'white text', 'Lego characters', 'movie title', 'release date', 'actor names']"
+},
+{
+"wrong": true,
+"own": 0.9800232648849487,
+"contrast": 0.9800232648849487,
+"has_other": false,
+"name": "items",
+"value": "['Lego logo', 'red logo', 'yellow rectangle', 'white text', 'Emmet', 'Wyldstyle', 'Batman', 'Gandalf', 'movie title', 'release date', 'actor names']"
+},
+{
+"wrong": false,
+"own": 0.005169940181076527,
+"contrast": -0.9473184226080775,
+"has_other": true,
+"name": "copyright_content",
+"value": "Coca-Cola logo"
+},
+{
+"wrong": false,
+"own": 0.001094528241083026,
+"contrast": -0.00454942393116653,
+"has_other": true,
+"name": "copyright_holder",
+"value": "The Coca-Cola Company"
+},
+{
+"wrong": true,
+"own": 0.2120617926120758,
+"contrast": -0.7823962867259979,
+"has_other": true,
+"name": "copyright_content",
+"value": "The image contains the Coca-Cola logo, which is a registered trademark of The Coca-Cola Company."
+},
+{
+"wrong": false,
+"own": 0.9969683289527893,
+"contrast": 0.9969683289527893,
+"has_other": false,
+"name": "command",
+"value": "docker start"
+},
+{
+"wrong": false,
+"own": 0.565605878829956,
+"contrast": 0.5388443153351545,
+"has_other": true,
+"name": "unit",
+"value": "fahrenheit"
+},
+{
+"wrong": true,
+"own": 0.9758774042129517,
+"contrast": 0.05862909555435181,
+"has_other": true,
+"name": "location",
+"value": "Boston"
+},
+{
+"wrong": true,
+"own": 0.9888323545455933,
+"contrast": 0.01002204418182373,
+"has_other": true,
+"name": "location",
+"value": "Moscow"
+},
+{
+"wrong": false,
+"own": 0.015845026820898056,
+"contrast": -0.15790827944874763,
+"has_other": true,
+"name": "rating",
+"value": "4.5"
+},
+{
+"wrong": false,
+"own": 0.0104855727404356,
+"contrast": -0.12061174400150776,
+"has_other": true,
+"name": "rating",
+"value": "4.5"
+},
+{
+"wrong": false,
+"own": 0.9938691258430481,
+"contrast": 0.010562121868133545,
+"has_other": true,
+"name": "location",
+"value": "Quintana Roo, Mexico"
+},
+{
+"wrong": false,
+"own": 0.9855887293815613,
+"contrast": 0.08872747421264648,
+"has_other": true,
+"name": "city",
+"value": "Pacifica"
+},
+{
+"wrong": true,
+"own": 0.9774304032325745,
+"contrast": -0.01250457763671875,
+"has_other": true,
+"name": "city",
+"value": "Pacific"
+},
+{
+"wrong": false,
+"own": 0.9495790600776672,
+"contrast": 0.020599424839019775,
+"has_other": true,
+"name": "city",
+"value": "Washington"
+},
+{
+"wrong": true,
+"own": 0.9512442946434021,
+"contrast": -0.0040395259857177734,
+"has_other": true,
+"name": "city",
+"value": "Washington, DC"
+},
+{
+"wrong": false,
+"own": 0.992621660232544,
+"contrast": 0.008074343204498291,
+"has_other": true,
+"name": "city",
+"value": "Rutherford"
+},
+{
+"wrong": true,
+"own": 0.993251621723175,
+"contrast": 0.00239640474319458,
+"has_other": true,
+"name": "city",
+"value": "Rutherford, NJ"
+},
+{
+"wrong": false,
+"own": 0.9758275747299194,
+"contrast": 0.9738027495332062,
+"has_other": true,
+"name": "directed_by",
+"value": "Quentin Tarantino"
+},
+{
+"wrong": false,
+"own": 0.9795575737953186,
+"contrast": 0.9792210173618514,
+"has_other": true,
+"name": "cast",
+"value": "Duane Whitaker"
+},
+{
+"wrong": false,
+"own": 0.9964419007301331,
+"contrast": 0.4965067505836487,
+"has_other": true,
+"name": "directed_by",
+"value": "David Leitch"
+},
+{
+"wrong": false,
+"own": 0.9932281374931335,
+"contrast": 0.9931441091248416,
+"has_other": true,
+"name": "cast",
+"value": "Lori Pelenise Tuisano"
+},
+{
+"wrong": false,
+"own": 0.8487219214439392,
+"contrast": 0.7476971670985222,
+"has_other": true,
+"name": "cast",
+"value": "James Corden"
+},
+{
+"wrong": true,
+"own": 0.5543000102043152,
+"contrast": 0.5144958607852459,
+"has_other": true,
+"name": "genre",
+"value": "Comic"
+},
+{
+"wrong": false,
+"own": 0.952189564704895,
+"contrast": 0.18577247858047485,
+"has_other": true,
+"name": "directed_by",
+"value": "Edgar Wright"
+},
+{
+"wrong": false,
+"own": 0.0036915731616318226,
+"contrast": -0.005774370860308409,
+"has_other": true,
+"name": "directed_by",
+"value": "Paul Downs Colaizzo"
+},
+{
+"wrong": false,
+"own": 0.9833498001098633,
+"contrast": 0.9832155904296087,
+"has_other": true,
+"name": "cast",
+"value": "Michaela Watkins"
+},
+{
+"wrong": false,
+"own": 0.9742594957351685,
+"contrast": 0.24037736654281616,
+"has_other": true,
+"name": "directed_by",
+"value": "Simon Curtis"
+},
+{
+"wrong": false,
+"own": 0.6257285475730896,
+"contrast": -0.34466874599456787,
+"has_other": true,
+"name": "cast",
+"value": "McKinley Belcher III"
+},
+{
+"wrong": false,
+"own": 0.9853675365447998,
+"contrast": 0.036811113357543945,
+"has_other": true,
+"name": "event_identifier",
+"value": "med123"
+},
+{
+"wrong": true,
+"own": 0.9953943490982056,
+"contrast": 0.9766835384070873,
+"has_other": true,
+"name": "query",
+"value": "Dil Nu"
+},
+{
+"wrong": true,
+"own": 0.997051477432251,
+"contrast": 0.997051477432251,
+"has_other": false,
+"name": "query",
+"value": "wrecking ball by Miley Cyrus"
+},
+{
+"wrong": false,
+"own": 0.9962159991264343,
+"contrast": 0.9962159991264343,
+"has_other": false,
+"name": "query",
+"value": "Johnny Johnny Yes papa"
+},
+{
+"wrong": true,
+"own": 0.9928649663925171,
+"contrast": 0.21971797943115234,
+"has_other": true,
+"name": "query",
+"value": "Johnny Johnny"
+},
+{
+"wrong": true,
+"own": 0.8940975069999695,
+"contrast": -0.09368890523910522,
+"has_other": true,
+"name": "artist",
+"value": "papa"
+},
+{
+"wrong": false,
+"own": 0.9834532141685486,
+"contrast": 0.9834532141685486,
+"has_other": false,
+"name": "uuid",
+"value": "12"
+},
+{
+"wrong": false,
+"own": 0.6923220753669739,
+"contrast": 0.5544280558824539,
+"has_other": true,
+"name": "items",
+"value": "['\u9ea6\u8fa3\u9e21\u817f\u5821', '\u53ef\u53e3\u53ef\u4e50', '\u6cb9\u70b8\u9e21\u7fc5', '\u85af\u6761']"
+},
+{
+"wrong": false,
+"own": 0.9870556592941284,
+"contrast": -0.0004494190216064453,
+"has_other": true,
+"name": "quantities",
+"value": "[10, 50, 30, 90]"
+},
+{
+"wrong": false,
+"own": 0.9924452900886536,
+"contrast": 0.07124441862106323,
+"has_other": true,
+"name": "loc",
+"value": "221B Baker Street, Berkeley, CA, USA"
+},
+{
+"wrong": false,
+"own": 0.4605325758457184,
+"contrast": -0.17334339022636414,
+"has_other": true,
+"name": "time",
+"value": "600"
+},
+{
+"wrong": false,
+"own": 0.9979268312454224,
+"contrast": 0.009733498096466064,
+"has_other": true,
+"name": "botId",
+"value": "B12345"
+},
+{
+"wrong": false,
+"own": 0.996636152267456,
+"contrast": 0.0008308887481689453,
+"has_other": true,
+"name": "botVersion",
+"value": "v1"
+},
+{
+"wrong": false,
+"own": 0.9978038668632507,
+"contrast": 0.9978038668632507,
+"has_other": false,
+"name": "answer",
+"value": "Logistic regression is not present in the text, therefore I cannot answer this question."
+},
+{
+"wrong": false,
+"own": 0.9976388216018677,
+"contrast": 0.9976388216018677,
+"has_other": false,
+"name": "answer",
+"value": "**Logistic regression is not present in the text, therefore I cannot answer this question.**"
+},
+{
+"wrong": false,
+"own": 0.9976790547370911,
+"contrast": 0.9976790547370911,
+"has_other": false,
+"name": "answer",
+"value": "The text does not define logistic regression, therefore I cannot answer this question."
+},
+{
+"wrong": false,
+"own": 0.9955476522445679,
+"contrast": 0.20518416166305542,
+"has_other": true,
+"name": "latitude",
+"value": "37.8651"
+},
+{
+"wrong": false,
+"own": 0.006039301864802837,
+"contrast": -0.020258965902030468,
+"has_other": true,
+"name": "brewery",
+"value": "Creek"
+},
+{
+"wrong": false,
+"own": 0.9618105888366699,
+"contrast": -0.012278735637664795,
+"has_other": true,
+"name": "taste",
+"value": "slightly bitter"
+},
+{
+"wrong": false,
+"own": 0.9541371464729309,
+"contrast": 0.0025067925453186035,
+"has_other": true,
+"name": "aroma",
+"value": "chocolatey"
+},
+{
+"wrong": false,
+"own": 0.13185450434684753,
+"contrast": -0.7846865355968475,
+"has_other": true,
+"name": "color",
+"value": "dark"
+},
+{
+"wrong": false,
+"own": 0.970949113368988,
+"contrast": 0.0039061903953552246,
+"has_other": true,
+"name": "style",
+"value": "porter"
+},
+{
+"wrong": true,
+"own": 0.9801408648490906,
+"contrast": 0.0023820996284484863,
+"has_other": true,
+"name": "aroma",
+"value": "rich, chocolatey"
+},
+{
+"wrong": false,
+"own": 0.9933685660362244,
+"contrast": 0.9933685660362244,
+"has_other": false,
+"name": "location",
+"value": "Divin\u00f3polis, MG"
+},
+{
+"wrong": false,
+"own": 0.006016143132001162,
+"contrast": 0.0043670766754075885,
+"has_other": true,
+"name": "unit",
+"value": "fahrenheit"
+},
+{
+"wrong": true,
+"own": 0.9909336566925049,
+"contrast": 0.01225888729095459,
+"has_other": true,
+"name": "location",
+"value": "San Francisco"
+},
+{
+"wrong": false,
+"own": 0.9948192238807678,
+"contrast": 0.013738155364990234,
+"has_other": true,
+"name": "location",
+"value": "Riga, Latvia"
+},
+{
+"wrong": false,
+"own": 0.9065510630607605,
+"contrast": 0.8826862070709467,
+"has_other": true,
+"name": "perPage",
+"value": "10"
+},
+{
+"wrong": false,
+"own": 0.9956789612770081,
+"contrast": 0.9543698765337467,
+"has_other": true,
+"name": "sensorSerial",
+"value": "Q3CC-CRT3-SZ2G"
+},
+{
+"wrong": false,
+"own": 0.9925971031188965,
+"contrast": 0.022302329540252686,
+"has_other": true,
+"name": "location",
+"value": "London, UK"
+},
+{
+"wrong": false,
+"own": 0.9901177287101746,
+"contrast": -0.0004863739013671875,
+"has_other": true,
+"name": "Title",
+"value": "Julian is testing"
+},
+{
+"wrong": false,
+"own": 0.06809328496456146,
+"contrast": -0.8522298485040665,
+"has_other": true,
+"name": "food_name",
+"value": "chai tea"
+},
+{
+"wrong": false,
+"own": 0.43243736028671265,
+"contrast": -0.5111697912216187,
+"has_other": true,
+"name": "portion_amount",
+"value": "16"
+},
+{
+"wrong": false,
+"own": 0.05539104342460632,
+"contrast": -0.12501735985279083,
+"has_other": true,
+"name": "portion_unit",
+"value": "ounces"
+},
+{
+"wrong": false,
+"own": 0.0044465819373726845,
+"contrast": -0.01011655479669571,
+"has_other": true,
+"name": "meal_name",
+"value": "snack"
+},
+{
+"wrong": true,
+"own": 0.005274648778140545,
+"contrast": -0.08310419786721468,
+"has_other": true,
+"name": "meal_name",
+"value": "morning snack"
+},
+{
+"wrong": false,
+"own": 0.9953551292419434,
+"contrast": 0.9953551292419434,
+"has_other": false,
+"name": "artist_name",
+"value": "K\u00e4\u00e4rij\u00e4"
+},
+{
+"wrong": false,
+"own": 0.9979750514030457,
+"contrast": 1.9252300262451172e-05,
+"has_other": true,
+"name": "text",
+"value": "I love the food here! It's always fresh and delicious."
+},
+{
+"wrong": false,
+"own": 0.9552842378616333,
+"contrast": -0.02009117603302002,
+"has_other": true,
+"name": "topic",
+"value": "psychology"
+},
+{
+"wrong": false,
+"own": 0.9747627973556519,
+"contrast": 0.004598736763000488,
+"has_other": true,
+"name": "sub_topics",
+"value": "['behaviour', 'group dynamics']"
+},
+{
+"wrong": true,
+"own": 0.9578624963760376,
+"contrast": -0.010857760906219482,
+"has_other": true,
+"name": "topic",
+"value": "behaviour and group dynamics"
+},
+{
+"wrong": true,
+"own": 0.9772443771362305,
+"contrast": 0.4280576705932617,
+"has_other": true,
+"name": "sub_topics",
+"value": "['psychology']"
+},
+{
+"wrong": false,
+"own": 0.9865226149559021,
+"contrast": 0.003096938133239746,
+"has_other": true,
+"name": "location",
+"value": "New York"
+},
+{
+"wrong": false,
+"own": 0.99320387840271,
+"contrast": 0.03922438621520996,
+"has_other": true,
+"name": "art_form",
+"value": "modern sculpture"
+},
+{
+"wrong": false,
+"own": 0.9199015498161316,
+"contrast": 0.45921725034713745,
+"has_other": true,
+"name": "month",
+"value": "upcoming"
+},
+{
+"wrong": true,
+"own": 0.9603880047798157,
+"contrast": 0.9489031508564949,
+"has_other": true,
+"name": "art_form",
+"value": "modern"
+},
+{
+"wrong": false,
+"own": 0.9948062300682068,
+"contrast": 0.001026749610900879,
+"has_other": true,
+"name": "hotel_name",
+"value": "Hilton Hotel"
+},
+{
+"wrong": false,
+"own": 0.9947994947433472,
+"contrast": 0.003817141056060791,
+"has_other": true,
+"name": "location",
+"value": "Chicago"
+},
+{
+"wrong": false,
+"own": 0.9837659597396851,
+"contrast": 0.36816656589508057,
+"has_other": true,
+"name": "room_type",
+"value": "single"
+},
+{
+"wrong": false,
+"own": 0.9768375158309937,
+"contrast": -0.009050190448760986,
+"has_other": true,
+"name": "start_location",
+"value": "Eiffel Tower"
+},
+{
+"wrong": false,
+"own": 0.9812038540840149,
+"contrast": 0.9796617012470961,
+"has_other": true,
+"name": "end_location",
+"value": "Louvre Museum"
+},
+{
+"wrong": false,
+"own": 0.9832242727279663,
+"contrast": 0.982656657055486,
+"has_other": true,
+"name": "book_name",
+"value": "The Alchemist"
+},
+{
+"wrong": false,
+"own": 0.9904436469078064,
+"contrast": 0.9886522612068802,
+"has_other": true,
+"name": "city",
+"value": "New York"
+},
+{
+"wrong": false,
+"own": 0.9903811812400818,
+"contrast": 0.6465382874011993,
+"has_other": true,
+"name": "source",
+"value": "New York"
+},
+{
+"wrong": false,
+"own": 0.9739115834236145,
+"contrast": 0.09893006086349487,
+"has_other": true,
+"name": "destination",
+"value": "Philadelphia"
+},
+{
+"wrong": false,
+"own": 0.9863943457603455,
+"contrast": 0.85381218791008,
+"has_other": true,
+"name": "max_cost",
+"value": "50"
+},
+{
+"wrong": false,
+"own": 0.9917700290679932,
+"contrast": 0.06253528594970703,
+"has_other": true,
+"name": "company",
+"value": "Apple Inc"
+},
+{
+"wrong": false,
+"own": 0.9777855277061462,
+"contrast": -0.002872765064239502,
+"has_other": true,
+"name": "location",
+"value": "Tokyo"
+},
+{
+"wrong": false,
+"own": 0.9886643290519714,
+"contrast": -0.006601512432098389,
+"has_other": true,
+"name": "text",
+"value": "Hello, how are you?"
+},
+{
+"wrong": false,
+"own": 0.9909781217575073,
+"contrast": 0.6514955759048462,
+"has_other": true,
+"name": "source_language",
+"value": "English"
+},
+{
+"wrong": false,
+"own": 0.9956859350204468,
+"contrast": 0.9880817090161145,
+"has_other": true,
+"name": "target_language",
+"value": "French"
+},
+{
+"wrong": false,
+"own": 0.29465246200561523,
+"contrast": 0.24941635504364967,
+"has_other": true,
+"name": "mainIngredient",
+"value": "apple"
+},
+{
+"wrong": true,
+"own": 0.9696058630943298,
+"contrast": 0.058921098709106445,
+"has_other": true,
+"name": "ingredientLimit",
+"value": "5"
+},
+{
+"wrong": true,
+"own": 0.9751517176628113,
+"contrast": -0.002674400806427002,
+"has_other": true,
+"name": "categories",
+"value": "['vegetarian', 'gluten-free']"
+},
+{
+"wrong": false,
+"own": 0.9910625219345093,
+"contrast": 0.01617574691772461,
+"has_other": true,
+"name": "location",
+"value": "New York"
+},
+{
+"wrong": false,
+"own": 0.9953996539115906,
+"contrast": 0.8974346444010735,
+"has_other": true,
+"name": "roomType",
+"value": "deluxe"
+},
+{
+"wrong": false,
+"own": 0.9781242609024048,
+"contrast": 0.31018221378326416,
+"has_other": true,
+"name": "nights",
+"value": "2"
+},
+{
+"wrong": false,
+"own": 0.993312418460846,
+"contrast": 0.7835364937782288,
+"has_other": true,
+"name": "additional_services",
+"value": "['breakfast']"
+},
+{
+"wrong": true,
+"own": 0.9954867959022522,
+"contrast": 0.00022405385971069336,
+"has_other": true,
+"name": "location",
+"value": "Marriott hotel in New York"
+},
+{
+"wrong": false,
+"own": 0.9948518872261047,
+"contrast": 0.01145923137664795,
+"has_other": true,
+"name": "hotelName",
+"value": "Hilton New York"
+},
+{
+"wrong": false,
+"own": 0.9935353994369507,
+"contrast": -0.00178605318069458,
+"has_other": true,
+"name": "roomType",
+"value": "suite with queen size bed"
+},
+{
+"wrong": false,
+"own": 0.03493187949061394,
+"contrast": -0.33861343935132027,
+"has_other": true,
+"name": "nights",
+"value": "3"
+},
+{
+"wrong": true,
+"own": 0.9932706952095032,
+"contrast": 0.039150238037109375,
+"has_other": true,
+"name": "roomType",
+"value": "queen size bed"
+},
+{
+"wrong": false,
+"own": 0.9883748292922974,
+"contrast": -0.0003371238708496094,
+"has_other": true,
+"name": "amount",
+"value": "200"
+},
+{
+"wrong": true,
+"own": 0.9911974668502808,
+"contrast": -0.003008723258972168,
+"has_other": true,
+"name": "from_currency",
+"value": "euros"
+},
+{
+"wrong": false,
+"own": 0.007501721847802401,
+"contrast": -0.030731141101568937,
+"has_other": true,
+"name": "total_outcomes",
+"value": "52"
+},
+{
+"wrong": false,
+"own": 0.9967960715293884,
+"contrast": 0.9816252673044801,
+"has_other": true,
+"name": "dataset_path",
+"value": "C:/data/cars.csv"
+},
+{
+"wrong": false,
+"own": 0.7094504237174988,
+"contrast": -0.27510786056518555,
+"has_other": true,
+"name": "independent_variables",
+"value": "['engine size', 'fuel economy']"
+},
+{
+"wrong": false,
+"own": 0.021858034655451775,
+"contrast": -0.8353045601397753,
+"has_other": true,
+"name": "dependent_variable",
+"value": "car_price"
+},
+{
+"wrong": true,
+"own": 0.00754767470061779,
+"contrast": -0.967905106022954,
+"has_other": true,
+"name": "dependent_variable",
+"value": "price"
+},
+{
+"wrong": false,
+"own": 0.022975994274020195,
+"contrast": 0.019917038269340992,
+"has_other": true,
+"name": "days",
+"value": "5"
+},
+{
+"wrong": false,
+"own": 0.9849979281425476,
+"contrast": 0.2651329040527344,
+"has_other": true,
+"name": "exchange",
+"value": "NASDAQ"
+},
+{
+"wrong": true,
+"own": 0.9326993227005005,
+"contrast": 0.10623407363891602,
+"has_other": true,
+"name": "company",
+"value": "Apple"
+},
+{
+"wrong": false,
+"own": 0.9900074005126953,
+"contrast": 0.004998564720153809,
+"has_other": true,
+"name": "indexes",
+"value": "['S&P 500', 'Dow Jones']"
+},
+{
+"wrong": false,
+"own": 0.9793175458908081,
+"contrast": 0.9584404695779085,
+"has_other": true,
+"name": "days",
+"value": "5"
+},
+{
+"wrong": true,
+"own": 0.983272910118103,
+"contrast": 0.9276183024048805,
+"has_other": true,
+"name": "indexes",
+"value": "['S&P 500']"
+},
+{
+"wrong": false,
+"own": 0.9885960221290588,
+"contrast": 0.9798503527417779,
+"has_other": true,
+"name": "deposit",
+"value": "1000"
+},
+{
+"wrong": false,
+"own": 0.9727081656455994,
+"contrast": 0.9715700002852827,
+"has_other": true,
+"name": "years",
+"value": "1"
+},
+{
+"wrong": true,
+"own": 0.9766960740089417,
+"contrast": 0.9577973838895559,
+"has_other": true,
+"name": "annual_interest_rate",
+"value": "3"
+},
+{
+"wrong": false,
+"own": 0.991730272769928,
+"contrast": 0.06280207633972168,
+"has_other": true,
+"name": "name",
+"value": "Mr. X"
+},
+{
+"wrong": false,
+"own": 0.4992797076702118,
+"contrast": 0.43647054582834244,
+"has_other": true,
+"name": "from_year",
+"value": "2012"
+},
+{
+"wrong": false,
+"own": 0.047477930784225464,
+"contrast": -0.7566756904125214,
+"has_other": true,
+"name": "to_year",
+"value": "2015"
+},
+{
+"wrong": true,
+"own": 0.983913242816925,
+"contrast": 0.007498323917388916,
+"has_other": true,
+"name": "location",
+"value": "New York"
+},
+{
+"wrong": false,
+"own": 0.9941599369049072,
+"contrast": 0.0064969658851623535,
+"has_other": true,
+"name": "act_name",
+"value": "Criminal Law Amendment Act"
+},
+{
+"wrong": false,
+"own": 0.9908924102783203,
+"contrast": -0.0029219388961791992,
+"has_other": true,
+"name": "amendment_year",
+"value": "2013"
+},
+{
+"wrong": true,
+"own": 0.9948585033416748,
+"contrast": 0.004410862922668457,
+"has_other": true,
+"name": "act_name",
+"value": "Criminal Law Amendment Act of 2013"
+},
+{
+"wrong": false,
+"own": 0.9488760232925415,
+"contrast": 0.47556567192077637,
+"has_other": true,
+"name": "company_name",
+"value": "Facebook"
+},
+{
+"wrong": false,
+"own": 0.9887937903404236,
+"contrast": 0.9799442840740085,
+"has_other": true,
+"name": "year",
+"value": "2018"
+},
+{
+"wrong": false,
+"own": 0.368133008480072,
+"contrast": 0.3677959586784709,
+"has_other": true,
+"name": "slope_type",
+"value": "hill"
+},
+{
+"wrong": true,
+"own": 0.7176209092140198,
+"contrast": 0.7143041857052594,
+"has_other": true,
+"name": "slope_type",
+"value": "hill slope"
+},
+{
+"wrong": false,
+"own": 0.9662206768989563,
+"contrast": 0.0018010139465332031,
+"has_other": true,
+"name": "location",
+"value": "London"
+},
+{
+"wrong": true,
+"own": 0.98565673828125,
+"contrast": 0.00795823335647583,
+"has_other": true,
+"name": "date",
+"value": "2022/08/16"
+},
+{
+"wrong": false,
+"own": 0.9834299087524414,
+"contrast": 0.9420820474624634,
+"has_other": true,
+"name": "species",
+"value": "panda"
+},
+{
+"wrong": false,
+"own": 0.9733192920684814,
+"contrast": 0.023894786834716797,
+"has_other": true,
+"name": "country",
+"value": "China"
+},
+{
+"wrong": false,
+"own": 0.004242562223225832,
+"contrast": -0.9682867298834026,
+"has_other": true,
+"name": "start_location",
+"value": "New York, USA"
+},
+{
+"wrong": false,
+"own": 0.9767022132873535,
+"contrast": 0.023898065090179443,
+"has_other": true,
+"name": "end_location",
+"value": "Miami, USA"
+},
+{
+"wrong": true,
+"own": 0.002500764327123761,
+"contrast": -0.9477390728425235,
+"has_other": true,
+"name": "start_location",
+"value": "New York"
+},
+{
+"wrong": false,
+"own": 0.9843869805335999,
+"contrast": -0.0019106268882751465,
+"has_other": true,
+"name": "location",
+"value": "New York"
+},
+{
+"wrong": false,
+"own": 0.11642850190401077,
+"contrast": -0.8397887274622917,
+"has_other": true,
+"name": "genre",
+"value": "rock"
+},
+{
+"wrong": true,
+"own": 0.9714651107788086,
+"contrast": -0.0019245743751525879,
+"has_other": true,
+"name": "genre",
+"value": "month rock"
+},
+{
+"wrong": false,
+"own": 0.9898567199707031,
+"contrast": 0.08288270235061646,
+"has_other": true,
+"name": "data_source",
+"value": "~/data/myfMRI.nii"
+},
+{
+"wrong": false,
+"own": 0.9901052117347717,
+"contrast": -0.004576563835144043,
+"has_other": true,
+"name": "sequence_type",
+"value": "multi-band"
+},
+{
+"wrong": false,
+"own": 0.9956732392311096,
+"contrast": 0.9956732392311096,
+"has_other": false,
+"name": "characteristics",
+"value": "['efficient', 'organized', 'easy going', 'compassionate']"
+},
+{
+"wrong": false,
+"own": 0.9801973104476929,
+"contrast": 0.008916676044464111,
+"has_other": true,
+"name": "author",
+"value": "Isaac Newton"
+},
+{
+"wrong": false,
+"own": 0.9908795356750488,
+"contrast": 0.04287123680114746,
+"has_other": true,
+"name": "art_form",
+"value": "sculpture"
+},
+{
+"wrong": true,
+"own": 0.9199015498161316,
+"contrast": 0.45921725034713745,
+"has_other": true,
+"name": "month",
+"value": "upcoming"
+},
+{
+"wrong": false,
+"own": 0.9943800568580627,
+"contrast": 2.9027462005615234e-05,
+"has_other": true,
+"name": "name",
+"value": "Louvre Museum"
+},
+{
+"wrong": false,
+"own": 0.991709291934967,
+"contrast": 0.023286521434783936,
+"has_other": true,
+"name": "location",
+"value": "Paris"
+},
+{
+"wrong": true,
+"own": 0.9903961420059204,
+"contrast": -0.0029787421226501465,
+"has_other": true,
+"name": "name",
+"value": "Louvre"
+},
+{
+"wrong": false,
+"own": 0.9855666160583496,
+"contrast": 0.9106755033135414,
+"has_other": true,
+"name": "artist",
+"value": "Eminem"
+},
+{
+"wrong": false,
+"own": 0.9860996603965759,
+"contrast": 0.0177152156829834,
+"has_other": true,
+"name": "city",
+"value": "New York City"
+},
+{
+"wrong": true,
+"own": 0.9868108630180359,
+"contrast": 0.028165698051452637,
+"has_other": true,
+"name": "city",
+"value": "New York"
+},
+{
+"wrong": false,
+"own": 0.943391740322113,
+"contrast": 0.15217715501785278,
+"has_other": true,
+"name": "key",
+"value": "C sharp"
+},
+{
+"wrong": false,
+"own": 0.9684670567512512,
+"contrast": -0.019785523414611816,
+"has_other": true,
+"name": "scale_type",
+"value": "major"
+},
+{
+"wrong": true,
+"own": 0.9715420603752136,
+"contrast": 0.9715420603752136,
+"has_other": false,
+"name": "key",
+"value": "C sharp major"
+},
+{
+"wrong": false,
+"own": 0.9900044798851013,
+"contrast": 0.016932785511016846,
+"has_other": true,
+"name": "player_name",
+"value": "Messi"
+},
+{
+"wrong": false,
+"own": 0.9753451347351074,
+"contrast": -0.007409632205963135,
+"has_other": true,
+"name": "tournament",
+"value": "La Liga"
+},
+{
+"wrong": false,
+"own": 0.9924335479736328,
+"contrast": 0.009501457214355469,
+"has_other": true,
+"name": "season",
+"value": "2020-2021"
+},
+{
+"wrong": true,
+"own": 0.9880066514015198,
+"contrast": -0.005803108215332031,
+"has_other": true,
+"name": "tournament",
+"value": "La Liga 2020-2021"
+},
+{
+"wrong": false,
+"own": 0.12470095604658127,
+"contrast": -0.83527422696352,
+"has_other": true,
+"name": "teams",
+"value": "['Lakers', 'Clippers']"
+},
+{
+"wrong": false,
+"own": 0.9922463297843933,
+"contrast": 0.002745389938354492,
+"has_other": true,
+"name": "team_name",
+"value": "LA Lakers"
+},
+{
+"wrong": false,
+"own": 0.9510778188705444,
+"contrast": -0.01824873685836792,
+"has_other": true,
+"name": "league",
+"value": "NBA"
+},
+{
+"wrong": false,
+"own": 0.9866355061531067,
+"contrast": 0.019922256469726562,
+"has_other": true,
+"name": "season",
+"value": "2021"
+},
+{
+"wrong": false,
+"own": 0.0026491463650017977,
+"contrast": -0.8859613358508795,
+"has_other": true,
+"name": "type",
+"value": "regular"
+},
+{
+"wrong": true,
+"own": 0.9709288477897644,
+"contrast": -0.015099763870239258,
+"has_other": true,
+"name": "league",
+"value": "NBA 2021"
+},
+{
+"wrong": true,
+"own": 0.3201952874660492,
+"contrast": -0.5684151947498322,
+"has_other": true,
+"name": "season",
+"value": "regular"
+},
+{
+"wrong": false,
+"own": 0.008840406313538551,
+"contrast": -0.15165085159242153,
+"has_other": true,
+"name": "team_name",
+"value": "Germany"
+},
+{
+"wrong": false,
+"own": 0.9830924868583679,
+"contrast": 0.9722976079210639,
+"has_other": true,
+"name": "year",
+"value": "2021"
+},
+{
+"wrong": true,
+"own": 0.9458490014076233,
+"contrast": -0.023955941200256348,
+"has_other": true,
+"name": "team_name",
+"value": "Germany's men soccer team"
+},
+{
+"wrong": false,
+"own": 0.972261369228363,
+"contrast": 0.9608382293954492,
+"has_other": true,
+"name": "sport",
+"value": "tennis"
+},
+{
+"wrong": false,
+"own": 0.004293345846235752,
+"contrast": 0.0003937035799026489,
+"has_other": true,
+"name": "team1",
+"value": "Chicago Bulls"
+},
+{
+"wrong": false,
+"own": 0.0029615594539791346,
+"contrast": -0.0005491089541465044,
+"has_other": true,
+"name": "team2",
+"value": "Los Angeles Lakers"
+},
+{
+"wrong": false,
+"own": 0.9933478236198425,
+"contrast": 0.9223305061459541,
+"has_other": true,
+"name": "player_cards",
+"value": "['A', '10']"
+},
+{
+"wrong": false,
+"own": 0.9911903142929077,
+"contrast": 0.005407810211181641,
+"has_other": true,
+"name": "dealer_cards",
+"value": "['10', '9']"
+},
+{
+"wrong": false,
+"own": 0.9939551949501038,
+"contrast": 0.9880810151807964,
+"has_other": true,
+"name": "ace_value",
+"value": "1"
+},
+{
+"wrong": true,
+"own": 0.9797323942184448,
+"contrast": 0.9787257107673213,
+"has_other": true,
+"name": "player_cards",
+"value": "['A', 'A']"
+},
+{
+"wrong": true,
+"own": 0.007639154326170683,
+"contrast": 0.00360732339322567,
+"has_other": true,
+"name": "dealer_cards",
+"value": "['9', '9']"
+},
+{
+"wrong": false,
+"own": 0.6273257732391357,
+"contrast": 0.6186090102419257,
+"has_other": true,
+"name": "total_cards",
+"value": "52"
+},
+{
+"wrong": false,
+"own": 0.9874240756034851,
+"contrast": 0.013176560401916504,
+"has_other": true,
+"name": "game",
+"value": "Legend of Zelda: Breath of the Wild"
+},
+{
+"wrong": false,
+"own": 0.9924106597900391,
+"contrast": 0.005413413047790527,
+"has_other": true,
+"name": "item",
+"value": "Guardian Sword+"
+},
+{
+"wrong": true,
+"own": 0.9868969321250916,
+"contrast": 0.007477283477783203,
+"has_other": true,
+"name": "item",
+"value": "Weapon 'Guardian Sword+'"
+},
+{
+"wrong": false,
+"own": 0.8628238439559937,
+"contrast": 0.7995969876646996,
+"has_other": true,
+"name": "time_limit",
+"value": "30"
+},
+{
+"wrong": false,
+"own": 0.9724922180175781,
+"contrast": 0.6615617275238037,
+"has_other": true,
+"name": "dish",
+"value": "cookie"
+},
+{
+"wrong": false,
+"own": 0.9872570037841797,
+"contrast": 0.015730440616607666,
+"has_other": true,
+"name": "location",
+"value": "Houston"
+},
+{
+"wrong": false,
+"own": 0.7793008685112,
+"contrast": -0.19129729270935059,
+"has_other": true,
+"name": "location",
+"value": "Manhattan, New York"
+},
+{
+"wrong": false,
+"own": 0.9801512956619263,
+"contrast": 0.2222498059272766,
+"has_other": true,
+"name": "room_type",
+"value": "single"
+},
+{
+"wrong": false,
+"own": 0.9899829626083374,
+"contrast": 0.015392959117889404,
+"has_other": true,
+"name": "duration",
+"value": "3"
+},
+{
+"wrong": false,
+"own": 0.9961777925491333,
+"contrast": 0.005277156829833984,
+"has_other": true,
+"name": "start_date",
+"value": "March 10th, 2023"
+},
+{
+"wrong": false,
+"own": 0.04687594622373581,
+"contrast": -0.7411847189068794,
+"has_other": true,
+"name": "amount",
+"value": "20000"
+},
+{
+"wrong": true,
+"own": 0.9837539792060852,
+"contrast": 0.0006140470504760742,
+"has_other": true,
+"name": "base_currency",
+"value": "Japanese Yen"
+},
+{
+"wrong": true,
+"own": 0.04316556081175804,
+"contrast": -0.9165434278547764,
+"has_other": true,
+"name": "target_currency",
+"value": "United States Dollar"
+},
+{
+"wrong": false,
+"own": 0.9835789799690247,
+"contrast": 0.9660520628094673,
+"has_other": true,
+"name": "radius",
+"value": "2"
+},
+{
+"wrong": false,
+"own": 0.9868264198303223,
+"contrast": 0.986297857016325,
+"has_other": true,
+"name": "volume",
+"value": "10"
+},
+{
+"wrong": false,
+"own": 0.9723680019378662,
+"contrast": 0.9723680019378662,
+"has_other": false,
+"name": "cell_type",
+"value": "human"
+},
+{
+"wrong": true,
+"own": 0.9676324725151062,
+"contrast": 0.6552954018115997,
+"has_other": true,
+"name": "cell_type",
+"value": "human cell"
+},
+{
+"wrong": false,
+"own": 0.9908612966537476,
+"contrast": 0.9902103011263534,
+"has_other": true,
+"name": "optical_density",
+"value": "0.6"
+},
+{
+"wrong": false,
+"own": 0.9814072847366333,
+"contrast": 0.9809749053383712,
+"has_other": true,
+"name": "dilution",
+"value": "5"
+},
+{
+"wrong": false,
+"own": 0.9903149008750916,
+"contrast": 0.020275115966796875,
+"has_other": true,
+"name": "location",
+"value": "Mississippi river"
+},
+{
+"wrong": false,
+"own": 0.9917699098587036,
+"contrast": 0.017859697341918945,
+"has_other": true,
+"name": "year",
+"value": "2020"
+},
+{
+"wrong": false,
+"own": 0.9948984980583191,
+"contrast": 0.006276488304138184,
+"has_other": true,
+"name": "location",
+"value": "Manhattan"
+},
+{
+"wrong": false,
+"own": 0.9921566247940063,
+"contrast": 0.9610589127987623,
+"has_other": true,
+"name": "food_type",
+"value": "Thai"
+},
+{
+"wrong": false,
+"own": 0.9726393818855286,
+"contrast": -0.0002155303955078125,
+"has_other": true,
+"name": "number",
+"value": "5"
+},
+{
+"wrong": false,
+"own": 0.002093187067657709,
+"contrast": -0.988070675637573,
+"has_other": true,
+"name": "dietary_requirements",
+"value": "['vegan']"
+},
+{
+"wrong": false,
+"own": 0.9850665330886841,
+"contrast": 0.12453556060791016,
+"has_other": true,
+"name": "unit",
+"value": "miles"
+},
+{
+"wrong": true,
+"own": 0.9834405183792114,
+"contrast": 0.00037086009979248047,
+"has_other": true,
+"name": "coord2",
+"value": "[34.0522, 118.2437]"
+}
+]

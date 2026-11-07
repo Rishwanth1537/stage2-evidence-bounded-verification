@@ -1,0 +1,42 @@
+{
+ "Groq gpt-oss-120b": {
+  "n": 168,
+  "judge_fbr": 0.354,
+  "judge_det": 0.535,
+  "union_fbr": 0.439,
+  "union_det": 0.709,
+  "contract_catches_of_judge_missed": "15/40",
+  "extra_false_blocks": 7,
+  "n_correct": 82
+ },
+ "Haiku": {
+  "n": 168,
+  "judge_fbr": 0.329,
+  "judge_det": 0.5,
+  "union_fbr": 0.439,
+  "union_det": 0.663,
+  "contract_catches_of_judge_missed": "14/43",
+  "extra_false_blocks": 9,
+  "n_correct": 82
+ },
+ "Sonnet": {
+  "n": 168,
+  "judge_fbr": 0.11,
+  "judge_det": 0.512,
+  "union_fbr": 0.268,
+  "union_det": 0.698,
+  "contract_catches_of_judge_missed": "16/42",
+  "extra_false_blocks": 13,
+  "n_correct": 82
+ },
+ "Opus": {
+  "n": 168,
+  "judge_fbr": 0.195,
+  "judge_det": 0.535,
+  "union_fbr": 0.317,
+  "union_det": 0.709,
+  "contract_catches_of_judge_missed": "15/40",
+  "extra_false_blocks": 10,
+  "n_correct": 82
+ }
+}

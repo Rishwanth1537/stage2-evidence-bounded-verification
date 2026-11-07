@@ -1,0 +1,125 @@
+{
+ "machine": {
+  "platform": "Windows-10-10.0.26220-SP0",
+  "processor": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+  "python": "3.11.9"
+ },
+ "checker": {
+  "fcrb": {
+   "n": 200,
+   "mean_ms": 0.273,
+   "p50_ms": 0.106,
+   "p95_ms": 0.997,
+   "max_ms": 2.246,
+   "mean_context_chars": 113.0
+  },
+  "cfb": {
+   "n": 100,
+   "mean_ms": 18.742,
+   "p50_ms": 4.868,
+   "p95_ms": 32.635,
+   "max_ms": 613.224,
+   "mean_context_chars": 9634.0
+  },
+  "injected": {
+   "n": 200,
+   "mean_ms": 0.9,
+   "p50_ms": 0.157,
+   "p95_ms": 2.901,
+   "max_ms": 32.55,
+   "mean_context_chars": 264.0
+  }
+ },
+ "judges": {
+  "llm_judge_args_cfb_agent_haiku_dev_v0.json": {
+   "n": 100,
+   "latency_s_mean": null,
+   "latency_s_p95": null,
+   "tokens_mean": null
+  },
+  "llm_judge_args_cfb_agent_opus_dev_v0.json": {
+   "n": 100,
+   "latency_s_mean": null,
+   "latency_s_p95": null,
+   "tokens_mean": null
+  },
+  "llm_judge_args_cfb_agent_sonnet_dev_v0.json": {
+   "n": 100,
+   "latency_s_mean": null,
+   "latency_s_p95": null,
+   "tokens_mean": null
+  },
+  "llm_judge_args_cfb_groq_openai_gpt_oss_120b_dev_v0.json": {
+   "n": 100,
+   "latency_s_mean": 1.346,
+   "latency_s_p95": 2.304,
+   "tokens_mean": 1755.8
+  },
+  "llm_judge_args_cfb_groq_openai_gpt_oss_20b_dev_v0.json": {
+   "n": 100,
+   "latency_s_mean": 1.267,
+   "latency_s_p95": 2.298,
+   "tokens_mean": 1701.5
+  },
+  "llm_judge_args_fcrb_agent_haiku_dev_v0.json": {
+   "n": 200,
+   "latency_s_mean": null,
+   "latency_s_p95": null,
+   "tokens_mean": null
+  },
+  "llm_judge_args_fcrb_agent_opus_dev_v0.json": {
+   "n": 200,
+   "latency_s_mean": null,
+   "latency_s_p95": null,
+   "tokens_mean": null
+  },
+  "llm_judge_args_fcrb_agent_sonnet_dev_v0.json": {
+   "n": 200,
+   "latency_s_mean": null,
+   "latency_s_p95": null,
+   "tokens_mean": null
+  },
+  "llm_judge_args_fcrb_groq_openai_gpt_oss_120b_dev_v0.json": {
+   "n": 200,
+   "latency_s_mean": 1.27,
+   "latency_s_p95": 2.344,
+   "tokens_mean": 520.6
+  },
+  "llm_judge_args_fcrb_groq_openai_gpt_oss_20b_dev_v0.json": {
+   "n": 200,
+   "latency_s_mean": 1.126,
+   "latency_s_p95": 2.037,
+   "tokens_mean": 508.7
+  },
+  "llm_judge_args_injected_agent_haiku_dev_v0.json": {
+   "n": 200,
+   "latency_s_mean": null,
+   "latency_s_p95": null,
+   "tokens_mean": null
+  },
+  "llm_judge_args_injected_agent_opus_dev_v0.json": {
+   "n": 200,
+   "latency_s_mean": null,
+   "latency_s_p95": null,
+   "tokens_mean": null
+  },
+  "llm_judge_args_injected_agent_sonnet_dev_v0.json": {
+   "n": 200,
+   "latency_s_mean": null,
+   "latency_s_p95": null,
+   "tokens_mean": null
+  },
+  "llm_judge_args_injected_gpt_oss_120b_dev_v0.json": {
+   "n": 200,
+   "latency_s_mean": 1.015,
+   "latency_s_p95": 1.938,
+   "tokens_mean": 520.5
+  },
+  "llm_judge_args_injected_gpt_oss_20b_dev_v0.json": {
+   "n": 200,
+   "latency_s_mean": 1.01,
+   "latency_s_p95": 1.958,
+   "tokens_mean": 508.2
+  }
+ }
+}

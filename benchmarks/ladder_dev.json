@@ -1,0 +1,163 @@
+[
+ {
+  "family": "Claude",
+  "judge": "Haiku",
+  "size_b": null,
+  "mode": "agent",
+  "n": 168,
+  "without": [
+   0.329,
+   0.5
+  ],
+  "with": [
+   0.244,
+   0.663
+  ],
+  "gain_det": 0.163,
+  "J_without": 0.171,
+  "J_with": 0.419,
+  "mcnemar_p": 0.0011,
+  "unparseable": [
+   0,
+   0
+  ]
+ },
+ {
+  "family": "Claude",
+  "judge": "Sonnet",
+  "size_b": null,
+  "mode": "agent",
+  "n": 168,
+  "without": [
+   0.11,
+   0.512
+  ],
+  "with": [
+   0.183,
+   0.709
+  ],
+  "gain_det": 0.198,
+  "J_without": 0.402,
+  "J_with": 0.526,
+  "mcnemar_p": 0.1173,
+  "unparseable": [
+   0,
+   0
+  ]
+ },
+ {
+  "family": "Claude",
+  "judge": "Opus",
+  "size_b": null,
+  "mode": "agent",
+  "n": 168,
+  "without": [
+   0.195,
+   0.535
+  ],
+  "with": [
+   0.146,
+   0.721
+  ],
+  "gain_det": 0.186,
+  "J_without": 0.34,
+  "J_with": 0.575,
+  "mcnemar_p": 0.0045,
+  "unparseable": [
+   0,
+   0
+  ]
+ },
+ {
+  "family": "Nemotron",
+  "judge": "bolt-e4b (4B)",
+  "size_b": 4,
+  "mode": "api t=0",
+  "n": 168,
+  "without": [
+   0.195,
+   0.547
+  ],
+  "with": [
+   0.244,
+   0.64
+  ],
+  "gain_det": 0.093,
+  "J_without": 0.351,
+  "J_with": 0.396,
+  "mcnemar_p": 0.6778,
+  "unparseable": [
+   0,
+   0
+  ]
+ },
+ {
+  "family": "Nemotron",
+  "judge": "lightning (30B-A3B)",
+  "size_b": 30,
+  "mode": "api t=0",
+  "n": 168,
+  "without": [
+   0.476,
+   0.651
+  ],
+  "with": [
+   0.524,
+   0.709
+  ],
+  "gain_det": 0.058,
+  "J_without": 0.176,
+  "J_with": 0.185,
+  "mcnemar_p": 1.0,
+  "unparseable": [
+   1,
+   5
+  ]
+ },
+ {
+  "family": "Nemotron",
+  "judge": "super-vl (120B-A12B)",
+  "size_b": 120,
+  "mode": "api t=0",
+  "n": 168,
+  "without": [
+   0.354,
+   0.57
+  ],
+  "with": [
+   0.402,
+   0.756
+  ],
+  "gain_det": 0.186,
+  "J_without": 0.216,
+  "J_with": 0.353,
+  "mcnemar_p": 0.0884,
+  "unparseable": [
+   0,
+   0
+  ]
+ },
+ {
+  "family": "Nemotron",
+  "judge": "ultra (550B-A55B)",
+  "size_b": 550,
+  "mode": "api t=0",
+  "n": 168,
+  "without": [
+   0.293,
+   0.57
+  ],
+  "with": [
+   0.329,
+   0.779
+  ],
+  "gain_det": 0.209,
+  "J_without": 0.277,
+  "J_with": 0.45,
+  "mcnemar_p": 0.0444,
+  "unparseable": [
+   1,
+   0
+  ]
+ }
+]

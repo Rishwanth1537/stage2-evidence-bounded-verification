@@ -1,0 +1,590 @@
+[
+[
+"B001",
+"no",
+"",
+"energy = 5 mol x 2800 kJ/mol = 14000; the definition says total energy produced"
+],
+[
+"B002",
+"no",
+"",
+"user's two categories copied; definition missing, so allowed values unchecked (low confidence)"
+],
+[
+"B003",
+"yes",
+"conversation",
+"excludeInactive=true is a restriction the user never asked for"
+],
+[
+"B004",
+"yes",
+"conversation",
+"user decision 2026-11-04 after external check: 00:00 is an invented time (user gave none)"
+],
+[
+"B005",
+"no",
+"",
+"date correct and in the documented format"
+],
+[
+"B006",
+"acceptable alternative",
+"",
+"same time in another format; the second movie belongs to a second call"
+],
+[
+"B007",
+"acceptable alternative",
+"",
+"optional flag documented for follow-up actions; the task needs a follow-up"
+],
+[
+"B008",
+"yes",
+"tool definition",
+"key is 'operator' but the definition requires 'operation'; value 25 is an int where a string is defined"
+],
+[
+"B009",
+"no",
+"",
+"all four stated preferences present and within the enums"
+],
+[
+"B010",
+"acceptable alternative",
+"",
+"'substance A' is the user's own wording; benchmark wants 'A'"
+],
+[
+"B011",
+"no",
+"",
+"definition says percentage, so 3.5 is right for 3.5%"
+],
+[
+"B012",
+"yes",
+"tool definition",
+"definition requires 'City, State'; state missing"
+],
+[
+"B013",
+"yes",
+"tool definition",
+"definition requires 'City, State' or 'City, Country'; bare 'Moscow'"
+],
+[
+"B014",
+"yes",
+"tool definition",
+"user decision 2026-11-04: 0.05 is wrong; the benchmark's percent convention (5.0) is taken as right"
+],
+[
+"B015",
+"acceptable alternative",
+"",
+"'Boston, MA' is the user's wording and a name of the city"
+],
+[
+"B016",
+"acceptable alternative",
+"",
+"free-form nickname derived from the hostname; optional, harmless"
+],
+[
+"B017",
+"no",
+"",
+"ISO-8601 without offset as defined, 10pm = 22:00"
+],
+[
+"B018",
+"yes",
+"tool definition",
+"definition requires 'City, State'; bare 'Los Angeles'"
+],
+[
+"B019",
+"no",
+"",
+"a poker hand has C(52,5) = 2598960 outcomes; 52 would give the wrong probability"
+],
+[
+"B020",
+"yes",
+"only the user",
+"'landlord's email' is a placeholder, the real address was never given; should ask"
+],
+[
+"B021",
+"acceptable alternative",
+"",
+"address as given by the user incl. ZIP, in 'Address, City, State' form"
+],
+[
+"B022",
+"no",
+"",
+"flight, date, bags, insurance and price match the confirmed summary; payment id not checkable"
+],
+[
+"B023",
+"yes",
+"conversation",
+"user wants a family therapist; agent chose Psychologist although 'Family Counselor' exists"
+],
+[
+"B024",
+"acceptable alternative",
+"",
+"duplicate of B021"
+],
+[
+"B025",
+"no",
+"",
+"date correct and in the documented format"
+],
+[
+"B026",
+"no",
+"",
+"user asked for pop concerts; Pop is in the enum"
+],
+[
+"B027",
+"yes",
+"system state",
+"bundles four flights priced 1203 while the agreed plan and the payments total 833; price lookup needed"
+],
+[
+"B028",
+"acceptable alternative",
+"",
+"the Principia is where the law was published; a reasonable work title"
+],
+[
+"B029",
+"yes",
+"conversation",
+"user decision 2026-11-04 after external check: dropping 'slightly' loses part of the user's value"
+],
+[
+"B030",
+"acceptable alternative",
+"",
+"user's own 'Rutherford, NJ'; definition asks for the city name"
+],
+[
+"B031",
+"acceptable alternative",
+"",
+"Chinese rendering of 'Shanghai, China' in the City, Country form; benchmark lists it"
+],
+[
+"B032",
+"yes",
+"conversation",
+"'~' expanded to '/home' giving /home/data/..., not the path the user wrote"
+],
+[
+"B033",
+"no",
+"",
+"duplicate of B009"
+],
+[
+"B034",
+"no",
+"",
+"purpose derived from the user's words (wake up, meeting)"
+],
+[
+"B035",
+"yes",
+"tool definition",
+"5 items to exchange but 2 new items; counts must match, and this tool cannot cancel items"
+],
+[
+"B036",
+"yes",
+"conversation",
+"URL still contains the literal {ip} placeholder; user gave 192.120.45.67"
+],
+[
+"B037",
+"acceptable alternative",
+"",
+"optional flag set beyond the default; harmless superset of a tech stack"
+],
+[
+"B038",
+"acceptable alternative",
+"",
+"'Atlanta, GA' is the user's wording and a city name"
+],
+[
+"B039",
+"yes",
+"conversation",
+"season should be 2021; 'regular' drops the year the user gave"
+],
+[
+"B040",
+"acceptable alternative",
+"",
+"user gave one date and time; using it as end of the availability window is a plausible reading"
+],
+[
+"B041",
+"yes",
+"tool definition",
+"3 items to exchange and none given as new items; counts must match"
+],
+[
+"B042",
+"acceptable alternative",
+"",
+"'Guangzhou, CN' follows the City, Country pattern with a country code"
+],
+[
+"B043",
+"yes",
+"tool definition",
+"'us' is not in the enum (metric, imperial); user gave no units"
+],
+[
+"B044",
+"acceptable alternative",
+"",
+"'City, Country' as the definition asks for non-US cities"
+],
+[
+"B045",
+"yes",
+"conversation",
+"user named the director Gene Stupnitsky; agent used dontcare"
+],
+[
+"B046",
+"no",
+"",
+"order and items match the plan the user confirmed; refund method not checkable"
+],
+[
+"B047",
+"no",
+"",
+"user said pop is their genre"
+],
+[
+"B048",
+"yes",
+"conversation",
+"user did not ask for regular shows; the documented default would include all types"
+],
+[
+"B049",
+"no",
+"",
+"county from the request"
+],
+[
+"B050",
+"no",
+"",
+"duplicate of B011"
+],
+[
+"B051",
+"no",
+"",
+"income from the request"
+],
+[
+"B052",
+"acceptable alternative",
+"",
+"user gave an album as the primary filter and 2019 only as an alternative; dontcare for the album search is reasonable"
+],
+[
+"B053",
+"no",
+"",
+"base 3 as asked"
+],
+[
+"B054",
+"no",
+"",
+"two bathrooms as asked"
+],
+[
+"B055",
+"yes",
+"conversation",
+"user asked for Akiko Kawase in the cast; agent used dontcare"
+],
+[
+"B056",
+"no",
+"",
+"address in 'Street, City, State' form"
+],
+[
+"B057",
+"no",
+"",
+"duplicate of B047"
+],
+[
+"B058",
+"acceptable alternative",
+"",
+"duplicate of B030"
+],
+[
+"B059",
+"yes",
+"conversation",
+"duplicate of B004; same decision"
+],
+[
+"B060",
+"yes",
+"tool definition",
+"'toll roads' is not in the enum (tolls, highways, ferries)"
+],
+[
+"B061",
+"cannot tell",
+"",
+"'medium red' could be a shade or size medium plus colour red; only the user can say"
+],
+[
+"B062",
+"yes",
+"conversation",
+"user gave no date; agent invented 04/01/2023, also not YYYY-MM-DD"
+],
+[
+"B063",
+"yes",
+"system state",
+"system says the order is not delivered, so an exchange is not allowed; order status needed"
+],
+[
+"B064",
+"no",
+"",
+"user's own phrase for the work"
+],
+[
+"B065",
+"yes",
+"tool definition",
+"definition gives 'City, ST' by example; state missing (lower confidence: example only)"
+],
+[
+"B066",
+"yes",
+"system state",
+"exchange on an order already in a return/non-delivered state; order status needed"
+],
+[
+"B067",
+"yes",
+"tool definition",
+"duplicate of B060"
+],
+[
+"B068",
+"yes",
+"only the user",
+"'landlord_email' is a placeholder, the real address was never given"
+],
+[
+"B069",
+"no",
+"",
+"y = 4 for the first point (3, 4)"
+],
+[
+"B070",
+"yes",
+"tool definition",
+"definition gives 'City, ST' by example; state missing (lower confidence: example only)"
+],
+[
+"B071",
+"no",
+"",
+"IATA code explicitly allowed"
+],
+[
+"B072",
+"no",
+"",
+"actor from the request"
+],
+[
+"B073",
+"no",
+"",
+"second team as named"
+],
+[
+"B074",
+"yes",
+"tool definition",
+"definition requires 'City, State'; bare 'Philadelphia'"
+],
+[
+"B075",
+"yes",
+"conversation",
+"destination should be the Louvre Museum; 'Paris, France' loses it"
+],
+[
+"B076",
+"yes",
+"conversation",
+"user asked to cancel order #W3189752; agent exchanges items of a different order #W5166363"
+],
+[
+"B077",
+"acceptable alternative",
+"",
+"'Beijing' as the search query is a reasonable reduction of 'where is beijing'"
+],
+[
+"B078",
+"no",
+"",
+"13 hearts in 52 cards"
+],
+[
+"B079",
+"no",
+"",
+"item name from the request"
+],
+[
+"B080",
+"yes",
+"conversation",
+"user asked for no category; agent restricted to Museum; default dontcare"
+],
+[
+"B081",
+"no",
+"",
+"City, Country form, Celsius is a separate argument"
+],
+[
+"B082",
+"yes",
+"conversation",
+"Daniel Camp is the cast member, not the director; also not a name"
+],
+[
+"B083",
+"yes",
+"conversation",
+"user asked for child-friendly; agent used dontcare"
+],
+[
+"B084",
+"acceptable alternative",
+"",
+"equals the documented default (true)"
+],
+[
+"B085",
+"yes",
+"tool definition",
+"duplicate of B008: 'operator' instead of 'operation'"
+],
+[
+"B086",
+"yes",
+"conversation",
+"'currently sep 2023' and 'the 9th' give 2023-09-09, not October"
+],
+[
+"B087",
+"no",
+"",
+"null is the documented no-preference value"
+],
+[
+"B088",
+"yes",
+"tool definition",
+"definition requires 'City, State'; bare 'San Francisco'"
+],
+[
+"B089",
+"no",
+"",
+"reservation id matches; the fault, if any, is the decision to cancel (policy), not the argument"
+],
+[
+"B090",
+"no",
+"",
+"dish from the request"
+],
+[
+"B091",
+"no",
+"",
+"category named by the user"
+],
+[
+"B092",
+"yes",
+"tool definition",
+"'hello' is not about linking accounts; queries also reworded"
+],
+[
+"B093",
+"no",
+"",
+"category named by the user"
+],
+[
+"B094",
+"yes",
+"tool definition",
+"definition requires 'City, State'; bare 'San Ramon'"
+],
+[
+"B095",
+"no",
+"",
+"user did not ask about kids; dontcare is right"
+],
+[
+"B096",
+"no",
+"",
+"duplicate of B001"
+],
+[
+"B097",
+"yes",
+"tool definition",
+"'2023.10.2' is not YYYY-MM-DD"
+],
+[
+"B098",
+"cannot tell",
+"",
+"whether the cabin upgrade took effect (tool output truncated) and the bag allowance are not shown"
+]
+]

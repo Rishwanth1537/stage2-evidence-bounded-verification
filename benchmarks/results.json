@@ -1,0 +1,920 @@
+{
+  "accuracy": 0.75,
+  "precision": 0.8182,
+  "recall": 0.6207,
+  "f1": 0.7059,
+  "tp": 18,
+  "fp": 4,
+  "tn": 27,
+  "fn": 11,
+  "per_type_metrics": {
+    "content": {
+      "accuracy": 0.6,
+      "precision": 0.75,
+      "recall": 0.25,
+      "f1": 0.375,
+      "tp": 3,
+      "fp": 1,
+      "tn": 12,
+      "fn": 9
+    },
+    "format": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 7,
+      "fp": 0,
+      "tn": 6,
+      "fn": 0
+    },
+    "schema": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 6,
+      "fp": 0,
+      "tn": 6,
+      "fn": 0
+    },
+    "negation": {
+      "accuracy": 0.6,
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "tp": 1,
+      "fp": 1,
+      "tn": 2,
+      "fn": 1
+    },
+    "role_swap": {
+      "accuracy": 0.4,
+      "precision": 0.3333,
+      "recall": 0.5,
+      "f1": 0.4,
+      "tp": 1,
+      "fp": 2,
+      "tn": 1,
+      "fn": 1
+    }
+  },
+  "predictions": [
+    {
+      "id": "T01",
+      "prediction": false,
+      "ground_truth": true,
+      "type": "content",
+      "score": 0.5814,
+      "ged_norm": 0.4186,
+      "mismatched_spans": [
+        {
+          "span": "20%",
+          "type": "content",
+          "issue": "Entailment score 0.01 \u2014 span not supported by premise."
+        },
+        {
+          "span": "$5M",
+          "type": "content",
+          "issue": "Entailment score 0.28 \u2014 span not supported by premise."
+        }
+      ],
+      "feedback": "The following spans lack grounding in the provided context:\n- \"20%\" [HallucinationType.CONTENT]: Entailment score 0.01 \u2014 span not supported by premise.\n- \"$5M\" [HallucinationType.CONTENT]: Entailment score 0.28 \u2014 span not supported by premise.\nRevise these before executing the planned action."
+    },
+    {
+      "id": "T02",
+      "prediction": false,
+      "ground_truth": false,
+      "type": "content",
+      "score": 0.9861,
+      "ged_norm": 0.0139,
+      "mismatched_spans": [
+        {
+          "span": "500",
+          "type": "content",
+          "issue": "Entailment score 0.00 \u2014 span not supported by premise."
+        }
+      ],
+      "feedback": "The following spans lack grounding in the provided context:\n- \"500\" [HallucinationType.CONTENT]: Entailment score 0.00 \u2014 span not supported by premise.\nRevise these before executing the planned action."
+    },
+    {
+      "id": "T03",
+      "prediction": false,
+      "ground_truth": false,
+      "type": "content",
+      "score": 0.6635,
+      "ged_norm": 0.3365,
+      "mismatched_spans": [
+        {
+          "span": "reboot",
+          "type": "content",
+          "issue": "Entailment score 0.00 \u2014 span not supported by premise."
+        }
+      ],
+      "feedback": "The following spans lack grounding in the provided context:\n- \"reboot\" [HallucinationType.CONTENT]: Entailment score 0.00 \u2014 span not supported by premise.\nRevise these before executing the planned action."
+    },
+    {
+      "id": "T04",
+      "prediction": false,
+      "ground_truth": true,
+      "type": "content",
+      "score": 0.7143,
+      "ged_norm": 0.2857,
+      "mismatched_spans": [
+        {
+          "span": "456",
+          "type": "content",
+          "issue": "Entailment score 0.01 \u2014 span not supported by premise."
+        }
+      ],
+      "feedback": "The following spans lack grounding in the provided context:\n- \"456\" [HallucinationType.CONTENT]: Entailment score 0.01 \u2014 span not supported by premise.\nRevise these before executing the planned action."
+    },
+    {
+      "id": "T05",
+      "prediction": false,
+      "ground_truth": false,
+      "type": "content",
+      "score": 0.5643,
+      "ged_norm": 0.4357,
+      "mismatched_spans": [
+        {
+          "span": "2.4.1",
+          "type": "content",
+          "issue": "Entailment score 0.00 \u2014 span not supported by premise."
+        }
+      ],
+      "feedback": "The following spans lack grounding in the provided context:\n- \"2.4.1\" [HallucinationType.CONTENT]: Entailment score 0.00 \u2014 span not supported by premise.\nRevise these before executing the planned action."
+    },
+    {
+      "id": "T06",
+      "prediction": true,
+      "ground_truth": true,
+      "type": "content",
+      "score": 0.8146,
+      "ged_norm": 0.1854,
+      "mismatched_spans": [],
+      "feedback": "Reasoning chain is structurally consistent with the provided context."
+    },
+    {
+      "id": "T07",
+      "prediction": false,
+      "ground_truth": false,
+      "type": "content",
+      "score": 0.6818,
+      "ged_norm": 0.3182,
+      "mismatched_spans": [
+        {
+          "span": "drop",
+          "type": "content",
+          "issue": "Entailment score 0.00 \u2014 span not supported by premise."
+        },
+        {
+          "span": "5 degrees Celsius",
+          "type": "content",
+          "issue": "Entailment score 0.00 \u2014 span not supported by premise."
+        }
+      ],
+      "feedback": "The following spans lack grounding in the provided context:\n- \"drop\" [HallucinationType.CONTENT]: Entailment score 0.00 \u2014 span not supported by premise.\n- \"5 degrees Celsius\" [HallucinationType.CONTENT]: Entailment score 0.00 \u2014 span not supported by premise.\nRevise these before executing the planned action."
+    },
+    {
+      "id": "T08",
+      "prediction": true,
+      "ground_truth": false,
+      "type": "content",
+      "score": 0.7551,
+      "ged_norm": 0.2449,
+      "mismatched_spans": [],
+      "feedback": "Reasoning chain is structurally consistent with the provided context."
+    },
+    {
+      "id": "T09",
+      "prediction": true,
+      "ground_truth": true,
+      "type": "content",
+      "score": 0.881,
+      "ged_norm": 0.119,
+      "mismatched_spans": [],
+      "feedback": "Reasoning chain is structurally consistent with the provided context."
+    },
+    {
+      "id": "T10",
+      "prediction": true,
+      "ground_truth": true,
+      "type": "content",
+      "score": 0.8947,
+      "ged_norm": 0.1053,
+      "mismatched_spans": [],
+      "feedback": "Reasoning chain is structurally consistent with the provided context."
+    },
+    {
+      "id": "T11",
+      "prediction": false,
+      "ground_truth": false,
+      "type": "content",
+      "score": 0.5093,
+      "ged_norm": 0.4907,
+      "mismatched_spans": [
+        {
+          "span": "30%",
+          "type": "content",
+          "issue": "Entailment score 0.00 \u2014 span not supported by premise."
+        }
+      ],
+      "feedback": "The following spans lack grounding in the provided context:\n- \"30%\" [HallucinationType.CONTENT]: Entailment score 0.00 \u2014 span not supported by premise.\nRevise these before executing the planned action."
+    },
+    {
+      "id": "T12",
+      "prediction": false,
+      "ground_truth": true,
+      "type": "content",
+      "score": 0.5667,
+      "ged_norm": 0.4333,
+      "mismatched_spans": [
+        {
+          "span": "42",
+          "type": "content",
+          "issue": "Entailment score 0.02 \u2014 span not supported by premise."
+        }
+      ],
+      "feedback": "The following spans lack grounding in the provided context:\n- \"42\" [HallucinationType.CONTENT]: Entailment score 0.02 \u2014 span not supported by premise.\nRevise these before executing the planned action."
+    },
+    {
+      "id": "T13",
+      "prediction": false,
+      "ground_truth": false,
+      "type": "content",
+      "score": 0.6444,
+      "ged_norm": 0.3556,
+      "mismatched_spans": [
+        {
+          "span": "December 15th",
+          "type": "content",
+          "issue": "Entailment score 0.00 \u2014 span not supported by premise."
+        }
+      ],
+      "feedback": "The following spans lack grounding in the provided context:\n- \"December 15th\" [HallucinationType.CONTENT]: Entailment score 0.00 \u2014 span not supported by premise.\nRevise these before executing the planned action."
+    },
+    {
+      "id": "T14",
+      "prediction": false,
+      "ground_truth": false,
+      "type": "content",
+      "score": 0.7256,
+      "ged_norm": 0.2744,
+      "mismatched_spans": [
+        {
+          "span": "1000",
+          "type": "content",
+          "issue": "Entailment score 0.00 \u2014 span not supported by premise."
+        }
+      ],
+      "feedback": "The following spans lack grounding in the provided context:\n- \"1000\" [HallucinationType.CONTENT]: Entailment score 0.00 \u2014 span not supported by premise.\nRevise these before executing the planned action."
+    },
+    {
+      "id": "T15",
+      "prediction": false,
+      "ground_truth": true,
+      "type": "content",
+      "score": 0.7391,
+      "ged_norm": 0.2609,
+      "mismatched_spans": [
+        {
+          "span": "Bob",
+          "type": "content",
+          "issue": "Entailment score 0.00 \u2014 span not supported by premise."
+        },
+        {
+          "span": "99",
+          "type": "content",
+          "issue": "Entailment score 0.12 \u2014 span not supported by premise."
+        }
+      ],
+      "feedback": "The following spans lack grounding in the provided context:\n- \"Bob\" [HallucinationType.CONTENT]: Entailment score 0.00 \u2014 span not supported by premise.\n- \"99\" [HallucinationType.CONTENT]: Entailment score 0.12 \u2014 span not supported by premise.\nRevise these before executing the planned action."
+    },
+    {
+      "id": "T16",
+      "prediction": true,
+      "ground_truth": true,
+      "type": "format",
+      "score": 1.0,
+      "ged_norm": 0.0,
+      "mismatched_spans": [],
+      "feedback": "Schema aligned."
+    },
+    {
+      "id": "T17",
+      "prediction": false,
+      "ground_truth": false,
+      "type": "format",
+      "score": 0.5,
+      "ged_norm": 0.0,
+      "mismatched_spans": [
+        {
+          "span": "price",
+          "type": "format",
+          "issue": "Field 'price' expected type 'number' but got str."
+        }
+      ],
+      "feedback": "Field 'price' expected type 'number' but got str."
+    },
+    {
+      "id": "T18",
+      "prediction": true,
+      "ground_truth": true,
+      "type": "format",
+      "score": 1.0,
+      "ged_norm": 0.0,
+      "mismatched_spans": [],
+      "feedback": "Schema aligned."
+    },
+    {
+      "id": "T19",
+      "prediction": true,
+      "ground_truth": true,
+      "type": "format",
+      "score": 1.0,
+      "ged_norm": 0.0,
+      "mismatched_spans": [],
+      "feedback": "Schema aligned."
+    },
+    {
+      "id": "T20",
+      "prediction": true,
+      "ground_truth": true,
+      "type": "format",
+      "score": 1.0,
+      "ged_norm": 0.0,
+      "mismatched_spans": [],
+      "feedback": "Schema aligned."
+    },
+    {
+      "id": "T21",
+      "prediction": false,
+      "ground_truth": false,
+      "type": "format",
+      "score": 0.0,
+      "ged_norm": 0.0,
+      "mismatched_spans": [
+        {
+          "span": "count",
+          "type": "format",
+          "issue": "Field 'count' expected type 'integer' but got str."
+        }
+      ],
+      "feedback": "Field 'count' expected type 'integer' but got str."
+    },
+    {
+      "id": "T22",
+      "prediction": true,
+      "ground_truth": true,
+      "type": "format",
+      "score": 1.0,
+      "ged_norm": 0.0,
+      "mismatched_spans": [],
+      "feedback": "Schema aligned."
+    },
+    {
+      "id": "T23",
+      "prediction": true,
+      "ground_truth": true,
+      "type": "format",
+      "score": 1.0,
+      "ged_norm": 0.0,
+      "mismatched_spans": [],
+      "feedback": "Schema aligned."
+    },
+    {
+      "id": "T24",
+      "prediction": false,
+      "ground_truth": false,
+      "type": "schema",
+      "score": 0.3333,
+      "ged_norm": 0.0,
+      "mismatched_spans": [
+        {
+          "span": "quantity",
+          "type": "schema",
+          "issue": "Required field 'quantity' is missing from agent_args."
+        },
+        {
+          "span": "address",
+          "type": "schema",
+          "issue": "Required field 'address' is missing from agent_args."
+        }
+      ],
+      "feedback": "Required field 'quantity' is missing from agent_args.; Required field 'address' is missing from agent_args."
+    },
+    {
+      "id": "T25",
+      "prediction": true,
+      "ground_truth": true,
+      "type": "schema",
+      "score": 1.0,
+      "ged_norm": 0.0,
+      "mismatched_spans": [],
+      "feedback": "Schema aligned."
+    },
+    {
+      "id": "T26",
+      "prediction": false,
+      "ground_truth": false,
+      "type": "schema",
+      "score": 0.6667,
+      "ged_norm": 0.0,
+      "mismatched_spans": [
+        {
+          "span": "email",
+          "type": "schema",
+          "issue": "Required field 'email' is missing from agent_args."
+        }
+      ],
+      "feedback": "Required field 'email' is missing from agent_args."
+    },
+    {
+      "id": "T27",
+      "prediction": true,
+      "ground_truth": true,
+      "type": "schema",
+      "score": 1.0,
+      "ged_norm": 0.0,
+      "mismatched_spans": [],
+      "feedback": "Schema aligned."
+    },
+    {
+      "id": "T28",
+      "prediction": false,
+      "ground_truth": false,
+      "type": "schema",
+      "score": 0.3333,
+      "ged_norm": 0.0,
+      "mismatched_spans": [
+        {
+          "span": "height",
+          "type": "schema",
+          "issue": "Required field 'height' is missing from agent_args."
+        },
+        {
+          "span": "image_path",
+          "type": "schema",
+          "issue": "Required field 'image_path' is missing from agent_args."
+        }
+      ],
+      "feedback": "Required field 'height' is missing from agent_args.; Required field 'image_path' is missing from agent_args."
+    },
+    {
+      "id": "T29",
+      "prediction": true,
+      "ground_truth": true,
+      "type": "schema",
+      "score": 1.0,
+      "ged_norm": 0.0,
+      "mismatched_spans": [],
+      "feedback": "Schema aligned."
+    },
+    {
+      "id": "T30",
+      "prediction": false,
+      "ground_truth": false,
+      "type": "schema",
+      "score": 0.6667,
+      "ged_norm": 0.0,
+      "mismatched_spans": [
+        {
+          "span": "confirmed",
+          "type": "schema",
+          "issue": "Required field 'confirmed' is missing from agent_args."
+        }
+      ],
+      "feedback": "Required field 'confirmed' is missing from agent_args."
+    },
+    {
+      "id": "T31",
+      "prediction": true,
+      "ground_truth": false,
+      "type": "negation",
+      "score": 0.7344,
+      "ged_norm": 0.2656,
+      "mismatched_spans": [],
+      "feedback": "Reasoning chain is structurally consistent with the provided context."
+    },
+    {
+      "id": "T32",
+      "prediction": false,
+      "ground_truth": false,
+      "type": "negation",
+      "score": 0.6176,
+      "ged_norm": 0.3824,
+      "mismatched_spans": [],
+      "feedback": "Reasoning chain is structurally consistent with the provided context."
+    },
+    {
+      "id": "T33",
+      "prediction": false,
+      "ground_truth": false,
+      "type": "negation",
+      "score": 0.7632,
+      "ged_norm": 0.2368,
+      "mismatched_spans": [
+        {
+          "span": "delete",
+          "type": "content",
+          "issue": "Entailment score 0.00 \u2014 span not supported by premise."
+        }
+      ],
+      "feedback": "The following spans lack grounding in the provided context:\n- \"delete\" [HallucinationType.CONTENT]: Entailment score 0.00 \u2014 span not supported by premise.\nRevise these before executing the planned action."
+    },
+    {
+      "id": "T34",
+      "prediction": false,
+      "ground_truth": true,
+      "type": "negation",
+      "score": 0.625,
+      "ged_norm": 0.375,
+      "mismatched_spans": [],
+      "feedback": "Reasoning chain is structurally consistent with the provided context."
+    },
+    {
+      "id": "T35",
+      "prediction": true,
+      "ground_truth": true,
+      "type": "negation",
+      "score": 0.766,
+      "ged_norm": 0.234,
+      "mismatched_spans": [],
+      "feedback": "Reasoning chain is structurally consistent with the provided context."
+    },
+    {
+      "id": "T36",
+      "prediction": false,
+      "ground_truth": false,
+      "type": "role_swap",
+      "score": 0.9579,
+      "ged_norm": 0.0421,
+      "mismatched_spans": [
+        {
+          "span": "150",
+          "type": "content",
+          "issue": "Entailment score 0.13 \u2014 span not supported by premise."
+        }
+      ],
+      "feedback": "The following spans lack grounding in the provided context:\n- \"150\" [HallucinationType.CONTENT]: Entailment score 0.13 \u2014 span not supported by premise.\nRevise these before executing the planned action."
+    },
+    {
+      "id": "T37",
+      "prediction": false,
+      "ground_truth": true,
+      "type": "role_swap",
+      "score": 0.7647,
+      "ged_norm": 0.2353,
+      "mismatched_spans": [
+        {
+          "span": "approve",
+          "type": "content",
+          "issue": "Entailment score 0.00 \u2014 span not supported by premise."
+        }
+      ],
+      "feedback": "The following spans lack grounding in the provided context:\n- \"approve\" [HallucinationType.CONTENT]: Entailment score 0.00 \u2014 span not supported by premise.\nRevise these before executing the planned action."
+    },
+    {
+      "id": "T38",
+      "prediction": true,
+      "ground_truth": false,
+      "type": "role_swap",
+      "score": 0.8333,
+      "ged_norm": 0.1667,
+      "mismatched_spans": [],
+      "feedback": "Reasoning chain is structurally consistent with the provided context."
+    },
+    {
+      "id": "T39",
+      "prediction": true,
+      "ground_truth": false,
+      "type": "role_swap",
+      "score": 0.9706,
+      "ged_norm": 0.0294,
+      "mismatched_spans": [],
+      "feedback": "Reasoning chain is structurally consistent with the provided context."
+    },
+    {
+      "id": "T40",
+      "prediction": true,
+      "ground_truth": true,
+      "type": "role_swap",
+      "score": 1.0,
+      "ged_norm": 0.0,
+      "mismatched_spans": [],
+      "feedback": "Reasoning chain is structurally consistent with the provided context."
+    },
+    {
+      "id": "T41",
+      "prediction": false,
+      "ground_truth": false,
+      "type": "format",
+      "score": 0.0,
+      "ged_norm": 0.0,
+      "mismatched_spans": [
+        {
+          "span": "priority",
+          "type": "format",
+          "issue": "Field 'priority' value 'critical' is not one of the allowed enum values: ['low', 'medium', 'high']."
+        }
+      ],
+      "feedback": "Field 'priority' value 'critical' is not one of the allowed enum values: ['low', 'medium', 'high']."
+    },
+    {
+      "id": "T42",
+      "prediction": false,
+      "ground_truth": false,
+      "type": "format",
+      "score": 0.0,
+      "ged_norm": 0.0,
+      "mismatched_spans": [
+        {
+          "span": "email",
+          "type": "format",
+          "issue": "Field 'email' value 'notanemail' does not match required pattern /^[^@]+@[^@]+$/."
+        }
+      ],
+      "feedback": "Field 'email' value 'notanemail' does not match required pattern /^[^@]+@[^@]+$/."
+    },
+    {
+      "id": "T43",
+      "prediction": false,
+      "ground_truth": false,
+      "type": "format",
+      "score": 0.0,
+      "ged_norm": 0.0,
+      "mismatched_spans": [
+        {
+          "span": "retry_count",
+          "type": "format",
+          "issue": "Field 'retry_count' value 10 exceeds maximum 5."
+        }
+      ],
+      "feedback": "Field 'retry_count' value 10 exceeds maximum 5."
+    },
+    {
+      "id": "T44",
+      "prediction": true,
+      "ground_truth": true,
+      "type": "format",
+      "score": 1.0,
+      "ged_norm": 0.0,
+      "mismatched_spans": [],
+      "feedback": "Schema aligned."
+    },
+    {
+      "id": "T45",
+      "prediction": false,
+      "ground_truth": false,
+      "type": "format",
+      "score": 0.0,
+      "ged_norm": 0.0,
+      "mismatched_spans": [
+        {
+          "span": "token",
+          "type": "format",
+          "issue": "Field 'token' is too short (min 8 chars)."
+        }
+      ],
+      "feedback": "Field 'token' is too short (min 8 chars)."
+    },
+    {
+      "id": "T46",
+      "prediction": true,
+      "ground_truth": true,
+      "type": "schema",
+      "score": 1.0,
+      "ged_norm": 0.0,
+      "mismatched_spans": [],
+      "feedback": "Schema aligned."
+    },
+    {
+      "id": "T47",
+      "prediction": false,
+      "ground_truth": false,
+      "type": "schema",
+      "score": 0.75,
+      "ged_norm": 0.0,
+      "mismatched_spans": [
+        {
+          "span": "currency",
+          "type": "schema",
+          "issue": "Required field 'currency' is missing from agent_args."
+        }
+      ],
+      "feedback": "Required field 'currency' is missing from agent_args."
+    },
+    {
+      "id": "T48",
+      "prediction": false,
+      "ground_truth": false,
+      "type": "schema",
+      "score": 0.6667,
+      "ged_norm": 0.0,
+      "mismatched_spans": [
+        {
+          "span": "ami_id",
+          "type": "schema",
+          "issue": "Required field 'ami_id' is missing from agent_args."
+        }
+      ],
+      "feedback": "Required field 'ami_id' is missing from agent_args."
+    },
+    {
+      "id": "T49",
+      "prediction": true,
+      "ground_truth": true,
+      "type": "schema",
+      "score": 1.0,
+      "ged_norm": 0.0,
+      "mismatched_spans": [],
+      "feedback": "Schema aligned."
+    },
+    {
+      "id": "T50",
+      "prediction": true,
+      "ground_truth": true,
+      "type": "schema",
+      "score": 1.0,
+      "ged_norm": 0.0,
+      "mismatched_spans": [],
+      "feedback": "Schema aligned."
+    },
+    {
+      "id": "T51",
+      "prediction": false,
+      "ground_truth": false,
+      "type": "content",
+      "score": 0.7159,
+      "ged_norm": 0.2841,
+      "mismatched_spans": [
+        {
+          "span": "140/90 mmHg",
+          "type": "content",
+          "issue": "Entailment score 0.00 \u2014 span not supported by premise."
+        }
+      ],
+      "feedback": "The following spans lack grounding in the provided context:\n- \"140/90 mmHg\" [HallucinationType.CONTENT]: Entailment score 0.00 \u2014 span not supported by premise.\nRevise these before executing the planned action."
+    },
+    {
+      "id": "T52",
+      "prediction": false,
+      "ground_truth": true,
+      "type": "content",
+      "score": 0.881,
+      "ged_norm": 0.119,
+      "mismatched_spans": [
+        {
+          "span": "2025-03-01",
+          "type": "content",
+          "issue": "Entailment score 0.01 \u2014 span not supported by premise."
+        },
+        {
+          "span": "expire",
+          "type": "content",
+          "issue": "Entailment score 0.04 \u2014 span not supported by premise."
+        }
+      ],
+      "feedback": "The following spans lack grounding in the provided context:\n- \"2025-03-01\" [HallucinationType.CONTENT]: Entailment score 0.01 \u2014 span not supported by premise.\n- \"expire\" [HallucinationType.CONTENT]: Entailment score 0.04 \u2014 span not supported by premise.\nRevise these before executing the planned action."
+    },
+    {
+      "id": "T53",
+      "prediction": false,
+      "ground_truth": true,
+      "type": "content",
+      "score": 0.6471,
+      "ged_norm": 0.3529,
+      "mismatched_spans": [
+        {
+          "span": "3",
+          "type": "content",
+          "issue": "Entailment score 0.02 \u2014 span not supported by premise."
+        }
+      ],
+      "feedback": "The following spans lack grounding in the provided context:\n- \"3\" [HallucinationType.CONTENT]: Entailment score 0.02 \u2014 span not supported by premise.\nRevise these before executing the planned action."
+    },
+    {
+      "id": "T54",
+      "prediction": false,
+      "ground_truth": false,
+      "type": "content",
+      "score": 0.7069,
+      "ged_norm": 0.2931,
+      "mismatched_spans": [
+        {
+          "span": "1,500,000",
+          "type": "content",
+          "issue": "Entailment score 0.00 \u2014 span not supported by premise."
+        }
+      ],
+      "feedback": "The following spans lack grounding in the provided context:\n- \"1,500,000\" [HallucinationType.CONTENT]: Entailment score 0.00 \u2014 span not supported by premise.\nRevise these before executing the planned action."
+    },
+    {
+      "id": "T55",
+      "prediction": false,
+      "ground_truth": true,
+      "type": "content",
+      "score": 0.7242,
+      "ged_norm": 0.2758,
+      "mismatched_spans": [
+        {
+          "span": "7",
+          "type": "content",
+          "issue": "Entailment score 0.01 \u2014 span not supported by premise."
+        },
+        {
+          "span": "suspend",
+          "type": "content",
+          "issue": "Entailment score 0.01 \u2014 span not supported by premise."
+        }
+      ],
+      "feedback": "The following spans lack grounding in the provided context:\n- \"7\" [HallucinationType.CONTENT]: Entailment score 0.01 \u2014 span not supported by premise.\n- \"suspend\" [HallucinationType.CONTENT]: Entailment score 0.01 \u2014 span not supported by premise.\nRevise these before executing the planned action."
+    },
+    {
+      "id": "T56",
+      "prediction": false,
+      "ground_truth": false,
+      "type": "content",
+      "score": 0.6184,
+      "ged_norm": 0.3816,
+      "mismatched_spans": [
+        {
+          "span": "45 minutes",
+          "type": "content",
+          "issue": "Entailment score 0.00 \u2014 span not supported by premise."
+        }
+      ],
+      "feedback": "The following spans lack grounding in the provided context:\n- \"45 minutes\" [HallucinationType.CONTENT]: Entailment score 0.00 \u2014 span not supported by premise.\nRevise these before executing the planned action."
+    },
+    {
+      "id": "T57",
+      "prediction": false,
+      "ground_truth": true,
+      "type": "content",
+      "score": 0.8431,
+      "ged_norm": 0.1569,
+      "mismatched_spans": [
+        {
+          "span": "94.2%",
+          "type": "content",
+          "issue": "Entailment score 0.01 \u2014 span not supported by premise."
+        }
+      ],
+      "feedback": "The following spans lack grounding in the provided context:\n- \"94.2%\" [HallucinationType.CONTENT]: Entailment score 0.01 \u2014 span not supported by premise.\nRevise these before executing the planned action."
+    },
+    {
+      "id": "T58",
+      "prediction": false,
+      "ground_truth": false,
+      "type": "content",
+      "score": 0.7667,
+      "ged_norm": 0.2333,
+      "mismatched_spans": [
+        {
+          "span": "75",
+          "type": "content",
+          "issue": "Entailment score 0.01 \u2014 span not supported by premise."
+        },
+        {
+          "span": "issue",
+          "type": "content",
+          "issue": "Entailment score 0.01 \u2014 span not supported by premise."
+        }
+      ],
+      "feedback": "The following spans lack grounding in the provided context:\n- \"75\" [HallucinationType.CONTENT]: Entailment score 0.01 \u2014 span not supported by premise.\n- \"issue\" [HallucinationType.CONTENT]: Entailment score 0.01 \u2014 span not supported by premise.\nRevise these before executing the planned action."
+    },
+    {
+      "id": "T59",
+      "prediction": false,
+      "ground_truth": true,
+      "type": "content",
+      "score": 0.6622,
+      "ged_norm": 0.3378,
+      "mismatched_spans": [
+        {
+          "span": "99.9%",
+          "type": "content",
+          "issue": "Entailment score 0.00 \u2014 span not supported by premise."
+        }
+      ],
+      "feedback": "The following spans lack grounding in the provided context:\n- \"99.9%\" [HallucinationType.CONTENT]: Entailment score 0.00 \u2014 span not supported by premise.\nRevise these before executing the planned action."
+    },
+    {
+      "id": "T60",
+      "prediction": false,
+      "ground_truth": false,
+      "type": "content",
+      "score": 0.8936,
+      "ged_norm": 0.1064,
+      "mismatched_spans": [
+        {
+          "span": "500",
+          "type": "content",
+          "issue": "Entailment score 0.00 \u2014 span not supported by premise."
+        }
+      ],
+      "feedback": "The following spans lack grounding in the provided context:\n- \"500\" [HallucinationType.CONTENT]: Entailment score 0.00 \u2014 span not supported by premise.\nRevise these before executing the planned action."
+    }
+  ]
+}

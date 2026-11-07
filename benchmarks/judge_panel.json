@@ -1,0 +1,14 @@
+{
+  "_comment": "Judges for the dev-half panel. Model ids can change: confirm with  python benchmarks/llm_judge_args.py --list-models --provider <name>  and edit 'model'. Entries whose key is missing are skipped. 'billed' entries cost money; check pricing first. For a model not covered (for example one you call 'Astra'), copy the 'custom' entry, set base_url (OpenAI-compatible, ending in /v1), model and key_env, and put the key in the key file under that name.",
+  "judges": [
+    {"name": "groq-gpt-oss-120b", "provider": "groq", "model": "openai/gpt-oss-120b", "rpm": 12, "rpm_long": 5},
+    {"name": "groq-gpt-oss-20b", "provider": "groq", "model": "openai/gpt-oss-20b", "rpm": 12, "rpm_long": 5},
+    {"name": "nvidia-llama", "provider": "nvidia", "model": "REPLACE_WITH_ID_FROM_LIST_MODELS", "rpm": 20, "rpm_long": 10},
+    {"name": "claude-haiku", "provider": "anthropic", "model": "claude-haiku-5-5", "rpm": 30, "rpm_long": 20, "billed": true},
+    {"name": "claude-sonnet", "provider": "anthropic", "model": "claude-sonnet-5-5", "rpm": 30, "rpm_long": 20, "billed": true},
+    {"name": "claude-opus", "provider": "anthropic", "model": "claude-opus-5-5", "rpm": 20, "rpm_long": 10, "billed": true},
+    {"name": "claude-fable", "provider": "anthropic", "model": "claude-fable-5-1", "rpm": 20, "rpm_long": 10, "billed": true},
+    {"name": "openrouter-other", "provider": "openrouter", "model": "REPLACE_WITH_ID_FROM_LIST_MODELS", "rpm": 20, "rpm_long": 10, "billed": true},
+    {"name": "custom-astra", "provider": "custom", "model": "REPLACE", "base_url": "https://REPLACE/v1", "key_env": "ASTRA_API_KEY", "rpm": 20, "rpm_long": 10}
+  ]
+}

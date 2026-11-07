@@ -1,0 +1,17 @@
+[
+{"audit_id":"B098","q1":"yes","q2":"system state","notes":"Rule 2: nonfree_baggages=0 assumes economy, but the system response still shows cabin basic_economy, so the free-bag count is not supported."},
+{"audit_id":"B094","q1":"yes","q2":"tool definition","notes":"Rule 1: definition requires 'City, State'; 'San Ramon' lacks the state."},
+{"audit_id":"B088","q1":"yes","q2":"tool definition","notes":"Rule 1: 'City, State' format required; state missing."},
+{"audit_id":"B077","q1":"acceptable alternative","q2":"","notes":"Rule 4: free-text query 'Beijing' is a sensible reading of 'where is beijing'."},
+{"audit_id":"B074","q1":"yes","q2":"tool definition","notes":"Rule 1: 'City, State' format required; state missing."},
+{"audit_id":"B070","q1":"yes","q2":"tool definition","notes":"Rule 1: definition states abbreviated-state 'City, State' form; value has no state."},
+{"audit_id":"B065","q1":"yes","q2":"tool definition","notes":"Rule 1: definition states 'City, State' form; value has no state."},
+{"audit_id":"B063","q1":"yes","q2":"system state","notes":"Rule 2: the system reports the order is not delivered, so exchanging items on this order is invalid."},
+{"audit_id":"B052","q1":"acceptable alternative","q2":"","notes":"Rule 4: user offered album or any 2019 song, so dontcare for year with the album is a sensible reading."},
+{"audit_id":"B040","q1":"acceptable alternative","q2":"","notes":"Rule 4: value follows YYYY-MM-DD HH:mm:ss and matches the requested time slot."},
+{"audit_id":"B037","q1":"yes","q2":"conversation","notes":"Rule 2/3: user never asked for tools; documented default is false."},
+{"audit_id":"B019","q1":"acceptable alternative","q2":"","notes":"Rule 4: royal flush odds use 2598960 five-card hands; 52 is the deck size, not the outcome count."},
+{"audit_id":"B018","q1":"yes","q2":"tool definition","notes":"Rule 1: 'City, State' format required; state missing."},
+{"audit_id":"B012","q1":"yes","q2":"tool definition","notes":"Rule 1: 'City, State' format required; state missing."},
+{"audit_id":"B003","q1":"yes","q2":"conversation","notes":"Rule 2: user did not ask to exclude inactive projects and no default is documented."}
+]

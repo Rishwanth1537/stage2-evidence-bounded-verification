@@ -1,0 +1,590 @@
+[
+ {
+  "audit_id": "B001",
+  "q1": "no",
+  "q2": "",
+  "notes": "energy = 5 mol x 2800 kJ/mol = 14000; the definition says total energy produced"
+ },
+ {
+  "audit_id": "B002",
+  "q1": "no",
+  "q2": "",
+  "notes": "user's two categories copied; definition missing, so allowed values unchecked (low confidence)"
+ },
+ {
+  "audit_id": "B003",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "excludeInactive=true is a restriction the user never asked for"
+ },
+ {
+  "audit_id": "B004",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "user decision 2026-11-04 after external check: 00:00 is an invented time (user gave none)"
+ },
+ {
+  "audit_id": "B005",
+  "q1": "no",
+  "q2": "",
+  "notes": "date correct and in the documented format"
+ },
+ {
+  "audit_id": "B006",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "same time in another format; the second movie belongs to a second call"
+ },
+ {
+  "audit_id": "B007",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "optional flag documented for follow-up actions; the task needs a follow-up"
+ },
+ {
+  "audit_id": "B008",
+  "q1": "yes",
+  "q2": "tool definition",
+  "notes": "key is 'operator' but the definition requires 'operation'; value 25 is an int where a string is defined"
+ },
+ {
+  "audit_id": "B009",
+  "q1": "no",
+  "q2": "",
+  "notes": "all four stated preferences present and within the enums"
+ },
+ {
+  "audit_id": "B010",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "'substance A' is the user's own wording; benchmark wants 'A'"
+ },
+ {
+  "audit_id": "B011",
+  "q1": "no",
+  "q2": "",
+  "notes": "definition says percentage, so 3.5 is right for 3.5%"
+ },
+ {
+  "audit_id": "B012",
+  "q1": "yes",
+  "q2": "tool definition",
+  "notes": "definition requires 'City, State'; state missing"
+ },
+ {
+  "audit_id": "B013",
+  "q1": "yes",
+  "q2": "tool definition",
+  "notes": "definition requires 'City, State' or 'City, Country'; bare 'Moscow'"
+ },
+ {
+  "audit_id": "B014",
+  "q1": "yes",
+  "q2": "tool definition",
+  "notes": "user decision 2026-11-04: 0.05 is wrong; the benchmark's percent convention (5.0) is taken as right"
+ },
+ {
+  "audit_id": "B015",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "'Boston, MA' is the user's wording and a name of the city"
+ },
+ {
+  "audit_id": "B016",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "free-form nickname derived from the hostname; optional, harmless"
+ },
+ {
+  "audit_id": "B017",
+  "q1": "no",
+  "q2": "",
+  "notes": "ISO-8601 without offset as defined, 10pm = 22:00"
+ },
+ {
+  "audit_id": "B018",
+  "q1": "yes",
+  "q2": "tool definition",
+  "notes": "definition requires 'City, State'; bare 'Los Angeles'"
+ },
+ {
+  "audit_id": "B019",
+  "q1": "no",
+  "q2": "",
+  "notes": "a poker hand has C(52,5) = 2598960 outcomes; 52 would give the wrong probability"
+ },
+ {
+  "audit_id": "B020",
+  "q1": "yes",
+  "q2": "only the user",
+  "notes": "'landlord's email' is a placeholder, the real address was never given; should ask"
+ },
+ {
+  "audit_id": "B021",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "address as given by the user incl. ZIP, in 'Address, City, State' form"
+ },
+ {
+  "audit_id": "B022",
+  "q1": "no",
+  "q2": "",
+  "notes": "flight, date, bags, insurance and price match the confirmed summary; payment id not checkable"
+ },
+ {
+  "audit_id": "B023",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "user wants a family therapist; agent chose Psychologist although 'Family Counselor' exists"
+ },
+ {
+  "audit_id": "B024",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "duplicate of B021"
+ },
+ {
+  "audit_id": "B025",
+  "q1": "no",
+  "q2": "",
+  "notes": "date correct and in the documented format"
+ },
+ {
+  "audit_id": "B026",
+  "q1": "no",
+  "q2": "",
+  "notes": "user asked for pop concerts; Pop is in the enum"
+ },
+ {
+  "audit_id": "B027",
+  "q1": "yes",
+  "q2": "system state",
+  "notes": "bundles four flights priced 1203 while the agreed plan and the payments total 833; price lookup needed"
+ },
+ {
+  "audit_id": "B028",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "the Principia is where the law was published; a reasonable work title"
+ },
+ {
+  "audit_id": "B029",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "user decision 2026-11-04 after external check: dropping 'slightly' loses part of the user's value"
+ },
+ {
+  "audit_id": "B030",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "user's own 'Rutherford, NJ'; definition asks for the city name"
+ },
+ {
+  "audit_id": "B031",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "Chinese rendering of 'Shanghai, China' in the City, Country form; benchmark lists it"
+ },
+ {
+  "audit_id": "B032",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "'~' expanded to '/home' giving /home/data/..., not the path the user wrote"
+ },
+ {
+  "audit_id": "B033",
+  "q1": "no",
+  "q2": "",
+  "notes": "duplicate of B009"
+ },
+ {
+  "audit_id": "B034",
+  "q1": "no",
+  "q2": "",
+  "notes": "purpose derived from the user's words (wake up, meeting)"
+ },
+ {
+  "audit_id": "B035",
+  "q1": "yes",
+  "q2": "tool definition",
+  "notes": "5 items to exchange but 2 new items; counts must match, and this tool cannot cancel items"
+ },
+ {
+  "audit_id": "B036",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "URL still contains the literal {ip} placeholder; user gave 192.120.45.67"
+ },
+ {
+  "audit_id": "B037",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "optional flag set beyond the default; harmless superset of a tech stack"
+ },
+ {
+  "audit_id": "B038",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "'Atlanta, GA' is the user's wording and a city name"
+ },
+ {
+  "audit_id": "B039",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "season should be 2021; 'regular' drops the year the user gave"
+ },
+ {
+  "audit_id": "B040",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "user gave one date and time; using it as end of the availability window is a plausible reading"
+ },
+ {
+  "audit_id": "B041",
+  "q1": "yes",
+  "q2": "tool definition",
+  "notes": "3 items to exchange and none given as new items; counts must match"
+ },
+ {
+  "audit_id": "B042",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "'Guangzhou, CN' follows the City, Country pattern with a country code"
+ },
+ {
+  "audit_id": "B043",
+  "q1": "yes",
+  "q2": "tool definition",
+  "notes": "'us' is not in the enum (metric, imperial); user gave no units"
+ },
+ {
+  "audit_id": "B044",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "'City, Country' as the definition asks for non-US cities"
+ },
+ {
+  "audit_id": "B045",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "user named the director Gene Stupnitsky; agent used dontcare"
+ },
+ {
+  "audit_id": "B046",
+  "q1": "no",
+  "q2": "",
+  "notes": "order and items match the plan the user confirmed; refund method not checkable"
+ },
+ {
+  "audit_id": "B047",
+  "q1": "no",
+  "q2": "",
+  "notes": "user said pop is their genre"
+ },
+ {
+  "audit_id": "B048",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "user did not ask for regular shows; the documented default would include all types"
+ },
+ {
+  "audit_id": "B049",
+  "q1": "no",
+  "q2": "",
+  "notes": "county from the request"
+ },
+ {
+  "audit_id": "B050",
+  "q1": "no",
+  "q2": "",
+  "notes": "duplicate of B011"
+ },
+ {
+  "audit_id": "B051",
+  "q1": "no",
+  "q2": "",
+  "notes": "income from the request"
+ },
+ {
+  "audit_id": "B052",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "user gave an album as the primary filter and 2019 only as an alternative; dontcare for the album search is reasonable"
+ },
+ {
+  "audit_id": "B053",
+  "q1": "no",
+  "q2": "",
+  "notes": "base 3 as asked"
+ },
+ {
+  "audit_id": "B054",
+  "q1": "no",
+  "q2": "",
+  "notes": "two bathrooms as asked"
+ },
+ {
+  "audit_id": "B055",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "user asked for Akiko Kawase in the cast; agent used dontcare"
+ },
+ {
+  "audit_id": "B056",
+  "q1": "no",
+  "q2": "",
+  "notes": "address in 'Street, City, State' form"
+ },
+ {
+  "audit_id": "B057",
+  "q1": "no",
+  "q2": "",
+  "notes": "duplicate of B047"
+ },
+ {
+  "audit_id": "B058",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "duplicate of B030"
+ },
+ {
+  "audit_id": "B059",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "duplicate of B004; same decision"
+ },
+ {
+  "audit_id": "B060",
+  "q1": "yes",
+  "q2": "tool definition",
+  "notes": "'toll roads' is not in the enum (tolls, highways, ferries)"
+ },
+ {
+  "audit_id": "B061",
+  "q1": "cannot tell",
+  "q2": "",
+  "notes": "'medium red' could be a shade or size medium plus colour red; only the user can say"
+ },
+ {
+  "audit_id": "B062",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "user gave no date; agent invented 04/01/2023, also not YYYY-MM-DD"
+ },
+ {
+  "audit_id": "B063",
+  "q1": "yes",
+  "q2": "system state",
+  "notes": "system says the order is not delivered, so an exchange is not allowed; order status needed"
+ },
+ {
+  "audit_id": "B064",
+  "q1": "no",
+  "q2": "",
+  "notes": "user's own phrase for the work"
+ },
+ {
+  "audit_id": "B065",
+  "q1": "yes",
+  "q2": "tool definition",
+  "notes": "definition gives 'City, ST' by example; state missing (lower confidence: example only)"
+ },
+ {
+  "audit_id": "B066",
+  "q1": "yes",
+  "q2": "system state",
+  "notes": "exchange on an order already in a return/non-delivered state; order status needed"
+ },
+ {
+  "audit_id": "B067",
+  "q1": "yes",
+  "q2": "tool definition",
+  "notes": "duplicate of B060"
+ },
+ {
+  "audit_id": "B068",
+  "q1": "yes",
+  "q2": "only the user",
+  "notes": "'landlord_email' is a placeholder, the real address was never given"
+ },
+ {
+  "audit_id": "B069",
+  "q1": "no",
+  "q2": "",
+  "notes": "y = 4 for the first point (3, 4)"
+ },
+ {
+  "audit_id": "B070",
+  "q1": "yes",
+  "q2": "tool definition",
+  "notes": "definition gives 'City, ST' by example; state missing (lower confidence: example only)"
+ },
+ {
+  "audit_id": "B071",
+  "q1": "no",
+  "q2": "",
+  "notes": "IATA code explicitly allowed"
+ },
+ {
+  "audit_id": "B072",
+  "q1": "no",
+  "q2": "",
+  "notes": "actor from the request"
+ },
+ {
+  "audit_id": "B073",
+  "q1": "no",
+  "q2": "",
+  "notes": "second team as named"
+ },
+ {
+  "audit_id": "B074",
+  "q1": "yes",
+  "q2": "tool definition",
+  "notes": "definition requires 'City, State'; bare 'Philadelphia'"
+ },
+ {
+  "audit_id": "B075",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "destination should be the Louvre Museum; 'Paris, France' loses it"
+ },
+ {
+  "audit_id": "B076",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "user asked to cancel order #W3189752; agent exchanges items of a different order #W5166363"
+ },
+ {
+  "audit_id": "B077",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "'Beijing' as the search query is a reasonable reduction of 'where is beijing'"
+ },
+ {
+  "audit_id": "B078",
+  "q1": "no",
+  "q2": "",
+  "notes": "13 hearts in 52 cards"
+ },
+ {
+  "audit_id": "B079",
+  "q1": "no",
+  "q2": "",
+  "notes": "item name from the request"
+ },
+ {
+  "audit_id": "B080",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "user asked for no category; agent restricted to Museum; default dontcare"
+ },
+ {
+  "audit_id": "B081",
+  "q1": "no",
+  "q2": "",
+  "notes": "City, Country form, Celsius is a separate argument"
+ },
+ {
+  "audit_id": "B082",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "Daniel Camp is the cast member, not the director; also not a name"
+ },
+ {
+  "audit_id": "B083",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "user asked for child-friendly; agent used dontcare"
+ },
+ {
+  "audit_id": "B084",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "equals the documented default (true)"
+ },
+ {
+  "audit_id": "B085",
+  "q1": "yes",
+  "q2": "tool definition",
+  "notes": "duplicate of B008: 'operator' instead of 'operation'"
+ },
+ {
+  "audit_id": "B086",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "'currently sep 2023' and 'the 9th' give 2023-09-09, not October"
+ },
+ {
+  "audit_id": "B087",
+  "q1": "no",
+  "q2": "",
+  "notes": "null is the documented no-preference value"
+ },
+ {
+  "audit_id": "B088",
+  "q1": "yes",
+  "q2": "tool definition",
+  "notes": "definition requires 'City, State'; bare 'San Francisco'"
+ },
+ {
+  "audit_id": "B089",
+  "q1": "no",
+  "q2": "",
+  "notes": "reservation id matches; the fault, if any, is the decision to cancel (policy), not the argument"
+ },
+ {
+  "audit_id": "B090",
+  "q1": "no",
+  "q2": "",
+  "notes": "dish from the request"
+ },
+ {
+  "audit_id": "B091",
+  "q1": "no",
+  "q2": "",
+  "notes": "category named by the user"
+ },
+ {
+  "audit_id": "B092",
+  "q1": "yes",
+  "q2": "tool definition",
+  "notes": "'hello' is not about linking accounts; queries also reworded"
+ },
+ {
+  "audit_id": "B093",
+  "q1": "no",
+  "q2": "",
+  "notes": "category named by the user"
+ },
+ {
+  "audit_id": "B094",
+  "q1": "yes",
+  "q2": "tool definition",
+  "notes": "definition requires 'City, State'; bare 'San Ramon'"
+ },
+ {
+  "audit_id": "B095",
+  "q1": "no",
+  "q2": "",
+  "notes": "user did not ask about kids; dontcare is right"
+ },
+ {
+  "audit_id": "B096",
+  "q1": "no",
+  "q2": "",
+  "notes": "duplicate of B001"
+ },
+ {
+  "audit_id": "B097",
+  "q1": "yes",
+  "q2": "tool definition",
+  "notes": "'2023.10.2' is not YYYY-MM-DD"
+ },
+ {
+  "audit_id": "B098",
+  "q1": "cannot tell",
+  "q2": "",
+  "notes": "whether the cabin upgrade took effect (tool output truncated) and the bag allowance are not shown"
+ }
+]

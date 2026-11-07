@@ -1,0 +1,11 @@
+# GED normalised score above this → flag as inconsistent
+# Lower value = more sensitive (catches more hallucinations, risks more false positives).
+# Run `make sweep` to find the optimal value for your dataset.
+ged_threshold: 0.35
+
+# Entailment probability below this → span flagged as mismatched
+# Lowered from 0.50 to 0.40 so DeBERTa flags more borderline spans.
+entailment_threshold: 0.40
+
+# Max nodes in a graph before switching to faster GED approximation
+ged_fast_mode_node_limit: 80

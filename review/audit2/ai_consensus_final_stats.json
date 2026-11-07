@@ -1,0 +1,247 @@
+{
+ "stats": {
+  "disputed_items": 15,
+  "round2_runs": [
+   "r2_haiku_1",
+   "r2_haiku_2",
+   "r2_opus_1",
+   "r2_opus_2",
+   "r2_sonnet_1",
+   "r2_sonnet_2"
+  ],
+  "final_q1_counts": {
+   "no": 31,
+   "yes": 41,
+   "acceptable alternative": 22,
+   "cannot tell": 4
+  },
+  "round2_unanimous": 8,
+  "round2_ge4_of_6": 13,
+  "round2_pairwise_agreement_mean": 0.76,
+  "changed_vs_round1": 13
+ },
+ "disputed_detail": {
+  "B003": {
+   "round1_votes": {
+    "cannot tell": 3,
+    "yes": 3
+   },
+   "round2_votes": {
+    "yes": 6
+   },
+   "round2_q2_votes": {
+    "only the user": 3,
+    "conversation": 3
+   },
+   "round1_consensus": "cannot tell",
+   "final": "yes"
+  },
+  "B012": {
+   "round1_votes": {
+    "acceptable alternative": 3,
+    "yes": 3
+   },
+   "round2_votes": {
+    "yes": 6
+   },
+   "round2_q2_votes": {
+    "tool definition": 6
+   },
+   "round1_consensus": "cannot tell",
+   "final": "yes"
+  },
+  "B018": {
+   "round1_votes": {
+    "acceptable alternative": 3,
+    "yes": 3
+   },
+   "round2_votes": {
+    "yes": 6
+   },
+   "round2_q2_votes": {
+    "tool definition": 6
+   },
+   "round1_consensus": "cannot tell",
+   "final": "yes"
+  },
+  "B019": {
+   "round1_votes": {
+    "yes": 2,
+    "cannot tell": 1,
+    "no": 1,
+    "acceptable alternative": 2
+   },
+   "round2_votes": {
+    "acceptable alternative": 3,
+    "yes": 1,
+    "no": 2
+   },
+   "round2_q2_votes": {
+    "only the user": 1
+   },
+   "round1_consensus": "cannot tell",
+   "final": "acceptable alternative"
+  },
+  "B037": {
+   "round1_votes": {
+    "cannot tell": 1,
+    "acceptable alternative": 3,
+    "yes": 2
+   },
+   "round2_votes": {
+    "yes": 4,
+    "acceptable alternative": 2
+   },
+   "round2_q2_votes": {
+    "conversation": 4
+   },
+   "round1_consensus": "acceptable alternative",
+   "final": "yes"
+  },
+  "B040": {
+   "round1_votes": {
+    "yes": 2,
+    "cannot tell": 2,
+    "acceptable alternative": 2
+   },
+   "round2_votes": {
+    "no": 2,
+    "acceptable alternative": 4
+   },
+   "round2_q2_votes": {},
+   "round1_consensus": "cannot tell",
+   "final": "acceptable alternative"
+  },
+  "B052": {
+   "round1_votes": {
+    "yes": 3,
+    "acceptable alternative": 2,
+    "no": 1
+   },
+   "round2_votes": {
+    "yes": 3,
+    "acceptable alternative": 3
+   },
+   "round2_q2_votes": {
+    "conversation": 3
+   },
+   "round1_consensus": "yes",
+   "final": "cannot tell"
+  },
+  "B063": {
+   "round1_votes": {
+    "no": 1,
+    "cannot tell": 2,
+    "yes": 3
+   },
+   "round2_votes": {
+    "yes": 5,
+    "no": 1
+   },
+   "round2_q2_votes": {
+    "system state": 5
+   },
+   "round1_consensus": "yes",
+   "final": "yes"
+  },
+  "B065": {
+   "round1_votes": {
+    "acceptable alternative": 3,
+    "yes": 3
+   },
+   "round2_votes": {
+    "yes": 6
+   },
+   "round2_q2_votes": {
+    "tool definition": 6
+   },
+   "round1_consensus": "cannot tell",
+   "final": "yes"
+  },
+  "B070": {
+   "round1_votes": {
+    "acceptable alternative": 3,
+    "yes": 3
+   },
+   "round2_votes": {
+    "yes": 6
+   },
+   "round2_q2_votes": {
+    "tool definition": 6
+   },
+   "round1_consensus": "cannot tell",
+   "final": "yes"
+  },
+  "B074": {
+   "round1_votes": {
+    "acceptable alternative": 3,
+    "yes": 3
+   },
+   "round2_votes": {
+    "yes": 6
+   },
+   "round2_q2_votes": {
+    "tool definition": 6
+   },
+   "round1_consensus": "cannot tell",
+   "final": "yes"
+  },
+  "B077": {
+   "round1_votes": {
+    "no": 3,
+    "acceptable alternative": 3
+   },
+   "round2_votes": {
+    "no": 2,
+    "acceptable alternative": 4
+   },
+   "round2_q2_votes": {},
+   "round1_consensus": "cannot tell",
+   "final": "acceptable alternative"
+  },
+  "B088": {
+   "round1_votes": {
+    "acceptable alternative": 3,
+    "yes": 3
+   },
+   "round2_votes": {
+    "yes": 6
+   },
+   "round2_q2_votes": {
+    "tool definition": 6
+   },
+   "round1_consensus": "cannot tell",
+   "final": "yes"
+  },
+  "B094": {
+   "round1_votes": {
+    "acceptable alternative": 3,
+    "yes": 3
+   },
+   "round2_votes": {
+    "yes": 6
+   },
+   "round2_q2_votes": {
+    "tool definition": 6
+   },
+   "round1_consensus": "cannot tell",
+   "final": "yes"
+  },
+  "B098": {
+   "round1_votes": {
+    "no": 2,
+    "yes": 3,
+    "cannot tell": 1
+   },
+   "round2_votes": {
+    "yes": 5,
+    "no": 1
+   },
+   "round2_q2_votes": {
+    "system state": 5
+   },
+   "round1_consensus": "yes",
+   "final": "yes"
+  }
+ }
+}

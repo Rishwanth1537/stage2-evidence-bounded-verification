@@ -1,0 +1,31 @@
+# Byte-compiled / optimized / test caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.hypothesis/
+*.egg-info/
+
+# Secrets and keys
+.env
+.env.*
+!.env.example
+audit_key*
+*.mcp_checker_keys.env
+*.env
+.secrets/
+
+# Large data and logs (unverified licenses / over 50 MB)
+*.log
+*.zip
+*.parquet
+benchmarks/data/
+
+# Local benchmark outputs and caches
+benchmarks/*_results.json
+benchmarks/mcpevol_eval.log
+benchmarks/external_eval.log
+benchmarks/argground_bench.json
+benchmarks/llm_judge_args_cache.jsonl
+benchmarks/llm_judge_args_*.json
+.huggingface/

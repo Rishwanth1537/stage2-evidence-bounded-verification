@@ -1,0 +1,390 @@
+{
+ "prompt": "v2",
+ "model": "nvidia/nemotron-3.5-bolt-e4b",
+ "provider": "nvidia",
+ "k": 4,
+ "n_cases": 200,
+ "skipped": {
+  "weak_only": 9,
+  "primary_function_mismatch": 7,
+  "primary_unparseable": 15
+ },
+ "n_calls": 169,
+ "n_wrong_strong": 13,
+ "mean_samples_returned": 3.97,
+ "auroc": {
+  "self_consistency": 0.667,
+  "peer": 0.883,
+  "union_sum": 0.914,
+  "contract": 0.558
+ },
+ "by_alpha": {
+  "0.05": {
+   "contract": {
+    "ask_rate_on_correct": 0.038,
+    "share_of_splits_within_alpha": 0.732,
+    "wrong_caught": 0.158,
+    "wrong_caught_p05_p95": [
+     0.0,
+     0.333
+    ]
+   },
+   "peer_boot": {
+    "ask_rate_on_correct": 0.017,
+    "share_of_splits_within_alpha": 0.932,
+    "wrong_caught": 0.438,
+    "wrong_caught_p05_p95": [
+     0.0,
+     0.833
+    ]
+   },
+   "peer_cluster": {
+    "ask_rate_on_correct": 0.0,
+    "share_of_splits_within_alpha": 1.0,
+    "wrong_caught": 0.0,
+    "wrong_caught_p05_p95": [
+     0.0,
+     0.0
+    ]
+   },
+   "peer_conformal": {
+    "ask_rate_on_correct": 0.029,
+    "share_of_splits_within_alpha": 0.802,
+    "wrong_caught": 0.682,
+    "wrong_caught_p05_p95": [
+     0.333,
+     1.0
+    ]
+   },
+   "peer_pac": {
+    "ask_rate_on_correct": 0.011,
+    "share_of_splits_within_alpha": 0.959,
+    "wrong_caught": 0.282,
+    "wrong_caught_p05_p95": [
+     0.0,
+     0.778
+    ]
+   },
+   "self_boot": {
+    "ask_rate_on_correct": 0.003,
+    "share_of_splits_within_alpha": 0.972,
+    "wrong_caught": 0.09,
+    "wrong_caught_p05_p95": [
+     0.0,
+     0.333
+    ]
+   },
+   "self_cluster": {
+    "ask_rate_on_correct": 0.0,
+    "share_of_splits_within_alpha": 1.0,
+    "wrong_caught": 0.0,
+    "wrong_caught_p05_p95": [
+     0.0,
+     0.0
+    ]
+   },
+   "self_conformal": {
+    "ask_rate_on_correct": 0.01,
+    "share_of_splits_within_alpha": 0.881,
+    "wrong_caught": 0.122,
+    "wrong_caught_p05_p95": [
+     0.0,
+     0.4
+    ]
+   },
+   "self_pac": {
+    "ask_rate_on_correct": 0.001,
+    "share_of_splits_within_alpha": 0.988,
+    "wrong_caught": 0.062,
+    "wrong_caught_p05_p95": [
+     0.0,
+     0.286
+    ]
+   },
+   "union_boot": {
+    "ask_rate_on_correct": 0.015,
+    "share_of_splits_within_alpha": 0.932,
+    "wrong_caught": 0.415,
+    "wrong_caught_p05_p95": [
+     0.0,
+     0.833
+    ]
+   },
+   "union_cluster": {
+    "ask_rate_on_correct": 0.0,
+    "share_of_splits_within_alpha": 1.0,
+    "wrong_caught": 0.0,
+    "wrong_caught_p05_p95": [
+     0.0,
+     0.0
+    ]
+   },
+   "union_conformal": {
+    "ask_rate_on_correct": 0.03,
+    "share_of_splits_within_alpha": 0.802,
+    "wrong_caught": 0.659,
+    "wrong_caught_p05_p95": [
+     0.286,
+     1.0
+    ]
+   },
+   "union_pac": {
+    "ask_rate_on_correct": 0.009,
+    "share_of_splits_within_alpha": 0.959,
+    "wrong_caught": 0.266,
+    "wrong_caught_p05_p95": [
+     0.0,
+     0.75
+    ]
+   }
+  },
+  "0.1": {
+   "contract": {
+    "ask_rate_on_correct": 0.038,
+    "share_of_splits_within_alpha": 1.0,
+    "wrong_caught": 0.151,
+    "wrong_caught_p05_p95": [
+     0.0,
+     0.333
+    ]
+   },
+   "peer_boot": {
+    "ask_rate_on_correct": 0.053,
+    "share_of_splits_within_alpha": 0.9,
+    "wrong_caught": 0.769,
+    "wrong_caught_p05_p95": [
+     0.571,
+     1.0
+    ]
+   },
+   "peer_cluster": {
+    "ask_rate_on_correct": 0.0,
+    "share_of_splits_within_alpha": 1.0,
+    "wrong_caught": 0.0,
+    "wrong_caught_p05_p95": [
+     0.0,
+     0.0
+    ]
+   },
+   "peer_conformal": {
+    "ask_rate_on_correct": 0.08,
+    "share_of_splits_within_alpha": 0.703,
+    "wrong_caught": 0.769,
+    "wrong_caught_p05_p95": [
+     0.571,
+     1.0
+    ]
+   },
+   "peer_pac": {
+    "ask_rate_on_correct": 0.044,
+    "share_of_splits_within_alpha": 0.939,
+    "wrong_caught": 0.76,
+    "wrong_caught_p05_p95": [
+     0.5,
+     1.0
+    ]
+   },
+   "self_boot": {
+    "ask_rate_on_correct": 0.041,
+    "share_of_splits_within_alpha": 0.986,
+    "wrong_caught": 0.273,
+    "wrong_caught_p05_p95": [
+     0.0,
+     0.6
+    ]
+   },
+   "self_cluster": {
+    "ask_rate_on_correct": 0.0,
+    "share_of_splits_within_alpha": 1.0,
+    "wrong_caught": 0.0,
+    "wrong_caught_p05_p95": [
+     0.0,
+     0.0
+    ]
+   },
+   "self_conformal": {
+    "ask_rate_on_correct": 0.057,
+    "share_of_splits_within_alpha": 0.986,
+    "wrong_caught": 0.377,
+    "wrong_caught_p05_p95": [
+     0.124,
+     0.625
+    ]
+   },
+   "self_pac": {
+    "ask_rate_on_correct": 0.031,
+    "share_of_splits_within_alpha": 0.986,
+    "wrong_caught": 0.213,
+    "wrong_caught_p05_p95": [
+     0.0,
+     0.571
+    ]
+   },
+   "union_boot": {
+    "ask_rate_on_correct": 0.053,
+    "share_of_splits_within_alpha": 0.894,
+    "wrong_caught": 0.769,
+    "wrong_caught_p05_p95": [
+     0.571,
+     1.0
+    ]
+   },
+   "union_cluster": {
+    "ask_rate_on_correct": 0.0,
+    "share_of_splits_within_alpha": 1.0,
+    "wrong_caught": 0.0,
+    "wrong_caught_p05_p95": [
+     0.0,
+     0.0
+    ]
+   },
+   "union_conformal": {
+    "ask_rate_on_correct": 0.08,
+    "share_of_splits_within_alpha": 0.706,
+    "wrong_caught": 0.769,
+    "wrong_caught_p05_p95": [
+     0.571,
+     1.0
+    ]
+   },
+   "union_pac": {
+    "ask_rate_on_correct": 0.045,
+    "share_of_splits_within_alpha": 0.934,
+    "wrong_caught": 0.756,
+    "wrong_caught_p05_p95": [
+     0.5,
+     1.0
+    ]
+   }
+  },
+  "0.2": {
+   "contract": {
+    "ask_rate_on_correct": 0.039,
+    "share_of_splits_within_alpha": 1.0,
+    "wrong_caught": 0.157,
+    "wrong_caught_p05_p95": [
+     0.0,
+     0.333
+    ]
+   },
+   "peer_boot": {
+    "ask_rate_on_correct": 0.141,
+    "share_of_splits_within_alpha": 0.866,
+    "wrong_caught": 0.775,
+    "wrong_caught_p05_p95": [
+     0.571,
+     1.0
+    ]
+   },
+   "peer_cluster": {
+    "ask_rate_on_correct": 0.071,
+    "share_of_splits_within_alpha": 0.997,
+    "wrong_caught": 0.77,
+    "wrong_caught_p05_p95": [
+     0.571,
+     1.0
+    ]
+   },
+   "peer_conformal": {
+    "ask_rate_on_correct": 0.181,
+    "share_of_splits_within_alpha": 0.656,
+    "wrong_caught": 0.797,
+    "wrong_caught_p05_p95": [
+     0.6,
+     1.0
+    ]
+   },
+   "peer_pac": {
+    "ask_rate_on_correct": 0.127,
+    "share_of_splits_within_alpha": 0.896,
+    "wrong_caught": 0.772,
+    "wrong_caught_p05_p95": [
+     0.571,
+     1.0
+    ]
+   },
+   "self_boot": {
+    "ask_rate_on_correct": 0.056,
+    "share_of_splits_within_alpha": 1.0,
+    "wrong_caught": 0.384,
+    "wrong_caught_p05_p95": [
+     0.143,
+     0.625
+    ]
+   },
+   "self_cluster": {
+    "ask_rate_on_correct": 0.051,
+    "share_of_splits_within_alpha": 1.0,
+    "wrong_caught": 0.341,
+    "wrong_caught_p05_p95": [
+     0.0,
+     0.6
+    ]
+   },
+   "self_conformal": {
+    "ask_rate_on_correct": 0.056,
+    "share_of_splits_within_alpha": 1.0,
+    "wrong_caught": 0.384,
+    "wrong_caught_p05_p95": [
+     0.143,
+     0.625
+    ]
+   },
+   "self_pac": {
+    "ask_rate_on_correct": 0.056,
+    "share_of_splits_within_alpha": 1.0,
+    "wrong_caught": 0.384,
+    "wrong_caught_p05_p95": [
+     0.143,
+     0.625
+    ]
+   },
+   "union_boot": {
+    "ask_rate_on_correct": 0.133,
+    "share_of_splits_within_alpha": 0.852,
+    "wrong_caught": 0.795,
+    "wrong_caught_p05_p95": [
+     0.6,
+     1.0
+    ]
+   },
+   "union_cluster": {
+    "ask_rate_on_correct": 0.07,
+    "share_of_splits_within_alpha": 0.999,
+    "wrong_caught": 0.77,
+    "wrong_caught_p05_p95": [
+     0.571,
+     1.0
+    ]
+   },
+   "union_conformal": {
+    "ask_rate_on_correct": 0.179,
+    "share_of_splits_within_alpha": 0.645,
+    "wrong_caught": 0.836,
+    "wrong_caught_p05_p95": [
+     0.667,
+     1.0
+    ]
+   },
+   "union_pac": {
+    "ask_rate_on_correct": 0.12,
+    "share_of_splits_within_alpha": 0.911,
+    "wrong_caught": 0.784,
+    "wrong_caught_p05_p95": [
+     0.571,
+     1.0
+    ]
+   }
+  }
+ },
+ "H_A1": {
+  "alpha": 0.1,
+  "self_consistency_caught": 0.377,
+  "contract_caught": 0.151,
+  "delta_points": 22.6,
+  "supported_if_delta_ge_15": true,
+  "peer_caught": 0.769,
+  "union_caught": 0.769,
+  "cost_objection_rule": "self-consistency AUROC < 0.70 while peer AUROC > 0.85 means the cost objection stands"
+ }
+}

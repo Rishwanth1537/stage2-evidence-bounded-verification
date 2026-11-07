@@ -1,0 +1,17 @@
+[
+  {"audit_id": "B003", "q1": "yes", "q2": "only the user", "notes": "Rule 2: user never mentioned excluding inactive projects; value invented and only the user could confirm (definition unavailable)."},
+  {"audit_id": "B012", "q1": "yes", "q2": "tool definition", "notes": "Rule 1: definition requires 'City, State'; 'Berkeley' lacks the state."},
+  {"audit_id": "B018", "q1": "yes", "q2": "tool definition", "notes": "Rule 1: definition requires 'City, State'; 'Los Angeles' lacks ', CA'."},
+  {"audit_id": "B019", "q1": "acceptable alternative", "q2": "", "notes": "Rule 4: 2,598,960 five-card hands is the mathematically sensible total for a royal-flush probability, though the prompt's framing suggests 52."},
+  {"audit_id": "B037", "q1": "acceptable alternative", "q2": "", "notes": "Rule 4: a 'tech stack' sensibly includes tools, so true is a reasonable reading despite default false."},
+  {"audit_id": "B040", "q1": "acceptable alternative", "q2": "", "notes": "Rule 4: correct format; bounding availability at the single requested time is a sensible reading."},
+  {"audit_id": "B052", "q1": "acceptable alternative", "q2": "", "notes": "Rule 4: user asked album OR 2019, so leaving year as dontcare while searching the album is a sensible reading."},
+  {"audit_id": "B063", "q1": "yes", "q2": "system state", "notes": "Rule 2/3: system response shows the order is not delivered, so this order_id is invalid for a delivered-order exchange."},
+  {"audit_id": "B065", "q1": "yes", "q2": "tool definition", "notes": "Rule 1: definition requires city with two-letter state; 'Burlingame' lacks it."},
+  {"audit_id": "B070", "q1": "yes", "q2": "tool definition", "notes": "Rule 1: definition requires city with two-letter state; 'San Lorenzo' lacks it."},
+  {"audit_id": "B074", "q1": "yes", "q2": "tool definition", "notes": "Rule 1: definition requires 'City, State'; 'Philadelphia' lacks ', PA'."},
+  {"audit_id": "B077", "q1": "acceptable alternative", "q2": "", "notes": "Rule 4: 'Beijing' is a sensible query for 'where is beijing'."},
+  {"audit_id": "B088", "q1": "yes", "q2": "tool definition", "notes": "Rule 1: definition requires 'City, State'; 'San Francisco' lacks ', CA'."},
+  {"audit_id": "B094", "q1": "yes", "q2": "tool definition", "notes": "Rule 1: definition requires 'City, State'; 'San Ramon' lacks ', CA'."},
+  {"audit_id": "B098", "q1": "yes", "q2": "system state", "notes": "Rule 2: system state shows cabin still basic_economy, so the premise that all 3 bags are free (nonfree_baggages 0) is unsupported."}
+]

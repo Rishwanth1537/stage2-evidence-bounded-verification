@@ -1,0 +1,244 @@
+{
+ "models": [
+  "selfconsistency_sc120",
+  "selfconsistency_sc30",
+  "selfconsistency_sc4k8"
+ ],
+ "n_calls": 489,
+ "n_strong_wrong": 30,
+ "by_model_wrong": {
+  "nvidia/nemotron-3.5-bolt-e4b": 13,
+  "nvidia/nemotron-3.5-lightning-30b-a3b": 9,
+  "nvidia/nemotron-3.5-super-vl-120b-a12b": 8
+ },
+ "auroc": {
+  "self_consistency": {
+   "auroc": 0.741,
+   "boot95": [
+    0.634,
+    0.837
+   ]
+  },
+  "peer": {
+   "auroc": 0.873,
+   "boot95": [
+    0.73,
+    0.983
+   ]
+  },
+  "union_sum": {
+   "auroc": 0.901,
+   "boot95": [
+    0.788,
+    0.978
+   ]
+  },
+  "contract": {
+   "auroc": 0.524,
+   "boot95": [
+    0.475,
+    0.588
+   ]
+  }
+ },
+ "by_alpha": {
+  "0.05": {
+   "contract|flag": {
+    "ask_rate_on_correct": 0.052,
+    "share_within_alpha": 0.461,
+    "wrong_caught": 0.105,
+    "p05_p95": [
+     0.0,
+     0.215
+    ]
+   },
+   "peer|conformal": {
+    "ask_rate_on_correct": 0.041,
+    "share_within_alpha": 0.681,
+    "wrong_caught": 0.671,
+    "p05_p95": [
+     0.466,
+     0.9
+    ]
+   },
+   "peer|pac": {
+    "ask_rate_on_correct": 0.027,
+    "share_within_alpha": 0.848,
+    "wrong_caught": 0.54,
+    "p05_p95": [
+     0.0,
+     0.833
+    ]
+   },
+   "self_consistency|conformal": {
+    "ask_rate_on_correct": 0.038,
+    "share_within_alpha": 0.873,
+    "wrong_caught": 0.289,
+    "p05_p95": [
+     0.091,
+     0.462
+    ]
+   },
+   "self_consistency|pac": {
+    "ask_rate_on_correct": 0.026,
+    "share_within_alpha": 0.88,
+    "wrong_caught": 0.247,
+    "p05_p95": [
+     0.077,
+     0.429
+    ]
+   },
+   "union_sum|conformal": {
+    "ask_rate_on_correct": 0.043,
+    "share_within_alpha": 0.643,
+    "wrong_caught": 0.582,
+    "p05_p95": [
+     0.333,
+     0.833
+    ]
+   },
+   "union_sum|pac": {
+    "ask_rate_on_correct": 0.026,
+    "share_within_alpha": 0.842,
+    "wrong_caught": 0.483,
+    "p05_p95": [
+     0.273,
+     0.7
+    ]
+   }
+  },
+  "0.1": {
+   "contract|flag": {
+    "ask_rate_on_correct": 0.052,
+    "share_within_alpha": 1.0,
+    "wrong_caught": 0.102,
+    "p05_p95": [
+     0.0,
+     0.214
+    ]
+   },
+   "peer|conformal": {
+    "ask_rate_on_correct": 0.092,
+    "share_within_alpha": 0.631,
+    "wrong_caught": 0.782,
+    "p05_p95": [
+     0.6,
+     1.0
+    ]
+   },
+   "peer|pac": {
+    "ask_rate_on_correct": 0.07,
+    "share_within_alpha": 0.804,
+    "wrong_caught": 0.739,
+    "p05_p95": [
+     0.5,
+     1.0
+    ]
+   },
+   "self_consistency|conformal": {
+    "ask_rate_on_correct": 0.084,
+    "share_within_alpha": 0.546,
+    "wrong_caught": 0.422,
+    "p05_p95": [
+     0.222,
+     0.6
+    ]
+   },
+   "self_consistency|pac": {
+    "ask_rate_on_correct": 0.062,
+    "share_within_alpha": 0.958,
+    "wrong_caught": 0.363,
+    "p05_p95": [
+     0.154,
+     0.533
+    ]
+   },
+   "union_sum|conformal": {
+    "ask_rate_on_correct": 0.092,
+    "share_within_alpha": 0.696,
+    "wrong_caught": 0.768,
+    "p05_p95": [
+     0.583,
+     0.941
+    ]
+   },
+   "union_sum|pac": {
+    "ask_rate_on_correct": 0.069,
+    "share_within_alpha": 0.842,
+    "wrong_caught": 0.705,
+    "p05_p95": [
+     0.5,
+     0.917
+    ]
+   }
+  },
+  "0.2": {
+   "contract|flag": {
+    "ask_rate_on_correct": 0.053,
+    "share_within_alpha": 1.0,
+    "wrong_caught": 0.103,
+    "p05_p95": [
+     0.0,
+     0.214
+    ]
+   },
+   "peer|conformal": {
+    "ask_rate_on_correct": 0.189,
+    "share_within_alpha": 0.569,
+    "wrong_caught": 0.81,
+    "p05_p95": [
+     0.615,
+     1.0
+    ]
+   },
+   "peer|pac": {
+    "ask_rate_on_correct": 0.155,
+    "share_within_alpha": 0.794,
+    "wrong_caught": 0.801,
+    "p05_p95": [
+     0.6,
+     1.0
+    ]
+   },
+   "self_consistency|conformal": {
+    "ask_rate_on_correct": 0.161,
+    "share_within_alpha": 0.981,
+    "wrong_caught": 0.592,
+    "p05_p95": [
+     0.4,
+     0.75
+    ]
+   },
+   "self_consistency|pac": {
+    "ask_rate_on_correct": 0.135,
+    "share_within_alpha": 0.981,
+    "wrong_caught": 0.534,
+    "p05_p95": [
+     0.312,
+     0.727
+    ]
+   },
+   "union_sum|conformal": {
+    "ask_rate_on_correct": 0.178,
+    "share_within_alpha": 0.849,
+    "wrong_caught": 0.842,
+    "p05_p95": [
+     0.667,
+     1.0
+    ]
+   },
+   "union_sum|pac": {
+    "ask_rate_on_correct": 0.156,
+    "share_within_alpha": 0.892,
+    "wrong_caught": 0.831,
+    "p05_p95": [
+     0.667,
+     1.0
+    ]
+   }
+  }
+ },
+ "H_A1": {
+  "delta_points_self_vs_contract": 32.0
+ }
+}

@@ -1,0 +1,590 @@
+[
+ {
+  "audit_id": "B001",
+  "q1": "no",
+  "q2": "",
+  "notes": "Total energy is 5*2800=14000 kJ; the user asks work from total energy, so 14000 fits."
+ },
+ {
+  "audit_id": "B002",
+  "q1": "no",
+  "q2": "",
+  "notes": "Categories match the user's vegetarian and gluten-free request."
+ },
+ {
+  "audit_id": "B003",
+  "q1": "yes",
+  "q2": "only the user",
+  "notes": "excludeInactive=true is an unrequested filter; only the user could say whether inactive children should be dropped."
+ },
+ {
+  "audit_id": "B004",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "User gave no start time; 00:00 is invented and restricts results."
+ },
+ {
+  "audit_id": "B005",
+  "q1": "no",
+  "q2": "",
+  "notes": "Date 2023-03-04 matches the 4th of March 2023."
+ },
+ {
+  "audit_id": "B006",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "'5:00 PM' is another way to write 5 pm."
+ },
+ {
+  "audit_id": "B007",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "Heartbeat true is sensible since a follow-up message must be sent."
+ },
+ {
+  "audit_id": "B008",
+  "q1": "yes",
+  "q2": "tool definition",
+  "notes": "Uses key 'operator' instead of required 'operation' and an integer where a string is defined."
+ },
+ {
+  "audit_id": "B009",
+  "q1": "no",
+  "q2": "",
+  "notes": "All drink preferences match the user's request."
+ },
+ {
+  "audit_id": "B010",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "'substance A' is an equivalent way to name substance A."
+ },
+ {
+  "audit_id": "B011",
+  "q1": "no",
+  "q2": "",
+  "notes": "Definition says rate in percentage, so 3.5 is right."
+ },
+ {
+  "audit_id": "B012",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "City is right; only the state suffix of the documented format is missing."
+ },
+ {
+  "audit_id": "B013",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "Moscow is right; country suffix of the format omitted."
+ },
+ {
+  "audit_id": "B014",
+  "q1": "cannot tell",
+  "q2": "",
+  "notes": "5% as 0.05 vs 5.0 depends on alert-type units the definition does not state."
+ },
+ {
+  "audit_id": "B015",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "'Boston, MA' is a fine city name for the arrival airport."
+ },
+ {
+  "audit_id": "B016",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "Optional nickname filled with a sensible name derived from the hostname."
+ },
+ {
+  "audit_id": "B017",
+  "q1": "no",
+  "q2": "",
+  "notes": "ISO time without offset as the definition requires; date and time match."
+ },
+ {
+  "audit_id": "B018",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "Los Angeles is right; state suffix omitted."
+ },
+ {
+  "audit_id": "B019",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "User stated 52 total outcomes; agent substituted 2598960 (mathematically truer but not the user's value)."
+ },
+ {
+  "audit_id": "B020",
+  "q1": "cannot tell",
+  "q2": "",
+  "notes": "User gave no actual email; whether 'landlord's email' resolves to a recipient cannot be told."
+ },
+ {
+  "audit_id": "B021",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "Address is the user's own, with the ZIP code added beyond the format."
+ },
+ {
+  "audit_id": "B022",
+  "q1": "cannot tell",
+  "q2": "",
+  "notes": "Booking details match the summary; payment id and DOB need system data to check."
+ },
+ {
+  "audit_id": "B023",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "User asked for a family therapist; agent chose Psychologist instead of Family Counselor."
+ },
+ {
+  "audit_id": "B024",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "Address is the user's own, with the ZIP code added beyond the format."
+ },
+ {
+  "audit_id": "B025",
+  "q1": "no",
+  "q2": "",
+  "notes": "Date matches."
+ },
+ {
+  "audit_id": "B026",
+  "q1": "no",
+  "q2": "",
+  "notes": "Genre matches."
+ },
+ {
+  "audit_id": "B027",
+  "q1": "yes",
+  "q2": "system state",
+  "notes": "Flights included cost 1203 while payments total 833; price mismatch only visible from system data."
+ },
+ {
+  "audit_id": "B028",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "Principia is the actual title of the work containing the law."
+ },
+ {
+  "audit_id": "B029",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "'bitter' captures 'slightly bitter'."
+ },
+ {
+  "audit_id": "B030",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "'Rutherford, NJ' names the right city."
+ },
+ {
+  "audit_id": "B031",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "Shanghai, China written in Chinese matches the format."
+ },
+ {
+  "audit_id": "B032",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "'~' expands to the user's home directory, not '/home'; path altered."
+ },
+ {
+  "audit_id": "B033",
+  "q1": "no",
+  "q2": "",
+  "notes": "All drink preferences match the user's request."
+ },
+ {
+  "audit_id": "B034",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "Purpose is a sensible description of the user's reason."
+ },
+ {
+  "audit_id": "B035",
+  "q1": "yes",
+  "q2": "system state",
+  "notes": "User wants to drop office items, but the call exchanges 5 items for 2; rejected by the system."
+ },
+ {
+  "audit_id": "B036",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "URL keeps literal '{ip}' instead of the user's IP 192.120.45.67."
+ },
+ {
+  "audit_id": "B037",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "Including tools is a reasonable reading of 'tech stack'."
+ },
+ {
+  "audit_id": "B038",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "'Atlanta, GA' names the right departure city."
+ },
+ {
+  "audit_id": "B039",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "User asked for the 2021 regular season; the year is dropped."
+ },
+ {
+  "audit_id": "B040",
+  "q1": "cannot tell",
+  "q2": "",
+  "notes": "Unclear whether setting end availability to the requested time is the intended filter."
+ },
+ {
+  "audit_id": "B041",
+  "q1": "yes",
+  "q2": "system state",
+  "notes": "Modify call with empty new items to cancel some items; rejected by the system."
+ },
+ {
+  "audit_id": "B042",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "'Guangzhou, CN' is an equivalent country form."
+ },
+ {
+  "audit_id": "B043",
+  "q1": "yes",
+  "q2": "tool definition",
+  "notes": "'us' is not in the enum [metric, imperial] and the user asked for no units."
+ },
+ {
+  "audit_id": "B044",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "'Sydney, Australia' is equivalent to 'Sydney, AU'."
+ },
+ {
+  "audit_id": "B045",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "User named director Gene Stupnitsky; agent used dontcare."
+ },
+ {
+  "audit_id": "B046",
+  "q1": "cannot tell",
+  "q2": "",
+  "notes": "Items match the user's confirmation; payment method needs system data."
+ },
+ {
+  "audit_id": "B047",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "User said pop is their jam; filling genre Pop is a plausible reading."
+ },
+ {
+  "audit_id": "B048",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "User specified no show type; 'regular' is invented instead of default."
+ },
+ {
+  "audit_id": "B049",
+  "q1": "no",
+  "q2": "",
+  "notes": "County matches."
+ },
+ {
+  "audit_id": "B050",
+  "q1": "no",
+  "q2": "",
+  "notes": "Definition says rate in percentage, so 3.5 is right."
+ },
+ {
+  "audit_id": "B051",
+  "q1": "no",
+  "q2": "",
+  "notes": "Income matches."
+ },
+ {
+  "audit_id": "B052",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "User said album OR 2019; filtering on album with year dontcare is a valid branch."
+ },
+ {
+  "audit_id": "B053",
+  "q1": "no",
+  "q2": "",
+  "notes": "Base matches."
+ },
+ {
+  "audit_id": "B054",
+  "q1": "no",
+  "q2": "",
+  "notes": "Baths match."
+ },
+ {
+  "audit_id": "B055",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "User named Akiko Kawase in cast; agent used dontcare."
+ },
+ {
+  "audit_id": "B056",
+  "q1": "no",
+  "q2": "",
+  "notes": "Address matches the user and format."
+ },
+ {
+  "audit_id": "B057",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "User said pop is their jam; filling genre Pop is a plausible reading."
+ },
+ {
+  "audit_id": "B058",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "'Rutherford, NJ' names the right city."
+ },
+ {
+  "audit_id": "B059",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "User gave no start time; 00:00 is invented and restricts results."
+ },
+ {
+  "audit_id": "B060",
+  "q1": "yes",
+  "q2": "tool definition",
+  "notes": "'toll roads' is not an allowed enum value ('tolls')."
+ },
+ {
+  "audit_id": "B061",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "'medium' is a size, not part of the color; color should be red."
+ },
+ {
+  "audit_id": "B062",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "User said 'sometime'; a specific date was invented, also in the wrong format."
+ },
+ {
+  "audit_id": "B063",
+  "q1": "yes",
+  "q2": "system state",
+  "notes": "Exchange on an order that is not delivered; only system data shows the status."
+ },
+ {
+  "audit_id": "B064",
+  "q1": "no",
+  "q2": "",
+  "notes": "Title matches the user's wording."
+ },
+ {
+  "audit_id": "B065",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "Burlingame is right; state suffix omitted."
+ },
+ {
+  "audit_id": "B066",
+  "q1": "yes",
+  "q2": "system state",
+  "notes": "New item id '47182' looks malformed and the order is not delivered; needs system data."
+ },
+ {
+  "audit_id": "B067",
+  "q1": "yes",
+  "q2": "tool definition",
+  "notes": "'toll roads' is not an allowed enum value ('tolls')."
+ },
+ {
+  "audit_id": "B068",
+  "q1": "cannot tell",
+  "q2": "",
+  "notes": "User gave no actual email; whether 'landlord_email' resolves to a recipient cannot be told."
+ },
+ {
+  "audit_id": "B069",
+  "q1": "no",
+  "q2": "",
+  "notes": "y=4 matches."
+ },
+ {
+  "audit_id": "B070",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "San Lorenzo is right; state suffix omitted."
+ },
+ {
+  "audit_id": "B071",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "SFO is the IATA code for San Francisco, allowed by the definition."
+ },
+ {
+  "audit_id": "B072",
+  "q1": "no",
+  "q2": "",
+  "notes": "Cast matches."
+ },
+ {
+  "audit_id": "B073",
+  "q1": "no",
+  "q2": "",
+  "notes": "Team matches."
+ },
+ {
+  "audit_id": "B074",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "Philadelphia is right; state suffix omitted."
+ },
+ {
+  "audit_id": "B075",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "User asked for the Louvre Museum; agent used 'Paris, France'."
+ },
+ {
+  "audit_id": "B076",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "User asked to cancel #W3189752; agent exchanges items on #W5166363."
+ },
+ {
+  "audit_id": "B077",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "'Beijing' is a reasonable query for 'where is beijing'."
+ },
+ {
+  "audit_id": "B078",
+  "q1": "no",
+  "q2": "",
+  "notes": "13 hearts in a deck."
+ },
+ {
+  "audit_id": "B079",
+  "q1": "no",
+  "q2": "",
+  "notes": "Item name matches."
+ },
+ {
+  "audit_id": "B080",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "User asked for no category; 'Museum' is invented."
+ },
+ {
+  "audit_id": "B081",
+  "q1": "no",
+  "q2": "",
+  "notes": "Location matches format."
+ },
+ {
+  "audit_id": "B082",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "Daniel Camp is a cast member, not the director."
+ },
+ {
+  "audit_id": "B083",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "User wants kid-suitable attractions; dontcare ignores that."
+ },
+ {
+  "audit_id": "B084",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "include_education=true is the documented default."
+ },
+ {
+  "audit_id": "B085",
+  "q1": "yes",
+  "q2": "tool definition",
+  "notes": "Uses key 'operator' instead of required 'operation' and an integer where a string is defined."
+ },
+ {
+  "audit_id": "B086",
+  "q1": "yes",
+  "q2": "only the user",
+  "notes": "'the 9th' in Sep 2023 most naturally means 2023-09-09; October is a plausible but unconfirmed reading."
+ },
+ {
+  "audit_id": "B087",
+  "q1": "no",
+  "q2": "",
+  "notes": "null is the documented default for no preference."
+ },
+ {
+  "audit_id": "B088",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "San Francisco is right; state suffix omitted."
+ },
+ {
+  "audit_id": "B089",
+  "q1": "no",
+  "q2": "",
+  "notes": "Reservation id is the one the user asked to cancel."
+ },
+ {
+  "audit_id": "B090",
+  "q1": "no",
+  "q2": "",
+  "notes": "Dish matches."
+ },
+ {
+  "audit_id": "B091",
+  "q1": "no",
+  "q2": "",
+  "notes": "Category matches."
+ },
+ {
+  "audit_id": "B092",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "Sentences were altered ('my account' to 'your accounts') instead of the user's text."
+ },
+ {
+  "audit_id": "B093",
+  "q1": "no",
+  "q2": "",
+  "notes": "Category matches."
+ },
+ {
+  "audit_id": "B094",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "San Ramon is right; state suffix omitted."
+ },
+ {
+  "audit_id": "B095",
+  "q1": "no",
+  "q2": "",
+  "notes": "User did not mention kids; dontcare is right."
+ },
+ {
+  "audit_id": "B096",
+  "q1": "no",
+  "q2": "",
+  "notes": "Total energy is 5*2800=14000 kJ; the user asks work from total energy, so 14000 fits."
+ },
+ {
+  "audit_id": "B097",
+  "q1": "yes",
+  "q2": "tool definition",
+  "notes": "'2023.10.2' violates the required YYYY-MM-DD format."
+ },
+ {
+  "audit_id": "B098",
+  "q1": "yes",
+  "q2": "system state",
+  "notes": "Reservation still basic economy per system response, so 0 non-free bags is likely wrong; needs system data."
+ }
+]

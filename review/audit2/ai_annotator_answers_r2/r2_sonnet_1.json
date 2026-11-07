@@ -1,0 +1,17 @@
+[
+{"audit_id":"B003","q1":"yes","q2":"conversation","notes":"Rule 2: user never mentioned excluding inactive projects; value invented."},
+{"audit_id":"B012","q1":"yes","q2":"tool definition","notes":"Rule 1: 'City, State' required, 'Berkeley' lacks state."},
+{"audit_id":"B018","q1":"yes","q2":"tool definition","notes":"Rule 1: 'City, State' required, 'Los Angeles' lacks state."},
+{"audit_id":"B019","q1":"no","q2":"","notes":"Rule 5: 52-card deck royal flush total outcomes is C(52,5)=2598960; 52 would be wrong."},
+{"audit_id":"B037","q1":"yes","q2":"conversation","notes":"Rule 2: user did not ask for tools; documented default is false."},
+{"audit_id":"B040","q1":"acceptable alternative","q2":"","notes":"Rule 4: format is correct and the stated time is a sensible reading of availability at 11:00."},
+{"audit_id":"B052","q1":"yes","q2":"conversation","notes":"Rule 3: user named 2019 as a criterion but agent used dontcare."},
+{"audit_id":"B063","q1":"yes","q2":"system state","notes":"Rule 2: system says order not delivered so exchange on this order/items is invalid."},
+{"audit_id":"B065","q1":"yes","q2":"tool definition","notes":"Rule 1: state abbreviation required in city, 'Burlingame' lacks it."},
+{"audit_id":"B070","q1":"yes","q2":"tool definition","notes":"Rule 1: state abbreviation required in city, 'San Lorenzo' lacks it."},
+{"audit_id":"B074","q1":"yes","q2":"tool definition","notes":"Rule 1: 'City, State' required, 'Philadelphia' lacks state."},
+{"audit_id":"B077","q1":"acceptable alternative","q2":"","notes":"Rule 4: 'Beijing' is a sensible reduction of 'where is beijing' for a search query."},
+{"audit_id":"B088","q1":"yes","q2":"tool definition","notes":"Rule 1: 'City, State' required, 'San Francisco' lacks state."},
+{"audit_id":"B094","q1":"yes","q2":"tool definition","notes":"Rule 1: 'City, State' required, 'San Ramon' lacks state."},
+{"audit_id":"B098","q1":"yes","q2":"system state","notes":"Rule 2: reservation still shows basic_economy (no free bags) so nonfree_baggages 0 is unsupported."}
+]

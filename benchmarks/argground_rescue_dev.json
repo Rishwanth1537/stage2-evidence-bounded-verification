@@ -1,0 +1,7594 @@
+[
+ {
+  "id": "AG-00001",
+  "gold": false,
+  "argument": "customer_name",
+  "value": "Jane Smith",
+  "changed": true,
+  "ent": 0.0002449630992487073
+ },
+ {
+  "id": "AG-00002",
+  "gold": true,
+  "argument": "stock_symbol",
+  "value": "MSFT",
+  "changed": false,
+  "ent": 0.0009086704812943935
+ },
+ {
+  "id": "AG-00006",
+  "gold": false,
+  "argument": "to_unit",
+  "value": "meters",
+  "changed": true,
+  "ent": 0.0008899402455426753
+ },
+ {
+  "id": "AG-00010",
+  "gold": false,
+  "argument": "author",
+  "value": "Stephen Hawking",
+  "changed": true,
+  "ent": 3.865896360366605e-05
+ },
+ {
+  "id": "AG-00013",
+  "gold": true,
+  "argument": "symbol",
+  "value": "AAPL",
+  "changed": false,
+  "ent": 0.9690491557121277
+ },
+ {
+  "id": "AG-00015",
+  "gold": false,
+  "argument": "discount_percentage",
+  "value": 15,
+  "changed": true,
+  "ent": 0.00043679107329808176
+ },
+ {
+  "id": "AG-00018",
+  "gold": false,
+  "argument": "word",
+  "value": "ephemeral",
+  "changed": true,
+  "ent": 0.0021551877725869417
+ },
+ {
+  "id": "AG-00024",
+  "gold": false,
+  "argument": "text",
+  "value": "Good morning",
+  "changed": true,
+  "ent": 0.0004300380533095449
+ },
+ {
+  "id": "AG-00029",
+  "gold": false,
+  "argument": "number",
+  "value": 50,
+  "changed": true,
+  "ent": 8.142228762153536e-05
+ },
+ {
+  "id": "AG-00030",
+  "gold": false,
+  "argument": "keyword",
+  "value": "Dell",
+  "changed": true,
+  "ent": 0.00016633054474368691
+ },
+ {
+  "id": "AG-00030",
+  "gold": false,
+  "argument": "category",
+  "value": "electronics",
+  "changed": false,
+  "ent": 0.9589803814888
+ },
+ {
+  "id": "AG-00030",
+  "gold": false,
+  "argument": "minimum_price",
+  "value": 0,
+  "changed": false,
+  "ent": 0.00016482343198731542
+ },
+ {
+  "id": "AG-00032",
+  "gold": false,
+  "argument": "target_currency",
+  "value": "JPY",
+  "changed": true,
+  "ent": 1.4131807802186813e-05
+ },
+ {
+  "id": "AG-00033",
+  "gold": false,
+  "argument": "length",
+  "value": 22,
+  "changed": true,
+  "ent": 8.557220280636102e-05
+ },
+ {
+  "id": "AG-00037",
+  "gold": false,
+  "argument": "shape",
+  "value": "box",
+  "changed": true,
+  "ent": 0.0003036702983081341
+ },
+ {
+  "id": "AG-00041",
+  "gold": false,
+  "argument": "loan_amount",
+  "value": 2000000,
+  "changed": true,
+  "ent": 0.01599983684718609
+ },
+ {
+  "id": "AG-00042",
+  "gold": false,
+  "argument": "diet",
+  "value": "keto",
+  "changed": true,
+  "ent": 2.470615982019808e-05
+ },
+ {
+  "id": "AG-00045",
+  "gold": false,
+  "argument": "genre",
+  "value": "comedy",
+  "changed": true,
+  "ent": 0.00013415742432698607
+ },
+ {
+  "id": "AG-00046",
+  "gold": false,
+  "argument": "genre",
+  "value": "mystery",
+  "changed": true,
+  "ent": 0.0007037017494440079
+ },
+ {
+  "id": "AG-00048",
+  "gold": false,
+  "argument": "amount",
+  "value": 50000,
+  "changed": true,
+  "ent": 4.60222963738488e-06
+ },
+ {
+  "id": "AG-00052",
+  "gold": false,
+  "argument": "to",
+  "value": "boss@company.com",
+  "changed": true,
+  "ent": 0.00025223937700502574
+ },
+ {
+  "id": "AG-00055",
+  "gold": false,
+  "argument": "query",
+  "value": "mockingbird",
+  "changed": true,
+  "ent": 0.00012370436161290854
+ },
+ {
+  "id": "AG-00057",
+  "gold": false,
+  "argument": "title",
+  "value": "Doctor's Appointment",
+  "changed": true,
+  "ent": 9.981881885323673e-05
+ },
+ {
+  "id": "AG-00058",
+  "gold": false,
+  "argument": "tip_percentage",
+  "value": 200,
+  "changed": true,
+  "ent": 0.0009341469267383218
+ },
+ {
+  "id": "AG-00059",
+  "gold": false,
+  "argument": "website_url",
+  "value": "www.randomsite123.com",
+  "changed": true,
+  "ent": 1.7331462004221976e-05
+ },
+ {
+  "id": "AG-00060",
+  "gold": false,
+  "argument": "max_value",
+  "value": 600,
+  "changed": true,
+  "ent": 0.00010687144822441041
+ },
+ {
+  "id": "AG-00062",
+  "gold": false,
+  "argument": "length",
+  "value": 7,
+  "changed": true,
+  "ent": 7.988869037944824e-05
+ },
+ {
+  "id": "AG-00063",
+  "gold": false,
+  "argument": "location",
+  "value": "Los Angeles",
+  "changed": true,
+  "ent": 1.5466639524674974e-05
+ },
+ {
+  "id": "AG-00067",
+  "gold": false,
+  "argument": "song_title",
+  "value": "Shape of You",
+  "changed": true,
+  "ent": 1.0927678886218928e-05
+ },
+ {
+  "id": "AG-00071",
+  "gold": false,
+  "argument": "name",
+  "value": "laptop",
+  "changed": true,
+  "ent": 0.0010022458154708147
+ },
+ {
+  "id": "AG-00077",
+  "gold": false,
+  "argument": "number",
+  "value": 10,
+  "changed": true,
+  "ent": 1.232848171639489e-05
+ },
+ {
+  "id": "AG-00078",
+  "gold": false,
+  "argument": "number",
+  "value": 100,
+  "changed": true,
+  "ent": 0.00023070747556630522
+ },
+ {
+  "id": "AG-00087",
+  "gold": false,
+  "argument": "language",
+  "value": "Spanish",
+  "changed": true,
+  "ent": 0.00014334141451399773
+ },
+ {
+  "id": "AG-00088",
+  "gold": false,
+  "argument": "company",
+  "value": "Apple Inc.",
+  "changed": true,
+  "ent": 0.0005026530125178397
+ },
+ {
+  "id": "AG-00091",
+  "gold": false,
+  "argument": "subject",
+  "value": "Project Update",
+  "changed": true,
+  "ent": 0.00015925969637464732
+ },
+ {
+  "id": "AG-00092",
+  "gold": false,
+  "argument": "number",
+  "value": 10,
+  "changed": true,
+  "ent": 9.094135748455301e-05
+ },
+ {
+  "id": "AG-00095",
+  "gold": false,
+  "argument": "tax_rate",
+  "value": 30,
+  "changed": true,
+  "ent": 0.00015806150622665882
+ },
+ {
+  "id": "AG-00097",
+  "gold": false,
+  "argument": "min",
+  "value": 101,
+  "changed": true,
+  "ent": 0.0008825279655866325
+ },
+ {
+  "id": "AG-00103",
+  "gold": false,
+  "argument": "year",
+  "value": 2010,
+  "changed": true,
+  "ent": 0.00010392994590802118
+ },
+ {
+  "id": "AG-00108",
+  "gold": false,
+  "argument": "subject",
+  "value": "Monthly Report",
+  "changed": true,
+  "ent": 2.6777601306093857e-05
+ },
+ {
+  "id": "AG-00110",
+  "gold": false,
+  "argument": "original_price",
+  "value": 1500,
+  "changed": true,
+  "ent": 0.00012776869698427618
+ },
+ {
+  "id": "AG-00115",
+  "gold": false,
+  "argument": "destination",
+  "value": "Chicago",
+  "changed": true,
+  "ent": 5.164180765859783e-05
+ },
+ {
+  "id": "AG-00118",
+  "gold": false,
+  "argument": "birth_date",
+  "value": "1990-03-15",
+  "changed": true,
+  "ent": 0.0004953124444000423
+ },
+ {
+  "id": "AG-00120",
+  "gold": false,
+  "argument": "discount_percentage",
+  "value": 14,
+  "changed": true,
+  "ent": 8.683108171680942e-05
+ },
+ {
+  "id": "AG-00123",
+  "gold": false,
+  "argument": "query",
+  "value": "J.K. Rowling",
+  "changed": true,
+  "ent": 1.5080220691743307e-05
+ },
+ {
+  "id": "AG-00126",
+  "gold": false,
+  "argument": "shape",
+  "value": "triangle",
+  "changed": true,
+  "ent": 2.229219717264641e-05
+ },
+ {
+  "id": "AG-00133",
+  "gold": false,
+  "argument": "interest_rate",
+  "value": 35.0,
+  "changed": true,
+  "ent": 0.00069059943780303
+ },
+ {
+  "id": "AG-00134",
+  "gold": false,
+  "argument": "title",
+  "value": "Inception 2",
+  "changed": true,
+  "ent": 5.7739296607906e-05
+ },
+ {
+  "id": "AG-00143",
+  "gold": false,
+  "argument": "query",
+  "value": "sci-fi",
+  "changed": true,
+  "ent": 0.0006089851376600564
+ },
+ {
+  "id": "AG-00144",
+  "gold": false,
+  "argument": "package_weight",
+  "value": 50,
+  "changed": true,
+  "ent": 0.0002821831440087408
+ },
+ {
+  "id": "AG-00145",
+  "gold": false,
+  "argument": "tip_percentage",
+  "value": 30,
+  "changed": true,
+  "ent": 0.0007344027399085462
+ },
+ {
+  "id": "AG-00147",
+  "gold": false,
+  "argument": "temperature",
+  "value": 10,
+  "changed": true,
+  "ent": 5.934556156717008e-06
+ },
+ {
+  "id": "AG-00156",
+  "gold": false,
+  "argument": "interest_rate",
+  "value": 53.5,
+  "changed": true,
+  "ent": 0.00046707395813427866
+ },
+ {
+  "id": "AG-00165",
+  "gold": false,
+  "argument": "category",
+  "value": "politics",
+  "changed": true,
+  "ent": 2.7844829673995264e-05
+ },
+ {
+  "id": "AG-00166",
+  "gold": false,
+  "argument": "shape",
+  "value": "triangle",
+  "changed": true,
+  "ent": 0.0005164556205272675
+ },
+ {
+  "id": "AG-00167",
+  "gold": false,
+  "argument": "due_date",
+  "value": "2022-05-15",
+  "changed": true,
+  "ent": 0.00034857913851737976
+ },
+ {
+  "id": "AG-00180",
+  "gold": false,
+  "argument": "shape",
+  "value": "triangle",
+  "changed": true,
+  "ent": 0.0002454254135955125
+ },
+ {
+  "id": "AG-00185",
+  "gold": false,
+  "argument": "text",
+  "value": "I am feeling very happy today.",
+  "changed": true,
+  "ent": 0.00014785233361180872
+ },
+ {
+  "id": "AG-00193",
+  "gold": false,
+  "argument": "to_unit",
+  "value": "Kelvin",
+  "changed": true,
+  "ent": 6.438900163630024e-05
+ },
+ {
+  "id": "AG-00195",
+  "gold": false,
+  "argument": "movie_title",
+  "value": "Inception",
+  "changed": true,
+  "ent": 1.0387595466454513e-05
+ },
+ {
+  "id": "AG-00207",
+  "gold": false,
+  "argument": "date",
+  "value": "2022-05-15",
+  "changed": true,
+  "ent": 0.0008734596194699407
+ },
+ {
+  "id": "AG-00215",
+  "gold": false,
+  "argument": "name",
+  "value": "Workout Vibes",
+  "changed": true,
+  "ent": 7.470513082807884e-05
+ },
+ {
+  "id": "AG-00216",
+  "gold": false,
+  "argument": "recipient",
+  "value": "john.doe@example.com",
+  "changed": true,
+  "ent": 0.0006002240115776658
+ },
+ {
+  "id": "AG-00223",
+  "gold": false,
+  "argument": "limit",
+  "value": 10,
+  "changed": true,
+  "ent": 0.0003009622450917959
+ },
+ {
+  "id": "AG-00224",
+  "gold": false,
+  "argument": "cuisine",
+  "value": "Mexican",
+  "changed": true,
+  "ent": 0.00010072626173496246
+ },
+ {
+  "id": "AG-00233",
+  "gold": false,
+  "argument": "time",
+  "value": "10:00",
+  "changed": true,
+  "ent": 0.17515793442726135
+ },
+ {
+  "id": "AG-00237",
+  "gold": false,
+  "argument": "url",
+  "value": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+  "changed": true,
+  "ent": 1.6419822713942267e-05
+ },
+ {
+  "id": "AG-00239",
+  "gold": false,
+  "argument": "shape",
+  "value": "box",
+  "changed": true,
+  "ent": 0.0018042962765321136
+ },
+ {
+  "id": "AG-00243",
+  "gold": false,
+  "argument": "text",
+  "value": "Je suis tr\u00e8s heureux de vous rencontrer",
+  "changed": true,
+  "ent": 0.0005729907425120473
+ },
+ {
+  "id": "AG-00244",
+  "gold": true,
+  "argument": "genre",
+  "value": "pop",
+  "changed": false,
+  "ent": 8.768041880102828e-05
+ },
+ {
+  "id": "AG-00245",
+  "gold": false,
+  "argument": "cuisine",
+  "value": "Mexican",
+  "changed": true,
+  "ent": 2.6367664759163745e-05
+ },
+ {
+  "id": "AG-00255",
+  "gold": false,
+  "argument": "location",
+  "value": "conference room",
+  "changed": true,
+  "ent": 9.271928865928203e-05
+ },
+ {
+  "id": "AG-00260",
+  "gold": false,
+  "argument": "limit",
+  "value": 15,
+  "changed": true,
+  "ent": 0.0002877878141589463
+ },
+ {
+  "id": "AG-00267",
+  "gold": false,
+  "argument": "loan_amount",
+  "value": 2000000,
+  "changed": true,
+  "ent": 0.018708085641264915
+ },
+ {
+  "id": "AG-00269",
+  "gold": false,
+  "argument": "query",
+  "value": "The Old Man and the Sea",
+  "changed": true,
+  "ent": 0.0012634270824491978
+ },
+ {
+  "id": "AG-00274",
+  "gold": false,
+  "argument": "text",
+  "value": "I am really upset because my favorite team lost the match.",
+  "changed": true,
+  "ent": 1.142294604505878e-05
+ },
+ {
+  "id": "AG-00277",
+  "gold": false,
+  "argument": "query",
+  "value": "sun",
+  "changed": true,
+  "ent": 0.00011736684245988727
+ },
+ {
+  "id": "AG-00278",
+  "gold": false,
+  "argument": "string",
+  "value": "computer",
+  "changed": true,
+  "ent": 0.0006019058637320995
+ },
+ {
+  "id": "AG-00279",
+  "gold": false,
+  "argument": "genre",
+  "value": "romance",
+  "changed": true,
+  "ent": 4.757851638714783e-05
+ },
+ {
+  "id": "AG-00280",
+  "gold": false,
+  "argument": "amount_due",
+  "value": 550,
+  "changed": true,
+  "ent": 0.0033547363709658384
+ },
+ {
+  "id": "AG-00281",
+  "gold": false,
+  "argument": "quantity",
+  "value": 49,
+  "changed": true,
+  "ent": 0.009046124294400215
+ },
+ {
+  "id": "AG-00282",
+  "gold": false,
+  "argument": "country",
+  "value": "United Kingdom",
+  "changed": true,
+  "ent": 0.00016268603212665766
+ },
+ {
+  "id": "AG-00289",
+  "gold": false,
+  "argument": "min",
+  "value": 10,
+  "changed": true,
+  "ent": 0.00023483384575229138
+ },
+ {
+  "id": "AG-00293",
+  "gold": false,
+  "argument": "recipient",
+  "value": "boss@example.com",
+  "changed": true,
+  "ent": 0.017811177298426628
+ },
+ {
+  "id": "AG-00299",
+  "gold": false,
+  "argument": "shape",
+  "value": "triangle",
+  "changed": true,
+  "ent": 4.865173468715511e-05
+ },
+ {
+  "id": "AG-00305",
+  "gold": false,
+  "argument": "category",
+  "value": "electronics",
+  "changed": true,
+  "ent": 8.462559344479814e-05
+ },
+ {
+  "id": "AG-00307",
+  "gold": false,
+  "argument": "location",
+  "value": "New York",
+  "changed": true,
+  "ent": 6.513678090414032e-05
+ },
+ {
+  "id": "AG-00310",
+  "gold": false,
+  "argument": "from_unit",
+  "value": "miles",
+  "changed": true,
+  "ent": 3.719440655913786e-06
+ },
+ {
+  "id": "AG-00311",
+  "gold": false,
+  "argument": "weight",
+  "value": 140,
+  "changed": true,
+  "ent": 0.00045950428466312587
+ },
+ {
+  "id": "AG-00312",
+  "gold": false,
+  "argument": "text",
+  "value": "Hello, how are you?",
+  "changed": true,
+  "ent": 0.0059812432155013084
+ },
+ {
+  "id": "AG-00314",
+  "gold": false,
+  "argument": "loan_term",
+  "value": 20,
+  "changed": true,
+  "ent": 0.0002294462319696322
+ },
+ {
+  "id": "AG-00315",
+  "gold": false,
+  "argument": "origin",
+  "value": "London",
+  "changed": true,
+  "ent": 4.225117663736455e-05
+ },
+ {
+  "id": "AG-00325",
+  "gold": false,
+  "argument": "country",
+  "value": "France",
+  "changed": true,
+  "ent": 4.7515975893475115e-05
+ },
+ {
+  "id": "AG-00327",
+  "gold": true,
+  "argument": "size",
+  "value": 200,
+  "changed": false,
+  "ent": 6.609963020309806e-05
+ },
+ {
+  "id": "AG-00332",
+  "gold": false,
+  "argument": "loan_amount",
+  "value": 100000,
+  "changed": true,
+  "ent": 0.00029411251307465136
+ },
+ {
+  "id": "AG-00336",
+  "gold": false,
+  "argument": "movie_title",
+  "value": "The Godfather",
+  "changed": true,
+  "ent": 0.0002637255529407412
+ },
+ {
+  "id": "AG-00337",
+  "gold": false,
+  "argument": "destination",
+  "value": "Los Angeles",
+  "changed": true,
+  "ent": 1.341326606052462e-05
+ },
+ {
+  "id": "AG-00340",
+  "gold": false,
+  "argument": "to_currency",
+  "value": "JPY",
+  "changed": true,
+  "ent": 2.6262297978973947e-05
+ },
+ {
+  "id": "AG-00342",
+  "gold": true,
+  "argument": "longitude",
+  "value": -118.2437,
+  "changed": false,
+  "ent": 0.002771482104435563
+ },
+ {
+  "id": "AG-00346",
+  "gold": false,
+  "argument": "symbol",
+  "value": "GOOGL",
+  "changed": true,
+  "ent": 5.538027107832022e-05
+ },
+ {
+  "id": "AG-00348",
+  "gold": false,
+  "argument": "end_location",
+  "value": "Miami",
+  "changed": true,
+  "ent": 1.1275047654635273e-05
+ },
+ {
+  "id": "AG-00353",
+  "gold": false,
+  "argument": "text",
+  "value": "www.mywebsite.com",
+  "changed": true,
+  "ent": 0.0009449577773921192
+ },
+ {
+  "id": "AG-00358",
+  "gold": false,
+  "argument": "total_amount",
+  "value": 150,
+  "changed": true,
+  "ent": 0.00035402915091253817
+ },
+ {
+  "id": "AG-00364",
+  "gold": false,
+  "argument": "keyword",
+  "value": "artificial intelligence",
+  "changed": true,
+  "ent": 1.4437601748795714e-05
+ },
+ {
+  "id": "AG-00365",
+  "gold": false,
+  "argument": "amount",
+  "value": 490,
+  "changed": true,
+  "ent": 0.0025592539459466934
+ },
+ {
+  "id": "AG-00369",
+  "gold": false,
+  "argument": "symbol",
+  "value": "GOOG",
+  "changed": true,
+  "ent": 8.782735676504672e-06
+ },
+ {
+  "id": "AG-00373",
+  "gold": false,
+  "argument": "discount_percentage",
+  "value": 60,
+  "changed": true,
+  "ent": 0.00017118924006354064
+ },
+ {
+  "id": "AG-00380",
+  "gold": false,
+  "argument": "shape",
+  "value": "triangle",
+  "changed": true,
+  "ent": 0.0006779927643947303
+ },
+ {
+  "id": "AG-00389",
+  "gold": false,
+  "argument": "total_bill",
+  "value": 49,
+  "changed": true,
+  "ent": 0.0023721547331660986
+ },
+ {
+  "id": "AG-00391",
+  "gold": true,
+  "argument": "symbol",
+  "value": "MSFT",
+  "changed": false,
+  "ent": 6.915684207342565e-05
+ },
+ {
+  "id": "AG-00395",
+  "gold": false,
+  "argument": "recipient",
+  "value": "boss@company.com",
+  "changed": true,
+  "ent": 0.05414949357509613
+ },
+ {
+  "id": "AG-00396",
+  "gold": false,
+  "argument": "shape",
+  "value": "circle",
+  "changed": true,
+  "ent": 0.0002604643232189119
+ },
+ {
+  "id": "AG-00401",
+  "gold": false,
+  "argument": "discount_percentage",
+  "value": 40,
+  "changed": true,
+  "ent": 0.00021626696980092674
+ },
+ {
+  "id": "AG-00408",
+  "gold": false,
+  "argument": "customer_name",
+  "value": "Jane Smith",
+  "changed": true,
+  "ent": 4.784273187397048e-05
+ },
+ {
+  "id": "AG-00412",
+  "gold": false,
+  "argument": "author",
+  "value": "Isaac Asimov",
+  "changed": true,
+  "ent": 1.5426709069288336e-05
+ },
+ {
+  "id": "AG-00419",
+  "gold": false,
+  "argument": "text",
+  "value": "I am very happy to meet you",
+  "changed": true,
+  "ent": 0.9978321194648743
+ },
+ {
+  "id": "AG-00425",
+  "gold": true,
+  "argument": "symbol",
+  "value": "MSFT",
+  "changed": false,
+  "ent": 1.8246675608679652e-05
+ },
+ {
+  "id": "AG-00431",
+  "gold": false,
+  "argument": "natural_gas_usage",
+  "value": 45,
+  "changed": true,
+  "ent": 0.031911611557006836
+ },
+ {
+  "id": "AG-00432",
+  "gold": false,
+  "argument": "company_name",
+  "value": "Apple Inc.",
+  "changed": true,
+  "ent": 0.0002168726787203923
+ },
+ {
+  "id": "AG-00434",
+  "gold": false,
+  "argument": "country",
+  "value": "United Kingdom",
+  "changed": true,
+  "ent": 0.00021122462931089103
+ },
+ {
+  "id": "AG-00435",
+  "gold": false,
+  "argument": "duration",
+  "value": 450,
+  "changed": true,
+  "ent": 0.00017399982607457787
+ },
+ {
+  "id": "AG-00440",
+  "gold": false,
+  "argument": "num_terms",
+  "value": 20,
+  "changed": true,
+  "ent": 0.0003166312235407531
+ },
+ {
+  "id": "AG-00443",
+  "gold": false,
+  "argument": "text",
+  "value": "I am not feeling well today.",
+  "changed": true,
+  "ent": 0.00019619549857452512
+ },
+ {
+  "id": "AG-00443",
+  "gold": false,
+  "argument": "size",
+  "value": 200,
+  "changed": false,
+  "ent": 6.717572250636294e-05
+ },
+ {
+  "id": "AG-00444",
+  "gold": true,
+  "argument": "start_time",
+  "value": "2022-05-18T10:00:00",
+  "changed": false,
+  "ent": 0.00026202332810498774
+ },
+ {
+  "id": "AG-00444",
+  "gold": true,
+  "argument": "end_time",
+  "value": "2022-05-18T11:30:00",
+  "changed": false,
+  "ent": 0.0002377290220465511
+ },
+ {
+  "id": "AG-00453",
+  "gold": false,
+  "argument": "year",
+  "value": 4030,
+  "changed": true,
+  "ent": 2.740140371315647e-05
+ },
+ {
+  "id": "AG-00457",
+  "gold": false,
+  "argument": "movie_title",
+  "value": "The Dark Knight",
+  "changed": true,
+  "ent": 0.0015373617643490434
+ },
+ {
+  "id": "AG-00461",
+  "gold": false,
+  "argument": "location",
+  "value": "New York",
+  "changed": true,
+  "ent": 0.00010835428111022338
+ },
+ {
+  "id": "AG-00465",
+  "gold": false,
+  "argument": "original_price",
+  "value": 199,
+  "changed": true,
+  "ent": 0.021094482392072678
+ },
+ {
+  "id": "AG-00466",
+  "gold": false,
+  "argument": "loan_term",
+  "value": 10,
+  "changed": true,
+  "ent": 0.00027624997892417014
+ },
+ {
+  "id": "AG-00467",
+  "gold": true,
+  "argument": "symbol",
+  "value": "MSFT",
+  "changed": false,
+  "ent": 0.00015843001892790198
+ },
+ {
+  "id": "AG-00473",
+  "gold": false,
+  "argument": "discount_percentage",
+  "value": 19,
+  "changed": true,
+  "ent": 0.001607340294867754
+ },
+ {
+  "id": "AG-00477",
+  "gold": false,
+  "argument": "income",
+  "value": 40050,
+  "changed": true,
+  "ent": 0.005304928869009018
+ },
+ {
+  "id": "AG-00480",
+  "gold": false,
+  "argument": "shape",
+  "value": "triangle",
+  "changed": true,
+  "ent": 0.00020956655498594046
+ },
+ {
+  "id": "AG-00485",
+  "gold": false,
+  "argument": "height",
+  "value": 101.75,
+  "changed": true,
+  "ent": 0.0033938195556402206
+ },
+ {
+  "id": "AG-00486",
+  "gold": false,
+  "argument": "name",
+  "value": "John Doe",
+  "changed": true,
+  "ent": 0.001137163257226348
+ },
+ {
+  "id": "AG-00488",
+  "gold": false,
+  "argument": "exchange",
+  "value": "NYSE",
+  "changed": true,
+  "ent": 5.833456089021638e-05
+ },
+ {
+  "id": "AG-00489",
+  "gold": false,
+  "argument": "from_currency",
+  "value": "JPY",
+  "changed": true,
+  "ent": 4.965264452039264e-05
+ },
+ {
+  "id": "AG-00491",
+  "gold": false,
+  "argument": "text",
+  "value": "Je suis tr\u00e8s heureux de vous rencontrer",
+  "changed": true,
+  "ent": 0.00010245964949717745
+ },
+ {
+  "id": "AG-00494",
+  "gold": false,
+  "argument": "text",
+  "value": "I love to travel.",
+  "changed": true,
+  "ent": 0.00010815748100867495
+ },
+ {
+  "id": "AG-00498",
+  "gold": false,
+  "argument": "tax_rate",
+  "value": 19,
+  "changed": true,
+  "ent": 0.0013650963082909584
+ },
+ {
+  "id": "AG-00499",
+  "gold": false,
+  "argument": "symbol",
+  "value": "GOOGL",
+  "changed": true,
+  "ent": 3.601648495532572e-05
+ },
+ {
+  "id": "AG-00500",
+  "gold": false,
+  "argument": "text",
+  "value": "I am really upset because my favorite team lost the match.",
+  "changed": true,
+  "ent": 0.00036207062657922506
+ },
+ {
+  "id": "AG-00501",
+  "gold": false,
+  "argument": "latitude",
+  "value": 140.71,
+  "changed": true,
+  "ent": 8.30101635074243e-05
+ },
+ {
+  "id": "AG-00501",
+  "gold": false,
+  "argument": "longitude",
+  "value": -74.006,
+  "changed": false,
+  "ent": 0.2549597918987274
+ },
+ {
+  "id": "AG-00503",
+  "gold": false,
+  "argument": "title",
+  "value": "Inception",
+  "changed": true,
+  "ent": 6.450241926359013e-05
+ },
+ {
+  "id": "AG-00507",
+  "gold": false,
+  "argument": "from_currency",
+  "value": "JPY",
+  "changed": true,
+  "ent": 3.0548832000931725e-05
+ },
+ {
+  "id": "AG-00511",
+  "gold": false,
+  "argument": "shape",
+  "value": "triangle",
+  "changed": true,
+  "ent": 0.00019985958351753652
+ },
+ {
+  "id": "AG-00513",
+  "gold": false,
+  "argument": "loan_amount",
+  "value": 200050,
+  "changed": true,
+  "ent": 0.008370911702513695
+ },
+ {
+  "id": "AG-00514",
+  "gold": false,
+  "argument": "loan_amount",
+  "value": 199995,
+  "changed": true,
+  "ent": 0.002338211052119732
+ },
+ {
+  "id": "AG-00524",
+  "gold": false,
+  "argument": "date",
+  "value": "tomorrow",
+  "changed": true,
+  "ent": 0.00925355777144432
+ },
+ {
+  "id": "AG-00530",
+  "gold": false,
+  "argument": "to_currency",
+  "value": "Euro",
+  "changed": true,
+  "ent": 8.804353274172172e-05
+ },
+ {
+  "id": "AG-00534",
+  "gold": false,
+  "argument": "discount_percentage",
+  "value": 29,
+  "changed": true,
+  "ent": 0.0002337286132387817
+ },
+ {
+  "id": "AG-00540",
+  "gold": false,
+  "argument": "shape",
+  "value": "box",
+  "changed": true,
+  "ent": 0.002063801046460867
+ },
+ {
+  "id": "AG-00544",
+  "gold": false,
+  "argument": "artist",
+  "value": "Taylor Swift",
+  "changed": true,
+  "ent": 4.21383956563659e-05
+ },
+ {
+  "id": "AG-00545",
+  "gold": false,
+  "argument": "number",
+  "value": 5,
+  "changed": true,
+  "ent": 0.00042504133307375014
+ },
+ {
+  "id": "AG-00548",
+  "gold": false,
+  "argument": "company",
+  "value": "Apple Inc.",
+  "changed": true,
+  "ent": 0.0006690946174785495
+ },
+ {
+  "id": "AG-00550",
+  "gold": false,
+  "argument": "discount_percentage",
+  "value": 15,
+  "changed": true,
+  "ent": 0.0004601227701641619
+ },
+ {
+  "id": "AG-00552",
+  "gold": false,
+  "argument": "name",
+  "value": "Chill Vibes",
+  "changed": true,
+  "ent": 3.6269640986574814e-05
+ },
+ {
+  "id": "AG-00553",
+  "gold": true,
+  "argument": "longitude",
+  "value": -74.006,
+  "changed": false,
+  "ent": 0.013804813846945763
+ },
+ {
+  "id": "AG-00555",
+  "gold": false,
+  "argument": "location",
+  "value": "downtown Los Angeles",
+  "changed": true,
+  "ent": 3.972237391280942e-05
+ },
+ {
+  "id": "AG-00566",
+  "gold": false,
+  "argument": "text",
+  "value": "www.mywebsite.com",
+  "changed": true,
+  "ent": 4.077391349710524e-05
+ },
+ {
+  "id": "AG-00575",
+  "gold": false,
+  "argument": "query",
+  "value": "vegan",
+  "changed": true,
+  "ent": 3.9043748984113336e-05
+ },
+ {
+  "id": "AG-00575",
+  "gold": false,
+  "argument": "category",
+  "value": "Electronics",
+  "changed": false,
+  "ent": 0.0007527455454692245
+ },
+ {
+  "id": "AG-00583",
+  "gold": true,
+  "argument": "start_time",
+  "value": "2022-03-15T10:00:00",
+  "changed": false,
+  "ent": 0.00028752474463544786
+ },
+ {
+  "id": "AG-00583",
+  "gold": true,
+  "argument": "end_time",
+  "value": "2022-03-15T11:30:00",
+  "changed": false,
+  "ent": 0.00022539820929523557
+ },
+ {
+  "id": "AG-00592",
+  "gold": false,
+  "argument": "category",
+  "value": "electronics",
+  "changed": false,
+  "ent": 0.9589803814888
+ },
+ {
+  "id": "AG-00592",
+  "gold": false,
+  "argument": "price",
+  "value": 2000,
+  "changed": true,
+  "ent": 0.00013838613813277334
+ },
+ {
+  "id": "AG-00593",
+  "gold": false,
+  "argument": "country",
+  "value": "Japan",
+  "changed": true,
+  "ent": 3.338924943818711e-05
+ },
+ {
+  "id": "AG-00596",
+  "gold": false,
+  "argument": "word",
+  "value": "quintessential",
+  "changed": true,
+  "ent": 0.00024130268138833344
+ },
+ {
+  "id": "AG-00598",
+  "gold": false,
+  "argument": "genre",
+  "value": "action",
+  "changed": true,
+  "ent": 8.111735223792493e-05
+ },
+ {
+  "id": "AG-00599",
+  "gold": false,
+  "argument": "discount",
+  "value": 65,
+  "changed": true,
+  "ent": 0.0003470527590252459
+ },
+ {
+  "id": "AG-00605",
+  "gold": false,
+  "argument": "query",
+  "value": "gaming laptop",
+  "changed": true,
+  "ent": 0.0001333392719971016
+ },
+ {
+  "id": "AG-00607",
+  "gold": false,
+  "argument": "interest_rate",
+  "value": 10,
+  "changed": true,
+  "ent": 0.00016823159239720553
+ },
+ {
+  "id": "AG-00613",
+  "gold": false,
+  "argument": "tip_percentage",
+  "value": 150,
+  "changed": true,
+  "ent": 0.0007552424212917686
+ },
+ {
+  "id": "AG-00617",
+  "gold": false,
+  "argument": "cuisine",
+  "value": "Mexican",
+  "changed": true,
+  "ent": 3.1762268918100744e-05
+ },
+ {
+  "id": "AG-00620",
+  "gold": false,
+  "argument": "actor",
+  "value": "Steve Carell",
+  "changed": true,
+  "ent": 3.6854584323009476e-05
+ },
+ {
+  "id": "AG-00631",
+  "gold": false,
+  "argument": "latitude1",
+  "value": 40.7128,
+  "changed": false,
+  "ent": 0.0010643593268468976
+ },
+ {
+  "id": "AG-00631",
+  "gold": false,
+  "argument": "longitude1",
+  "value": -74.006,
+  "changed": false,
+  "ent": 0.0011489560129120946
+ },
+ {
+  "id": "AG-00631",
+  "gold": false,
+  "argument": "latitude2",
+  "value": 34.0522,
+  "changed": false,
+  "ent": 0.0007960466900840402
+ },
+ {
+  "id": "AG-00631",
+  "gold": false,
+  "argument": "longitude2",
+  "value": -1182.44,
+  "changed": true,
+  "ent": 0.0015071319648995996
+ },
+ {
+  "id": "AG-00632",
+  "gold": false,
+  "argument": "principal",
+  "value": 49990,
+  "changed": true,
+  "ent": 0.010919996537268162
+ },
+ {
+  "id": "AG-00636",
+  "gold": false,
+  "argument": "discount_percentage",
+  "value": 120,
+  "changed": true,
+  "ent": 6.37270713923499e-05
+ },
+ {
+  "id": "AG-00637",
+  "gold": false,
+  "argument": "max_value",
+  "value": 90,
+  "changed": true,
+  "ent": 0.0006196938338689506
+ },
+ {
+  "id": "AG-00640",
+  "gold": true,
+  "argument": "category",
+  "value": "electronics",
+  "changed": false,
+  "ent": 0.9589803814888
+ },
+ {
+  "id": "AG-00643",
+  "gold": false,
+  "argument": "word",
+  "value": "quintessential",
+  "changed": true,
+  "ent": 0.0010916374158114195
+ },
+ {
+  "id": "AG-00644",
+  "gold": false,
+  "argument": "weight",
+  "value": 10,
+  "changed": true,
+  "ent": 0.00031424761982634664
+ },
+ {
+  "id": "AG-00669",
+  "gold": false,
+  "argument": "text_to_translate",
+  "value": "I am fine, thank you",
+  "changed": true,
+  "ent": 0.00015340064419433475
+ },
+ {
+  "id": "AG-00671",
+  "gold": false,
+  "argument": "length",
+  "value": 120,
+  "changed": true,
+  "ent": 0.0001235344388987869
+ },
+ {
+  "id": "AG-00673",
+  "gold": false,
+  "argument": "discount",
+  "value": 40,
+  "changed": true,
+  "ent": 0.00035871242289431393
+ },
+ {
+  "id": "AG-00674",
+  "gold": true,
+  "argument": "rating",
+  "value": 7,
+  "changed": false,
+  "ent": 9.755510109243914e-05
+ },
+ {
+  "id": "AG-00681",
+  "gold": false,
+  "argument": "category",
+  "value": "sports",
+  "changed": true,
+  "ent": 0.00010866688535315916
+ },
+ {
+  "id": "AG-00686",
+  "gold": false,
+  "argument": "genre",
+  "value": "action",
+  "changed": true,
+  "ent": 0.0003896717680618167
+ },
+ {
+  "id": "AG-00689",
+  "gold": false,
+  "argument": "date",
+  "value": "15th of March",
+  "changed": true,
+  "ent": 0.0050734179094433784
+ },
+ {
+  "id": "AG-00691",
+  "gold": false,
+  "argument": "start_time",
+  "value": "2022-05-18T10:00:00",
+  "changed": true,
+  "ent": 0.00023658727877773345
+ },
+ {
+  "id": "AG-00691",
+  "gold": false,
+  "argument": "end_time",
+  "value": "2022-03-15T11:30:00",
+  "changed": false,
+  "ent": 0.00022539820929523557
+ },
+ {
+  "id": "AG-00695",
+  "gold": false,
+  "argument": "content",
+  "value": "Discuss project progress and next steps",
+  "changed": true,
+  "ent": 0.010041125118732452
+ },
+ {
+  "id": "AG-00696",
+  "gold": false,
+  "argument": "age",
+  "value": 25,
+  "changed": true,
+  "ent": 0.0003923175681848079
+ },
+ {
+  "id": "AG-00701",
+  "gold": false,
+  "argument": "data",
+  "value": "MySecretPassword123",
+  "changed": true,
+  "ent": 4.581333996611647e-05
+ },
+ {
+  "id": "AG-00702",
+  "gold": false,
+  "argument": "number",
+  "value": 70,
+  "changed": true,
+  "ent": 0.00011876635835506022
+ },
+ {
+  "id": "AG-00703",
+  "gold": false,
+  "argument": "country",
+  "value": "United Kingdom",
+  "changed": true,
+  "ent": 0.00027437511016614735
+ },
+ {
+  "id": "AG-00705",
+  "gold": true,
+  "argument": "features",
+  "value": [
+   "objects",
+   "colors",
+   "faces"
+  ],
+  "changed": false,
+  "ent": 0.0013816563878208399
+ },
+ {
+  "id": "AG-00711",
+  "gold": false,
+  "argument": "title",
+  "value": "Superbad",
+  "changed": true,
+  "ent": 0.00012932188110426068
+ },
+ {
+  "id": "AG-00712",
+  "gold": false,
+  "argument": "country",
+  "value": "Canada",
+  "changed": true,
+  "ent": 0.00021293906320352107
+ },
+ {
+  "id": "AG-00714",
+  "gold": false,
+  "argument": "destination",
+  "value": "Chicago",
+  "changed": true,
+  "ent": 5.825885818921961e-05
+ },
+ {
+  "id": "AG-00719",
+  "gold": false,
+  "argument": "start_date",
+  "value": "2022-05-15",
+  "changed": true,
+  "ent": 4.290588549338281e-05
+ },
+ {
+  "id": "AG-00723",
+  "gold": false,
+  "argument": "task",
+  "value": "call the plumber",
+  "changed": true,
+  "ent": 3.394854957150528e-06
+ },
+ {
+  "id": "AG-00725",
+  "gold": false,
+  "argument": "subject",
+  "value": "Meeting Agenda for Tomorrow",
+  "changed": true,
+  "ent": 1.9215151041862555e-05
+ },
+ {
+  "id": "AG-00727",
+  "gold": false,
+  "argument": "length",
+  "value": 150,
+  "changed": true,
+  "ent": 0.0001648564066272229
+ },
+ {
+  "id": "AG-00731",
+  "gold": false,
+  "argument": "original_price",
+  "value": 150,
+  "changed": true,
+  "ent": 0.0002705931256059557
+ },
+ {
+  "id": "AG-00734",
+  "gold": true,
+  "argument": "duration",
+  "value": 120,
+  "changed": false,
+  "ent": 0.021617498248815536
+ },
+ {
+  "id": "AG-00742",
+  "gold": false,
+  "argument": "release_year",
+  "value": 4038,
+  "changed": true,
+  "ent": 2.6377221729489975e-05
+ },
+ {
+  "id": "AG-00745",
+  "gold": false,
+  "argument": "subject",
+  "value": "Meeting Schedule",
+  "changed": true,
+  "ent": 2.472220512572676e-05
+ },
+ {
+  "id": "AG-00747",
+  "gold": false,
+  "argument": "symbol",
+  "value": "MSFT",
+  "changed": true,
+  "ent": 3.7210666050668806e-05
+ },
+ {
+  "id": "AG-00750",
+  "gold": false,
+  "argument": "to_currency",
+  "value": "JPY",
+  "changed": true,
+  "ent": 9.921233868226409e-06
+ },
+ {
+  "id": "AG-00751",
+  "gold": true,
+  "argument": "start_time",
+  "value": "2022-04-01T10:00:00",
+  "changed": false,
+  "ent": 0.11537693440914154
+ },
+ {
+  "id": "AG-00751",
+  "gold": true,
+  "argument": "end_time",
+  "value": "2022-04-01T11:00:00",
+  "changed": false,
+  "ent": 0.7742022275924683
+ },
+ {
+  "id": "AG-00755",
+  "gold": false,
+  "argument": "title",
+  "value": "John's Birthday Party",
+  "changed": true,
+  "ent": 1.1859250662382692e-05
+ },
+ {
+  "id": "AG-00757",
+  "gold": false,
+  "argument": "start_time",
+  "value": "2022-05-18T10:00:00",
+  "changed": false,
+  "ent": 0.00026202332810498774
+ },
+ {
+  "id": "AG-00757",
+  "gold": false,
+  "argument": "end_time",
+  "value": "2022-05-18T11:30:00",
+  "changed": false,
+  "ent": 0.0002377290220465511
+ },
+ {
+  "id": "AG-00757",
+  "gold": false,
+  "argument": "location",
+  "value": "New York",
+  "changed": true,
+  "ent": 8.13237638794817e-05
+ },
+ {
+  "id": "AG-00758",
+  "gold": false,
+  "argument": "latitude",
+  "value": 68.1,
+  "changed": true,
+  "ent": 0.00017125210433732718
+ },
+ {
+  "id": "AG-00758",
+  "gold": false,
+  "argument": "longitude",
+  "value": -118.2437,
+  "changed": false,
+  "ent": 0.002771482104435563
+ },
+ {
+  "id": "AG-00759",
+  "gold": false,
+  "argument": "original_price",
+  "value": 200,
+  "changed": true,
+  "ent": 0.003888120409101248
+ },
+ {
+  "id": "AG-00760",
+  "gold": false,
+  "argument": "image_url",
+  "value": "https://example.com/myimage.jpg",
+  "changed": true,
+  "ent": 0.005122876260429621
+ },
+ {
+  "id": "AG-00768",
+  "gold": false,
+  "argument": "category",
+  "value": "park",
+  "changed": true,
+  "ent": 0.00018688547424972057
+ },
+ {
+  "id": "AG-00774",
+  "gold": false,
+  "argument": "discount_percentage",
+  "value": 200,
+  "changed": true,
+  "ent": 9.671450243331492e-05
+ },
+ {
+  "id": "AG-00783",
+  "gold": false,
+  "argument": "shape",
+  "value": "rectangle",
+  "changed": true,
+  "ent": 0.0004097176424693316
+ },
+ {
+  "id": "AG-00785",
+  "gold": false,
+  "argument": "description",
+  "value": "Buy milk, eggs, and bread from the supermarket",
+  "changed": true,
+  "ent": 0.0019188170554116368
+ },
+ {
+  "id": "AG-00787",
+  "gold": false,
+  "argument": "symbol",
+  "value": "GOOGL",
+  "changed": true,
+  "ent": 3.082641705987044e-05
+ },
+ {
+  "id": "AG-00793",
+  "gold": false,
+  "argument": "title",
+  "value": "Project Meeting",
+  "changed": true,
+  "ent": 4.211283885524608e-05
+ },
+ {
+  "id": "AG-00796",
+  "gold": false,
+  "argument": "word",
+  "value": "ephemeral",
+  "changed": true,
+  "ent": 0.023378627374768257
+ },
+ {
+  "id": "AG-00800",
+  "gold": true,
+  "argument": "symbol",
+  "value": "MSFT",
+  "changed": false,
+  "ent": 3.692623431561515e-05
+ },
+ {
+  "id": "AG-00803",
+  "gold": false,
+  "argument": "interest_rate",
+  "value": 0.5,
+  "changed": true,
+  "ent": 0.0001945085678016767
+ },
+ {
+  "id": "AG-00808",
+  "gold": true,
+  "argument": "symbol",
+  "value": "MSFT",
+  "changed": false,
+  "ent": 0.0007906722603365779
+ },
+ {
+  "id": "AG-00815",
+  "gold": false,
+  "argument": "title",
+  "value": "The Dark Night",
+  "changed": true,
+  "ent": 3.259816821810091e-06
+ },
+ {
+  "id": "AG-00816",
+  "gold": false,
+  "argument": "length",
+  "value": 11,
+  "changed": true,
+  "ent": 0.0028003172483295202
+ },
+ {
+  "id": "AG-00818",
+  "gold": false,
+  "argument": "year",
+  "value": 4036,
+  "changed": true,
+  "ent": 2.2984033421380445e-05
+ },
+ {
+  "id": "AG-00819",
+  "gold": false,
+  "argument": "word",
+  "value": "quintessential",
+  "changed": true,
+  "ent": 0.0015670304419472814
+ },
+ {
+  "id": "AG-00829",
+  "gold": false,
+  "argument": "input",
+  "value": "12345ABC",
+  "changed": true,
+  "ent": 0.0017599959392100573
+ },
+ {
+  "id": "AG-00834",
+  "gold": false,
+  "argument": "customer_name",
+  "value": "Jane Smith",
+  "changed": true,
+  "ent": 4.8325433454010636e-05
+ },
+ {
+  "id": "AG-00837",
+  "gold": false,
+  "argument": "number",
+  "value": 50,
+  "changed": true,
+  "ent": 1.6386133211199194e-05
+ },
+ {
+  "id": "AG-00840",
+  "gold": false,
+  "argument": "destination",
+  "value": "Paris",
+  "changed": true,
+  "ent": 2.6144534785998985e-05
+ },
+ {
+  "id": "AG-00841",
+  "gold": true,
+  "argument": "tenure",
+  "value": 240,
+  "changed": false,
+  "ent": 0.0002903198474086821
+ },
+ {
+  "id": "AG-00844",
+  "gold": false,
+  "argument": "genre",
+  "value": "fantasy",
+  "changed": true,
+  "ent": 5.747096656705253e-05
+ },
+ {
+  "id": "AG-00846",
+  "gold": false,
+  "argument": "start_location",
+  "value": "London",
+  "changed": true,
+  "ent": 5.0258800911251456e-05
+ },
+ {
+  "id": "AG-00849",
+  "gold": false,
+  "argument": "diet",
+  "value": "keto",
+  "changed": true,
+  "ent": 0.00020336615853011608
+ },
+ {
+  "id": "AG-00861",
+  "gold": false,
+  "argument": "height",
+  "value": 101.75,
+  "changed": true,
+  "ent": 0.0013457991881296039
+ },
+ {
+  "id": "AG-00865",
+  "gold": false,
+  "argument": "original_price",
+  "value": 400,
+  "changed": true,
+  "ent": 0.0027302743401378393
+ },
+ {
+  "id": "AG-00870",
+  "gold": false,
+  "argument": "bill_amount",
+  "value": 60,
+  "changed": true,
+  "ent": 2.9775303119095042e-05
+ },
+ {
+  "id": "AG-00871",
+  "gold": false,
+  "argument": "text",
+  "value": "Hello World",
+  "changed": true,
+  "ent": 8.509755389241036e-06
+ },
+ {
+  "id": "AG-00872",
+  "gold": true,
+  "argument": "symbol",
+  "value": "AAPL",
+  "changed": false,
+  "ent": 0.0003427639021538198
+ },
+ {
+  "id": "AG-00873",
+  "gold": false,
+  "argument": "income",
+  "value": 60005,
+  "changed": true,
+  "ent": 0.0030516367405653
+ },
+ {
+  "id": "AG-00875",
+  "gold": false,
+  "argument": "target_currency",
+  "value": "JPY",
+  "changed": true,
+  "ent": 3.844153616228141e-05
+ },
+ {
+  "id": "AG-00881",
+  "gold": false,
+  "argument": "original_price",
+  "value": 250,
+  "changed": true,
+  "ent": 0.0015789343742653728
+ },
+ {
+  "id": "AG-00883",
+  "gold": false,
+  "argument": "cuisine",
+  "value": "Mexican",
+  "changed": true,
+  "ent": 9.686755947768688e-05
+ },
+ {
+  "id": "AG-00885",
+  "gold": false,
+  "argument": "message",
+  "value": "Please find attached the monthly report for your review.",
+  "changed": true,
+  "ent": 0.0005357685149647295
+ },
+ {
+  "id": "AG-00894",
+  "gold": false,
+  "argument": "discount_percentage",
+  "value": 150,
+  "changed": true,
+  "ent": 0.0003563237842172384
+ },
+ {
+  "id": "AG-00895",
+  "gold": false,
+  "argument": "shape",
+  "value": "triangle",
+  "changed": true,
+  "ent": 0.0002668886154424399
+ },
+ {
+  "id": "AG-00914",
+  "gold": true,
+  "argument": "start_time",
+  "value": "2022-04-15T14:00:00",
+  "changed": false,
+  "ent": 0.00015344809798989445
+ },
+ {
+  "id": "AG-00914",
+  "gold": true,
+  "argument": "end_time",
+  "value": "2022-04-15T15:00:00",
+  "changed": false,
+  "ent": 0.00018120548338629305
+ },
+ {
+  "id": "AG-00915",
+  "gold": false,
+  "argument": "shape_type",
+  "value": "triangle",
+  "changed": true,
+  "ent": 0.0004519628710113466
+ },
+ {
+  "id": "AG-00919",
+  "gold": false,
+  "argument": "text",
+  "value": "www.mywebsite.com",
+  "changed": true,
+  "ent": 0.0007349413936026394
+ },
+ {
+  "id": "AG-00920",
+  "gold": false,
+  "argument": "word",
+  "value": "sad",
+  "changed": true,
+  "ent": 3.548471795511432e-05
+ },
+ {
+  "id": "AG-00930",
+  "gold": false,
+  "argument": "source",
+  "value": "London",
+  "changed": true,
+  "ent": 8.738639007788152e-05
+ },
+ {
+  "id": "AG-00934",
+  "gold": true,
+  "argument": "stock",
+  "value": "MSFT",
+  "changed": false,
+  "ent": 0.001607074635103345
+ },
+ {
+  "id": "AG-00937",
+  "gold": false,
+  "argument": "keywords",
+  "value": "comedy, romantic",
+  "changed": true,
+  "ent": 5.375924956751987e-05
+ },
+ {
+  "id": "AG-00938",
+  "gold": false,
+  "argument": "text",
+  "value": "I am very happy to meet you",
+  "changed": true,
+  "ent": 0.00010296888649463654
+ },
+ {
+  "id": "AG-00940",
+  "gold": false,
+  "argument": "query",
+  "value": "good Italian restaurant",
+  "changed": true,
+  "ent": 1.5460196664207615e-05
+ },
+ {
+  "id": "AG-00941",
+  "gold": false,
+  "argument": "number1",
+  "value": 35,
+  "changed": true,
+  "ent": 0.0009433655650354922
+ },
+ {
+  "id": "AG-00945",
+  "gold": false,
+  "argument": "query",
+  "value": "J.K. Rowling",
+  "changed": true,
+  "ent": 0.001415497506968677
+ },
+ {
+  "id": "AG-00950",
+  "gold": false,
+  "argument": "end_location",
+  "value": "Miami",
+  "changed": true,
+  "ent": 4.0172948502004147e-05
+ },
+ {
+  "id": "AG-00952",
+  "gold": false,
+  "argument": "location1",
+  "value": "London",
+  "changed": true,
+  "ent": 9.210648386215325e-06
+ },
+ {
+  "id": "AG-00954",
+  "gold": false,
+  "argument": "playlist",
+  "value": "Classic Rock",
+  "changed": true,
+  "ent": 3.600454510888085e-05
+ },
+ {
+  "id": "AG-00958",
+  "gold": false,
+  "argument": "location",
+  "value": "John's House",
+  "changed": true,
+  "ent": 0.0001037826223182492
+ },
+ {
+  "id": "AG-00959",
+  "gold": false,
+  "argument": "discount_percentage",
+  "value": 30,
+  "changed": true,
+  "ent": 1.2737093129544519e-05
+ },
+ {
+  "id": "AG-00966",
+  "gold": false,
+  "argument": "query",
+  "value": "climate change",
+  "changed": true,
+  "ent": 1.1145109056087676e-05
+ },
+ {
+  "id": "AG-00968",
+  "gold": false,
+  "argument": "message",
+  "value": "Hi John, Let's meet tomorrow at 10 AM. Regards, Alex",
+  "changed": true,
+  "ent": 0.00035933090839535
+ },
+ {
+  "id": "AG-00974",
+  "gold": false,
+  "argument": "keywords",
+  "value": "mystery",
+  "changed": true,
+  "ent": 0.00024170719552785158
+ },
+ {
+  "id": "AG-00982",
+  "gold": false,
+  "argument": "movie_name",
+  "value": "Titanic",
+  "changed": true,
+  "ent": 0.9925011992454529
+ },
+ {
+  "id": "AG-00983",
+  "gold": false,
+  "argument": "genre",
+  "value": "romance",
+  "changed": true,
+  "ent": 6.425649917218834e-05
+ },
+ {
+  "id": "AG-00984",
+  "gold": false,
+  "argument": "tip_percentage",
+  "value": 115,
+  "changed": true,
+  "ent": 0.0011270740069448948
+ },
+ {
+  "id": "AG-00989",
+  "gold": false,
+  "argument": "longitude",
+  "value": -148.01,
+  "changed": true,
+  "ent": 0.00019604485714808106
+ },
+ {
+  "id": "AG-00996",
+  "gold": false,
+  "argument": "age",
+  "value": 29,
+  "changed": true,
+  "ent": 0.0006963064079172909
+ },
+ {
+  "id": "AG-01005",
+  "gold": true,
+  "argument": "current_date",
+  "value": "2022-03-15",
+  "changed": false,
+  "ent": 0.00105743866879493
+ },
+ {
+  "id": "AG-01011",
+  "gold": false,
+  "argument": "tip_percentage",
+  "value": 150,
+  "changed": true,
+  "ent": 0.0005262831109575927
+ },
+ {
+  "id": "AG-01017",
+  "gold": false,
+  "argument": "shape",
+  "value": "circle",
+  "changed": true,
+  "ent": 0.000232758917263709
+ },
+ {
+  "id": "AG-01018",
+  "gold": true,
+  "argument": "size",
+  "value": 500,
+  "changed": false,
+  "ent": 4.4305576011538506e-05
+ },
+ {
+  "id": "AG-01022",
+  "gold": true,
+  "argument": "start_time",
+  "value": "2022-04-01T10:00:00",
+  "changed": false,
+  "ent": 0.7326022982597351
+ },
+ {
+  "id": "AG-01022",
+  "gold": true,
+  "argument": "end_time",
+  "value": "2022-04-01T11:00:00",
+  "changed": false,
+  "ent": 0.8311342597007751
+ },
+ {
+  "id": "AG-01028",
+  "gold": false,
+  "argument": "title",
+  "value": "Annual Sales Meeting",
+  "changed": true,
+  "ent": 4.954927590006264e-06
+ },
+ {
+  "id": "AG-01030",
+  "gold": false,
+  "argument": "original_price",
+  "value": 2000,
+  "changed": true,
+  "ent": 0.0004911915166303515
+ },
+ {
+  "id": "AG-01034",
+  "gold": false,
+  "argument": "temperature_fahrenheit",
+  "value": 197.2,
+  "changed": true,
+  "ent": 0.00013080552162136883
+ },
+ {
+  "id": "AG-01035",
+  "gold": false,
+  "argument": "keywords",
+  "value": "pasta",
+  "changed": true,
+  "ent": 6.0844937252113596e-05
+ },
+ {
+  "id": "AG-01038",
+  "gold": false,
+  "argument": "cuisine",
+  "value": "Mexican",
+  "changed": true,
+  "ent": 3.512164767016657e-05
+ },
+ {
+  "id": "AG-01040",
+  "gold": false,
+  "argument": "title",
+  "value": "My Birthday Party",
+  "changed": true,
+  "ent": 0.22794684767723083
+ },
+ {
+  "id": "AG-01048",
+  "gold": true,
+  "argument": "symbol",
+  "value": "MSFT",
+  "changed": false,
+  "ent": 0.0011032685870304704
+ },
+ {
+  "id": "AG-01050",
+  "gold": false,
+  "argument": "song_title",
+  "value": "Shape of You",
+  "changed": true,
+  "ent": 6.652817319263704e-06
+ },
+ {
+  "id": "AG-01051",
+  "gold": false,
+  "argument": "discount_percentage",
+  "value": 120,
+  "changed": true,
+  "ent": 0.0006295180064626038
+ },
+ {
+  "id": "AG-01056",
+  "gold": false,
+  "argument": "longitude",
+  "value": -148.01,
+  "changed": true,
+  "ent": 7.710949284955859e-05
+ },
+ {
+  "id": "AG-01060",
+  "gold": false,
+  "argument": "interest_rate",
+  "value": 4,
+  "changed": true,
+  "ent": 0.002288054209202528
+ },
+ {
+  "id": "AG-01063",
+  "gold": false,
+  "argument": "height",
+  "value": 12,
+  "changed": true,
+  "ent": 0.00017747374658938497
+ },
+ {
+  "id": "AG-01068",
+  "gold": false,
+  "argument": "min",
+  "value": 2,
+  "changed": true,
+  "ent": 0.00011118811380583793
+ },
+ {
+  "id": "AG-01072",
+  "gold": false,
+  "argument": "movie_title",
+  "value": "Titanic",
+  "changed": true,
+  "ent": 0.00674739433452487
+ },
+ {
+  "id": "AG-01076",
+  "gold": false,
+  "argument": "size",
+  "value": 5000,
+  "changed": true,
+  "ent": 8.220246672863141e-05
+ },
+ {
+  "id": "AG-01077",
+  "gold": false,
+  "argument": "shape",
+  "value": "circle",
+  "changed": true,
+  "ent": 0.0002604643232189119
+ },
+ {
+  "id": "AG-01078",
+  "gold": false,
+  "argument": "topic",
+  "value": "new iPhone release",
+  "changed": true,
+  "ent": 8.787922706687823e-05
+ },
+ {
+  "id": "AG-01081",
+  "gold": false,
+  "argument": "original_price",
+  "value": 400,
+  "changed": true,
+  "ent": 0.007172962184995413
+ },
+ {
+  "id": "AG-01082",
+  "gold": false,
+  "argument": "location",
+  "value": "New York",
+  "changed": true,
+  "ent": 5.245162537903525e-05
+ },
+ {
+  "id": "AG-01084",
+  "gold": false,
+  "argument": "bill_amount",
+  "value": 49,
+  "changed": true,
+  "ent": 0.0016974348109215498
+ },
+ {
+  "id": "AG-01088",
+  "gold": false,
+  "argument": "original_price",
+  "value": 2000,
+  "changed": true,
+  "ent": 0.00037208059802651405
+ },
+ {
+  "id": "AG-01090",
+  "gold": false,
+  "argument": "query",
+  "value": "J.K. Rowling",
+  "changed": true,
+  "ent": 1.6306414181599393e-05
+ },
+ {
+  "id": "AG-01102",
+  "gold": false,
+  "argument": "shape",
+  "value": "triangle",
+  "changed": true,
+  "ent": 0.00019538904598448426
+ },
+ {
+  "id": "AG-01109",
+  "gold": false,
+  "argument": "loan_amount",
+  "value": 50050,
+  "changed": true,
+  "ent": 0.9838436245918274
+ },
+ {
+  "id": "AG-01112",
+  "gold": false,
+  "argument": "query",
+  "value": "sun",
+  "changed": true,
+  "ent": 0.00015398056712001562
+ },
+ {
+  "id": "AG-01113",
+  "gold": false,
+  "argument": "genre",
+  "value": "fantasy",
+  "changed": true,
+  "ent": 8.519520633853972e-05
+ },
+ {
+  "id": "AG-01119",
+  "gold": false,
+  "argument": "cuisine",
+  "value": "Mexican",
+  "changed": true,
+  "ent": 9.855762618826702e-05
+ },
+ {
+  "id": "AG-01120",
+  "gold": true,
+  "argument": "category",
+  "value": "Electronics",
+  "changed": false,
+  "ent": 0.0007527455454692245
+ },
+ {
+  "id": "AG-01122",
+  "gold": false,
+  "argument": "loan_term",
+  "value": 120,
+  "changed": true,
+  "ent": 0.0004624243301805109
+ },
+ {
+  "id": "AG-01126",
+  "gold": true,
+  "argument": "current_date",
+  "value": "2022-03-15",
+  "changed": false,
+  "ent": 0.00105743866879493
+ },
+ {
+  "id": "AG-01127",
+  "gold": false,
+  "argument": "subject",
+  "value": "Monthly Report",
+  "changed": true,
+  "ent": 0.0001775096170604229
+ },
+ {
+  "id": "AG-01131",
+  "gold": false,
+  "argument": "director",
+  "value": "Christopher Nolan",
+  "changed": true,
+  "ent": 2.8627047868212685e-05
+ },
+ {
+  "id": "AG-01133",
+  "gold": false,
+  "argument": "category",
+  "value": "business",
+  "changed": true,
+  "ent": 0.0003064025077037513
+ },
+ {
+  "id": "AG-01134",
+  "gold": false,
+  "argument": "shape",
+  "value": "square",
+  "changed": true,
+  "ent": 0.0022284367587417364
+ },
+ {
+  "id": "AG-01135",
+  "gold": false,
+  "argument": "tip_percentage",
+  "value": 30,
+  "changed": true,
+  "ent": 0.000547262723557651
+ },
+ {
+  "id": "AG-01139",
+  "gold": false,
+  "argument": "height",
+  "value": 11.75,
+  "changed": true,
+  "ent": 0.0011263212654739618
+ },
+ {
+  "id": "AG-01145",
+  "gold": false,
+  "argument": "activity",
+  "value": "cycling",
+  "changed": true,
+  "ent": 0.15251974761486053
+ },
+ {
+  "id": "AG-01150",
+  "gold": false,
+  "argument": "location",
+  "value": "Conference Room 1",
+  "changed": true,
+  "ent": 4.260313289705664e-05
+ },
+ {
+  "id": "AG-01152",
+  "gold": false,
+  "argument": "from_currency",
+  "value": "JPY",
+  "changed": true,
+  "ent": 8.529478509444743e-05
+ },
+ {
+  "id": "AG-01153",
+  "gold": false,
+  "argument": "from_currency",
+  "value": "JPY",
+  "changed": true,
+  "ent": 0.00013040576595813036
+ },
+ {
+  "id": "AG-01161",
+  "gold": true,
+  "argument": "start_time",
+  "value": "2022-04-15T10:00:00",
+  "changed": false,
+  "ent": 0.00023007846903055906
+ },
+ {
+  "id": "AG-01161",
+  "gold": true,
+  "argument": "end_time",
+  "value": "2022-04-15T11:30:00",
+  "changed": false,
+  "ent": 0.0001802190818125382
+ },
+ {
+  "id": "AG-01163",
+  "gold": false,
+  "argument": "loan_amount",
+  "value": 199995,
+  "changed": true,
+  "ent": 0.0027805587742477655
+ },
+ {
+  "id": "AG-01173",
+  "gold": false,
+  "argument": "number_of_people",
+  "value": 10,
+  "changed": true,
+  "ent": 0.0004103157261852175
+ },
+ {
+  "id": "AG-01174",
+  "gold": false,
+  "argument": "amount",
+  "value": 1050,
+  "changed": true,
+  "ent": 0.001061651506461203
+ },
+ {
+  "id": "AG-01178",
+  "gold": false,
+  "argument": "country",
+  "value": "Japan",
+  "changed": true,
+  "ent": 6.008326090523042e-05
+ },
+ {
+  "id": "AG-01183",
+  "gold": false,
+  "argument": "distance",
+  "value": 510,
+  "changed": true,
+  "ent": 0.0004770466184709221
+ },
+ {
+  "id": "AG-01184",
+  "gold": false,
+  "argument": "shape",
+  "value": "circle",
+  "changed": true,
+  "ent": 0.0009552750852890313
+ },
+ {
+  "id": "AG-01187",
+  "gold": false,
+  "argument": "genre",
+  "value": "comedy",
+  "changed": true,
+  "ent": 0.00011339860793668777
+ },
+ {
+  "id": "AG-01194",
+  "gold": false,
+  "argument": "timezone",
+  "value": "Eastern Standard Time",
+  "changed": true,
+  "ent": 9.877579577732831e-05
+ },
+ {
+  "id": "AG-01199",
+  "gold": false,
+  "argument": "query",
+  "value": "climate change",
+  "changed": true,
+  "ent": 1.882873402792029e-05
+ },
+ {
+  "id": "AG-01211",
+  "gold": false,
+  "argument": "location",
+  "value": "Zoom",
+  "changed": true,
+  "ent": 0.027720609679818153
+ },
+ {
+  "id": "AG-01212",
+  "gold": false,
+  "argument": "flight_number",
+  "value": "BA 2159",
+  "changed": true,
+  "ent": 4.212424755678512e-05
+ },
+ {
+  "id": "AG-01217",
+  "gold": true,
+  "argument": "b",
+  "value": -3,
+  "changed": false,
+  "ent": 0.00185720669105649
+ },
+ {
+  "id": "AG-01225",
+  "gold": false,
+  "argument": "location",
+  "value": "London",
+  "changed": true,
+  "ent": 3.7425033951876685e-05
+ },
+ {
+  "id": "AG-01228",
+  "gold": false,
+  "argument": "limit",
+  "value": 10,
+  "changed": true,
+  "ent": 0.0005342332297004759
+ },
+ {
+  "id": "AG-01239",
+  "gold": false,
+  "argument": "income",
+  "value": 49995,
+  "changed": true,
+  "ent": 0.0007439862238243222
+ },
+ {
+  "id": "AG-01240",
+  "gold": false,
+  "argument": "number",
+  "value": 810,
+  "changed": true,
+  "ent": 0.0015766372671350837
+ },
+ {
+  "id": "AG-01244",
+  "gold": false,
+  "argument": "content",
+  "value": "www.mywebsite.com",
+  "changed": true,
+  "ent": 0.00035230672801844776
+ },
+ {
+  "id": "AG-01245",
+  "gold": false,
+  "argument": "title",
+  "value": "Inception 2",
+  "changed": true,
+  "ent": 2.981598117912654e-05
+ },
+ {
+  "id": "AG-01248",
+  "gold": false,
+  "argument": "loan_term",
+  "value": 20,
+  "changed": true,
+  "ent": 0.00020432965538930148
+ },
+ {
+  "id": "AG-01250",
+  "gold": false,
+  "argument": "company",
+  "value": "Microsoft",
+  "changed": true,
+  "ent": 3.7539441109402105e-05
+ },
+ {
+  "id": "AG-01253",
+  "gold": false,
+  "argument": "destination",
+  "value": "Chicago",
+  "changed": true,
+  "ent": 7.604684469697531e-06
+ },
+ {
+  "id": "AG-01255",
+  "gold": false,
+  "argument": "principal",
+  "value": 100000,
+  "changed": true,
+  "ent": 0.00016632370534352958
+ },
+ {
+  "id": "AG-01262",
+  "gold": false,
+  "argument": "start_location",
+  "value": "London",
+  "changed": true,
+  "ent": 6.035928527126089e-05
+ },
+ {
+  "id": "AG-01264",
+  "gold": false,
+  "argument": "from",
+  "value": "GBP",
+  "changed": true,
+  "ent": 6.465757905971259e-05
+ },
+ {
+  "id": "AG-01267",
+  "gold": true,
+  "argument": "symbol",
+  "value": "AAPL",
+  "changed": false,
+  "ent": 0.9755983352661133
+ },
+ {
+  "id": "AG-01276",
+  "gold": false,
+  "argument": "purchase_amount",
+  "value": 1505,
+  "changed": true,
+  "ent": 0.9471395015716553
+ },
+ {
+  "id": "AG-01277",
+  "gold": false,
+  "argument": "title",
+  "value": "Project Follow-up",
+  "changed": true,
+  "ent": 0.0032565598376095295
+ },
+ {
+  "id": "AG-01277",
+  "gold": false,
+  "argument": "start_time",
+  "value": "2022-04-15T10:00:00",
+  "changed": false,
+  "ent": 0.00023007846903055906
+ },
+ {
+  "id": "AG-01277",
+  "gold": false,
+  "argument": "end_time",
+  "value": "2022-04-15T11:30:00",
+  "changed": false,
+  "ent": 0.0001802190818125382
+ },
+ {
+  "id": "AG-01278",
+  "gold": false,
+  "argument": "song_title",
+  "value": "Imagine",
+  "changed": true,
+  "ent": 1.2441907529137097e-05
+ },
+ {
+  "id": "AG-01286",
+  "gold": false,
+  "argument": "original_price",
+  "value": 190,
+  "changed": true,
+  "ent": 0.00863109715282917
+ },
+ {
+  "id": "AG-01290",
+  "gold": false,
+  "argument": "shape",
+  "value": "rectangle",
+  "changed": true,
+  "ent": 0.00016009311366360635
+ },
+ {
+  "id": "AG-01292",
+  "gold": false,
+  "argument": "cuisine",
+  "value": "Mexican",
+  "changed": true,
+  "ent": 4.196213558316231e-05
+ },
+ {
+  "id": "AG-01293",
+  "gold": false,
+  "argument": "discount_percentage",
+  "value": 10,
+  "changed": true,
+  "ent": 0.00019496932509355247
+ },
+ {
+  "id": "AG-01295",
+  "gold": false,
+  "argument": "duration",
+  "value": 40,
+  "changed": true,
+  "ent": 0.00372076197527349
+ },
+ {
+  "id": "AG-01296",
+  "gold": false,
+  "argument": "loan_amount",
+  "value": 500000,
+  "changed": true,
+  "ent": 0.9960112571716309
+ },
+ {
+  "id": "AG-01300",
+  "gold": false,
+  "argument": "subject",
+  "value": "Project Update",
+  "changed": true,
+  "ent": 0.00011978322436334565
+ },
+ {
+  "id": "AG-01304",
+  "gold": false,
+  "argument": "company",
+  "value": "Apple Inc.",
+  "changed": true,
+  "ent": 0.00029280901071615517
+ },
+ {
+  "id": "AG-01306",
+  "gold": false,
+  "argument": "country",
+  "value": "United Kingdom",
+  "changed": true,
+  "ent": 0.00012220909411553293
+ },
+ {
+  "id": "AG-01310",
+  "gold": false,
+  "argument": "discount_percentage",
+  "value": 15,
+  "changed": true,
+  "ent": 0.0002601978194434196
+ },
+ {
+  "id": "AG-01319",
+  "gold": false,
+  "argument": "symbol",
+  "value": "MSFT",
+  "changed": true,
+  "ent": 1.7677139112493023e-05
+ },
+ {
+  "id": "AG-01322",
+  "gold": false,
+  "argument": "artist",
+  "value": "Queen",
+  "changed": true,
+  "ent": 1.3988556020194665e-05
+ },
+ {
+  "id": "AG-01325",
+  "gold": false,
+  "argument": "height",
+  "value": 3.5,
+  "changed": true,
+  "ent": 0.0003322225820738822
+ },
+ {
+  "id": "AG-01333",
+  "gold": false,
+  "argument": "discount_percentage",
+  "value": 10,
+  "changed": true,
+  "ent": 0.00024967867648229003
+ },
+ {
+  "id": "AG-01336",
+  "gold": false,
+  "argument": "price",
+  "value": 95,
+  "changed": true,
+  "ent": 0.0001445434318156913
+ },
+ {
+  "id": "AG-01341",
+  "gold": false,
+  "argument": "length",
+  "value": 7,
+  "changed": true,
+  "ent": 0.00029509689193218946
+ },
+ {
+  "id": "AG-01349",
+  "gold": false,
+  "argument": "hours_worked",
+  "value": 80,
+  "changed": true,
+  "ent": 0.0005275641451589763
+ },
+ {
+  "id": "AG-01351",
+  "gold": false,
+  "argument": "query",
+  "value": "Max Tegmark",
+  "changed": true,
+  "ent": 0.0007754835532978177
+ },
+ {
+  "id": "AG-01353",
+  "gold": false,
+  "argument": "tax_rate",
+  "value": 30,
+  "changed": true,
+  "ent": 0.00021435141388792545
+ },
+ {
+  "id": "AG-01359",
+  "gold": false,
+  "argument": "query",
+  "value": "gaming laptop",
+  "changed": true,
+  "ent": 0.0001053837695508264
+ },
+ {
+  "id": "AG-01360",
+  "gold": false,
+  "argument": "start_date",
+  "value": "2000-01-01",
+  "changed": true,
+  "ent": 0.00017344568914268166
+ },
+ {
+  "id": "AG-01360",
+  "gold": false,
+  "argument": "end_date",
+  "value": "2022-03-15T11:00:00",
+  "changed": false,
+  "ent": 0.6521546244621277
+ },
+ {
+  "id": "AG-01362",
+  "gold": false,
+  "argument": "query",
+  "value": "romance",
+  "changed": true,
+  "ent": 7.148003351176158e-05
+ },
+ {
+  "id": "AG-01363",
+  "gold": false,
+  "argument": "weight",
+  "value": 60,
+  "changed": true,
+  "ent": 0.0006081759347580373
+ },
+ {
+  "id": "AG-01364",
+  "gold": false,
+  "argument": "word",
+  "value": "listen",
+  "changed": true,
+  "ent": 0.0004255371750332415
+ },
+ {
+  "id": "AG-01366",
+  "gold": false,
+  "argument": "current_date",
+  "value": "2022-03-15",
+  "changed": true,
+  "ent": 0.00105743866879493
+ },
+ {
+  "id": "AG-01368",
+  "gold": false,
+  "argument": "author",
+  "value": "Harper Lee",
+  "changed": true,
+  "ent": 3.208917041774839e-05
+ },
+ {
+  "id": "AG-01380",
+  "gold": false,
+  "argument": "principal",
+  "value": 2000000,
+  "changed": true,
+  "ent": 0.04434484615921974
+ },
+ {
+  "id": "AG-01382",
+  "gold": true,
+  "argument": "current_date",
+  "value": "2022-03-01",
+  "changed": false,
+  "ent": 0.0005018105730414391
+ },
+ {
+  "id": "AG-01385",
+  "gold": false,
+  "argument": "genre",
+  "value": "action",
+  "changed": true,
+  "ent": 3.037894748558756e-05
+ },
+ {
+  "id": "AG-01387",
+  "gold": false,
+  "argument": "image_url",
+  "value": "https://example.com/myimage.jpg",
+  "changed": true,
+  "ent": 0.0014960113912820816
+ },
+ {
+  "id": "AG-01390",
+  "gold": false,
+  "argument": "subject",
+  "value": "Monthly Report",
+  "changed": true,
+  "ent": 3.3094038371928036e-05
+ },
+ {
+  "id": "AG-01395",
+  "gold": false,
+  "argument": "discount_percentage",
+  "value": 30,
+  "changed": true,
+  "ent": 0.0002897799713537097
+ },
+ {
+  "id": "AG-01400",
+  "gold": false,
+  "argument": "end_location",
+  "value": "Chicago",
+  "changed": true,
+  "ent": 4.55392619187478e-05
+ },
+ {
+  "id": "AG-01401",
+  "gold": false,
+  "argument": "name",
+  "value": "John Doe",
+  "changed": true,
+  "ent": 3.556402589310892e-05
+ },
+ {
+  "id": "AG-01406",
+  "gold": false,
+  "argument": "taxable_income",
+  "value": 59999,
+  "changed": true,
+  "ent": 0.00042345054680481553
+ },
+ {
+  "id": "AG-01408",
+  "gold": false,
+  "argument": "size",
+  "value": 400,
+  "changed": true,
+  "ent": 5.853788388776593e-05
+ },
+ {
+  "id": "AG-01409",
+  "gold": false,
+  "argument": "interest_rate",
+  "value": 0,
+  "changed": true,
+  "ent": 0.00018627314420882612
+ },
+ {
+  "id": "AG-01414",
+  "gold": false,
+  "argument": "playlist",
+  "value": "Classic Rock",
+  "changed": true,
+  "ent": 5.1287515816511586e-05
+ },
+ {
+  "id": "AG-01415",
+  "gold": false,
+  "argument": "genre",
+  "value": "comedy",
+  "changed": true,
+  "ent": 0.00010218251554761082
+ },
+ {
+  "id": "AG-01422",
+  "gold": false,
+  "argument": "image_url",
+  "value": "www.example.com/image.jpg",
+  "changed": true,
+  "ent": 0.012133583426475525
+ },
+ {
+  "id": "AG-01422",
+  "gold": false,
+  "argument": "features",
+  "value": [
+   "objects",
+   "colors",
+   "faces"
+  ],
+  "changed": false,
+  "ent": 0.0013816563878208399
+ },
+ {
+  "id": "AG-01424",
+  "gold": false,
+  "argument": "height",
+  "value": 3.6,
+  "changed": true,
+  "ent": 0.0002394956536591053
+ },
+ {
+  "id": "AG-01426",
+  "gold": false,
+  "argument": "cuisine",
+  "value": "Mexican",
+  "changed": true,
+  "ent": 8.011709724087268e-05
+ },
+ {
+  "id": "AG-01428",
+  "gold": false,
+  "argument": "end_location",
+  "value": "Chicago",
+  "changed": true,
+  "ent": 4.929040733259171e-05
+ },
+ {
+  "id": "AG-01430",
+  "gold": false,
+  "argument": "word",
+  "value": "serendipity",
+  "changed": true,
+  "ent": 0.00012709610746242106
+ },
+ {
+  "id": "AG-01432",
+  "gold": false,
+  "argument": "fuel_type",
+  "value": "gasoline",
+  "changed": true,
+  "ent": 0.0007359690498560667
+ },
+ {
+  "id": "AG-01439",
+  "gold": false,
+  "argument": "interest_rate",
+  "value": 35.0,
+  "changed": true,
+  "ent": 0.000848098483402282
+ },
+ {
+  "id": "AG-01440",
+  "gold": false,
+  "argument": "symbol",
+  "value": "GOOGL",
+  "changed": true,
+  "ent": 1.3636639778269455e-05
+ },
+ {
+  "id": "AG-01443",
+  "gold": true,
+  "argument": "symbol",
+  "value": "MSFT",
+  "changed": false,
+  "ent": 0.0002122677251463756
+ },
+ {
+  "id": "AG-01446",
+  "gold": false,
+  "argument": "genre",
+  "value": "sci-fi",
+  "changed": true,
+  "ent": 4.329063813202083e-05
+ },
+ {
+  "id": "AG-01448",
+  "gold": false,
+  "argument": "principal",
+  "value": 50000,
+  "changed": true,
+  "ent": 0.9728840589523315
+ },
+ {
+  "id": "AG-01461",
+  "gold": false,
+  "argument": "text",
+  "value": "www.mywebsite.com",
+  "changed": true,
+  "ent": 6.61271478747949e-05
+ },
+ {
+  "id": "AG-01469",
+  "gold": false,
+  "argument": "radius",
+  "value": 0,
+  "changed": true,
+  "ent": 0.00012948499352205545
+ },
+ {
+  "id": "AG-01471",
+  "gold": true,
+  "argument": "symbol",
+  "value": "MSFT",
+  "changed": false,
+  "ent": 0.00040441559394821525
+ },
+ {
+  "id": "AG-01472",
+  "gold": true,
+  "argument": "company_symbol",
+  "value": "AAPL",
+  "changed": false,
+  "ent": 0.9834874272346497
+ },
+ {
+  "id": "AG-01473",
+  "gold": false,
+  "argument": "country",
+  "value": "UK",
+  "changed": true,
+  "ent": 0.00039259326877072453
+ },
+ {
+  "id": "AG-01475",
+  "gold": false,
+  "argument": "number",
+  "value": 12,
+  "changed": true,
+  "ent": 0.00012197309115435928
+ },
+ {
+  "id": "AG-01478",
+  "gold": false,
+  "argument": "category",
+  "value": "electronics",
+  "changed": true,
+  "ent": 0.008210723288357258
+ },
+ {
+  "id": "AG-01483",
+  "gold": false,
+  "argument": "due_date",
+  "value": "2022-03-15",
+  "changed": true,
+  "ent": 2.1632093194057234e-05
+ },
+ {
+  "id": "AG-01487",
+  "gold": false,
+  "argument": "author",
+  "value": "Max Tegmark",
+  "changed": true,
+  "ent": 9.152096026809886e-05
+ },
+ {
+  "id": "AG-01488",
+  "gold": false,
+  "argument": "end_date",
+  "value": "2022-05-01",
+  "changed": true,
+  "ent": 8.556150714866817e-05
+ },
+ {
+  "id": "AG-01490",
+  "gold": false,
+  "argument": "amount",
+  "value": 1000,
+  "changed": true,
+  "ent": 0.00011516141967149451
+ },
+ {
+  "id": "AG-01502",
+  "gold": true,
+  "argument": "max_time",
+  "value": 30,
+  "changed": false,
+  "ent": 0.00025543454103171825
+ },
+ {
+  "id": "AG-01504",
+  "gold": false,
+  "argument": "height",
+  "value": 0.0,
+  "changed": true,
+  "ent": 4.379112579044886e-05
+ },
+ {
+  "id": "AG-01508",
+  "gold": false,
+  "argument": "limit",
+  "value": 0,
+  "changed": true,
+  "ent": 2.0359821064630523e-05
+ },
+ {
+  "id": "AG-01515",
+  "gold": false,
+  "argument": "title",
+  "value": "Project Meeting",
+  "changed": true,
+  "ent": 3.0790917662670836e-05
+ },
+ {
+  "id": "AG-01522",
+  "gold": false,
+  "argument": "release_year",
+  "value": 4030,
+  "changed": true,
+  "ent": 9.500385931460187e-05
+ },
+ {
+  "id": "AG-01525",
+  "gold": false,
+  "argument": "title",
+  "value": "Project Discussion",
+  "changed": true,
+  "ent": 8.915141370380297e-05
+ },
+ {
+  "id": "AG-01532",
+  "gold": false,
+  "argument": "author",
+  "value": "Stephen Hawking",
+  "changed": true,
+  "ent": 6.307199328148272e-06
+ },
+ {
+  "id": "AG-01541",
+  "gold": false,
+  "argument": "length",
+  "value": 24,
+  "changed": true,
+  "ent": 0.0004261947760824114
+ },
+ {
+  "id": "AG-01546",
+  "gold": false,
+  "argument": "subject",
+  "value": "Monthly Report",
+  "changed": true,
+  "ent": 0.00013340915029402822
+ },
+ {
+  "id": "AG-01547",
+  "gold": false,
+  "argument": "from_currency",
+  "value": "JPY",
+  "changed": true,
+  "ent": 4.9609057896304876e-05
+ },
+ {
+  "id": "AG-01556",
+  "gold": false,
+  "argument": "text",
+  "value": "www.mywebsite.com",
+  "changed": true,
+  "ent": 4.077391349710524e-05
+ },
+ {
+  "id": "AG-01569",
+  "gold": false,
+  "argument": "interest_rate",
+  "value": 0,
+  "changed": true,
+  "ent": 5.414232873590663e-05
+ },
+ {
+  "id": "AG-01572",
+  "gold": false,
+  "argument": "customer_name",
+  "value": "Jane Smith",
+  "changed": true,
+  "ent": 6.762614066246897e-05
+ },
+ {
+  "id": "AG-01573",
+  "gold": false,
+  "argument": "tip_percentage",
+  "value": 10,
+  "changed": true,
+  "ent": 0.00028110144194215536
+ },
+ {
+  "id": "AG-01574",
+  "gold": false,
+  "argument": "to",
+  "value": "boss@company.com",
+  "changed": true,
+  "ent": 7.906442988314666e-06
+ },
+ {
+  "id": "AG-01575",
+  "gold": false,
+  "argument": "original_price",
+  "value": 2000,
+  "changed": true,
+  "ent": 0.00044984667329117656
+ },
+ {
+  "id": "AG-01581",
+  "gold": false,
+  "argument": "symbol",
+  "value": "GOOG",
+  "changed": true,
+  "ent": 2.2624397388426587e-05
+ },
+ {
+  "id": "AG-01593",
+  "gold": false,
+  "argument": "principal",
+  "value": 400000,
+  "changed": true,
+  "ent": 0.00027066614711657166
+ },
+ {
+  "id": "AG-01598",
+  "gold": false,
+  "argument": "year",
+  "value": 2024,
+  "changed": true,
+  "ent": 1.3200891771703027e-05
+ },
+ {
+  "id": "AG-01610",
+  "gold": false,
+  "argument": "principal",
+  "value": 19990,
+  "changed": true,
+  "ent": 0.00216752290725708
+ },
+ {
+  "id": "AG-01611",
+  "gold": false,
+  "argument": "company_name",
+  "value": "Microsoft",
+  "changed": true,
+  "ent": 4.07771258323919e-05
+ },
+ {
+  "id": "AG-01614",
+  "gold": false,
+  "argument": "discount_percentage",
+  "value": 40,
+  "changed": true,
+  "ent": 0.000257585576036945
+ },
+ {
+  "id": "AG-01625",
+  "gold": false,
+  "argument": "category",
+  "value": "business",
+  "changed": true,
+  "ent": 0.0004355136479716748
+ },
+ {
+  "id": "AG-01630",
+  "gold": false,
+  "argument": "date",
+  "value": "2022-05-15",
+  "changed": true,
+  "ent": 0.00020860131189692765
+ },
+ {
+  "id": "AG-01633",
+  "gold": false,
+  "argument": "text",
+  "value": "www.mywebsite.com",
+  "changed": true,
+  "ent": 4.2951214709319174e-05
+ },
+ {
+  "id": "AG-01638",
+  "gold": false,
+  "argument": "shape",
+  "value": "circle",
+  "changed": true,
+  "ent": 0.00015705272380728275
+ },
+ {
+  "id": "AG-01646",
+  "gold": false,
+  "argument": "origin",
+  "value": "London",
+  "changed": true,
+  "ent": 3.485705019556917e-05
+ },
+ {
+  "id": "AG-01648",
+  "gold": false,
+  "argument": "priority",
+  "value": "medium",
+  "changed": true,
+  "ent": 5.8126315707340837e-05
+ },
+ {
+  "id": "AG-01650",
+  "gold": false,
+  "argument": "message",
+  "value": "Please find attached the monthly report for your review.",
+  "changed": true,
+  "ent": 2.0305351426941343e-05
+ },
+ {
+  "id": "AG-01651",
+  "gold": false,
+  "argument": "income",
+  "value": 60100,
+  "changed": true,
+  "ent": 0.0030963439494371414
+ },
+ {
+  "id": "AG-01655",
+  "gold": false,
+  "argument": "recipient",
+  "value": "john.doe@example.com",
+  "changed": true,
+  "ent": 0.0002770722785498947
+ },
+ {
+  "id": "AG-01657",
+  "gold": false,
+  "argument": "symbol",
+  "value": "GOOG",
+  "changed": true,
+  "ent": 1.0997268873325083e-05
+ },
+ {
+  "id": "AG-01674",
+  "gold": false,
+  "argument": "name",
+  "value": "Chill Vibes",
+  "changed": true,
+  "ent": 2.5703466235427186e-05
+ },
+ {
+  "id": "AG-01678",
+  "gold": false,
+  "argument": "location",
+  "value": "New York",
+  "changed": true,
+  "ent": 1.582656113896519e-05
+ },
+ {
+  "id": "AG-01680",
+  "gold": false,
+  "argument": "original_price",
+  "value": 145,
+  "changed": true,
+  "ent": 0.0008855505147948861
+ },
+ {
+  "id": "AG-01682",
+  "gold": false,
+  "argument": "length",
+  "value": 120,
+  "changed": true,
+  "ent": 4.023651490570046e-05
+ },
+ {
+  "id": "AG-01690",
+  "gold": false,
+  "argument": "amount",
+  "value": 495,
+  "changed": true,
+  "ent": 0.001610038336366415
+ },
+ {
+  "id": "AG-01692",
+  "gold": false,
+  "argument": "artist",
+  "value": "Taylor Swift",
+  "changed": true,
+  "ent": 1.0596873835311271e-05
+ },
+ {
+  "id": "AG-01693",
+  "gold": false,
+  "argument": "title",
+  "value": "Titanic",
+  "changed": true,
+  "ent": 0.00021426980674732476
+ },
+ {
+  "id": "AG-01699",
+  "gold": false,
+  "argument": "bill_amount",
+  "value": 150,
+  "changed": true,
+  "ent": 5.923129720031284e-05
+ },
+ {
+  "id": "AG-01701",
+  "gold": false,
+  "argument": "loan_term",
+  "value": 100,
+  "changed": true,
+  "ent": 0.0001973430480575189
+ },
+ {
+  "id": "AG-01715",
+  "gold": false,
+  "argument": "company_symbol",
+  "value": "MSFT",
+  "changed": true,
+  "ent": 8.799285569693893e-05
+ },
+ {
+  "id": "AG-01721",
+  "gold": false,
+  "argument": "shape",
+  "value": "triangle",
+  "changed": true,
+  "ent": 4.813824125449173e-05
+ },
+ {
+  "id": "AG-01722",
+  "gold": false,
+  "argument": "password",
+  "value": "johndoe123",
+  "changed": true,
+  "ent": 0.05400365963578224
+ },
+ {
+  "id": "AG-01734",
+  "gold": false,
+  "argument": "loan_term",
+  "value": 150,
+  "changed": true,
+  "ent": 0.00036083877785131335
+ },
+ {
+  "id": "AG-01736",
+  "gold": false,
+  "argument": "symbol",
+  "value": "MSFT",
+  "changed": true,
+  "ent": 5.003234764444642e-05
+ },
+ {
+  "id": "AG-01741",
+  "gold": false,
+  "argument": "shape",
+  "value": "circle",
+  "changed": true,
+  "ent": 0.000250695418799296
+ },
+ {
+  "id": "AG-01746",
+  "gold": false,
+  "argument": "due_date",
+  "value": "tomorrow",
+  "changed": true,
+  "ent": 0.0007551705348305404
+ },
+ {
+  "id": "AG-01749",
+  "gold": false,
+  "argument": "location",
+  "value": "conference room",
+  "changed": true,
+  "ent": 3.9794191252440214e-05
+ },
+ {
+  "id": "AG-01761",
+  "gold": false,
+  "argument": "price",
+  "value": 205,
+  "changed": true,
+  "ent": 0.0036616509314626455
+ },
+ {
+  "id": "AG-01763",
+  "gold": false,
+  "argument": "shape",
+  "value": "rectangle",
+  "changed": true,
+  "ent": 0.0003255511983297765
+ },
+ {
+  "id": "AG-01768",
+  "gold": false,
+  "argument": "origin",
+  "value": "London",
+  "changed": true,
+  "ent": 5.321593562257476e-05
+ },
+ {
+  "id": "AG-01771",
+  "gold": false,
+  "argument": "symbol",
+  "value": "GOOG",
+  "changed": true,
+  "ent": 2.5361141524626873e-05
+ },
+ {
+  "id": "AG-01773",
+  "gold": true,
+  "argument": "language",
+  "value": "English",
+  "changed": false,
+  "ent": 0.002460656687617302
+ },
+ {
+  "id": "AG-01773",
+  "gold": true,
+  "argument": "sort_by",
+  "value": "relevance",
+  "changed": false,
+  "ent": 0.006114758551120758
+ },
+ {
+  "id": "AG-01775",
+  "gold": false,
+  "argument": "quantity",
+  "value": 15,
+  "changed": true,
+  "ent": 0.0006371920462697744
+ },
+ {
+  "id": "AG-01781",
+  "gold": false,
+  "argument": "symbol",
+  "value": "MSFT",
+  "changed": true,
+  "ent": 1.5217624422803055e-05
+ },
+ {
+  "id": "AG-01788",
+  "gold": false,
+  "argument": "title",
+  "value": "The Godfather",
+  "changed": true,
+  "ent": 1.0202844350715168e-05
+ },
+ {
+  "id": "AG-01792",
+  "gold": false,
+  "argument": "start_time",
+  "value": "2022-04-01T10:00:00",
+  "changed": false,
+  "ent": 0.7326022982597351
+ },
+ {
+  "id": "AG-01792",
+  "gold": false,
+  "argument": "end_time",
+  "value": "2022-04-15T11:30:00",
+  "changed": true,
+  "ent": 0.0003738166415132582
+ },
+ {
+  "id": "AG-01801",
+  "gold": false,
+  "argument": "diet",
+  "value": "vegan",
+  "changed": true,
+  "ent": 0.0002550002536736429
+ },
+ {
+  "id": "AG-01808",
+  "gold": false,
+  "argument": "category",
+  "value": "politics",
+  "changed": true,
+  "ent": 6.742936238879338e-05
+ },
+ {
+  "id": "AG-01809",
+  "gold": false,
+  "argument": "number",
+  "value": 162,
+  "changed": true,
+  "ent": 0.00022935574816074222
+ },
+ {
+  "id": "AG-01817",
+  "gold": true,
+  "argument": "symbol",
+  "value": "MSFT",
+  "changed": false,
+  "ent": 0.00031300599221140146
+ },
+ {
+  "id": "AG-01818",
+  "gold": false,
+  "argument": "target_language",
+  "value": "Spanish",
+  "changed": true,
+  "ent": 5.1871636969735846e-05
+ },
+ {
+  "id": "AG-01819",
+  "gold": false,
+  "argument": "bill_amount",
+  "value": 1000,
+  "changed": true,
+  "ent": 9.268458961741999e-05
+ },
+ {
+  "id": "AG-01821",
+  "gold": false,
+  "argument": "original_price",
+  "value": 140,
+  "changed": true,
+  "ent": 0.0014407547423616052
+ },
+ {
+  "id": "AG-01822",
+  "gold": false,
+  "argument": "target_language",
+  "value": "English",
+  "changed": true,
+  "ent": 3.941034083254635e-05
+ },
+ {
+  "id": "AG-01825",
+  "gold": false,
+  "argument": "original_price",
+  "value": 99,
+  "changed": true,
+  "ent": 0.022831887006759644
+ },
+ {
+  "id": "AG-01826",
+  "gold": false,
+  "argument": "start_time",
+  "value": "2022-04-15T14:00:00",
+  "changed": false,
+  "ent": 0.00015344809798989445
+ },
+ {
+  "id": "AG-01826",
+  "gold": false,
+  "argument": "end_time",
+  "value": "11:30 AM on 15th March",
+  "changed": true,
+  "ent": 0.03813786059617996
+ },
+ {
+  "id": "AG-01837",
+  "gold": false,
+  "argument": "query",
+  "value": "J.K. Rowling",
+  "changed": true,
+  "ent": 4.519505091593601e-05
+ },
+ {
+  "id": "AG-01840",
+  "gold": false,
+  "argument": "recipient",
+  "value": "john.doe@example.com",
+  "changed": true,
+  "ent": 0.00010623675188980997
+ },
+ {
+  "id": "AG-01861",
+  "gold": false,
+  "argument": "diet",
+  "value": "vegan",
+  "changed": true,
+  "ent": 0.0004071917792316526
+ },
+ {
+  "id": "AG-01862",
+  "gold": false,
+  "argument": "end_location",
+  "value": "Boston",
+  "changed": true,
+  "ent": 5.2053870604140684e-05
+ },
+ {
+  "id": "AG-01865",
+  "gold": false,
+  "argument": "amount",
+  "value": 2000,
+  "changed": true,
+  "ent": 0.00017450202722102404
+ },
+ {
+  "id": "AG-01876",
+  "gold": false,
+  "argument": "category",
+  "value": "entertainment",
+  "changed": true,
+  "ent": 0.0002614916884340346
+ },
+ {
+  "id": "AG-01880",
+  "gold": false,
+  "argument": "max_time",
+  "value": 300,
+  "changed": true,
+  "ent": 0.00025006572832353413
+ },
+ {
+  "id": "AG-01885",
+  "gold": false,
+  "argument": "loan_term",
+  "value": 80,
+  "changed": true,
+  "ent": 0.00020390903227962554
+ },
+ {
+  "id": "AG-01892",
+  "gold": false,
+  "argument": "text",
+  "value": "www.mywebsite.com",
+  "changed": true,
+  "ent": 0.00036488636396825314
+ },
+ {
+  "id": "AG-01895",
+  "gold": false,
+  "argument": "query",
+  "value": "Jane Doe",
+  "changed": true,
+  "ent": 0.0003265479172114283
+ },
+ {
+  "id": "AG-01897",
+  "gold": false,
+  "argument": "original_price",
+  "value": 2000,
+  "changed": true,
+  "ent": 0.0007339935982599854
+ },
+ {
+  "id": "AG-01899",
+  "gold": false,
+  "argument": "product_code",
+  "value": "SS123",
+  "changed": true,
+  "ent": 8.060190157266334e-05
+ },
+ {
+  "id": "AG-01902",
+  "gold": false,
+  "argument": "loan_term",
+  "value": 160,
+  "changed": true,
+  "ent": 0.0007691800128668547
+ },
+ {
+  "id": "AG-01903",
+  "gold": false,
+  "argument": "loan_amount",
+  "value": 200050,
+  "changed": true,
+  "ent": 0.13023976981639862
+ },
+ {
+  "id": "AG-01906",
+  "gold": false,
+  "argument": "keyword",
+  "value": "artificial intelligence",
+  "changed": true,
+  "ent": 9.956202848115936e-05
+ },
+ {
+  "id": "AG-01909",
+  "gold": false,
+  "argument": "text",
+  "value": "I am really upset because my favorite team lost the match.",
+  "changed": true,
+  "ent": 4.09383064834401e-05
+ },
+ {
+  "id": "AG-01910",
+  "gold": false,
+  "argument": "amount",
+  "value": 10000,
+  "changed": true,
+  "ent": 5.737661012972239e-06
+ },
+ {
+  "id": "AG-01914",
+  "gold": false,
+  "argument": "tip_percent",
+  "value": 25,
+  "changed": true,
+  "ent": 0.0004243548319209367
+ },
+ {
+  "id": "AG-01918",
+  "gold": false,
+  "argument": "to_currency",
+  "value": "GBP",
+  "changed": true,
+  "ent": 2.3034517653286457e-05
+ },
+ {
+  "id": "AG-01924",
+  "gold": false,
+  "argument": "cuisine",
+  "value": "Mexican",
+  "changed": true,
+  "ent": 4.438843097887002e-05
+ },
+ {
+  "id": "AG-01927",
+  "gold": false,
+  "argument": "interest_rate",
+  "value": 10,
+  "changed": true,
+  "ent": 0.00016623394913040102
+ },
+ {
+  "id": "AG-01930",
+  "gold": false,
+  "argument": "birthdate",
+  "value": "1990-07-15",
+  "changed": true,
+  "ent": 0.0007494017481803894
+ },
+ {
+  "id": "AG-01940",
+  "gold": false,
+  "argument": "subject",
+  "value": "Meeting Schedule",
+  "changed": true,
+  "ent": 1.9319781131343916e-05
+ },
+ {
+  "id": "AG-01945",
+  "gold": false,
+  "argument": "location",
+  "value": "Los Angeles",
+  "changed": true,
+  "ent": 9.912748646456748e-05
+ },
+ {
+  "id": "AG-01955",
+  "gold": false,
+  "argument": "min",
+  "value": 400,
+  "changed": true,
+  "ent": 1.798308403522242e-05
+ },
+ {
+  "id": "AG-01956",
+  "gold": false,
+  "argument": "subject",
+  "value": "Monthly Report",
+  "changed": true,
+  "ent": 0.00014290798571892083
+ },
+ {
+  "id": "AG-01962",
+  "gold": true,
+  "argument": "start_date",
+  "value": "2022-03-15T10:00:00",
+  "changed": false,
+  "ent": 0.8857308626174927
+ },
+ {
+  "id": "AG-01962",
+  "gold": true,
+  "argument": "end_date",
+  "value": "2022-03-15T11:00:00",
+  "changed": false,
+  "ent": 0.6521546244621277
+ },
+ {
+  "id": "AG-01963",
+  "gold": false,
+  "argument": "destination",
+  "value": "Paris",
+  "changed": true,
+  "ent": 4.234876541886479e-05
+ },
+ {
+  "id": "AG-01964",
+  "gold": false,
+  "argument": "location",
+  "value": "Los Angeles",
+  "changed": true,
+  "ent": 1.0702469808165915e-05
+ },
+ {
+  "id": "AG-01968",
+  "gold": true,
+  "argument": "stock_symbol",
+  "value": "MSFT",
+  "changed": false,
+  "ent": 0.9716330766677856
+ },
+ {
+  "id": "AG-01970",
+  "gold": false,
+  "argument": "min",
+  "value": 5000,
+  "changed": true,
+  "ent": 7.658442882529926e-06
+ },
+ {
+  "id": "AG-01971",
+  "gold": false,
+  "argument": "max_number",
+  "value": 1000,
+  "changed": true,
+  "ent": 7.853093120502308e-05
+ },
+ {
+  "id": "AG-01980",
+  "gold": false,
+  "argument": "length",
+  "value": 80,
+  "changed": true,
+  "ent": 8.235820132540539e-05
+ },
+ {
+  "id": "AG-01983",
+  "gold": false,
+  "argument": "limit",
+  "value": 50,
+  "changed": true,
+  "ent": 0.00017332697461824864
+ },
+ {
+  "id": "AG-01984",
+  "gold": false,
+  "argument": "location",
+  "value": "New York",
+  "changed": true,
+  "ent": 2.8474472856032662e-05
+ },
+ {
+  "id": "AG-01988",
+  "gold": false,
+  "argument": "to",
+  "value": "bossman@company.com",
+  "changed": true,
+  "ent": 0.00035244939499534667
+ },
+ {
+  "id": "AG-01992",
+  "gold": false,
+  "argument": "cuisine",
+  "value": "Mexican",
+  "changed": true,
+  "ent": 4.12083427363541e-05
+ },
+ {
+  "id": "AG-01993",
+  "gold": false,
+  "argument": "subject",
+  "value": "Meeting Agenda for Tomorrow",
+  "changed": true,
+  "ent": 3.118268068647012e-05
+ },
+ {
+  "id": "AG-01994",
+  "gold": false,
+  "argument": "bill_amount",
+  "value": 500,
+  "changed": true,
+  "ent": 0.00019225673167966306
+ },
+ {
+  "id": "AG-01996",
+  "gold": false,
+  "argument": "origin",
+  "value": "London",
+  "changed": true,
+  "ent": 0.0001283541350858286
+ },
+ {
+  "id": "AG-01999",
+  "gold": false,
+  "argument": "subject",
+  "value": "Project Update",
+  "changed": true,
+  "ent": 0.00011738960165530443
+ },
+ {
+  "id": "AG-02000",
+  "gold": false,
+  "argument": "size",
+  "value": 400,
+  "changed": true,
+  "ent": 5.2639639761764556e-05
+ },
+ {
+  "id": "AG-02001",
+  "gold": false,
+  "argument": "location",
+  "value": "Office Conference Room",
+  "changed": true,
+  "ent": 6.6715529101202264e-06
+ },
+ {
+  "id": "AG-02007",
+  "gold": false,
+  "argument": "size",
+  "value": 505,
+  "changed": true,
+  "ent": 0.0003962688788305968
+ },
+ {
+  "id": "AG-02010",
+  "gold": false,
+  "argument": "destination",
+  "value": "Miami",
+  "changed": true,
+  "ent": 3.804664811468683e-05
+ },
+ {
+  "id": "AG-02013",
+  "gold": true,
+  "argument": "size",
+  "value": 200,
+  "changed": false,
+  "ent": 0.0002858764783013612
+ },
+ {
+  "id": "AG-02015",
+  "gold": false,
+  "argument": "loan_term",
+  "value": 600,
+  "changed": true,
+  "ent": 0.45889338850975037
+ },
+ {
+  "id": "AG-02018",
+  "gold": false,
+  "argument": "category",
+  "value": "Success",
+  "changed": true,
+  "ent": 9.995439177146181e-05
+ },
+ {
+  "id": "AG-02021",
+  "gold": false,
+  "argument": "message",
+  "value": "Hey, I will be late today. See you at 7 PM.",
+  "changed": true,
+  "ent": 0.00012482705642469227
+ },
+ {
+  "id": "AG-02026",
+  "gold": false,
+  "argument": "title",
+  "value": "Project Discussion",
+  "changed": true,
+  "ent": 0.00378368329256773
+ },
+ {
+  "id": "AG-02028",
+  "gold": false,
+  "argument": "symbol",
+  "value": "GOOG",
+  "changed": true,
+  "ent": 1.086739302991191e-05
+ },
+ {
+  "id": "AG-02032",
+  "gold": true,
+  "argument": "size",
+  "value": 200,
+  "changed": false,
+  "ent": 4.5573178795166314e-05
+ },
+ {
+  "id": "AG-02036",
+  "gold": false,
+  "argument": "tax_rate",
+  "value": 200,
+  "changed": true,
+  "ent": 0.0005661097820848227
+ },
+ {
+  "id": "AG-02037",
+  "gold": true,
+  "argument": "category",
+  "value": "electronics",
+  "changed": false,
+  "ent": 0.9589803814888
+ },
+ {
+  "id": "AG-02037",
+  "gold": true,
+  "argument": "minimum_price",
+  "value": 0,
+  "changed": false,
+  "ent": 0.00016482343198731542
+ },
+ {
+  "id": "AG-02047",
+  "gold": false,
+  "argument": "height",
+  "value": 3.5,
+  "changed": true,
+  "ent": 0.0004724803438875824
+ },
+ {
+  "id": "AG-02049",
+  "gold": false,
+  "argument": "date",
+  "value": "2022-05-15",
+  "changed": true,
+  "ent": 0.0011556255631148815
+ },
+ {
+  "id": "AG-02050",
+  "gold": false,
+  "argument": "category",
+  "value": "sports",
+  "changed": true,
+  "ent": 3.814977389993146e-05
+ },
+ {
+  "id": "AG-02054",
+  "gold": false,
+  "argument": "bill_total",
+  "value": 60,
+  "changed": true,
+  "ent": 0.0005820533842779696
+ },
+ {
+  "id": "AG-02073",
+  "gold": false,
+  "argument": "tip_percentage",
+  "value": 40,
+  "changed": true,
+  "ent": 0.00017565522284712642
+ },
+ {
+  "id": "AG-02077",
+  "gold": false,
+  "argument": "customer_name",
+  "value": "Jane Smith",
+  "changed": true,
+  "ent": 3.794399162870832e-05
+ },
+ {
+  "id": "AG-02079",
+  "gold": false,
+  "argument": "min_rating",
+  "value": 57,
+  "changed": true,
+  "ent": 0.0010397459845989943
+ },
+ {
+  "id": "AG-02086",
+  "gold": false,
+  "argument": "length",
+  "value": 65,
+  "changed": true,
+  "ent": 9.163276990875602e-05
+ },
+ {
+  "id": "AG-02087",
+  "gold": false,
+  "argument": "start_time",
+  "value": "2022-05-15T10:00:00",
+  "changed": true,
+  "ent": 0.000830183969810605
+ },
+ {
+  "id": "AG-02087",
+  "gold": false,
+  "argument": "end_time",
+  "value": "2022-04-01T11:00:00",
+  "changed": false,
+  "ent": 0.7742022275924683
+ },
+ {
+  "id": "AG-02091",
+  "gold": false,
+  "argument": "discount_percentage",
+  "value": 30,
+  "changed": true,
+  "ent": 0.00033102332963608205
+ },
+ {
+  "id": "AG-02097",
+  "gold": false,
+  "argument": "fuel_price",
+  "value": 0.0,
+  "changed": true,
+  "ent": 5.410533049143851e-05
+ },
+ {
+  "id": "AG-02098",
+  "gold": false,
+  "argument": "message",
+  "value": "Hey, let's meet up for coffee tomorrow at 10am",
+  "changed": true,
+  "ent": 6.078915612306446e-05
+ },
+ {
+  "id": "AG-02100",
+  "gold": false,
+  "argument": "amount",
+  "value": 2000,
+  "changed": true,
+  "ent": 0.000455298664746806
+ },
+ {
+  "id": "AG-02111",
+  "gold": false,
+  "argument": "destination",
+  "value": "Paris",
+  "changed": true,
+  "ent": 1.3412618500296958e-05
+ },
+ {
+  "id": "AG-02121",
+  "gold": false,
+  "argument": "text",
+  "value": "I am really upset because I lost my wallet.",
+  "changed": true,
+  "ent": 1.8657341570360586e-05
+ },
+ {
+  "id": "AG-02123",
+  "gold": false,
+  "argument": "text",
+  "value": "www.mywebsite.com",
+  "changed": true,
+  "ent": 4.264913968654582e-06
+ },
+ {
+  "id": "AG-02126",
+  "gold": false,
+  "argument": "website_url",
+  "value": "www.randomsite123.com",
+  "changed": true,
+  "ent": 1.704718124528881e-05
+ },
+ {
+  "id": "AG-02128",
+  "gold": false,
+  "argument": "exchange",
+  "value": "NYSE",
+  "changed": true,
+  "ent": 0.00011786980030592531
+ },
+ {
+  "id": "AG-02129",
+  "gold": false,
+  "argument": "shape",
+  "value": "circle",
+  "changed": true,
+  "ent": 0.00017899122030939907
+ },
+ {
+  "id": "AG-02131",
+  "gold": true,
+  "argument": "symbol",
+  "value": "MSFT",
+  "changed": false,
+  "ent": 0.00015479064313694835
+ },
+ {
+  "id": "AG-02132",
+  "gold": false,
+  "argument": "year",
+  "value": 2005,
+  "changed": true,
+  "ent": 0.00029844423988834023
+ },
+ {
+  "id": "AG-02132",
+  "gold": false,
+  "argument": "rating",
+  "value": 7,
+  "changed": false,
+  "ent": 9.755510109243914e-05
+ },
+ {
+  "id": "AG-02136",
+  "gold": true,
+  "argument": "current_date",
+  "value": "2022-04-01",
+  "changed": false,
+  "ent": 0.0006403235602192581
+ },
+ {
+  "id": "AG-02138",
+  "gold": false,
+  "argument": "min",
+  "value": 0,
+  "changed": true,
+  "ent": 0.00025346758775413036
+ },
+ {
+  "id": "AG-02141",
+  "gold": false,
+  "argument": "query",
+  "value": "Max Tegmark",
+  "changed": true,
+  "ent": 0.0001012519423966296
+ },
+ {
+  "id": "AG-02143",
+  "gold": false,
+  "argument": "discount_percentage",
+  "value": 150,
+  "changed": true,
+  "ent": 0.0002351399016333744
+ },
+ {
+  "id": "AG-02148",
+  "gold": false,
+  "argument": "amount_due",
+  "value": 7500,
+  "changed": true,
+  "ent": 0.0002493205829523504
+ },
+ {
+  "id": "AG-02150",
+  "gold": false,
+  "argument": "author",
+  "value": "Ray Kurzweil",
+  "changed": true,
+  "ent": 6.802899406466167e-06
+ },
+ {
+  "id": "AG-02151",
+  "gold": false,
+  "argument": "destination",
+  "value": "Paris",
+  "changed": true,
+  "ent": 1.3474746083375067e-05
+ },
+ {
+  "id": "AG-02153",
+  "gold": true,
+  "argument": "start_timestamp",
+  "value": "2022-01-01 08:00:00",
+  "changed": false,
+  "ent": 0.9947250485420227
+ },
+ {
+  "id": "AG-02153",
+  "gold": true,
+  "argument": "end_timestamp",
+  "value": "2022-01-01 10:00:00",
+  "changed": false,
+  "ent": 0.9122401475906372
+ },
+ {
+  "id": "AG-02160",
+  "gold": false,
+  "argument": "word",
+  "value": "Euphoria",
+  "changed": true,
+  "ent": 2.9624823582707904e-05
+ },
+ {
+  "id": "AG-02161",
+  "gold": false,
+  "argument": "location",
+  "value": "Conference Room 1",
+  "changed": true,
+  "ent": 5.318471812643111e-05
+ },
+ {
+  "id": "AG-02164",
+  "gold": false,
+  "argument": "distance",
+  "value": 99,
+  "changed": true,
+  "ent": 0.0029243556782603264
+ },
+ {
+  "id": "AG-02166",
+  "gold": false,
+  "argument": "target_language",
+  "value": "Spanish",
+  "changed": true,
+  "ent": 4.905071546090767e-05
+ },
+ {
+  "id": "AG-02173",
+  "gold": false,
+  "argument": "min",
+  "value": 51,
+  "changed": true,
+  "ent": 0.00010072128497995436
+ },
+ {
+  "id": "AG-02174",
+  "gold": false,
+  "argument": "company",
+  "value": "Microsoft",
+  "changed": true,
+  "ent": 2.5604580514482222e-05
+ },
+ {
+  "id": "AG-02175",
+  "gold": true,
+  "argument": "size",
+  "value": 200,
+  "changed": false,
+  "ent": 6.717572250636294e-05
+ },
+ {
+  "id": "AG-02181",
+  "gold": false,
+  "argument": "shape",
+  "value": "triangle",
+  "changed": true,
+  "ent": 0.0001633870997466147
+ },
+ {
+  "id": "AG-02185",
+  "gold": false,
+  "argument": "movie_title",
+  "value": "The Dark Knight",
+  "changed": true,
+  "ent": 1.2901443369628396e-05
+ },
+ {
+  "id": "AG-02187",
+  "gold": false,
+  "argument": "target_language",
+  "value": "Spanish",
+  "changed": true,
+  "ent": 4.345931301941164e-05
+ },
+ {
+  "id": "AG-02188",
+  "gold": false,
+  "argument": "symbol",
+  "value": "GOOG",
+  "changed": true,
+  "ent": 4.9043399485526606e-05
+ },
+ {
+  "id": "AG-02196",
+  "gold": false,
+  "argument": "from_unit",
+  "value": "miles",
+  "changed": true,
+  "ent": 3.0757250897295307e-06
+ },
+ {
+  "id": "AG-02201",
+  "gold": false,
+  "argument": "message",
+  "value": "We will meet at the park at 5pm.",
+  "changed": true,
+  "ent": 0.0001540800294606015
+ },
+ {
+  "id": "AG-02203",
+  "gold": false,
+  "argument": "length",
+  "value": 2,
+  "changed": true,
+  "ent": 0.00028695768560282886
+ },
+ {
+  "id": "AG-02204",
+  "gold": false,
+  "argument": "min",
+  "value": 500,
+  "changed": true,
+  "ent": 8.207085193134844e-05
+ },
+ {
+  "id": "AG-02209",
+  "gold": false,
+  "argument": "current_date",
+  "value": "2022-03-15",
+  "changed": true,
+  "ent": 0.00105743866879493
+ },
+ {
+  "id": "AG-02212",
+  "gold": false,
+  "argument": "title",
+  "value": "Team Meeting Agenda",
+  "changed": true,
+  "ent": 2.0037381545989774e-05
+ },
+ {
+  "id": "AG-02217",
+  "gold": false,
+  "argument": "shape",
+  "value": "circle",
+  "changed": true,
+  "ent": 0.0002935873344540596
+ },
+ {
+  "id": "AG-02222",
+  "gold": true,
+  "argument": "language",
+  "value": "English",
+  "changed": false,
+  "ent": 1.3942292753199581e-05
+ },
+ {
+  "id": "AG-02230",
+  "gold": false,
+  "argument": "customer_name",
+  "value": "Jane Smith",
+  "changed": true,
+  "ent": 7.020799239398912e-05
+ },
+ {
+  "id": "AG-02232",
+  "gold": false,
+  "argument": "origin",
+  "value": "London",
+  "changed": true,
+  "ent": 2.4774521079962142e-05
+ },
+ {
+  "id": "AG-02234",
+  "gold": false,
+  "argument": "source",
+  "value": "London",
+  "changed": true,
+  "ent": 2.9771586923743598e-05
+ },
+ {
+  "id": "AG-02235",
+  "gold": false,
+  "argument": "genre",
+  "value": "sci-fi",
+  "changed": true,
+  "ent": 2.813941682688892e-05
+ },
+ {
+  "id": "AG-02237",
+  "gold": false,
+  "argument": "genre",
+  "value": "sci-fi",
+  "changed": true,
+  "ent": 8.602403977420181e-05
+ },
+ {
+  "id": "AG-02238",
+  "gold": false,
+  "argument": "amount",
+  "value": 2000,
+  "changed": true,
+  "ent": 0.0007317405543290079
+ },
+ {
+  "id": "AG-02240",
+  "gold": false,
+  "argument": "tip_percentage",
+  "value": 40,
+  "changed": true,
+  "ent": 0.00011264234490226954
+ },
+ {
+  "id": "AG-02242",
+  "gold": false,
+  "argument": "amount",
+  "value": 2000,
+  "changed": true,
+  "ent": 0.0005025843274779618
+ },
+ {
+  "id": "AG-02245",
+  "gold": false,
+  "argument": "target_language",
+  "value": "es",
+  "changed": true,
+  "ent": 0.0058600991033017635
+ },
+ {
+  "id": "AG-02246",
+  "gold": false,
+  "argument": "height",
+  "value": 0.0,
+  "changed": true,
+  "ent": 3.645215110736899e-05
+ },
+ {
+  "id": "AG-02247",
+  "gold": false,
+  "argument": "revenue",
+  "value": 4999,
+  "changed": true,
+  "ent": 0.7895755171775818
+ },
+ {
+  "id": "AG-02250",
+  "gold": false,
+  "argument": "message",
+  "value": "We will meet at the park at 5pm.",
+  "changed": true,
+  "ent": 5.0498500058893114e-05
+ },
+ {
+  "id": "AG-02261",
+  "gold": false,
+  "argument": "interest_rate",
+  "value": 53.5,
+  "changed": true,
+  "ent": 0.0005410732701420784
+ },
+ {
+  "id": "AG-02268",
+  "gold": false,
+  "argument": "category",
+  "value": "electronics",
+  "changed": true,
+  "ent": 0.0003275096823927015
+ },
+ {
+  "id": "AG-02270",
+  "gold": false,
+  "argument": "weight",
+  "value": 850,
+  "changed": true,
+  "ent": 0.035963382571935654
+ },
+ {
+  "id": "AG-02276",
+  "gold": false,
+  "argument": "from_currency",
+  "value": "JPY",
+  "changed": true,
+  "ent": 5.384900759963784e-06
+ },
+ {
+  "id": "AG-02278",
+  "gold": false,
+  "argument": "loan_term",
+  "value": 60,
+  "changed": true,
+  "ent": 0.00023034802870824933
+ },
+ {
+  "id": "AG-02279",
+  "gold": false,
+  "argument": "tax_rate",
+  "value": 40,
+  "changed": true,
+  "ent": 0.00010963851673295721
+ },
+ {
+  "id": "AG-02281",
+  "gold": false,
+  "argument": "location",
+  "value": "Conference Room 1",
+  "changed": true,
+  "ent": 2.3347784008365124e-05
+ },
+ {
+  "id": "AG-02286",
+  "gold": false,
+  "argument": "author",
+  "value": "Agatha Christie",
+  "changed": true,
+  "ent": 6.796473826398142e-06
+ },
+ {
+  "id": "AG-02294",
+  "gold": false,
+  "argument": "category",
+  "value": "sports",
+  "changed": true,
+  "ent": 4.117931894143112e-05
+ },
+ {
+  "id": "AG-02295",
+  "gold": false,
+  "argument": "shape",
+  "value": "triangle",
+  "changed": true,
+  "ent": 0.0001260210992768407
+ },
+ {
+  "id": "AG-02299",
+  "gold": false,
+  "argument": "destination",
+  "value": "Chicago",
+  "changed": true,
+  "ent": 6.025184120517224e-06
+ },
+ {
+  "id": "AG-02301",
+  "gold": false,
+  "argument": "point1",
+  "value": "Paris",
+  "changed": true,
+  "ent": 2.3455970222130418e-05
+ },
+ {
+  "id": "AG-02304",
+  "gold": false,
+  "argument": "size",
+  "value": 495,
+  "changed": true,
+  "ent": 5.659627277054824e-05
+ },
+ {
+  "id": "AG-02307",
+  "gold": false,
+  "argument": "origin",
+  "value": "London",
+  "changed": true,
+  "ent": 2.44082239078125e-05
+ },
+ {
+  "id": "AG-02310",
+  "gold": false,
+  "argument": "author",
+  "value": "Ray Kurzweil",
+  "changed": true,
+  "ent": 4.097615601494908e-06
+ },
+ {
+  "id": "AG-02311",
+  "gold": false,
+  "argument": "loan_term",
+  "value": 0,
+  "changed": true,
+  "ent": 0.00016020577459130436
+ },
+ {
+  "id": "AG-02314",
+  "gold": false,
+  "argument": "string",
+  "value": "computer",
+  "changed": true,
+  "ent": 0.00027767333085648715
+ },
+ {
+  "id": "AG-02342",
+  "gold": false,
+  "argument": "principal",
+  "value": 500000,
+  "changed": true,
+  "ent": 0.9944760203361511
+ },
+ {
+  "id": "AG-02349",
+  "gold": false,
+  "argument": "bill_total",
+  "value": 200,
+  "changed": true,
+  "ent": 0.0004103687242604792
+ },
+ {
+  "id": "AG-02351",
+  "gold": true,
+  "argument": "longitude",
+  "value": -74.006,
+  "changed": false,
+  "ent": 0.0006896016420796514
+ },
+ {
+  "id": "AG-02354",
+  "gold": false,
+  "argument": "title",
+  "value": "Grocery Shopping",
+  "changed": true,
+  "ent": 0.1680542677640915
+ },
+ {
+  "id": "AG-02356",
+  "gold": false,
+  "argument": "recipient",
+  "value": "boss@company.com",
+  "changed": true,
+  "ent": 0.0014608011115342379
+ },
+ {
+  "id": "AG-02357",
+  "gold": false,
+  "argument": "company",
+  "value": "Apple Inc.",
+  "changed": true,
+  "ent": 0.1703505963087082
+ },
+ {
+  "id": "AG-02358",
+  "gold": false,
+  "argument": "weight",
+  "value": 50,
+  "changed": true,
+  "ent": 0.00023985616280697286
+ },
+ {
+  "id": "AG-02367",
+  "gold": false,
+  "argument": "country",
+  "value": "United Kingdom",
+  "changed": true,
+  "ent": 0.00010223749268334359
+ },
+ {
+  "id": "AG-02371",
+  "gold": false,
+  "argument": "bill_amount",
+  "value": 115,
+  "changed": true,
+  "ent": 0.0006705720443278551
+ },
+ {
+  "id": "AG-02378",
+  "gold": false,
+  "argument": "word",
+  "value": "ephemeral",
+  "changed": true,
+  "ent": 0.042425669729709625
+ },
+ {
+  "id": "AG-02379",
+  "gold": false,
+  "argument": "shape",
+  "value": "triangle",
+  "changed": true,
+  "ent": 6.386658787960187e-05
+ },
+ {
+  "id": "AG-02381",
+  "gold": false,
+  "argument": "category",
+  "value": "sports",
+  "changed": true,
+  "ent": 7.575147174065933e-05
+ },
+ {
+  "id": "AG-02383",
+  "gold": false,
+  "argument": "tip_percentage",
+  "value": 15,
+  "changed": true,
+  "ent": 0.00024389165628235787
+ },
+ {
+  "id": "AG-02399",
+  "gold": false,
+  "argument": "bill_amount",
+  "value": 105,
+  "changed": true,
+  "ent": 0.0011864937841892242
+ },
+ {
+  "id": "AG-02401",
+  "gold": false,
+  "argument": "income",
+  "value": 75005,
+  "changed": true,
+  "ent": 0.9842053055763245
+ },
+ {
+  "id": "AG-02402",
+  "gold": false,
+  "argument": "number2",
+  "value": 126,
+  "changed": true,
+  "ent": 6.0155857681820635e-06
+ },
+ {
+  "id": "AG-02407",
+  "gold": false,
+  "argument": "loan_amount",
+  "value": 300050,
+  "changed": true,
+  "ent": 0.12318145483732224
+ },
+ {
+  "id": "AG-02408",
+  "gold": false,
+  "argument": "title",
+  "value": "Project Discussion",
+  "changed": true,
+  "ent": 0.9918700456619263
+ },
+ {
+  "id": "AG-02409",
+  "gold": true,
+  "argument": "language",
+  "value": "English",
+  "changed": false,
+  "ent": 0.0029100729152560234
+ },
+ {
+  "id": "AG-02423",
+  "gold": false,
+  "argument": "genre",
+  "value": "comedy",
+  "changed": true,
+  "ent": 1.6717602193239145e-05
+ },
+ {
+  "id": "AG-02424",
+  "gold": false,
+  "argument": "title",
+  "value": "Weekend Chores",
+  "changed": true,
+  "ent": 7.2059342528518755e-06
+ },
+ {
+  "id": "AG-02426",
+  "gold": false,
+  "argument": "due_date",
+  "value": "2022-05-15",
+  "changed": true,
+  "ent": 0.0019200930837541819
+ },
+ {
+  "id": "AG-02434",
+  "gold": false,
+  "argument": "original_price",
+  "value": 300,
+  "changed": true,
+  "ent": 0.000794505060184747
+ },
+ {
+  "id": "AG-02437",
+  "gold": false,
+  "argument": "from_currency",
+  "value": "JPY",
+  "changed": true,
+  "ent": 1.3873682291887235e-05
+ },
+ {
+  "id": "AG-02441",
+  "gold": false,
+  "argument": "weight",
+  "value": 50,
+  "changed": true,
+  "ent": 0.00019633339252322912
+ },
+ {
+  "id": "AG-02444",
+  "gold": false,
+  "argument": "interest_rate",
+  "value": 10,
+  "changed": true,
+  "ent": 0.0003949417732656002
+ },
+ {
+  "id": "AG-02449",
+  "gold": false,
+  "argument": "check_in_date",
+  "value": "2022-05-01",
+  "changed": false,
+  "ent": 0.00019262917339801788
+ },
+ {
+  "id": "AG-02449",
+  "gold": false,
+  "argument": "check_out_date",
+  "value": "2022-05-05",
+  "changed": false,
+  "ent": 0.00019718070689123124
+ },
+ {
+  "id": "AG-02449",
+  "gold": false,
+  "argument": "guests",
+  "value": 0,
+  "changed": true,
+  "ent": 0.0001281507284147665
+ },
+ {
+  "id": "AG-02451",
+  "gold": false,
+  "argument": "diet",
+  "value": "vegetarian",
+  "changed": true,
+  "ent": 0.9236429333686829
+ },
+ {
+  "id": "AG-02455",
+  "gold": false,
+  "argument": "author",
+  "value": "George Orwell",
+  "changed": true,
+  "ent": 1.500769576523453e-05
+ },
+ {
+  "id": "AG-02459",
+  "gold": false,
+  "argument": "to_currency",
+  "value": "GBP",
+  "changed": true,
+  "ent": 7.391686267510522e-06
+ },
+ {
+  "id": "AG-02468",
+  "gold": false,
+  "argument": "task",
+  "value": "Prepare a presentation for the annual meeting",
+  "changed": true,
+  "ent": 0.00010635830403771251
+ },
+ {
+  "id": "AG-02469",
+  "gold": false,
+  "argument": "location",
+  "value": "Conference Room 1",
+  "changed": true,
+  "ent": 0.0001429816911695525
+ },
+ {
+  "id": "AG-02470",
+  "gold": false,
+  "argument": "text",
+  "value": "I am feeling very happy today.",
+  "changed": true,
+  "ent": 6.69864602969028e-05
+ },
+ {
+  "id": "AG-02481",
+  "gold": false,
+  "argument": "title",
+  "value": "Inception",
+  "changed": true,
+  "ent": 1.6196574506466277e-05
+ },
+ {
+  "id": "AG-02488",
+  "gold": false,
+  "argument": "key",
+  "value": "mysecretkey",
+  "changed": true,
+  "ent": 0.000653386814519763
+ },
+ {
+  "id": "AG-02489",
+  "gold": false,
+  "argument": "discount_percentage",
+  "value": 19,
+  "changed": true,
+  "ent": 0.0008671803516335785
+ },
+ {
+  "id": "AG-02491",
+  "gold": false,
+  "argument": "year",
+  "value": 4020,
+  "changed": true,
+  "ent": 1.724317917251028e-05
+ },
+ {
+  "id": "AG-02492",
+  "gold": false,
+  "argument": "discount_percentage",
+  "value": 200,
+  "changed": true,
+  "ent": 7.595733040943742e-05
+ },
+ {
+  "id": "AG-02494",
+  "gold": false,
+  "argument": "year",
+  "value": 20100,
+  "changed": true,
+  "ent": 0.9524915218353271
+ },
+ {
+  "id": "AG-02498",
+  "gold": false,
+  "argument": "text",
+  "value": "I am very happy to meet you",
+  "changed": true,
+  "ent": 0.9974282383918762
+ },
+ {
+  "id": "AG-02508",
+  "gold": false,
+  "argument": "query",
+  "value": "J.K. Rowling",
+  "changed": true,
+  "ent": 7.488719711545855e-05
+ },
+ {
+  "id": "AG-02513",
+  "gold": false,
+  "argument": "tip_percentage",
+  "value": 10,
+  "changed": true,
+  "ent": 0.0002242423070129007
+ },
+ {
+  "id": "AG-02514",
+  "gold": false,
+  "argument": "num_terms",
+  "value": 30,
+  "changed": true,
+  "ent": 0.000391558074625209
+ },
+ {
+  "id": "AG-02516",
+  "gold": false,
+  "argument": "tax_rate",
+  "value": 40,
+  "changed": true,
+  "ent": 0.00014945286966394633
+ },
+ {
+  "id": "AG-02536",
+  "gold": false,
+  "argument": "title",
+  "value": "Grocery Shopping",
+  "changed": true,
+  "ent": 1.1182702110090759e-05
+ },
+ {
+  "id": "AG-02537",
+  "gold": false,
+  "argument": "location",
+  "value": "Conference Room 1",
+  "changed": true,
+  "ent": 2.4685390599188395e-05
+ },
+ {
+  "id": "AG-02539",
+  "gold": false,
+  "argument": "destination",
+  "value": "Chicago",
+  "changed": true,
+  "ent": 5.164180765859783e-05
+ },
+ {
+  "id": "AG-02542",
+  "gold": false,
+  "argument": "loan_amount",
+  "value": 700000,
+  "changed": true,
+  "ent": 0.0004077391349710524
+ },
+ {
+  "id": "AG-02546",
+  "gold": false,
+  "argument": "location",
+  "value": "Conference Room 1",
+  "changed": true,
+  "ent": 3.380506677785888e-05
+ },
+ {
+  "id": "AG-02551",
+  "gold": false,
+  "argument": "genre",
+  "value": "pop",
+  "changed": true,
+  "ent": 8.645001798868179e-05
+ },
+ {
+  "id": "AG-02552",
+  "gold": false,
+  "argument": "tip_percentage",
+  "value": 150,
+  "changed": true,
+  "ent": 0.0007910889107733965
+ },
+ {
+  "id": "AG-02553",
+  "gold": false,
+  "argument": "loan_amount",
+  "value": 3000000,
+  "changed": true,
+  "ent": 0.022267257794737816
+ },
+ {
+  "id": "AG-02565",
+  "gold": false,
+  "argument": "symbol",
+  "value": "GOOGL",
+  "changed": true,
+  "ent": 1.806476757337805e-05
+ },
+ {
+  "id": "AG-02567",
+  "gold": false,
+  "argument": "discount_percentage",
+  "value": 25,
+  "changed": true,
+  "ent": 1.8425438611302525e-05
+ },
+ {
+  "id": "AG-02572",
+  "gold": true,
+  "argument": "symbol",
+  "value": "MSFT",
+  "changed": false,
+  "ent": 0.00024163504713214934
+ },
+ {
+  "id": "AG-02576",
+  "gold": false,
+  "argument": "query",
+  "value": "To Kill a",
+  "changed": true,
+  "ent": 0.00017749627295415848
+ },
+ {
+  "id": "AG-02577",
+  "gold": false,
+  "argument": "shape",
+  "value": "square",
+  "changed": true,
+  "ent": 0.0026719695888459682
+ },
+ {
+  "id": "AG-02578",
+  "gold": false,
+  "argument": "size",
+  "value": 1000,
+  "changed": true,
+  "ent": 0.00011272579286014661
+ },
+ {
+  "id": "AG-02589",
+  "gold": false,
+  "argument": "stock_symbol",
+  "value": "AAPL",
+  "changed": true,
+  "ent": 0.00011493970669107512
+ },
+ {
+  "id": "AG-02593",
+  "gold": false,
+  "argument": "release_year",
+  "value": 4038,
+  "changed": true,
+  "ent": 7.741727313259616e-05
+ },
+ {
+  "id": "AG-02600",
+  "gold": false,
+  "argument": "genre",
+  "value": "jazz",
+  "changed": true,
+  "ent": 0.0001019743867800571
+ },
+ {
+  "id": "AG-02607",
+  "gold": false,
+  "argument": "country",
+  "value": "United Kingdom",
+  "changed": true,
+  "ent": 8.391361188841984e-05
+ },
+ {
+  "id": "AG-02609",
+  "gold": false,
+  "argument": "duration",
+  "value": 110,
+  "changed": true,
+  "ent": 0.012751840986311436
+ },
+ {
+  "id": "AG-02616",
+  "gold": false,
+  "argument": "current_date",
+  "value": "2022-03-15",
+  "changed": true,
+  "ent": 0.00105743866879493
+ },
+ {
+  "id": "AG-02620",
+  "gold": false,
+  "argument": "text",
+  "value": "I am feeling very happy today.",
+  "changed": true,
+  "ent": 3.81189129257109e-05
+ },
+ {
+  "id": "AG-02622",
+  "gold": false,
+  "argument": "max_value",
+  "value": 1000,
+  "changed": true,
+  "ent": 7.088794518494979e-05
+ },
+ {
+  "id": "AG-02631",
+  "gold": false,
+  "argument": "title",
+  "value": "Inception",
+  "changed": true,
+  "ent": 4.492555672186427e-05
+ },
+ {
+  "id": "AG-02634",
+  "gold": false,
+  "argument": "price",
+  "value": 1495,
+  "changed": true,
+  "ent": 0.01846468076109886
+ },
+ {
+  "id": "AG-02635",
+  "gold": false,
+  "argument": "discount",
+  "value": 65,
+  "changed": true,
+  "ent": 0.0011336643947288394
+ },
+ {
+  "id": "AG-02637",
+  "gold": false,
+  "argument": "artist",
+  "value": "Queen",
+  "changed": true,
+  "ent": 7.13858617018559e-06
+ },
+ {
+  "id": "AG-02639",
+  "gold": false,
+  "argument": "n",
+  "value": 30,
+  "changed": true,
+  "ent": 1.6166583009180613e-05
+ },
+ {
+  "id": "AG-02640",
+  "gold": false,
+  "argument": "shape",
+  "value": "triangle",
+  "changed": true,
+  "ent": 0.00011418222129577771
+ },
+ {
+  "id": "AG-02641",
+  "gold": false,
+  "argument": "diet",
+  "value": "vegetarian",
+  "changed": true,
+  "ent": 0.8651074767112732
+ },
+ {
+  "id": "AG-02645",
+  "gold": false,
+  "argument": "interest_rate",
+  "value": 7.0,
+  "changed": true,
+  "ent": 0.00027043564477935433
+ },
+ {
+  "id": "AG-02656",
+  "gold": false,
+  "argument": "movie_name",
+  "value": "Titanic",
+  "changed": true,
+  "ent": 0.18718761205673218
+ },
+ {
+  "id": "AG-02665",
+  "gold": false,
+  "argument": "check_out_date",
+  "value": "2022-05-05",
+  "changed": true,
+  "ent": 0.00025497571914456785
+ },
+ {
+  "id": "AG-02666",
+  "gold": false,
+  "argument": "genre",
+  "value": "pop",
+  "changed": false,
+  "ent": 7.694825035287067e-05
+ },
+ {
+  "id": "AG-02666",
+  "gold": false,
+  "argument": "mood",
+  "value": "uplifting",
+  "changed": true,
+  "ent": 0.00043399297283031046
+ },
+ {
+  "id": "AG-02667",
+  "gold": false,
+  "argument": "title",
+  "value": "To Kill a Mockingbird",
+  "changed": true,
+  "ent": 1.5292833268176764e-05
+ },
+ {
+  "id": "AG-02670",
+  "gold": false,
+  "argument": "shape",
+  "value": "triangle",
+  "changed": true,
+  "ent": 0.0002668886154424399
+ },
+ {
+  "id": "AG-02673",
+  "gold": false,
+  "argument": "height",
+  "value": 3.5,
+  "changed": true,
+  "ent": 0.00029335892759263515
+ },
+ {
+  "id": "AG-02684",
+  "gold": false,
+  "argument": "bill_amount",
+  "value": 45,
+  "changed": true,
+  "ent": 0.001842896337620914
+ },
+ {
+  "id": "AG-02685",
+  "gold": false,
+  "argument": "input",
+  "value": "www.mywebsite.com",
+  "changed": true,
+  "ent": 0.0002244887873530388
+ },
+ {
+  "id": "AG-02687",
+  "gold": false,
+  "argument": "to_unit",
+  "value": "kilometers",
+  "changed": true,
+  "ent": 5.778241757070646e-05
+ },
+ {
+  "id": "AG-02689",
+  "gold": false,
+  "argument": "number",
+  "value": 16,
+  "changed": true,
+  "ent": 4.1831368434941396e-05
+ },
+ {
+  "id": "AG-02692",
+  "gold": false,
+  "argument": "bill_amount",
+  "value": 100,
+  "changed": true,
+  "ent": 0.0003062126925215125
+ },
+ {
+  "id": "AG-02697",
+  "gold": true,
+  "argument": "date",
+  "value": "2022-03-15",
+  "changed": false,
+  "ent": 0.0005878096562810242
+ },
+ {
+  "id": "AG-02700",
+  "gold": false,
+  "argument": "description",
+  "value": "Prepare a presentation on AI for the upcoming conference",
+  "changed": true,
+  "ent": 4.9259506340604275e-06
+ },
+ {
+  "id": "AG-02701",
+  "gold": false,
+  "argument": "amount",
+  "value": 110,
+  "changed": true,
+  "ent": 0.004381031729280949
+ },
+ {
+  "id": "AG-02710",
+  "gold": false,
+  "argument": "amount",
+  "value": 99,
+  "changed": true,
+  "ent": 0.0011812180746346712
+ },
+ {
+  "id": "AG-02711",
+  "gold": false,
+  "argument": "task",
+  "value": "Prepare a presentation for the next team meeting",
+  "changed": true,
+  "ent": 2.7892472644452937e-05
+ },
+ {
+  "id": "AG-02713",
+  "gold": false,
+  "argument": "keywords",
+  "value": "mystery",
+  "changed": true,
+  "ent": 0.002553235972300172
+ },
+ {
+  "id": "AG-02715",
+  "gold": false,
+  "argument": "interest_rate",
+  "value": 0.1,
+  "changed": true,
+  "ent": 0.001826359541155398
+ },
+ {
+  "id": "AG-02723",
+  "gold": false,
+  "argument": "shape",
+  "value": "triangle",
+  "changed": true,
+  "ent": 0.0007742505986243486
+ },
+ {
+  "id": "AG-02730",
+  "gold": false,
+  "argument": "symbol",
+  "value": "GOOG",
+  "changed": true,
+  "ent": 2.5889819880831055e-05
+ },
+ {
+  "id": "AG-02742",
+  "gold": false,
+  "argument": "tax_rate",
+  "value": 30,
+  "changed": true,
+  "ent": 0.00013593895710073411
+ },
+ {
+  "id": "AG-02748",
+  "gold": false,
+  "argument": "destination",
+  "value": "Paris",
+  "changed": true,
+  "ent": 1.0624834430927876e-05
+ },
+ {
+  "id": "AG-02750",
+  "gold": false,
+  "argument": "shape",
+  "value": "circle",
+  "changed": true,
+  "ent": 0.000381092686438933
+ },
+ {
+  "id": "AG-02760",
+  "gold": false,
+  "argument": "subject",
+  "value": "Meeting Agenda for Tomorrow",
+  "changed": true,
+  "ent": 8.53154961077962e-06
+ },
+ {
+  "id": "AG-02761",
+  "gold": true,
+  "argument": "symbol",
+  "value": "MSFT",
+  "changed": false,
+  "ent": 0.00024737513740547
+ },
+ {
+  "id": "AG-02765",
+  "gold": false,
+  "argument": "distance",
+  "value": 199,
+  "changed": true,
+  "ent": 0.000460231356555596
+ },
+ {
+  "id": "AG-02770",
+  "gold": false,
+  "argument": "query",
+  "value": "George R.R. Martin",
+  "changed": true,
+  "ent": 1.0884986295423005e-05
+ },
+ {
+  "id": "AG-02772",
+  "gold": false,
+  "argument": "cuisine",
+  "value": "Mexican",
+  "changed": true,
+  "ent": 3.0078968848101795e-05
+ },
+ {
+  "id": "AG-02779",
+  "gold": false,
+  "argument": "title",
+  "value": "The Dark Knight",
+  "changed": true,
+  "ent": 2.0860150470980443e-05
+ },
+ {
+  "id": "AG-02791",
+  "gold": false,
+  "argument": "birthdate",
+  "value": "1990-07-15",
+  "changed": true,
+  "ent": 0.0008365965913981199
+ },
+ {
+  "id": "AG-02792",
+  "gold": false,
+  "argument": "author",
+  "value": "Stephen King",
+  "changed": true,
+  "ent": 9.930254236678593e-06
+ },
+ {
+  "id": "AG-02802",
+  "gold": false,
+  "argument": "diet",
+  "value": "vegan",
+  "changed": true,
+  "ent": 0.00011612206435529515
+ },
+ {
+  "id": "AG-02809",
+  "gold": true,
+  "argument": "symbol",
+  "value": "AAPL",
+  "changed": false,
+  "ent": 4.2593543184921145e-05
+ },
+ {
+  "id": "AG-02823",
+  "gold": false,
+  "argument": "category",
+  "value": "technology",
+  "changed": true,
+  "ent": 0.00017220524023286998
+ },
+ {
+  "id": "AG-02832",
+  "gold": false,
+  "argument": "bill_total",
+  "value": 40,
+  "changed": true,
+  "ent": 0.000202450537472032
+ },
+ {
+  "id": "AG-02835",
+  "gold": false,
+  "argument": "symbol",
+  "value": "MSFT",
+  "changed": true,
+  "ent": 1.8287279090145603e-05
+ },
+ {
+  "id": "AG-02838",
+  "gold": false,
+  "argument": "title",
+  "value": "Buy groceries",
+  "changed": true,
+  "ent": 0.005147602409124374
+ },
+ {
+  "id": "AG-02843",
+  "gold": false,
+  "argument": "shape",
+  "value": "square",
+  "changed": true,
+  "ent": 0.0029585547745227814
+ },
+ {
+  "id": "AG-02850",
+  "gold": false,
+  "argument": "shape_type",
+  "value": "rectangle",
+  "changed": true,
+  "ent": 0.00038080717786215246
+ },
+ {
+  "id": "AG-02851",
+  "gold": false,
+  "argument": "playlist",
+  "value": "Classic Rock",
+  "changed": true,
+  "ent": 6.39942372799851e-05
+ },
+ {
+  "id": "AG-02856",
+  "gold": false,
+  "argument": "height",
+  "value": 0.0,
+  "changed": true,
+  "ent": 2.543248592701275e-05
+ },
+ {
+  "id": "AG-02859",
+  "gold": false,
+  "argument": "interest_rate",
+  "value": 0,
+  "changed": true,
+  "ent": 6.379659316735342e-05
+ },
+ {
+  "id": "AG-02860",
+  "gold": true,
+  "argument": "due_date",
+  "value": "2022-04-30",
+  "changed": false,
+  "ent": 0.009942367672920227
+ },
+ {
+  "id": "AG-02863",
+  "gold": true,
+  "argument": "longitude",
+  "value": -74.006,
+  "changed": false,
+  "ent": 0.2549597918987274
+ },
+ {
+  "id": "AG-02864",
+  "gold": false,
+  "argument": "movie_title",
+  "value": "Titanic",
+  "changed": true,
+  "ent": 0.05861430615186691
+ },
+ {
+  "id": "AG-02865",
+  "gold": false,
+  "argument": "current_date",
+  "value": "2022-04-01",
+  "changed": true,
+  "ent": 0.0006403235602192581
+ },
+ {
+  "id": "AG-02869",
+  "gold": false,
+  "argument": "max",
+  "value": 3000,
+  "changed": true,
+  "ent": 4.379868187243119e-05
+ },
+ {
+  "id": "AG-02873",
+  "gold": false,
+  "argument": "product",
+  "value": "product X",
+  "changed": true,
+  "ent": 0.00010914493032032624
+ },
+ {
+  "id": "AG-02874",
+  "gold": false,
+  "argument": "to_currency",
+  "value": "GBP",
+  "changed": true,
+  "ent": 5.940775736235082e-06
+ },
+ {
+  "id": "AG-02885",
+  "gold": false,
+  "argument": "base",
+  "value": 60,
+  "changed": true,
+  "ent": 0.00023635561228729784
+ },
+ {
+  "id": "AG-02889",
+  "gold": false,
+  "argument": "loan_term",
+  "value": 110,
+  "changed": true,
+  "ent": 0.00023299778695218265
+ },
+ {
+  "id": "AG-02894",
+  "gold": false,
+  "argument": "interest_rate",
+  "value": 8.5,
+  "changed": true,
+  "ent": 0.0005540442653000355
+ },
+ {
+  "id": "AG-02898",
+  "gold": false,
+  "argument": "location",
+  "value": "Hilton Hotel",
+  "changed": true,
+  "ent": 8.105282176984474e-05
+ },
+ {
+  "id": "AG-02904",
+  "gold": false,
+  "argument": "artist",
+  "value": "Coldplay",
+  "changed": true,
+  "ent": 1.7397165720467456e-05
+ },
+ {
+  "id": "AG-02906",
+  "gold": false,
+  "argument": "playlist",
+  "value": "Workout Mix",
+  "changed": true,
+  "ent": 1.6535936083528213e-05
+ },
+ {
+  "id": "AG-02908",
+  "gold": false,
+  "argument": "end_time",
+  "value": "2022-03-01T11:00:00",
+  "changed": true,
+  "ent": 8.113920921459794e-05
+ },
+ {
+  "id": "AG-02911",
+  "gold": false,
+  "argument": "keyword",
+  "value": "love",
+  "changed": true,
+  "ent": 8.974748197942972e-05
+ },
+ {
+  "id": "AG-02912",
+  "gold": false,
+  "argument": "movie_title",
+  "value": "Titanic",
+  "changed": true,
+  "ent": 1.9046463421545923e-05
+ },
+ {
+  "id": "AG-02913",
+  "gold": false,
+  "argument": "product_price",
+  "value": 200,
+  "changed": true,
+  "ent": 0.0003256242489442229
+ },
+ {
+  "id": "AG-02919",
+  "gold": false,
+  "argument": "category",
+  "value": "technology",
+  "changed": true,
+  "ent": 0.0003437361738178879
+ },
+ {
+  "id": "AG-02921",
+  "gold": false,
+  "argument": "cuisine",
+  "value": "Mexican",
+  "changed": true,
+  "ent": 3.7451151001732796e-05
+ },
+ {
+  "id": "AG-02924",
+  "gold": false,
+  "argument": "total_bill",
+  "value": 40,
+  "changed": true,
+  "ent": 0.0005605171318165958
+ },
+ {
+  "id": "AG-02926",
+  "gold": false,
+  "argument": "title",
+  "value": "Project Discussion",
+  "changed": true,
+  "ent": 0.007437475956976414
+ },
+ {
+  "id": "AG-02931",
+  "gold": false,
+  "argument": "tip_percentage",
+  "value": 25,
+  "changed": true,
+  "ent": 0.0006533883279189467
+ },
+ {
+  "id": "AG-02932",
+  "gold": false,
+  "argument": "text",
+  "value": "I am really upset because my favorite team lost the match.",
+  "changed": true,
+  "ent": 2.762559006441734e-06
+ },
+ {
+  "id": "AG-02934",
+  "gold": false,
+  "argument": "time",
+  "value": "10:00",
+  "changed": true,
+  "ent": 0.13038994371891022
+ },
+ {
+  "id": "AG-02935",
+  "gold": false,
+  "argument": "shape",
+  "value": "circle",
+  "changed": true,
+  "ent": 0.00022229352907743305
+ },
+ {
+  "id": "AG-02940",
+  "gold": false,
+  "argument": "number",
+  "value": 14,
+  "changed": true,
+  "ent": 4.302335946704261e-05
+ },
+ {
+  "id": "AG-02945",
+  "gold": false,
+  "argument": "input_string",
+  "value": "computer",
+  "changed": true,
+  "ent": 0.008095057681202888
+ },
+ {
+  "id": "AG-02947",
+  "gold": false,
+  "argument": "start_time",
+  "value": "2022-04-15T10:00:00",
+  "changed": true,
+  "ent": 0.0009421170107088983
+ },
+ {
+  "id": "AG-02948",
+  "gold": false,
+  "argument": "shape",
+  "value": "triangle",
+  "changed": true,
+  "ent": 0.000266150658717379
+ },
+ {
+  "id": "AG-02953",
+  "gold": false,
+  "argument": "bill_amount",
+  "value": 75,
+  "changed": true,
+  "ent": 0.0003802228020504117
+ },
+ {
+  "id": "AG-02954",
+  "gold": false,
+  "argument": "company_name",
+  "value": "Apple Inc.",
+  "changed": true,
+  "ent": 0.0002603947650641203
+ },
+ {
+  "id": "AG-02956",
+  "gold": false,
+  "argument": "birthdate",
+  "value": "1990-07-15",
+  "changed": true,
+  "ent": 0.0008461239631287754
+ },
+ {
+  "id": "AG-02958",
+  "gold": false,
+  "argument": "origin",
+  "value": "London",
+  "changed": true,
+  "ent": 3.262612517573871e-05
+ },
+ {
+  "id": "AG-02960",
+  "gold": false,
+  "argument": "priority",
+  "value": "medium",
+  "changed": true,
+  "ent": 0.00016039548791013658
+ },
+ {
+  "id": "AG-02962",
+  "gold": false,
+  "argument": "destination",
+  "value": "Chicago",
+  "changed": true,
+  "ent": 3.729755917447619e-05
+ },
+ {
+  "id": "AG-02965",
+  "gold": false,
+  "argument": "loan_term",
+  "value": 60,
+  "changed": true,
+  "ent": 0.00023376342142000794
+ },
+ {
+  "id": "AG-02975",
+  "gold": false,
+  "argument": "location",
+  "value": "Conference Room 1",
+  "changed": true,
+  "ent": 2.6651805455912836e-05
+ },
+ {
+  "id": "AG-02976",
+  "gold": false,
+  "argument": "principal",
+  "value": 200050,
+  "changed": true,
+  "ent": 0.0010240190895274282
+ },
+ {
+  "id": "AG-02980",
+  "gold": true,
+  "argument": "symbol",
+  "value": "MSFT",
+  "changed": false,
+  "ent": 4.083657040609978e-05
+ },
+ {
+  "id": "AG-02983",
+  "gold": false,
+  "argument": "email",
+  "value": "john.doe123@gmail.com",
+  "changed": true,
+  "ent": 0.0013228434836491942
+ },
+ {
+  "id": "AG-02988",
+  "gold": false,
+  "argument": "source_language",
+  "value": "French",
+  "changed": true,
+  "ent": 0.00026650013751350343
+ },
+ {
+  "id": "AG-02990",
+  "gold": false,
+  "argument": "program_name",
+  "value": "DataVisualization",
+  "changed": true,
+  "ent": 2.0345469238236547e-05
+ },
+ {
+  "id": "AG-02996",
+  "gold": false,
+  "argument": "subject",
+  "value": "Monthly Report",
+  "changed": true,
+  "ent": 0.00011346075189067051
+ },
+ {
+  "id": "AG-03000",
+  "gold": false,
+  "argument": "message",
+  "value": "Hi John, Let's meet tomorrow at 10 AM. Regards, Alex",
+  "changed": true,
+  "ent": 0.0006204398232512176
+ },
+ {
+  "id": "AG-03001",
+  "gold": false,
+  "argument": "playlist",
+  "value": "Workout Mix",
+  "changed": true,
+  "ent": 1.442019856767729e-05
+ },
+ {
+  "id": "AG-03002",
+  "gold": false,
+  "argument": "bill_amount",
+  "value": 45,
+  "changed": true,
+  "ent": 0.0007954223547130823
+ },
+ {
+  "id": "AG-03004",
+  "gold": true,
+  "argument": "latitude1",
+  "value": 40.7128,
+  "changed": false,
+  "ent": 0.0010643593268468976
+ },
+ {
+  "id": "AG-03004",
+  "gold": true,
+  "argument": "longitude1",
+  "value": -74.006,
+  "changed": false,
+  "ent": 0.0011489560129120946
+ },
+ {
+  "id": "AG-03004",
+  "gold": true,
+  "argument": "latitude2",
+  "value": 34.0522,
+  "changed": false,
+  "ent": 0.0007960466900840402
+ },
+ {
+  "id": "AG-03004",
+  "gold": true,
+  "argument": "longitude2",
+  "value": -118.2437,
+  "changed": false,
+  "ent": 0.001616399735212326
+ },
+ {
+  "id": "AG-03009",
+  "gold": false,
+  "argument": "text",
+  "value": "I am really upset because my favorite team lost the match.",
+  "changed": true,
+  "ent": 6.682842013105983e-06
+ },
+ {
+  "id": "AG-03011",
+  "gold": false,
+  "argument": "cuisine",
+  "value": "Mexican",
+  "changed": true,
+  "ent": 2.907493217207957e-05
+ },
+ {
+  "id": "AG-03018",
+  "gold": false,
+  "argument": "tax_rate",
+  "value": 10,
+  "changed": true,
+  "ent": 0.0008621019078418612
+ },
+ {
+  "id": "AG-03019",
+  "gold": false,
+  "argument": "keyword",
+  "value": "data science",
+  "changed": true,
+  "ent": 8.81104642758146e-06
+ },
+ {
+  "id": "AG-03030",
+  "gold": false,
+  "argument": "destination",
+  "value": "Chicago",
+  "changed": true,
+  "ent": 5.080960545456037e-05
+ },
+ {
+  "id": "AG-03036",
+  "gold": false,
+  "argument": "num_tweets",
+  "value": 510,
+  "changed": true,
+  "ent": 0.0025452072732150555
+ },
+ {
+  "id": "AG-03038",
+  "gold": false,
+  "argument": "recipient",
+  "value": "john.doe@example.com",
+  "changed": true,
+  "ent": 0.0002245944633614272
+ },
+ {
+  "id": "AG-03041",
+  "gold": false,
+  "argument": "text",
+  "value": "Je suis tr\u00e8s heureux de vous rencontrer",
+  "changed": true,
+  "ent": 4.644493310479447e-05
+ },
+ {
+  "id": "AG-03046",
+  "gold": false,
+  "argument": "width",
+  "value": 108,
+  "changed": true,
+  "ent": 0.00014069881581235677
+ },
+ {
+  "id": "AG-03047",
+  "gold": false,
+  "argument": "title",
+  "value": "Inception",
+  "changed": true,
+  "ent": 8.058806997723877e-06
+ },
+ {
+  "id": "AG-03049",
+  "gold": false,
+  "argument": "recipient",
+  "value": "boss@example.com",
+  "changed": true,
+  "ent": 0.021691223606467247
+ },
+ {
+  "id": "AG-03053",
+  "gold": false,
+  "argument": "original_price",
+  "value": 99,
+  "changed": true,
+  "ent": 0.008514437824487686
+ },
+ {
+  "id": "AG-03059",
+  "gold": false,
+  "argument": "title",
+  "value": "Buy groceries",
+  "changed": true,
+  "ent": 8.453478585579433e-06
+ },
+ {
+  "id": "AG-03060",
+  "gold": false,
+  "argument": "genre",
+  "value": "Allegorical novella",
+  "changed": true,
+  "ent": 6.986640801187605e-05
+ },
+ {
+  "id": "AG-03062",
+  "gold": false,
+  "argument": "bill_amount",
+  "value": 40,
+  "changed": true,
+  "ent": 0.0015078602591529489
+ },
+ {
+  "id": "AG-03067",
+  "gold": false,
+  "argument": "genre",
+  "value": "mystery",
+  "changed": true,
+  "ent": 0.00037011713720858097
+ },
+ {
+  "id": "AG-03073",
+  "gold": false,
+  "argument": "bill_amount",
+  "value": 49,
+  "changed": true,
+  "ent": 0.0014537182869389653
+ },
+ {
+  "id": "AG-03076",
+  "gold": false,
+  "argument": "source",
+  "value": "BBC",
+  "changed": true,
+  "ent": 2.4030909116845578e-05
+ },
+ {
+  "id": "AG-03083",
+  "gold": false,
+  "argument": "shape",
+  "value": "circle",
+  "changed": true,
+  "ent": 0.00033775222254917026
+ },
+ {
+  "id": "AG-03091",
+  "gold": false,
+  "argument": "message",
+  "value": "Hi John, Let's meet tomorrow at 10 AM. Regards, Alex",
+  "changed": true,
+  "ent": 0.00020214117830619216
+ },
+ {
+  "id": "AG-03092",
+  "gold": false,
+  "argument": "number",
+  "value": 200,
+  "changed": true,
+  "ent": 0.0001340924936812371
+ },
+ {
+  "id": "AG-03093",
+  "gold": false,
+  "argument": "genre",
+  "value": "action",
+  "changed": true,
+  "ent": 4.6248223952716216e-05
+ },
+ {
+  "id": "AG-03093",
+  "gold": false,
+  "argument": "release_year",
+  "value": 1990,
+  "changed": false,
+  "ent": 0.0004857556486967951
+ },
+ {
+  "id": "AG-03095",
+  "gold": false,
+  "argument": "original_price",
+  "value": 2000,
+  "changed": true,
+  "ent": 0.000342083687428385
+ },
+ {
+  "id": "AG-03100",
+  "gold": false,
+  "argument": "length",
+  "value": 62,
+  "changed": true,
+  "ent": 5.7655241107568145e-05
+ },
+ {
+  "id": "AG-03106",
+  "gold": false,
+  "argument": "max",
+  "value": 200,
+  "changed": true,
+  "ent": 0.0001428804243914783
+ },
+ {
+  "id": "AG-03108",
+  "gold": false,
+  "argument": "query",
+  "value": "laptop",
+  "changed": true,
+  "ent": 0.00010782720346469432
+ },
+ {
+  "id": "AG-03110",
+  "gold": true,
+  "argument": "current_date",
+  "value": "2022-04-01",
+  "changed": false,
+  "ent": 0.0006403235602192581
+ },
+ {
+  "id": "AG-03112",
+  "gold": false,
+  "argument": "original_price",
+  "value": 2000,
+  "changed": true,
+  "ent": 0.00022837414871901274
+ },
+ {
+  "id": "AG-03116",
+  "gold": false,
+  "argument": "year",
+  "value": 19970,
+  "changed": true,
+  "ent": 0.9798204302787781
+ },
+ {
+  "id": "AG-03122",
+  "gold": false,
+  "argument": "from_currency",
+  "value": "US Dollar",
+  "changed": true,
+  "ent": 0.00029383969376794994
+ },
+ {
+  "id": "AG-03123",
+  "gold": false,
+  "argument": "number",
+  "value": 2400,
+  "changed": true,
+  "ent": 8.675467142893467e-06
+ },
+ {
+  "id": "AG-03124",
+  "gold": false,
+  "argument": "language",
+  "value": "English",
+  "changed": true,
+  "ent": 0.0005793465534225106
+ },
+ {
+  "id": "AG-03125",
+  "gold": false,
+  "argument": "destination",
+  "value": "Chicago",
+  "changed": true,
+  "ent": 5.147415868123062e-05
+ },
+ {
+  "id": "AG-03130",
+  "gold": false,
+  "argument": "title",
+  "value": "Team Meeting",
+  "changed": true,
+  "ent": 2.2766223992221057e-05
+ },
+ {
+  "id": "AG-03131",
+  "gold": false,
+  "argument": "loan_term",
+  "value": 60,
+  "changed": true,
+  "ent": 6.664898683084175e-05
+ },
+ {
+  "id": "AG-03132",
+  "gold": false,
+  "argument": "discount_percentage",
+  "value": 10,
+  "changed": true,
+  "ent": 3.7326062738429755e-05
+ },
+ {
+  "id": "AG-03133",
+  "gold": false,
+  "argument": "title",
+  "value": "star",
+  "changed": true,
+  "ent": 0.0037287960294634104
+ },
+ {
+  "id": "AG-03135",
+  "gold": false,
+  "argument": "word",
+  "value": "amor",
+  "changed": true,
+  "ent": 9.889788634609431e-05
+ },
+ {
+  "id": "AG-03137",
+  "gold": false,
+  "argument": "image_url",
+  "value": "https://example.com/myimage.jpg",
+  "changed": true,
+  "ent": 0.001173582160845399
+ },
+ {
+  "id": "AG-03148",
+  "gold": false,
+  "argument": "weight",
+  "value": 700,
+  "changed": true,
+  "ent": 0.0004126539279241115
+ },
+ {
+  "id": "AG-03149",
+  "gold": false,
+  "argument": "age",
+  "value": 60,
+  "changed": true,
+  "ent": 0.00017603629385121167
+ },
+ {
+  "id": "AG-03150",
+  "gold": false,
+  "argument": "subject",
+  "value": "Meeting Agenda for Tomorrow",
+  "changed": true,
+  "ent": 1.054803669831017e-05
+ },
+ {
+  "id": "AG-03151",
+  "gold": false,
+  "argument": "destination",
+  "value": "Chicago",
+  "changed": true,
+  "ent": 3.1881030736258253e-05
+ },
+ {
+  "id": "AG-03156",
+  "gold": false,
+  "argument": "date",
+  "value": "2022-03-01",
+  "changed": true,
+  "ent": 2.627526737342123e-05
+ },
+ {
+  "id": "AG-03157",
+  "gold": false,
+  "argument": "shape",
+  "value": "circle",
+  "changed": true,
+  "ent": 0.0002147074555978179
+ },
+ {
+  "id": "AG-03162",
+  "gold": false,
+  "argument": "destination",
+  "value": "San Francisco",
+  "changed": true,
+  "ent": 1.3279107406560797e-05
+ },
+ {
+  "id": "AG-03164",
+  "gold": false,
+  "argument": "title",
+  "value": "The Great Gatsby",
+  "changed": true,
+  "ent": 2.8205318812979385e-05
+ },
+ {
+  "id": "AG-03166",
+  "gold": false,
+  "argument": "original_price",
+  "value": 195,
+  "changed": true,
+  "ent": 0.006864937487989664
+ },
+ {
+  "id": "AG-03167",
+  "gold": false,
+  "argument": "side_length",
+  "value": 50,
+  "changed": true,
+  "ent": 8.180989243555814e-05
+ },
+ {
+  "id": "AG-03172",
+  "gold": false,
+  "argument": "diet",
+  "value": "vegan",
+  "changed": true,
+  "ent": 9.322002006229013e-05
+ },
+ {
+  "id": "AG-03176",
+  "gold": false,
+  "argument": "weight",
+  "value": 0,
+  "changed": true,
+  "ent": 7.747478957753628e-05
+ },
+ {
+  "id": "AG-03182",
+  "gold": false,
+  "argument": "invoice_number",
+  "value": "JD124",
+  "changed": true,
+  "ent": 0.0002287493844050914
+ },
+ {
+  "id": "AG-03186",
+  "gold": false,
+  "argument": "interest_rate",
+  "value": 0,
+  "changed": true,
+  "ent": 0.00019260853878222406
+ },
+ {
+  "id": "AG-03189",
+  "gold": false,
+  "argument": "subject",
+  "value": "Meeting Schedule",
+  "changed": true,
+  "ent": 1.849216096161399e-05
+ },
+ {
+  "id": "AG-03199",
+  "gold": false,
+  "argument": "loan_amount",
+  "value": 200050,
+  "changed": true,
+  "ent": 0.008590987883508205
+ },
+ {
+  "id": "AG-03201",
+  "gold": false,
+  "argument": "destination",
+  "value": "Paris",
+  "changed": true,
+  "ent": 1.3474746083375067e-05
+ },
+ {
+  "id": "AG-03202",
+  "gold": false,
+  "argument": "cuisine",
+  "value": "Mexican",
+  "changed": true,
+  "ent": 1.9689661712618545e-05
+ },
+ {
+  "id": "AG-03204",
+  "gold": false,
+  "argument": "total_amount",
+  "value": 1400,
+  "changed": true,
+  "ent": 3.202596781193279e-05
+ },
+ {
+  "id": "AG-03205",
+  "gold": false,
+  "argument": "actor",
+  "value": "Bradley Cooper",
+  "changed": true,
+  "ent": 1.874287409009412e-05
+ },
+ {
+  "id": "AG-03206",
+  "gold": false,
+  "argument": "complexity",
+  "value": "strong",
+  "changed": true,
+  "ent": 0.0003206311375834048
+ },
+ {
+  "id": "AG-03208",
+  "gold": false,
+  "argument": "shape",
+  "value": "rectangle",
+  "changed": true,
+  "ent": 0.00045581295853480697
+ },
+ {
+  "id": "AG-03211",
+  "gold": false,
+  "argument": "percentage",
+  "value": 15,
+  "changed": true,
+  "ent": 0.00029710287344641984
+ },
+ {
+  "id": "AG-03220",
+  "gold": false,
+  "argument": "interest_rate",
+  "value": 10,
+  "changed": true,
+  "ent": 0.0006951739778742194
+ },
+ {
+  "id": "AG-03222",
+  "gold": true,
+  "argument": "check_in_date",
+  "value": "2022-05-01",
+  "changed": false,
+  "ent": 0.00019262917339801788
+ },
+ {
+  "id": "AG-03222",
+  "gold": true,
+  "argument": "check_out_date",
+  "value": "2022-05-05",
+  "changed": false,
+  "ent": 0.00019718070689123124
+ },
+ {
+  "id": "AG-03227",
+  "gold": false,
+  "argument": "bill_amount",
+  "value": 200,
+  "changed": true,
+  "ent": 0.00021779799135401845
+ },
+ {
+  "id": "AG-03230",
+  "gold": false,
+  "argument": "loan_amount",
+  "value": 400000,
+  "changed": true,
+  "ent": 0.0006084470660425723
+ },
+ {
+  "id": "AG-03230",
+  "gold": false,
+  "argument": "tenure",
+  "value": 240,
+  "changed": false,
+  "ent": 0.0002903198474086821
+ },
+ {
+  "id": "AG-03231",
+  "gold": false,
+  "argument": "a",
+  "value": 11,
+  "changed": true,
+  "ent": 0.0003787449386436492
+ },
+ {
+  "id": "AG-03231",
+  "gold": false,
+  "argument": "b",
+  "value": -3,
+  "changed": false,
+  "ent": 0.00185720669105649
+ },
+ {
+  "id": "AG-03234",
+  "gold": false,
+  "argument": "n",
+  "value": 14,
+  "changed": true,
+  "ent": 3.6605131754186004e-05
+ },
+ {
+  "id": "AG-03237",
+  "gold": false,
+  "argument": "name",
+  "value": "Workout Vibes",
+  "changed": true,
+  "ent": 6.603873043786734e-05
+ },
+ {
+  "id": "AG-03243",
+  "gold": false,
+  "argument": "category",
+  "value": "politics",
+  "changed": true,
+  "ent": 5.9430745750432834e-05
+ },
+ {
+  "id": "AG-03245",
+  "gold": false,
+  "argument": "loan_amount",
+  "value": 500000,
+  "changed": true,
+  "ent": 0.9959986209869385
+ },
+ {
+  "id": "AG-03246",
+  "gold": false,
+  "argument": "location",
+  "value": "Los Angeles",
+  "changed": true,
+  "ent": 1.2433402844180819e-05
+ },
+ {
+  "id": "AG-03253",
+  "gold": false,
+  "argument": "expenses",
+  "value": 8000,
+  "changed": true,
+  "ent": 0.0002280288317706436
+ },
+ {
+  "id": "AG-03254",
+  "gold": false,
+  "argument": "artist",
+  "value": "Taylor Swift",
+  "changed": true,
+  "ent": 8.65210222400492e-06
+ },
+ {
+  "id": "AG-03259",
+  "gold": false,
+  "argument": "exchange",
+  "value": "NYSE",
+  "changed": true,
+  "ent": 6.697780918329954e-05
+ },
+ {
+  "id": "AG-03264",
+  "gold": false,
+  "argument": "shape",
+  "value": "box",
+  "changed": true,
+  "ent": 0.0013899089535698295
+ },
+ {
+  "id": "AG-03275",
+  "gold": false,
+  "argument": "title",
+  "value": "Team Meeting Agenda",
+  "changed": true,
+  "ent": 0.003110743360593915
+ },
+ {
+  "id": "AG-03277",
+  "gold": false,
+  "argument": "category",
+  "value": "sports",
+  "changed": true,
+  "ent": 4.597211955115199e-05
+ },
+ {
+  "id": "AG-03283",
+  "gold": false,
+  "argument": "category",
+  "value": "electronics",
+  "changed": true,
+  "ent": 0.00019618669466581196
+ },
+ {
+  "id": "AG-03284",
+  "gold": false,
+  "argument": "title",
+  "value": "Grocery Shopping",
+  "changed": true,
+  "ent": 8.405001608480234e-06
+ },
+ {
+  "id": "AG-03289",
+  "gold": false,
+  "argument": "query",
+  "value": "romance",
+  "changed": true,
+  "ent": 6.119938916526735e-05
+ },
+ {
+  "id": "AG-03304",
+  "gold": false,
+  "argument": "to_currency",
+  "value": "GBP",
+  "changed": true,
+  "ent": 6.36068261883338e-06
+ },
+ {
+  "id": "AG-03308",
+  "gold": false,
+  "argument": "loan_amount",
+  "value": 200010,
+  "changed": true,
+  "ent": 0.05450575426220894
+ },
+ {
+  "id": "AG-03319",
+  "gold": false,
+  "argument": "book_title",
+  "value": "To Kill a Mockingbird",
+  "changed": true,
+  "ent": 4.129743956582388e-06
+ },
+ {
+  "id": "AG-03320",
+  "gold": false,
+  "argument": "original_price",
+  "value": 200,
+  "changed": true,
+  "ent": 0.0005190829979255795
+ },
+ {
+  "id": "AG-03330",
+  "gold": false,
+  "argument": "symbol",
+  "value": "GOOGL",
+  "changed": true,
+  "ent": 1.7942453268915415e-05
+ },
+ {
+  "id": "AG-03331",
+  "gold": false,
+  "argument": "genre",
+  "value": "action",
+  "changed": true,
+  "ent": 0.0003295994538348168
+ },
+ {
+  "id": "AG-03340",
+  "gold": false,
+  "argument": "destination",
+  "value": "Chicago",
+  "changed": true,
+  "ent": 5.825885818921961e-05
+ },
+ {
+  "id": "AG-03341",
+  "gold": false,
+  "argument": "name",
+  "value": "John Doe",
+  "changed": true,
+  "ent": 3.672440652735531e-05
+ },
+ {
+  "id": "AG-03342",
+  "gold": false,
+  "argument": "year",
+  "value": 2007,
+  "changed": true,
+  "ent": 0.15789736807346344
+ },
+ {
+  "id": "AG-03346",
+  "gold": false,
+  "argument": "discount_percentage",
+  "value": 40,
+  "changed": true,
+  "ent": 0.00024017872055992484
+ },
+ {
+  "id": "AG-03353",
+  "gold": false,
+  "argument": "title",
+  "value": "Team Meeting",
+  "changed": true,
+  "ent": 3.706120696733706e-05
+ },
+ {
+  "id": "AG-03362",
+  "gold": false,
+  "argument": "destination",
+  "value": "Paris",
+  "changed": true,
+  "ent": 3.0596354918088764e-05
+ },
+ {
+  "id": "AG-03364",
+  "gold": false,
+  "argument": "interest_rate",
+  "value": 50,
+  "changed": true,
+  "ent": 0.0006568363751284778
+ },
+ {
+  "id": "AG-03371",
+  "gold": false,
+  "argument": "text",
+  "value": "Je suis tr\u00e8s heureux de vous rencontrer",
+  "changed": true,
+  "ent": 8.524214354110882e-05
+ },
+ {
+  "id": "AG-03371",
+  "gold": false,
+  "argument": "size",
+  "value": 200,
+  "changed": false,
+  "ent": 0.0002858764783013612
+ },
+ {
+  "id": "AG-03372",
+  "gold": false,
+  "argument": "tax_rate",
+  "value": 100.07,
+  "changed": true,
+  "ent": 0.000761121220421046
+ },
+ {
+  "id": "AG-03378",
+  "gold": false,
+  "argument": "discount_percentage",
+  "value": 25,
+  "changed": true,
+  "ent": 1.9899542166967876e-05
+ },
+ {
+  "id": "AG-03379",
+  "gold": false,
+  "argument": "price_range",
+  "value": "moderate",
+  "changed": true,
+  "ent": 0.0003234324394725263
+ },
+ {
+  "id": "AG-03380",
+  "gold": false,
+  "argument": "text",
+  "value": "I am really upset because my favorite team lost the match.",
+  "changed": true,
+  "ent": 8.112128125503659e-05
+ },
+ {
+  "id": "AG-03381",
+  "gold": false,
+  "argument": "word",
+  "value": "ephemeral",
+  "changed": true,
+  "ent": 0.00034140347270295024
+ },
+ {
+  "id": "AG-03382",
+  "gold": false,
+  "argument": "search_query",
+  "value": "gardening",
+  "changed": true,
+  "ent": 0.0001506176049588248
+ },
+ {
+  "id": "AG-03387",
+  "gold": false,
+  "argument": "quantity",
+  "value": 1,
+  "changed": true,
+  "ent": 0.0019290739437565207
+ },
+ {
+  "id": "AG-03395",
+  "gold": false,
+  "argument": "symbol",
+  "value": "GOOGL",
+  "changed": true,
+  "ent": 3.570609260350466e-05
+ },
+ {
+  "id": "AG-03396",
+  "gold": true,
+  "argument": "release_year",
+  "value": 1990,
+  "changed": false,
+  "ent": 0.0004857556486967951
+ },
+ {
+  "id": "AG-03398",
+  "gold": false,
+  "argument": "year",
+  "value": 4000,
+  "changed": true,
+  "ent": 7.497207843698561e-05
+ },
+ {
+  "id": "AG-03399",
+  "gold": false,
+  "argument": "title",
+  "value": "Inception",
+  "changed": true,
+  "ent": 2.2169944713823497e-05
+ },
+ {
+  "id": "AG-03424",
+  "gold": false,
+  "argument": "amount",
+  "value": 510,
+  "changed": true,
+  "ent": 4.743121826322749e-05
+ },
+ {
+  "id": "AG-03425",
+  "gold": false,
+  "argument": "title",
+  "value": "Sun",
+  "changed": true,
+  "ent": 0.0004187702143099159
+ },
+ {
+  "id": "AG-03428",
+  "gold": false,
+  "argument": "priority",
+  "value": "medium",
+  "changed": true,
+  "ent": 4.7413490392500535e-05
+ },
+ {
+  "id": "AG-03429",
+  "gold": false,
+  "argument": "birth_date",
+  "value": "1990-03-15",
+  "changed": true,
+  "ent": 0.0004953124444000423
+ },
+ {
+  "id": "AG-03429",
+  "gold": false,
+  "argument": "current_date",
+  "value": "2022-03-15",
+  "changed": false,
+  "ent": 0.00105743866879493
+ },
+ {
+  "id": "AG-03438",
+  "gold": false,
+  "argument": "query",
+  "value": "mystery",
+  "changed": true,
+  "ent": 0.019757665693759918
+ },
+ {
+  "id": "AG-03453",
+  "gold": false,
+  "argument": "location",
+  "value": "Tokyo",
+  "changed": true,
+  "ent": 3.603645018301904e-05
+ },
+ {
+  "id": "AG-03454",
+  "gold": false,
+  "argument": "recipient",
+  "value": "boss@example.com",
+  "changed": true,
+  "ent": 0.01805621013045311
+ },
+ {
+  "id": "AG-03456",
+  "gold": false,
+  "argument": "artist",
+  "value": "Coldplay",
+  "changed": true,
+  "ent": 1.8840195480152033e-05
+ },
+ {
+  "id": "AG-03464",
+  "gold": false,
+  "argument": "max_value",
+  "value": 200,
+  "changed": true,
+  "ent": 0.00021414857474155724
+ },
+ {
+  "id": "AG-03470",
+  "gold": false,
+  "argument": "text",
+  "value": "Thank you very much",
+  "changed": true,
+  "ent": 0.0051827821880578995
+ },
+ {
+  "id": "AG-03482",
+  "gold": false,
+  "argument": "movie_id",
+  "value": 11356,
+  "changed": true,
+  "ent": 0.029149627313017845
+ },
+ {
+  "id": "AG-03486",
+  "gold": false,
+  "argument": "language",
+  "value": "Spanish",
+  "changed": true,
+  "ent": 1.1098503819084726e-05
+ },
+ {
+  "id": "AG-03489",
+  "gold": false,
+  "argument": "password",
+  "value": "Secret123",
+  "changed": true,
+  "ent": 0.001060880022123456
+ },
+ {
+  "id": "AG-03493",
+  "gold": true,
+  "argument": "genre",
+  "value": "pop",
+  "changed": false,
+  "ent": 7.694825035287067e-05
+ },
+ {
+  "id": "AG-03493",
+  "gold": true,
+  "argument": "mood",
+  "value": "happy",
+  "changed": false,
+  "ent": 0.00028221719549037516
+ },
+ {
+  "id": "AG-03495",
+  "gold": false,
+  "argument": "name",
+  "value": "Chill Vibes",
+  "changed": true,
+  "ent": 0.00016870112449396402
+ },
+ {
+  "id": "AG-03496",
+  "gold": false,
+  "argument": "original_price",
+  "value": 300,
+  "changed": true,
+  "ent": 0.005495280958712101
+ },
+ {
+  "id": "AG-03497",
+  "gold": false,
+  "argument": "author",
+  "value": "Harper Lee",
+  "changed": true,
+  "ent": 3.399198249098845e-05
+ },
+ {
+  "id": "AG-03498",
+  "gold": false,
+  "argument": "discount_percentage",
+  "value": 30,
+  "changed": true,
+  "ent": 0.0004145584534853697
+ },
+ {
+  "id": "AG-03503",
+  "gold": false,
+  "argument": "birth_date",
+  "value": "1990-03-15",
+  "changed": true,
+  "ent": 0.00044447981053963304
+ },
+ {
+  "id": "AG-03504",
+  "gold": false,
+  "argument": "original_price",
+  "value": 2000,
+  "changed": true,
+  "ent": 0.00019659333338495344
+ },
+ {
+  "id": "AG-03506",
+  "gold": false,
+  "argument": "word",
+  "value": "ephemeral",
+  "changed": true,
+  "ent": 0.06026937812566757
+ },
+ {
+  "id": "AG-03514",
+  "gold": false,
+  "argument": "source_language",
+  "value": "French",
+  "changed": true,
+  "ent": 0.00022029860701877624
+ },
+ {
+  "id": "AG-03527",
+  "gold": false,
+  "argument": "title",
+  "value": "Project Meeting",
+  "changed": true,
+  "ent": 0.02846352383494377
+ },
+ {
+  "id": "AG-03532",
+  "gold": false,
+  "argument": "location",
+  "value": "Conference Room 1",
+  "changed": true,
+  "ent": 2.3809818230802193e-05
+ },
+ {
+  "id": "AG-03533",
+  "gold": false,
+  "argument": "keyword",
+  "value": "Sun",
+  "changed": true,
+  "ent": 0.0019092136062681675
+ },
+ {
+  "id": "AG-03533",
+  "gold": false,
+  "argument": "language",
+  "value": "English",
+  "changed": false,
+  "ent": 0.002460656687617302
+ },
+ {
+  "id": "AG-03533",
+  "gold": false,
+  "argument": "sort_by",
+  "value": "relevance",
+  "changed": false,
+  "ent": 0.006114758551120758
+ },
+ {
+  "id": "AG-03542",
+  "gold": false,
+  "argument": "subject",
+  "value": "Project Update",
+  "changed": true,
+  "ent": 0.00010302371083525941
+ },
+ {
+  "id": "AG-03543",
+  "gold": false,
+  "argument": "birthdate",
+  "value": "1990-05-15",
+  "changed": true,
+  "ent": 0.0002092567301588133
+ },
+ {
+  "id": "AG-03545",
+  "gold": false,
+  "argument": "symbol",
+  "value": "GOOG",
+  "changed": true,
+  "ent": 8.087722380878404e-05
+ },
+ {
+  "id": "AG-03547",
+  "gold": false,
+  "argument": "original_price",
+  "value": 205,
+  "changed": true,
+  "ent": 0.007986145094037056
+ },
+ {
+  "id": "AG-03548",
+  "gold": false,
+  "argument": "product_id",
+  "value": "123XYZ",
+  "changed": true,
+  "ent": 7.317489507840946e-05
+ },
+ {
+  "id": "AG-03550",
+  "gold": false,
+  "argument": "gross_salary",
+  "value": 50000,
+  "changed": true,
+  "ent": 0.9959678649902344
+ }
+]

@@ -1,0 +1,192 @@
+{
+ "n_cases": 630,
+ "argument_level": {
+  "all|correct": {
+   "n": 697,
+   "any": 60,
+   "type": 5,
+   "enum": 16,
+   "enum_ci": 16,
+   "fmt_city_state": 19,
+   "fmt_date": 18,
+   "fmt_time": 8,
+   "unknown_arg": 2,
+   "any_rate": 0.086,
+   "any_ci": [
+    0.067,
+    0.109
+   ]
+  },
+  "all|wrong": {
+   "n": 319,
+   "any": 77,
+   "type": 3,
+   "enum": 9,
+   "enum_ci": 9,
+   "fmt_city_state": 42,
+   "fmt_date": 18,
+   "fmt_time": 8,
+   "unknown_arg": 4,
+   "any_rate": 0.241,
+   "any_ci": [
+    0.198,
+    0.291
+   ]
+  },
+  "default|correct": {
+   "n": 95,
+   "any": 7,
+   "type": 1,
+   "enum": 6,
+   "enum_ci": 6,
+   "any_rate": 0.074,
+   "any_ci": [
+    0.036,
+    0.144
+   ]
+  },
+  "default|wrong": {
+   "n": 27,
+   "any_rate": 0.0,
+   "any_ci": [
+    0.0,
+    0.125
+   ]
+  },
+  "format|correct": {
+   "n": 70,
+   "any": 14,
+   "enum": 5,
+   "enum_ci": 5,
+   "fmt_date": 9,
+   "fmt_time": 5,
+   "any_rate": 0.2,
+   "any_ci": [
+    0.123,
+    0.308
+   ]
+  },
+  "format|wrong": {
+   "n": 13,
+   "any": 5,
+   "fmt_date": 5,
+   "fmt_time": 3,
+   "any_rate": 0.385,
+   "any_ci": [
+    0.177,
+    0.645
+   ]
+  },
+  "no_source|correct": {
+   "n": 215,
+   "any": 19,
+   "type": 1,
+   "enum": 2,
+   "enum_ci": 2,
+   "fmt_city_state": 10,
+   "fmt_date": 6,
+   "fmt_time": 2,
+   "any_rate": 0.088,
+   "any_ci": [
+    0.057,
+    0.134
+   ]
+  },
+  "no_source|wrong": {
+   "n": 156,
+   "any": 26,
+   "type": 2,
+   "enum": 4,
+   "enum_ci": 4,
+   "fmt_city_state": 7,
+   "fmt_date": 11,
+   "fmt_time": 4,
+   "unknown_arg": 2,
+   "any_rate": 0.167,
+   "any_ci": [
+    0.116,
+    0.233
+   ]
+  },
+  "placeholder|correct": {
+   "n": 7,
+   "any_rate": 0.0,
+   "any_ci": [
+    0.0,
+    0.354
+   ]
+  },
+  "placeholder|wrong": {
+   "n": 2,
+   "any_rate": 0.0,
+   "any_ci": [
+    0.0,
+    0.658
+   ]
+  },
+  "visible|correct": {
+   "n": 310,
+   "any": 20,
+   "type": 3,
+   "enum": 3,
+   "enum_ci": 3,
+   "fmt_city_state": 9,
+   "fmt_date": 3,
+   "fmt_time": 1,
+   "unknown_arg": 2,
+   "any_rate": 0.065,
+   "any_ci": [
+    0.042,
+    0.098
+   ]
+  },
+  "visible|wrong": {
+   "n": 121,
+   "any": 46,
+   "type": 1,
+   "enum": 5,
+   "enum_ci": 5,
+   "fmt_city_state": 35,
+   "fmt_date": 2,
+   "fmt_time": 1,
+   "unknown_arg": 2,
+   "any_rate": 0.38,
+   "any_ci": [
+    0.299,
+    0.469
+   ]
+  }
+ },
+ "call_level_all_dev": {
+  "contract": {
+   "fbr": 0.162,
+   "det": 0.225
+  },
+  "context_S2": {
+   "fbr": 0.514,
+   "det": 0.441
+  },
+  "union": {
+   "fbr": 0.568,
+   "det": 0.571
+  },
+  "n": 630,
+  "n_with_schema": 510
+ },
+ "call_level_judge_sample_with_schema": {
+  "contract": {
+   "fbr": 0.159,
+   "det": 0.256
+  },
+  "context_S2": {
+   "fbr": 0.585,
+   "det": 0.43
+  },
+  "union": {
+   "fbr": 0.659,
+   "det": 0.581
+  },
+  "n": 168,
+  "n_with_schema": 168
+ }
+}

@@ -1,0 +1,174 @@
+{
+ "n_calls": 2423,
+ "n_tasks": 500,
+ "all": {
+  "n": 2423,
+  "blocked": 1666,
+  "rate": 0.688,
+  "wilson95": [
+   0.669,
+   0.706
+  ]
+ },
+ "with_arguments": {
+  "n": 2114,
+  "blocked": 1666,
+  "rate": 0.788,
+  "wilson95": [
+   0.77,
+   0.805
+  ]
+ },
+ "first_call_of_task": {
+  "n": 357,
+  "blocked": 149,
+  "rate": 0.417,
+  "wilson95": [
+   0.367,
+   0.469
+  ]
+ },
+ "later_calls": {
+  "n": 1757,
+  "blocked": 1517,
+  "rate": 0.863,
+  "wilson95": [
+   0.847,
+   0.879
+  ]
+ },
+ "argument_verdicts": {
+  "GROUNDED": 689,
+  "UNGROUNDED": 2593,
+  "UNCHECKABLE": 256
+ },
+ "top_blocking_argument_names": [
+  {
+   "arg": "query",
+   "ungrounded": 244,
+   "total": 463
+  },
+  {
+   "arg": "base_id",
+   "ungrounded": 201,
+   "total": 201
+  },
+  {
+   "arg": "database",
+   "ungrounded": 184,
+   "total": 184
+  },
+  {
+   "arg": "path",
+   "ungrounded": 145,
+   "total": 188
+  },
+  {
+   "arg": "table_name",
+   "ungrounded": 120,
+   "total": 139
+  },
+  {
+   "arg": "code",
+   "ungrounded": 108,
+   "total": 108
+  },
+  {
+   "arg": "collection",
+   "ungrounded": 94,
+   "total": 125
+  },
+  {
+   "arg": "value",
+   "ungrounded": 90,
+   "total": 97
+  },
+  {
+   "arg": "field_name",
+   "ungrounded": 88,
+   "total": 97
+  },
+  {
+   "arg": "command",
+   "ungrounded": 86,
+   "total": 95
+  },
+  {
+   "arg": "q",
+   "ungrounded": 64,
+   "total": 122
+  },
+  {
+   "arg": "startTime",
+   "ungrounded": 60,
+   "total": 60
+  },
+  {
+   "arg": "endTime",
+   "ungrounded": 60,
+   "total": 60
+  },
+  {
+   "arg": "interval",
+   "ungrounded": 60,
+   "total": 60
+  },
+  {
+   "arg": "database_id",
+   "ungrounded": 46,
+   "total": 46
+  }
+ ],
+ "tools_with_most_blocks": [
+  {
+   "tool": "airtable_search_records",
+   "calls": 97,
+   "blocked": 97
+  },
+  {
+   "tool": "cli-mcp-server_run_command",
+   "calls": 95,
+   "blocked": 86
+  },
+  {
+   "tool": "airtable_list_tables",
+   "calls": 62,
+   "blocked": 62
+  },
+  {
+   "tool": "alchemy_fetchTokenPriceHistoryBySymbol",
+   "calls": 60,
+   "blocked": 60
+  },
+  {
+   "tool": "mongodb_list-collections",
+   "calls": 59,
+   "blocked": 59
+  },
+  {
+   "tool": "oxylabs_google_search_scraper",
+   "calls": 77,
+   "blocked": 54
+  },
+  {
+   "tool": "mcp-code-executor_execute_code",
+   "calls": 53,
+   "blocked": 53
+  },
+  {
+   "tool": "exa_web_search_exa",
+   "calls": 82,
+   "blocked": 53
+  },
+  {
+   "tool": "mongodb_collection-schema",
+   "calls": 53,
+   "blocked": 53
+  },
+  {
+   "tool": "brave-search_brave_web_search",
+   "calls": 64,
+   "blocked": 49
+  }
+ ]
+}

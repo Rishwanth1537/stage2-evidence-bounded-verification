@@ -1,0 +1,590 @@
+[
+ {
+  "audit_id": "B001",
+  "q1": "no",
+  "q2": "",
+  "notes": "AI consensus {'cannot tell': 2, 'no': 4}; Total energy is 5*2800=14000 kJ; the user asks work from total energy, so 14000 fits."
+ },
+ {
+  "audit_id": "B002",
+  "q1": "no",
+  "q2": "",
+  "notes": "AI consensus {'no': 6}; Vegetarian and gluten-free categories match the user's request."
+ },
+ {
+  "audit_id": "B003",
+  "q1": "yes",
+  "q2": "cannot tell",
+  "notes": "round2 {'yes': 6}; round1 {'cannot tell': 3, 'yes': 3}; Rule 2: excludeInactive=true is a filter the user never mentioned, no definition is available and it is not a documented default."
+ },
+ {
+  "audit_id": "B004",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "AI consensus {'yes': 5, 'acceptable alternative': 1}; The user gave no start time, so 00:00 is an invented value rather than dontcare or a stated time."
+ },
+ {
+  "audit_id": "B005",
+  "q1": "no",
+  "q2": "",
+  "notes": "AI consensus {'no': 6}; 4th of March 2023 in YYYY-MM-DD is 2023-03-04, which is correct."
+ },
+ {
+  "audit_id": "B006",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "AI consensus {'yes': 1, 'acceptable alternative': 4, 'no': 1}; 5:00 PM is the same time as 17:00 in another format; the request for Tenet at 5 pm is matched."
+ },
+ {
+  "audit_id": "B007",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "AI consensus {'no': 1, 'acceptable alternative': 5}; request_heartbeat true is optional and sensible since a follow-up message action is needed after the search."
+ },
+ {
+  "audit_id": "B008",
+  "q1": "yes",
+  "q2": "tool definition",
+  "notes": "AI consensus {'yes': 6}; The definition requires the key 'operation' but the agent used 'operator', which the schema does not allow."
+ },
+ {
+  "audit_id": "B009",
+  "q1": "no",
+  "q2": "",
+  "notes": "AI consensus {'no': 6}; Large, hot, regular sweetness and almond milk all match the user's request."
+ },
+ {
+  "audit_id": "B010",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "AI consensus {'acceptable alternative': 6}; 'substance A' is a reasonable spelling of the user's substance A reference."
+ },
+ {
+  "audit_id": "B011",
+  "q1": "no",
+  "q2": "",
+  "notes": "AI consensus {'no': 6}; The definition says the rate is in percentage, so 3.5 is correct and the benchmark value 0.035 is the odd one out."
+ },
+ {
+  "audit_id": "B012",
+  "q1": "yes",
+  "q2": "tool definition",
+  "notes": "round2 {'yes': 6}; round1 {'acceptable alternative': 3, 'yes': 3}; Rule 1: location 'Berkeley' does not follow the required 'City, State' format."
+ },
+ {
+  "audit_id": "B013",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "AI consensus {'acceptable alternative': 5, 'yes': 1}; Moscow is the city the user named; the country suffix from the format is missing but the value is clearly right."
+ },
+ {
+  "audit_id": "B014",
+  "q1": "cannot tell",
+  "q2": "",
+  "notes": "AI consensus {'cannot tell': 5, 'yes': 1}; The definition says units depend on alert_type, which is not shown, so 0.05 versus 5 cannot be checked."
+ },
+ {
+  "audit_id": "B015",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "AI consensus {'acceptable alternative': 6}; 'Boston, MA' names the city the user asked for; the definition allows city names."
+ },
+ {
+  "audit_id": "B016",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "AI consensus {'acceptable alternative': 4, 'yes': 2}; The optional nickname is filled with a sensible value derived from the hostname the user gave."
+ },
+ {
+  "audit_id": "B017",
+  "q1": "no",
+  "q2": "",
+  "notes": "AI consensus {'no': 6}; 22:00 without an offset matches 10 pm and the definition's no-offset format."
+ },
+ {
+  "audit_id": "B018",
+  "q1": "yes",
+  "q2": "tool definition",
+  "notes": "round2 {'yes': 6}; round1 {'acceptable alternative': 3, 'yes': 3}; Rule 1: to_city 'Los Angeles' does not follow the required 'City, State' format."
+ },
+ {
+  "audit_id": "B019",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "round2 {'acceptable alternative': 3, 'yes': 1, 'no': 2}; round1 {'yes': 2, 'cannot tell': 1, 'no': 1, 'acceptable alternative': 2}; Rule 4: 2598960 is the sensible total for 5-card poker hands that the royal-flush probability requires; the benchmark's 52 would give a nonsensical 4/52 probability."
+ },
+ {
+  "audit_id": "B020",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "AI consensus {'yes': 5, 'cannot tell': 1}; The landlord's email address was never given; the literal phrase is not a usable recipient identifier and needs a lookup."
+ },
+ {
+  "audit_id": "B021",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "AI consensus {'no': 1, 'acceptable alternative': 5}; Same as B024: the address is correct, and the extra zip code is harmless."
+ },
+ {
+  "audit_id": "B022",
+  "q1": "cannot tell",
+  "q2": "",
+  "notes": "AI consensus {'cannot tell': 5, 'no': 1}; Insurance, bag count and amount match the conversation, but the payment ID and passenger DOB come from system data not shown."
+ },
+ {
+  "audit_id": "B023",
+  "q1": "yes",
+  "q2": "cannot tell",
+  "notes": "AI consensus {'yes': 6}; The user asked for a family therapist, but the agent chose Psychologist; Family Counselor is the closer enum match."
+ },
+ {
+  "audit_id": "B024",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "AI consensus {'no': 1, 'acceptable alternative': 5}; The Vietnamese address is correctly given in English form with a zip code appended."
+ },
+ {
+  "audit_id": "B025",
+  "q1": "no",
+  "q2": "",
+  "notes": "AI consensus {'no': 6}; 2023-04-25 matches April 25th 2023 in the documented format."
+ },
+ {
+  "audit_id": "B026",
+  "q1": "no",
+  "q2": "",
+  "notes": "AI consensus {'no': 6}; Pop matches the user's request for pop concerts."
+ },
+ {
+  "audit_id": "B027",
+  "q1": "yes",
+  "q2": "system state",
+  "notes": "AI consensus {'yes': 6}; The system error shows the total is 1203 but the payments sum to 833, so the amounts are wrong."
+ },
+ {
+  "audit_id": "B028",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "AI consensus {'acceptable alternative': 6}; The Principia is the work that states the law, a reasonable title for the same answer."
+ },
+ {
+  "audit_id": "B029",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "AI consensus {'no': 1, 'acceptable alternative': 5}; bitter is close to the requested slightly bitter, though the intensity is dropped; the tool's taste vocabulary is limited."
+ },
+ {
+  "audit_id": "B030",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "AI consensus {'acceptable alternative': 5, 'no': 1}; The definition asks for the city name, and Rutherford is that name; the state was dropped."
+ },
+ {
+  "audit_id": "B031",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "AI consensus {'acceptable alternative': 6}; '\u4e0a\u6d77, \u4e2d\u56fd' is a direct rendering of Shanghai, China, which the user meant."
+ },
+ {
+  "audit_id": "B032",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "AI consensus {'yes': 5, 'acceptable alternative': 1}; The user gave ~/data, but the agent wrote /home/data, which drops the user's home directory and needs a system lookup."
+ },
+ {
+  "audit_id": "B033",
+  "q1": "no",
+  "q2": "",
+  "notes": "AI consensus {'no': 6}; Duplicate of B009; the drink preferences match the request."
+ },
+ {
+  "audit_id": "B034",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "AI consensus {'acceptable alternative': 5, 'no': 1}; The purpose is an optional field filled with a sensible value close to the documented examples."
+ },
+ {
+  "audit_id": "B035",
+  "q1": "yes",
+  "q2": "system state",
+  "notes": "AI consensus {'yes': 5, 'cannot tell': 1}; The item counts in the call (5 to exchange, 2 new) do not match, and the system error confirms the call failed."
+ },
+ {
+  "audit_id": "B036",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "AI consensus {'yes': 6}; The user gave IP 192.120.45.67 but the URL contains the unfilled placeholder {ip}."
+ },
+ {
+  "audit_id": "B037",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "round2 {'yes': 4, 'acceptable alternative': 2}; round1 {'cannot tell': 1, 'acceptable alternative': 3, 'yes': 2}; Rule 2: include_tools=true was not requested (the user asked about the tech stack) and is not the documented default false."
+ },
+ {
+  "audit_id": "B038",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "AI consensus {'acceptable alternative': 6}; 'Atlanta' is the city the user named and the definition allows city names."
+ },
+ {
+  "audit_id": "B039",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "AI consensus {'yes': 6}; The user named the 2021 season but the agent passed only 'regular' and dropped the year."
+ },
+ {
+  "audit_id": "B040",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "round2 {'no': 2, 'acceptable alternative': 4}; round1 {'yes': 2, 'cannot tell': 2, 'acceptable alternative': 2}; Rule 4: correct format; bounding availability at the single requested time is a sensible reading."
+ },
+ {
+  "audit_id": "B041",
+  "q1": "yes",
+  "q2": "cannot tell",
+  "notes": "AI consensus {'cannot tell': 2, 'yes': 4}; Modify call with empty new items to cancel some items; rejected by the system."
+ },
+ {
+  "audit_id": "B042",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "AI consensus {'acceptable alternative': 6}; 'Guangzhou, CN' uses the country code for Guangzhou, China, which is acceptable."
+ },
+ {
+  "audit_id": "B043",
+  "q1": "yes",
+  "q2": "tool definition",
+  "notes": "AI consensus {'yes': 6}; 'us' is not an allowed value; the enum is metric or imperial and the user gave no unit."
+ },
+ {
+  "audit_id": "B044",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "AI consensus {'acceptable alternative': 5, 'no': 1}; 'Sydney, Australia' is a reasonable form of the City, Country format."
+ },
+ {
+  "audit_id": "B045",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "AI consensus {'yes': 6}; The user named Gene Stupnitsky as director but the agent used dontcare."
+ },
+ {
+  "audit_id": "B046",
+  "q1": "cannot tell",
+  "q2": "",
+  "notes": "AI consensus {'no': 2, 'cannot tell': 4}; Items match the user's confirmation; payment method needs system data."
+ },
+ {
+  "audit_id": "B047",
+  "q1": "no",
+  "q2": "",
+  "notes": "AI consensus {'no': 4, 'acceptable alternative': 2}; The user said pop music, so a Pop genre filter is a fair reading."
+ },
+ {
+  "audit_id": "B048",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "AI consensus {'yes': 6}; The user named no show type and the documented default is dontcare, but the agent filtered to regular."
+ },
+ {
+  "audit_id": "B049",
+  "q1": "no",
+  "q2": "",
+  "notes": "AI consensus {'no': 6}; San Francisco is the county the user named, and the benchmark accepts it."
+ },
+ {
+  "audit_id": "B050",
+  "q1": "no",
+  "q2": "",
+  "notes": "AI consensus {'no': 6}; Duplicate of B011; the definition says percentage so 3.5 is correct."
+ },
+ {
+  "audit_id": "B051",
+  "q1": "no",
+  "q2": "",
+  "notes": "AI consensus {'no': 6}; The payor income of 10000 matches the user's figure."
+ },
+ {
+  "audit_id": "B052",
+  "q1": "cannot tell",
+  "q2": "",
+  "notes": "round2 {'yes': 3, 'acceptable alternative': 3}; round1 {'yes': 3, 'acceptable alternative': 2, 'no': 1}; "
+ },
+ {
+  "audit_id": "B053",
+  "q1": "no",
+  "q2": "",
+  "notes": "AI consensus {'no': 6}; Base 3 matches 3 raised to the power 4."
+ },
+ {
+  "audit_id": "B054",
+  "q1": "no",
+  "q2": "",
+  "notes": "AI consensus {'no': 6}; Two bathrooms matches the user's request."
+ },
+ {
+  "audit_id": "B055",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "AI consensus {'yes': 6}; The user named Akiko Kawase in the cast but the agent used dontcare."
+ },
+ {
+  "audit_id": "B056",
+  "q1": "no",
+  "q2": "",
+  "notes": "AI consensus {'no': 6}; The full address with city and state matches the user's destination."
+ },
+ {
+  "audit_id": "B057",
+  "q1": "no",
+  "q2": "",
+  "notes": "AI consensus {'no': 4, 'acceptable alternative': 2}; Duplicate of B047; the Pop genre follows from the user's words."
+ },
+ {
+  "audit_id": "B058",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "AI consensus {'acceptable alternative': 5, 'no': 1}; Duplicate of B030; the city name is the definition's requested form."
+ },
+ {
+  "audit_id": "B059",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "AI consensus {'yes': 5, 'acceptable alternative': 1}; The user gave no start time, so 00:00 is an invented value rather than dontcare."
+ },
+ {
+  "audit_id": "B060",
+  "q1": "yes",
+  "q2": "tool definition",
+  "notes": "AI consensus {'acceptable alternative': 1, 'yes': 5}; Same as B067: toll roads is not in the enum, which uses tolls."
+ },
+ {
+  "audit_id": "B061",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "AI consensus {'cannot tell': 1, 'yes': 5}; The color field should hold only the color red; medium is a size and is placed in the color field."
+ },
+ {
+  "audit_id": "B062",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "AI consensus {'yes': 6}; The user gave no date, so 04/01/2023 is invented and also not in YYYY-MM-DD format."
+ },
+ {
+  "audit_id": "B063",
+  "q1": "yes",
+  "q2": "system state",
+  "notes": "round2 {'yes': 5, 'no': 1}; round1 {'no': 1, 'cannot tell': 2, 'yes': 3}; Rule 5 considered: the arguments match the user's request, but the system response says the order is not delivered and cannot be exchanged, so the call is wrong for the system state."
+ },
+ {
+  "audit_id": "B064",
+  "q1": "no",
+  "q2": "",
+  "notes": "AI consensus {'no': 6}; The user's own title for the law is used and the benchmark accepts it."
+ },
+ {
+  "audit_id": "B065",
+  "q1": "yes",
+  "q2": "tool definition",
+  "notes": "round2 {'yes': 6}; round1 {'acceptable alternative': 3, 'yes': 3}; Rule 1: city 'Burlingame' omits the state, and the definition's example and format use 'City, State'."
+ },
+ {
+  "audit_id": "B066",
+  "q1": "yes",
+  "q2": "system state",
+  "notes": "AI consensus {'yes': 4, 'cannot tell': 2}; The new item ID 47182 is not a valid 10-digit item ID in this store, so the exchange value is wrong."
+ },
+ {
+  "audit_id": "B067",
+  "q1": "yes",
+  "q2": "tool definition",
+  "notes": "AI consensus {'acceptable alternative': 1, 'yes': 5}; toll roads is not in the enum, which uses tolls; the meaning is right but the value is ruled out."
+ },
+ {
+  "audit_id": "B068",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "AI consensus {'yes': 5, 'cannot tell': 1}; 'landlord_email' is a placeholder, not an address, so the recipient needs a lookup."
+ },
+ {
+  "audit_id": "B069",
+  "q1": "no",
+  "q2": "",
+  "notes": "AI consensus {'no': 6}; y = 4 matches the point (3, 4)."
+ },
+ {
+  "audit_id": "B070",
+  "q1": "yes",
+  "q2": "tool definition",
+  "notes": "round2 {'yes': 6}; round1 {'acceptable alternative': 3, 'yes': 3}; Rule 1: city 'San Lorenzo' omits the state, and the definition's example and format use 'City, State'."
+ },
+ {
+  "audit_id": "B071",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "AI consensus {'no': 1, 'acceptable alternative': 5}; SFO is a valid IATA code for San Francisco, which the definition allows."
+ },
+ {
+  "audit_id": "B072",
+  "q1": "no",
+  "q2": "",
+  "notes": "AI consensus {'no': 6}; Betsy Widhalm matches the user's cast request."
+ },
+ {
+  "audit_id": "B073",
+  "q1": "no",
+  "q2": "",
+  "notes": "AI consensus {'no': 6}; Los Angeles Lakers is the second team in the user's match."
+ },
+ {
+  "audit_id": "B074",
+  "q1": "yes",
+  "q2": "tool definition",
+  "notes": "round2 {'yes': 6}; round1 {'acceptable alternative': 3, 'yes': 3}; Rule 1: where_to 'Philadelphia' omits the state, and the definition's format requires 'City, State'."
+ },
+ {
+  "audit_id": "B075",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "AI consensus {'yes': 6}; The user asked for the Louvre Museum as the destination but the agent used Paris, France."
+ },
+ {
+  "audit_id": "B076",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "AI consensus {'yes': 6}; The user asked to cancel order #W3189752 but the agent's call targets a different order #W5166363."
+ },
+ {
+  "audit_id": "B077",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "round2 {'no': 2, 'acceptable alternative': 4}; round1 {'no': 3, 'acceptable alternative': 3}; Rule 4: 'Beijing' is a sensible query for 'where is beijing'."
+ },
+ {
+  "audit_id": "B078",
+  "q1": "no",
+  "q2": "",
+  "notes": "AI consensus {'no': 6}; A heart deck has 13 cards, which matches desired_cards."
+ },
+ {
+  "audit_id": "B079",
+  "q1": "no",
+  "q2": "",
+  "notes": "AI consensus {'no': 6}; The item name matches the user's Guardian Sword+."
+ },
+ {
+  "audit_id": "B080",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "AI consensus {'yes': 6}; The user named no category, but the agent chose Museum instead of dontcare."
+ },
+ {
+  "audit_id": "B081",
+  "q1": "no",
+  "q2": "",
+  "notes": "AI consensus {'no': 6}; Shanghai, China is the correct English form of the user's city."
+ },
+ {
+  "audit_id": "B082",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "AI consensus {'yes': 6}; The user named Daniel Camp as a cast member but the agent put him in the director field."
+ },
+ {
+  "audit_id": "B083",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "AI consensus {'yes': 6}; The user asked for kid-suitable attractions but the agent set dontcare."
+ },
+ {
+  "audit_id": "B084",
+  "q1": "acceptable alternative",
+  "q2": "",
+  "notes": "AI consensus {'acceptable alternative': 6}; true is the documented default for include_education, so the value is sensible even though the user asked only for experiences."
+ },
+ {
+  "audit_id": "B085",
+  "q1": "yes",
+  "q2": "tool definition",
+  "notes": "AI consensus {'yes': 6}; Duplicate of B008; the key 'operator' is not in the schema, which requires 'operation'."
+ },
+ {
+  "audit_id": "B086",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "AI consensus {'yes': 5, 'cannot tell': 1}; The user said it is currently September 2023 and the 9th, which reads as 2023-09-09, not October."
+ },
+ {
+  "audit_id": "B087",
+  "q1": "no",
+  "q2": "",
+  "notes": "AI consensus {'no': 6}; No age preference was stated, so null is the documented value."
+ },
+ {
+  "audit_id": "B088",
+  "q1": "yes",
+  "q2": "tool definition",
+  "notes": "round2 {'yes': 6}; round1 {'acceptable alternative': 3, 'yes': 3}; Rule 1: location 'San Francisco' omits the state, and the definition's format requires 'City, State'."
+ },
+ {
+  "audit_id": "B089",
+  "q1": "no",
+  "q2": "",
+  "notes": "AI consensus {'no': 5, 'cannot tell': 1}; EUJUY6 is the reservation the conversation refers to."
+ },
+ {
+  "audit_id": "B090",
+  "q1": "no",
+  "q2": "",
+  "notes": "AI consensus {'no': 6}; Cookie is the dish the user asked for; the time limit is not a parameter here."
+ },
+ {
+  "audit_id": "B091",
+  "q1": "no",
+  "q2": "",
+  "notes": "AI consensus {'no': 6}; Historical Landmark matches the user's request."
+ },
+ {
+  "audit_id": "B092",
+  "q1": "yes",
+  "q2": "conversation",
+  "notes": "AI consensus {'acceptable alternative': 1, 'yes': 5}; hello is not a query about linking accounts, which the definition requires for this array."
+ },
+ {
+  "audit_id": "B093",
+  "q1": "no",
+  "q2": "",
+  "notes": "AI consensus {'no': 6}; Theme Park matches the user's request."
+ },
+ {
+  "audit_id": "B094",
+  "q1": "yes",
+  "q2": "tool definition",
+  "notes": "round2 {'yes': 6}; round1 {'acceptable alternative': 3, 'yes': 3}; Rule 1: location 'San Ramon' omits the state, and the definition's format requires 'City, State'."
+ },
+ {
+  "audit_id": "B095",
+  "q1": "no",
+  "q2": "",
+  "notes": "AI consensus {'no': 6}; The user did not mention children, so dontcare is correct."
+ },
+ {
+  "audit_id": "B096",
+  "q1": "no",
+  "q2": "",
+  "notes": "AI consensus {'cannot tell': 2, 'no': 4}; Total energy is 5*2800=14000 kJ; the user asks work from total energy, so 14000 fits."
+ },
+ {
+  "audit_id": "B097",
+  "q1": "yes",
+  "q2": "tool definition",
+  "notes": "AI consensus {'acceptable alternative': 2, 'yes': 4}; '2023.10.2' violates the required YYYY-MM-DD format."
+ },
+ {
+  "audit_id": "B098",
+  "q1": "yes",
+  "q2": "system state",
+  "notes": "round2 {'yes': 5, 'no': 1}; round1 {'no': 2, 'yes': 3, 'cannot tell': 1}; Rule 5 considered: nonfree_baggages=0 assumes the cabin upgrade succeeded, but the reservation state shown still reads basic_economy."
+ }
+]

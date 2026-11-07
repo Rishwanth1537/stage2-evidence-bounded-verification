@@ -1,0 +1,17 @@
+[
+  {"audit_id": "B098", "q1": "no", "q2": "", "notes": "Rule 5: the 3 total bags matches the user's stated 3 checked bags; the visible conversation supports the value."},
+  {"audit_id": "B094", "q1": "yes", "q2": "tool definition", "notes": "Rule 1: the definition gives the 'City, State' format with an abbreviated state, and 'San Ramon' has no state."},
+  {"audit_id": "B088", "q1": "yes", "q2": "tool definition", "notes": "Rule 1: the definition requires 'City, State' format, and 'San Francisco' has no state abbreviation."},
+  {"audit_id": "B077", "q1": "no", "q2": "", "notes": "Rule 5: a free-text search query 'Beijing' matches the user's request 'where is beijing'."},
+  {"audit_id": "B074", "q1": "yes", "q2": "tool definition", "notes": "Rule 1: the definition requires 'City, State' format, and 'Philadelphia' has no state."},
+  {"audit_id": "B070", "q1": "yes", "q2": "tool definition", "notes": "Rule 1: the definition's 'such as New York, NY' and the state-abbreviation requirement state a City, State format, and 'San Lorenzo' has no state."},
+  {"audit_id": "B065", "q1": "yes", "q2": "tool definition", "notes": "Rule 1: the definition's 'such as New York, NY' and the state-abbreviation requirement state a City, State format, and 'Burlingame' has no state."},
+  {"audit_id": "B063", "q1": "no", "q2": "", "notes": "Rule 5: the order, item ids and payment method match the user's confirmed exchange; the error response is a system-state result, not a wrong argument."},
+  {"audit_id": "B052", "q1": "yes", "q2": "conversation", "notes": "Rule 3: the user asked for a song from 2019, but the agent used 'dontcare' instead of 2019."},
+  {"audit_id": "B040", "q1": "no", "q2": "", "notes": "Rule 5: the timestamp matches the requested date and time and follows the YYYY-MM-DD HH:mm:ss format."},
+  {"audit_id": "B037", "q1": "yes", "q2": "conversation", "notes": "Rule 2: the user did not ask for tools, and include_tools=true is not the documented default of false."},
+  {"audit_id": "B019", "q1": "yes", "q2": "only the user", "notes": "Rule 2: the user gave 52 cards and 4 outcomes but not the total outcomes value 2598960 (5-card hands), so the user must confirm the intended denominator."},
+  {"audit_id": "B018", "q1": "yes", "q2": "tool definition", "notes": "Rule 1: the definition gives 'City, State' format such as 'Los Angeles, CA', and 'Los Angeles' has no state."},
+  {"audit_id": "B012", "q1": "yes", "q2": "tool definition", "notes": "Rule 1: the definition gives 'City, State' format, and 'Berkeley' has no state."},
+  {"audit_id": "B003", "q1": "yes", "q2": "only the user", "notes": "Rule 2: the user never mentioned excludeInactive, there is no documented default, and only the user can confirm whether inactive projects should be excluded."}
+]

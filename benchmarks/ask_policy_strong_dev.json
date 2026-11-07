@@ -1,0 +1,259 @@
+{
+ "n_calls": 4996,
+ "n_wrong": 255,
+ "wrong_rate": 0.051,
+ "contract_coverage": 1.0,
+ "contract_flag_rate_correct": 0.046,
+ "contract_flag_rate_wrong": 0.078,
+ "auroc": {
+  "consensus": 0.892,
+  "contract": 0.516,
+  "combined": 0.864
+ },
+ "wrong_calls_with_no_signal": {
+  "n": 27,
+  "share": 0.106
+ },
+ "by_alpha": {
+  "0.05": {
+   "consensus": {
+    "ask_rate_on_correct_mean": 0.048,
+    "ask_rate_p05_p95": [
+     0.022,
+     0.091
+    ],
+    "share_of_splits_within_alpha": 0.629,
+    "wrong_caught_mean": 0.64,
+    "wrong_caught_p05_p95": [
+     0.421,
+     0.952
+    ]
+   },
+   "consensus_pac": {
+    "ask_rate_on_correct_mean": 0.044,
+    "ask_rate_p05_p95": [
+     0.017,
+     0.085
+    ],
+    "share_of_splits_within_alpha": 0.738,
+    "wrong_caught_mean": 0.615,
+    "wrong_caught_p05_p95": [
+     0.4,
+     0.848
+    ]
+   },
+   "consensus_cluster": {
+    "ask_rate_on_correct_mean": 0.0,
+    "ask_rate_p05_p95": [
+     0.0,
+     0.0
+    ],
+    "share_of_splits_within_alpha": 1.0,
+    "wrong_caught_mean": 0.0,
+    "wrong_caught_p05_p95": [
+     0.0,
+     0.0
+    ]
+   },
+   "consensus_boot": {
+    "ask_rate_on_correct_mean": 0.005,
+    "ask_rate_p05_p95": [
+     0.0,
+     0.013
+    ],
+    "share_of_splits_within_alpha": 1.0,
+    "wrong_caught_mean": 0.196,
+    "wrong_caught_p05_p95": [
+     0.0,
+     0.406
+    ]
+   },
+   "combined": {
+    "ask_rate_on_correct_mean": 0.047,
+    "ask_rate_p05_p95": [
+     0.003,
+     0.105
+    ],
+    "share_of_splits_within_alpha": 0.503,
+    "wrong_caught_mean": 0.236,
+    "wrong_caught_p05_p95": [
+     0.027,
+     0.581
+    ]
+   },
+   "contract": {
+    "ask_rate_on_correct_mean": 0.047,
+    "ask_rate_p05_p95": [
+     0.023,
+     0.071
+    ],
+    "share_of_splits_within_alpha": 0.598,
+    "wrong_caught_mean": 0.082,
+    "wrong_caught_p05_p95": [
+     0.033,
+     0.146
+    ]
+   }
+  },
+  "0.1": {
+   "consensus": {
+    "ask_rate_on_correct_mean": 0.093,
+    "ask_rate_p05_p95": [
+     0.043,
+     0.161
+    ],
+    "share_of_splits_within_alpha": 0.613,
+    "wrong_caught_mean": 0.805,
+    "wrong_caught_p05_p95": [
+     0.6,
+     1.0
+    ]
+   },
+   "consensus_pac": {
+    "ask_rate_on_correct_mean": 0.086,
+    "ask_rate_p05_p95": [
+     0.04,
+     0.156
+    ],
+    "share_of_splits_within_alpha": 0.683,
+    "wrong_caught_mean": 0.79,
+    "wrong_caught_p05_p95": [
+     0.553,
+     1.0
+    ]
+   },
+   "consensus_cluster": {
+    "ask_rate_on_correct_mean": 0.0,
+    "ask_rate_p05_p95": [
+     0.0,
+     0.0
+    ],
+    "share_of_splits_within_alpha": 1.0,
+    "wrong_caught_mean": 0.0,
+    "wrong_caught_p05_p95": [
+     0.0,
+     0.0
+    ]
+   },
+   "consensus_boot": {
+    "ask_rate_on_correct_mean": 0.021,
+    "ask_rate_p05_p95": [
+     0.004,
+     0.05
+    ],
+    "share_of_splits_within_alpha": 0.998,
+    "wrong_caught_mean": 0.421,
+    "wrong_caught_p05_p95": [
+     0.208,
+     0.673
+    ]
+   },
+   "combined": {
+    "ask_rate_on_correct_mean": 0.095,
+    "ask_rate_p05_p95": [
+     0.041,
+     0.158
+    ],
+    "share_of_splits_within_alpha": 0.592,
+    "wrong_caught_mean": 0.657,
+    "wrong_caught_p05_p95": [
+     0.395,
+     1.0
+    ]
+   },
+   "contract": {
+    "ask_rate_on_correct_mean": 0.046,
+    "ask_rate_p05_p95": [
+     0.022,
+     0.071
+    ],
+    "share_of_splits_within_alpha": 1.0,
+    "wrong_caught_mean": 0.082,
+    "wrong_caught_p05_p95": [
+     0.031,
+     0.144
+    ]
+   }
+  },
+  "0.2": {
+   "consensus": {
+    "ask_rate_on_correct_mean": 0.193,
+    "ask_rate_p05_p95": [
+     0.106,
+     0.281
+    ],
+    "share_of_splits_within_alpha": 0.535,
+    "wrong_caught_mean": 0.849,
+    "wrong_caught_p05_p95": [
+     0.631,
+     1.0
+    ]
+   },
+   "consensus_pac": {
+    "ask_rate_on_correct_mean": 0.184,
+    "ask_rate_p05_p95": [
+     0.105,
+     0.271
+    ],
+    "share_of_splits_within_alpha": 0.58,
+    "wrong_caught_mean": 0.838,
+    "wrong_caught_p05_p95": [
+     0.62,
+     1.0
+    ]
+   },
+   "consensus_cluster": {
+    "ask_rate_on_correct_mean": 0.035,
+    "ask_rate_p05_p95": [
+     0.011,
+     0.077
+    ],
+    "share_of_splits_within_alpha": 1.0,
+    "wrong_caught_mean": 0.54,
+    "wrong_caught_p05_p95": [
+     0.323,
+     0.803
+    ]
+   },
+   "consensus_boot": {
+    "ask_rate_on_correct_mean": 0.089,
+    "ask_rate_p05_p95": [
+     0.034,
+     0.166
+    ],
+    "share_of_splits_within_alpha": 0.99,
+    "wrong_caught_mean": 0.782,
+    "wrong_caught_p05_p95": [
+     0.529,
+     1.0
+    ]
+   },
+   "combined": {
+    "ask_rate_on_correct_mean": 0.192,
+    "ask_rate_p05_p95": [
+     0.111,
+     0.291
+    ],
+    "share_of_splits_within_alpha": 0.564,
+    "wrong_caught_mean": 0.839,
+    "wrong_caught_p05_p95": [
+     0.631,
+     1.0
+    ]
+   },
+   "contract": {
+    "ask_rate_on_correct_mean": 0.045,
+    "ask_rate_p05_p95": [
+     0.022,
+     0.071
+    ],
+    "share_of_splits_within_alpha": 1.0,
+    "wrong_caught_mean": 0.083,
+    "wrong_caught_p05_p95": [
+     0.03,
+     0.15
+    ]
+   }
+  }
+ }
+}

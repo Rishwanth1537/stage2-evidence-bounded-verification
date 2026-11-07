@@ -1,0 +1,350 @@
+{
+ "llm_judge_args_fcrb_groq_openai_gpt_oss_120b_dev_v0.json": {
+  "n": 200,
+  "judge_fbr": 0.319,
+  "judge_det": 0.594,
+  "grid": [
+   {
+    "tau": 1.0,
+    "esc_all": 0.535,
+    "esc_at_5pct_wrong": 0.58,
+    "fbr": 0.309,
+    "det": 0.387,
+    "d_det": -0.208,
+    "random_det": 0.318,
+    "leak": 22
+   },
+   {
+    "tau": 0.95,
+    "esc_all": 0.525,
+    "esc_at_5pct_wrong": 0.579,
+    "fbr": 0.309,
+    "det": 0.377,
+    "d_det": -0.217,
+    "random_det": 0.312,
+    "leak": 23
+   },
+   {
+    "tau": 0.88,
+    "esc_all": 0.495,
+    "esc_at_5pct_wrong": 0.557,
+    "fbr": 0.298,
+    "det": 0.358,
+    "d_det": -0.236,
+    "random_det": 0.294,
+    "leak": 25
+   },
+   {
+    "tau": 0.7,
+    "esc_all": 0.425,
+    "esc_at_5pct_wrong": 0.464,
+    "fbr": 0.277,
+    "det": 0.349,
+    "d_det": -0.245,
+    "random_det": 0.253,
+    "leak": 26
+   },
+   {
+    "tau": 0.5,
+    "esc_all": 0.295,
+    "esc_at_5pct_wrong": 0.269,
+    "fbr": 0.202,
+    "det": 0.311,
+    "d_det": -0.283,
+    "random_det": 0.175,
+    "leak": 30
+   },
+   {
+    "tau": 0.3,
+    "esc_all": 0.17,
+    "esc_at_5pct_wrong": 0.17,
+    "fbr": 0.117,
+    "det": 0.16,
+    "d_det": -0.434,
+    "random_det": 0.101,
+    "leak": 46
+   },
+   {
+    "tau": 0.0,
+    "esc_all": 1.0,
+    "esc_at_5pct_wrong": 1.0,
+    "fbr": 0.319,
+    "det": 0.594,
+    "d_det": 0.0,
+    "random_det": 0.594,
+    "leak": 0
+   }
+  ],
+  "smallest_escalation_within_margin": {
+   "tau": 0.0,
+   "esc_all": 1.0,
+   "esc_at_5pct_wrong": 1.0,
+   "fbr": 0.319,
+   "det": 0.594,
+   "d_det": 0.0,
+   "random_det": 0.594,
+   "leak": 0
+  }
+ },
+ "llm_judge_args_fcrb_agent_opus_dev_v0.json": {
+  "n": 200,
+  "judge_fbr": 0.17,
+  "judge_det": 0.547,
+  "grid": [
+   {
+    "tau": 1.0,
+    "esc_all": 0.535,
+    "esc_at_5pct_wrong": 0.58,
+    "fbr": 0.17,
+    "det": 0.387,
+    "d_det": -0.16,
+    "random_det": 0.293,
+    "leak": 17
+   },
+   {
+    "tau": 0.95,
+    "esc_all": 0.525,
+    "esc_at_5pct_wrong": 0.579,
+    "fbr": 0.17,
+    "det": 0.377,
+    "d_det": -0.17,
+    "random_det": 0.287,
+    "leak": 18
+   },
+   {
+    "tau": 0.88,
+    "esc_all": 0.495,
+    "esc_at_5pct_wrong": 0.557,
+    "fbr": 0.17,
+    "det": 0.377,
+    "d_det": -0.17,
+    "random_det": 0.271,
+    "leak": 18
+   },
+   {
+    "tau": 0.7,
+    "esc_all": 0.425,
+    "esc_at_5pct_wrong": 0.464,
+    "fbr": 0.16,
+    "det": 0.358,
+    "d_det": -0.189,
+    "random_det": 0.233,
+    "leak": 20
+   },
+   {
+    "tau": 0.5,
+    "esc_all": 0.295,
+    "esc_at_5pct_wrong": 0.269,
+    "fbr": 0.128,
+    "det": 0.311,
+    "d_det": -0.236,
+    "random_det": 0.161,
+    "leak": 25
+   },
+   {
+    "tau": 0.3,
+    "esc_all": 0.17,
+    "esc_at_5pct_wrong": 0.17,
+    "fbr": 0.106,
+    "det": 0.17,
+    "d_det": -0.377,
+    "random_det": 0.093,
+    "leak": 40
+   },
+   {
+    "tau": 0.0,
+    "esc_all": 1.0,
+    "esc_at_5pct_wrong": 1.0,
+    "fbr": 0.17,
+    "det": 0.547,
+    "d_det": 0.0,
+    "random_det": 0.547,
+    "leak": 0
+   }
+  ],
+  "smallest_escalation_within_margin": {
+   "tau": 0.0,
+   "esc_all": 1.0,
+   "esc_at_5pct_wrong": 1.0,
+   "fbr": 0.17,
+   "det": 0.547,
+   "d_det": 0.0,
+   "random_det": 0.547,
+   "leak": 0
+  }
+ },
+ "llm_judge_args_fcrb_agent_sonnet_dev_v0.json": {
+  "n": 200,
+  "judge_fbr": 0.096,
+  "judge_det": 0.538,
+  "grid": [
+   {
+    "tau": 1.0,
+    "esc_all": 0.535,
+    "esc_at_5pct_wrong": 0.58,
+    "fbr": 0.096,
+    "det": 0.387,
+    "d_det": -0.151,
+    "random_det": 0.288,
+    "leak": 16
+   },
+   {
+    "tau": 0.95,
+    "esc_all": 0.525,
+    "esc_at_5pct_wrong": 0.579,
+    "fbr": 0.096,
+    "det": 0.377,
+    "d_det": -0.16,
+    "random_det": 0.282,
+    "leak": 17
+   },
+   {
+    "tau": 0.88,
+    "esc_all": 0.495,
+    "esc_at_5pct_wrong": 0.557,
+    "fbr": 0.096,
+    "det": 0.377,
+    "d_det": -0.16,
+    "random_det": 0.266,
+    "leak": 17
+   },
+   {
+    "tau": 0.7,
+    "esc_all": 0.425,
+    "esc_at_5pct_wrong": 0.464,
+    "fbr": 0.085,
+    "det": 0.349,
+    "d_det": -0.189,
+    "random_det": 0.229,
+    "leak": 20
+   },
+   {
+    "tau": 0.5,
+    "esc_all": 0.295,
+    "esc_at_5pct_wrong": 0.269,
+    "fbr": 0.085,
+    "det": 0.302,
+    "d_det": -0.236,
+    "random_det": 0.159,
+    "leak": 25
+   },
+   {
+    "tau": 0.3,
+    "esc_all": 0.17,
+    "esc_at_5pct_wrong": 0.17,
+    "fbr": 0.064,
+    "det": 0.16,
+    "d_det": -0.377,
+    "random_det": 0.091,
+    "leak": 40
+   },
+   {
+    "tau": 0.0,
+    "esc_all": 1.0,
+    "esc_at_5pct_wrong": 1.0,
+    "fbr": 0.096,
+    "det": 0.538,
+    "d_det": 0.0,
+    "random_det": 0.538,
+    "leak": 0
+   }
+  ],
+  "smallest_escalation_within_margin": {
+   "tau": 0.0,
+   "esc_all": 1.0,
+   "esc_at_5pct_wrong": 1.0,
+   "fbr": 0.096,
+   "det": 0.538,
+   "d_det": 0.0,
+   "random_det": 0.538,
+   "leak": 0
+  }
+ },
+ "llm_judge_args_fcrb_agent_haiku_dev_v0.json": {
+  "n": 200,
+  "judge_fbr": 0.287,
+  "judge_det": 0.528,
+  "grid": [
+   {
+    "tau": 1.0,
+    "esc_all": 0.535,
+    "esc_at_5pct_wrong": 0.58,
+    "fbr": 0.277,
+    "det": 0.406,
+    "d_det": -0.123,
+    "random_det": 0.283,
+    "leak": 13
+   },
+   {
+    "tau": 0.95,
+    "esc_all": 0.525,
+    "esc_at_5pct_wrong": 0.579,
+    "fbr": 0.277,
+    "det": 0.396,
+    "d_det": -0.132,
+    "random_det": 0.277,
+    "leak": 14
+   },
+   {
+    "tau": 0.88,
+    "esc_all": 0.495,
+    "esc_at_5pct_wrong": 0.557,
+    "fbr": 0.277,
+    "det": 0.396,
+    "d_det": -0.132,
+    "random_det": 0.262,
+    "leak": 14
+   },
+   {
+    "tau": 0.7,
+    "esc_all": 0.425,
+    "esc_at_5pct_wrong": 0.464,
+    "fbr": 0.266,
+    "det": 0.368,
+    "d_det": -0.16,
+    "random_det": 0.225,
+    "leak": 17
+   },
+   {
+    "tau": 0.5,
+    "esc_all": 0.295,
+    "esc_at_5pct_wrong": 0.269,
+    "fbr": 0.191,
+    "det": 0.311,
+    "d_det": -0.217,
+    "random_det": 0.156,
+    "leak": 23
+   },
+   {
+    "tau": 0.3,
+    "esc_all": 0.17,
+    "esc_at_5pct_wrong": 0.17,
+    "fbr": 0.106,
+    "det": 0.17,
+    "d_det": -0.358,
+    "random_det": 0.09,
+    "leak": 38
+   },
+   {
+    "tau": 0.0,
+    "esc_all": 1.0,
+    "esc_at_5pct_wrong": 1.0,
+    "fbr": 0.287,
+    "det": 0.528,
+    "d_det": 0.0,
+    "random_det": 0.528,
+    "leak": 0
+   }
+  ],
+  "smallest_escalation_within_margin": {
+   "tau": 0.0,
+   "esc_all": 1.0,
+   "esc_at_5pct_wrong": 1.0,
+   "fbr": 0.287,
+   "det": 0.528,
+   "d_det": 0.0,
+   "random_det": 0.528,
+   "leak": 0
+  }
+ }
+}

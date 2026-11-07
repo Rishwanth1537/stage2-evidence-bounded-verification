@@ -1,0 +1,26 @@
+{
+ "bfcl": {
+  "n_wrong": 819,
+  "counts": {
+   "E1_conversation": 161,
+   "E2_contract": 57,
+   "WEAK_format_variant": 357,
+   "WEAK_optional_unrequested": 157,
+   "CHOICE_user": 87
+  }
+ },
+ "fcrb_dev": {
+  "n_wrong": 388,
+  "counts": {
+   "E1_conversation": 321,
+   "E2_contract": 67
+  }
+ },
+ "taubench": {
+  "n_wrong": 737,
+  "counts": {
+   "E3_state": 99,
+   "CHOICE_user": 638
+  }
+ }
+}

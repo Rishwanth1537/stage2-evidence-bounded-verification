@@ -1,0 +1,2142 @@
+[
+ {
+  "hypothesis": "59 laptops from order #361 went out to Austin.",
+  "premise": "Order #361 for 59 laptops was shipped to Austin.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "order",
+  "premise_extra": false,
+  "id": "V3-001"
+ },
+ {
+  "hypothesis": "Wednesday's meeting starts at 2 PM in room 298.",
+  "premise": "The meeting is scheduled for 2 PM on Wednesday in room 297.",
+  "label": false,
+  "type": "content",
+  "mutation": "room",
+  "template": "meeting",
+  "premise_extra": false,
+  "id": "V3-002"
+ },
+ {
+  "hypothesis": "The backup was deleted.",
+  "premise": "The backup was not deleted; it is retained for 7 days.",
+  "label": false,
+  "type": "negation",
+  "mutation": "negation_flip",
+  "template": "neg_backup",
+  "premise_extra": false,
+  "id": "V3-003"
+ },
+ {
+  "hypothesis": "Carol approved the $379 budget.",
+  "premise": "Carol did not approve the budget of $379. Another request, for $9,000, was escalated to the finance lead on Friday.",
+  "label": false,
+  "type": "negation",
+  "mutation": "negation_flip",
+  "template": "neg_budget",
+  "premise_extra": true,
+  "id": "V3-004"
+ },
+ {
+  "hypothesis": "The deployment of version 1.4.9 to production happened at 10 AM.",
+  "premise": "Version 1.4.9 was deployed to production at 10 AM.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "deploy",
+  "premise_extra": false,
+  "id": "V3-005"
+ },
+ {
+  "hypothesis": "25 routers from order #659 went out to Pune.",
+  "premise": "Order #659 for 25 routers was shipped to Pune. The previous report listed 250 items and was filed in March.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "order",
+  "premise_extra": true,
+  "id": "V3-006"
+ },
+ {
+  "hypothesis": "Customer David received a $2600 refund on order #632.",
+  "premise": "A refund of $2600 was issued to customer David for order #632.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "refund",
+  "premise_extra": false,
+  "id": "V3-007"
+ },
+ {
+  "hypothesis": "The backup is still being retained.",
+  "premise": "The backup was not deleted; it is retained for 14 days.",
+  "label": true,
+  "type": "negation",
+  "mutation": "consistent_neg",
+  "template": "neg_backup",
+  "premise_extra": false,
+  "id": "V3-008"
+ },
+ {
+  "hypothesis": "The $358 budget was not approved by Ravi.",
+  "premise": "Ravi did not approve the budget of $358.",
+  "label": true,
+  "type": "negation",
+  "mutation": "consistent_neg",
+  "template": "neg_budget",
+  "premise_extra": false,
+  "id": "V3-009"
+ },
+ {
+  "hypothesis": "Customer Fatima received a $99 refund on order #520.",
+  "premise": "A refund of $99 was issued to customer Fatima for order #520.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "refund",
+  "premise_extra": false,
+  "id": "V3-010"
+ },
+ {
+  "hypothesis": "Friday's meeting starts at 9 AM in room 137.",
+  "premise": "The meeting is scheduled for 3 PM on Friday in room 137. The previous report listed 250 items and was filed in March.",
+  "label": false,
+  "type": "content",
+  "mutation": "time",
+  "template": "meeting",
+  "premise_extra": true,
+  "id": "V3-011"
+ },
+ {
+  "hypothesis": "Maria now owns ticket T-4109, which has low priority.",
+  "premise": "Ticket T-4109 was assigned to Maria with low priority.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "ticket",
+  "premise_extra": false,
+  "id": "V3-012"
+ },
+ {
+  "hypothesis": "Priya approved Elena's request for admin access to the HR portal.",
+  "premise": "Elena requested admin access to the HR portal, and Priya approved the request. Another request, for $9,000, was escalated to the finance lead on Friday.",
+  "label": true,
+  "type": "role_swap",
+  "mutation": "consistent",
+  "template": "access",
+  "premise_extra": true,
+  "id": "V3-013"
+ },
+ {
+  "hypothesis": "On Friday, Maria sent $450 to Bob.",
+  "premise": "Maria transferred $450 to Bob on Wednesday. A separate task for 14 other accounts is still pending review.",
+  "label": false,
+  "type": "content",
+  "mutation": "day",
+  "template": "transfer",
+  "premise_extra": true,
+  "id": "V3-014"
+ },
+ {
+  "hypothesis": "Carol now owns ticket T-8315, which has critical priority.",
+  "premise": "Ticket T-8315 was assigned to Carol with high priority. The office will be closed on the following Monday for maintenance.",
+  "label": false,
+  "type": "content",
+  "mutation": "priority",
+  "template": "ticket",
+  "premise_extra": true,
+  "id": "V3-015"
+ },
+ {
+  "hypothesis": "64 rows were returned from the sessions table.",
+  "premise": "The query returned 64 rows from table sessions. Version 1.9.2 of the client library was also released that week.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "query",
+  "premise_extra": true,
+  "id": "V3-016"
+ },
+ {
+  "hypothesis": "The agent will summarise /reports/q3.pdf as requested.",
+  "premise": "The user asked the agent to summarise the file at /reports/q3.pdf.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "file",
+  "premise_extra": false,
+  "id": "V3-017"
+ },
+ {
+  "hypothesis": "The deployment of version 1.0.2 to the QA cluster happened at 2 PM.",
+  "premise": "Version 1.0.2 was deployed to staging at 2 PM.",
+  "label": false,
+  "type": "content",
+  "mutation": "env",
+  "template": "deploy",
+  "premise_extra": false,
+  "id": "V3-018"
+ },
+ {
+  "hypothesis": "At 2 PM, host web-01 hit 95% CPU.",
+  "premise": "CPU usage reached 95% on host db-02 at 2 PM.",
+  "label": false,
+  "type": "content",
+  "mutation": "host",
+  "template": "alert",
+  "premise_extra": false,
+  "id": "V3-019"
+ },
+ {
+  "hypothesis": "The agent will download /reports/q3.pdf as requested.",
+  "premise": "The user asked the agent to download the file at /reports/q3.pdf. Another request, for $9,000, was escalated to the finance lead on Friday.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "file",
+  "premise_extra": true,
+  "id": "V3-020"
+ },
+ {
+  "hypothesis": "On Friday, Chen sent $482 to Fatima.",
+  "premise": "Chen transferred $482 to Fatima on Tuesday.",
+  "label": false,
+  "type": "content",
+  "mutation": "day",
+  "template": "transfer",
+  "premise_extra": false,
+  "id": "V3-021"
+ },
+ {
+  "hypothesis": "On Thursday, David sent $50 to Fatima.",
+  "premise": "David transferred $50 to Fatima on Thursday.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "transfer",
+  "premise_extra": false,
+  "id": "V3-022"
+ },
+ {
+  "hypothesis": "13 routers from order #632 went out to Pune.",
+  "premise": "Order #632 for 13 routers was shipped to Pune.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "order",
+  "premise_extra": false,
+  "id": "V3-023"
+ },
+ {
+  "hypothesis": "The deployment of version 1.8.4 to the demo environment happened at 9 AM.",
+  "premise": "Version 1.8.4 was deployed to staging at 9 AM. Version 1.9.2 of the client library was also released that week.",
+  "label": false,
+  "type": "content",
+  "mutation": "env",
+  "template": "deploy",
+  "premise_extra": true,
+  "id": "V3-024"
+ },
+ {
+  "hypothesis": "Bob paid Elena $2300 for the consulting invoice.",
+  "premise": "Elena paid Bob $2300 for the consulting invoice. Version 1.9.2 of the client library was also released that week.",
+  "label": false,
+  "type": "role_swap",
+  "mutation": "role_swap",
+  "template": "pay",
+  "premise_extra": true,
+  "id": "V3-025"
+ },
+ {
+  "hypothesis": "Tom received $379 from Carol for the consulting invoice.",
+  "premise": "Carol paid Tom $379 for the consulting invoice.",
+  "label": true,
+  "type": "role_swap",
+  "mutation": "consistent",
+  "template": "pay",
+  "premise_extra": false,
+  "id": "V3-026"
+ },
+ {
+  "hypothesis": "Customer Omar received a $379 refund on order #384.",
+  "premise": "A refund of $379 was issued to customer Omar for order #384.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "refund",
+  "premise_extra": false,
+  "id": "V3-027"
+ },
+ {
+  "hypothesis": "The backup is still being retained.",
+  "premise": "The backup was not deleted; it is retained for 30 days. Another request, for $9,000, was escalated to the finance lead on Friday.",
+  "label": true,
+  "type": "negation",
+  "mutation": "consistent_neg",
+  "template": "neg_backup",
+  "premise_extra": true,
+  "id": "V3-028"
+ },
+ {
+  "hypothesis": "59 routers from order #520 went out to Osaka.",
+  "premise": "Order #520 for 59 routers was shipped to Lagos. Another request, for $9,000, was escalated to the finance lead on Friday.",
+  "label": false,
+  "type": "content",
+  "mutation": "city",
+  "template": "order",
+  "premise_extra": true,
+  "id": "V3-029"
+ },
+ {
+  "hypothesis": "Chen approved Carol's request for auditor access to the build server.",
+  "premise": "Carol requested write access to the build server, and Chen approved the request. A separate task for 14 other accounts is still pending review.",
+  "label": false,
+  "type": "content",
+  "mutation": "level",
+  "template": "access",
+  "premise_extra": true,
+  "id": "V3-030"
+ },
+ {
+  "hypothesis": "At 11:30 AM, host db-02 hit 72% CPU.",
+  "premise": "CPU usage reached 72% on host web-01 at 11:30 AM. The previous report listed 250 items and was filed in March.",
+  "label": false,
+  "type": "content",
+  "mutation": "host",
+  "template": "alert",
+  "premise_extra": true,
+  "id": "V3-031"
+ },
+ {
+  "hypothesis": "Elena now owns ticket T-4597, which has medium priority.",
+  "premise": "Ticket T-4597 was assigned to Elena with medium priority. The previous report listed 250 items and was filed in March.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "ticket",
+  "premise_extra": true,
+  "id": "V3-032"
+ },
+ {
+  "hypothesis": "141 rows were returned from the sessions table.",
+  "premise": "The query returned 141 rows from table sessions. The office will be closed on the following Monday for maintenance.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "query",
+  "premise_extra": true,
+  "id": "V3-033"
+ },
+ {
+  "hypothesis": "Carol now owns ticket T-2183, which has high priority.",
+  "premise": "Ticket T-2183 was assigned to Ravi with high priority. Version 1.9.2 of the client library was also released that week.",
+  "label": false,
+  "type": "content",
+  "mutation": "assignee",
+  "template": "ticket",
+  "premise_extra": true,
+  "id": "V3-034"
+ },
+ {
+  "hypothesis": "The $99 budget was not approved by Fatima.",
+  "premise": "Fatima did not approve the budget of $99.",
+  "label": true,
+  "type": "negation",
+  "mutation": "consistent_neg",
+  "template": "neg_budget",
+  "premise_extra": false,
+  "id": "V3-035"
+ },
+ {
+  "hypothesis": "Elena received $99 from Fatima for the consulting invoice.",
+  "premise": "Fatima paid Elena $99 for the consulting invoice.",
+  "label": true,
+  "type": "role_swap",
+  "mutation": "consistent",
+  "template": "pay",
+  "premise_extra": false,
+  "id": "V3-036"
+ },
+ {
+  "hypothesis": "On Thursday, Fatima sent $99 to Elena.",
+  "premise": "Fatima transferred $99 to Elena on Thursday.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "transfer",
+  "premise_extra": false,
+  "id": "V3-037"
+ },
+ {
+  "hypothesis": "Payment for order #164 was processed successfully.",
+  "premise": "No payment was processed for order #164; it remains pending approval.",
+  "label": false,
+  "type": "negation",
+  "mutation": "negation_flip",
+  "template": "neg_payment",
+  "premise_extra": false,
+  "id": "V3-038"
+ },
+ {
+  "hypothesis": "On Thursday, Carol sent $379 to Tom.",
+  "premise": "Carol transferred $379 to Tom on Wednesday. Version 1.9.2 of the client library was also released that week.",
+  "label": false,
+  "type": "content",
+  "mutation": "day",
+  "template": "transfer",
+  "premise_extra": true,
+  "id": "V3-039"
+ },
+ {
+  "hypothesis": "At 10 AM, host web-01 hit 97% CPU.",
+  "premise": "CPU usage reached 97% on host web-01 at 10 AM. Version 1.9.2 of the client library was also released that week.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "alert",
+  "premise_extra": true,
+  "id": "V3-040"
+ },
+ {
+  "hypothesis": "The agent will download /home/shared/budget.xlsx as requested.",
+  "premise": "The user asked the agent to download the file at /home/shared/budget.xlsx.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "file",
+  "premise_extra": false,
+  "id": "V3-041"
+ },
+ {
+  "hypothesis": "Payment for order #192 was processed successfully.",
+  "premise": "No payment was processed for order #192; it remains pending approval.",
+  "label": false,
+  "type": "negation",
+  "mutation": "negation_flip",
+  "template": "neg_payment",
+  "premise_extra": false,
+  "id": "V3-042"
+ },
+ {
+  "hypothesis": "Wednesday's meeting starts at 2 PM in room 297.",
+  "premise": "The meeting is scheduled for 2 PM on Wednesday in room 297.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "meeting",
+  "premise_extra": false,
+  "id": "V3-043"
+ },
+ {
+  "hypothesis": "Bob received $2300 from Elena for the consulting invoice.",
+  "premise": "Elena paid Bob $2300 for the consulting invoice. Support contacted the vendor twice about a 7-day delay on an unrelated shipment.",
+  "label": true,
+  "type": "role_swap",
+  "mutation": "consistent",
+  "template": "pay",
+  "premise_extra": true,
+  "id": "V3-044"
+ },
+ {
+  "hypothesis": "The agent will download /srv/logs/app.log as requested.",
+  "premise": "The user asked the agent to download the file at /reports/q3.pdf. A separate task for 14 other accounts is still pending review.",
+  "label": false,
+  "type": "content",
+  "mutation": "path",
+  "template": "file",
+  "premise_extra": true,
+  "id": "V3-045"
+ },
+ {
+  "hypothesis": "Carol received $358 from Ravi for the consulting invoice.",
+  "premise": "Ravi paid Carol $358 for the consulting invoice.",
+  "label": true,
+  "type": "role_swap",
+  "mutation": "consistent",
+  "template": "pay",
+  "premise_extra": false,
+  "id": "V3-046"
+ },
+ {
+  "hypothesis": "Payment for order #520 was processed successfully.",
+  "premise": "No payment was processed for order #520; it remains pending approval.",
+  "label": false,
+  "type": "negation",
+  "mutation": "negation_flip",
+  "template": "neg_payment",
+  "premise_extra": false,
+  "id": "V3-047"
+ },
+ {
+  "hypothesis": "The agent will summarise /srv/logs/app.log as requested.",
+  "premise": "The user asked the agent to summarise the file at /srv/logs/app.log. Another request, for $9,000, was escalated to the finance lead on Friday.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "file",
+  "premise_extra": true,
+  "id": "V3-048"
+ },
+ {
+  "hypothesis": "The agent will upload /reports/q3.pdf as requested.",
+  "premise": "The user asked the agent to download the file at /reports/q3.pdf. The office will be closed on the following Monday for maintenance.",
+  "label": false,
+  "type": "content",
+  "mutation": "action",
+  "template": "file",
+  "premise_extra": true,
+  "id": "V3-049"
+ },
+ {
+  "hypothesis": "118 routers from order #520 went out to Lagos.",
+  "premise": "Order #520 for 59 routers was shipped to Lagos.",
+  "label": false,
+  "type": "content",
+  "mutation": "qty",
+  "template": "order",
+  "premise_extra": false,
+  "id": "V3-050"
+ },
+ {
+  "hypothesis": "Friday's meeting starts at 10 AM in room 414.",
+  "premise": "The meeting is scheduled for 10 AM on Friday in room 414.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "meeting",
+  "premise_extra": false,
+  "id": "V3-051"
+ },
+ {
+  "hypothesis": "674 rows were returned from the sessions table.",
+  "premise": "The query returned 337 rows from table sessions. The office will be closed on the following Monday for maintenance.",
+  "label": false,
+  "type": "content",
+  "mutation": "value",
+  "template": "query",
+  "premise_extra": true,
+  "id": "V3-052"
+ },
+ {
+  "hypothesis": "Chen approved the $482 budget.",
+  "premise": "Chen did not approve the budget of $482. Version 1.9.2 of the client library was also released that week.",
+  "label": false,
+  "type": "negation",
+  "mutation": "negation_flip",
+  "template": "neg_budget",
+  "premise_extra": true,
+  "id": "V3-053"
+ },
+ {
+  "hypothesis": "Elena approved David's request for write access to the billing database.",
+  "premise": "Elena requested write access to the billing database, and David approved the request. The office will be closed on the following Monday for maintenance.",
+  "label": false,
+  "type": "role_swap",
+  "mutation": "role_swap",
+  "template": "access",
+  "premise_extra": true,
+  "id": "V3-054"
+ },
+ {
+  "hypothesis": "887 rows were returned from the sessions table.",
+  "premise": "The query returned 887 rows from table sessions.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "query",
+  "premise_extra": false,
+  "id": "V3-055"
+ },
+ {
+  "hypothesis": "5 laptops from order #164 went out to Berlin.",
+  "premise": "Order #164 for 5 laptops was shipped to Berlin. Version 1.9.2 of the client library was also released that week.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "order",
+  "premise_extra": true,
+  "id": "V3-056"
+ },
+ {
+  "hypothesis": "Order #164 has not been paid.",
+  "premise": "No payment was processed for order #164; it remains pending approval.",
+  "label": true,
+  "type": "negation",
+  "mutation": "consistent_neg",
+  "template": "neg_payment",
+  "premise_extra": false,
+  "id": "V3-057"
+ },
+ {
+  "hypothesis": "The backup was deleted.",
+  "premise": "The backup was not deleted; it is retained for 30 days.",
+  "label": false,
+  "type": "negation",
+  "mutation": "negation_flip",
+  "template": "neg_backup",
+  "premise_extra": false,
+  "id": "V3-058"
+ },
+ {
+  "hypothesis": "Elena approved the $2300 budget.",
+  "premise": "Elena did not approve the budget of $2300.",
+  "label": false,
+  "type": "negation",
+  "mutation": "negation_flip",
+  "template": "neg_budget",
+  "premise_extra": false,
+  "id": "V3-059"
+ },
+ {
+  "hypothesis": "On Friday, Ravi sent $358 to Carol.",
+  "premise": "Ravi transferred $358 to Carol on Friday.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "transfer",
+  "premise_extra": false,
+  "id": "V3-060"
+ },
+ {
+  "hypothesis": "Friday's meeting starts at 3 PM in room 137.",
+  "premise": "The meeting is scheduled for 3 PM on Friday in room 137. The office will be closed on the following Monday for maintenance.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "meeting",
+  "premise_extra": true,
+  "id": "V3-061"
+ },
+ {
+  "hypothesis": "25 routers from order #659 went out to Lagos.",
+  "premise": "Order #659 for 25 routers was shipped to Pune. The previous report listed 250 items and was filed in March.",
+  "label": false,
+  "type": "content",
+  "mutation": "city",
+  "template": "order",
+  "premise_extra": true,
+  "id": "V3-062"
+ },
+ {
+  "hypothesis": "Chen now owns ticket T-2363, which has medium priority.",
+  "premise": "Ticket T-2363 was assigned to Chen with medium priority.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "ticket",
+  "premise_extra": false,
+  "id": "V3-063"
+ },
+ {
+  "hypothesis": "Tom approved Maria's request for auditor access to the build server.",
+  "premise": "Maria requested write access to the build server, and Tom approved the request. A separate task for 14 other accounts is still pending review.",
+  "label": false,
+  "type": "content",
+  "mutation": "level",
+  "template": "access",
+  "premise_extra": true,
+  "id": "V3-064"
+ },
+ {
+  "hypothesis": "Fatima paid David $50 for the consulting invoice.",
+  "premise": "David paid Fatima $50 for the consulting invoice. A separate task for 14 other accounts is still pending review.",
+  "label": false,
+  "type": "role_swap",
+  "mutation": "role_swap",
+  "template": "pay",
+  "premise_extra": true,
+  "id": "V3-065"
+ },
+ {
+  "hypothesis": "45 keyboards from order #897 went out to Austin.",
+  "premise": "Order #897 for 45 keyboards was shipped to Austin. A separate task for 14 other accounts is still pending review.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "order",
+  "premise_extra": true,
+  "id": "V3-066"
+ },
+ {
+  "hypothesis": "Carol now owns ticket T-8315, which has high priority.",
+  "premise": "Ticket T-8315 was assigned to Carol with high priority.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "ticket",
+  "premise_extra": false,
+  "id": "V3-067"
+ },
+ {
+  "hypothesis": "On Friday, Elena sent $4600 to Bob.",
+  "premise": "Elena transferred $2300 to Bob on Friday. The office will be closed on the following Monday for maintenance.",
+  "label": false,
+  "type": "content",
+  "mutation": "value",
+  "template": "transfer",
+  "premise_extra": true,
+  "id": "V3-068"
+ },
+ {
+  "hypothesis": "887 rows were returned from the customers table.",
+  "premise": "The query returned 887 rows from table sessions. Another request, for $9,000, was escalated to the finance lead on Friday.",
+  "label": false,
+  "type": "content",
+  "mutation": "table",
+  "template": "query",
+  "premise_extra": true,
+  "id": "V3-069"
+ },
+ {
+  "hypothesis": "The deployment of version 2.0.0 to staging happened at 9 AM.",
+  "premise": "Version 1.8.4 was deployed to staging at 9 AM. The office will be closed on the following Monday for maintenance.",
+  "label": false,
+  "type": "content",
+  "mutation": "version",
+  "template": "deploy",
+  "premise_extra": true,
+  "id": "V3-070"
+ },
+ {
+  "hypothesis": "Order #384 has not been paid.",
+  "premise": "No payment was processed for order #384; it remains pending approval. Another request, for $9,000, was escalated to the finance lead on Friday.",
+  "label": true,
+  "type": "negation",
+  "mutation": "consistent_neg",
+  "template": "neg_payment",
+  "premise_extra": true,
+  "id": "V3-071"
+ },
+ {
+  "hypothesis": "150 chairs from order #192 went out to Lyon.",
+  "premise": "Order #192 for 15 chairs was shipped to Lyon.",
+  "label": false,
+  "type": "content",
+  "mutation": "qty",
+  "template": "order",
+  "premise_extra": false,
+  "id": "V3-072"
+ },
+ {
+  "hypothesis": "On Monday, Fatima sent $99 to Elena.",
+  "premise": "Fatima transferred $99 to Elena on Thursday. Version 1.9.2 of the client library was also released that week.",
+  "label": false,
+  "type": "content",
+  "mutation": "day",
+  "template": "transfer",
+  "premise_extra": true,
+  "id": "V3-073"
+ },
+ {
+  "hypothesis": "The agent will delete /home/shared/budget.xlsx as requested.",
+  "premise": "The user asked the agent to summarise the file at /home/shared/budget.xlsx. The office will be closed on the following Monday for maintenance.",
+  "label": false,
+  "type": "content",
+  "mutation": "action",
+  "template": "file",
+  "premise_extra": true,
+  "id": "V3-074"
+ },
+ {
+  "hypothesis": "The deployment of version 1.1.0 to staging happened at 2 PM.",
+  "premise": "Version 1.0.2 was deployed to staging at 2 PM. The previous report listed 250 items and was filed in March.",
+  "label": false,
+  "type": "content",
+  "mutation": "version",
+  "template": "deploy",
+  "premise_extra": true,
+  "id": "V3-075"
+ },
+ {
+  "hypothesis": "Fatima approved the $99 budget.",
+  "premise": "Fatima did not approve the budget of $99.",
+  "label": false,
+  "type": "negation",
+  "mutation": "negation_flip",
+  "template": "neg_budget",
+  "premise_extra": false,
+  "id": "V3-076"
+ },
+ {
+  "hypothesis": "The agent will summarise /home/shared/budget.xlsx as requested.",
+  "premise": "The user asked the agent to summarise the file at /reports/q3.pdf.",
+  "label": false,
+  "type": "content",
+  "mutation": "path",
+  "template": "file",
+  "premise_extra": false,
+  "id": "V3-077"
+ },
+ {
+  "hypothesis": "Wednesday's meeting starts at 11:30 AM in room 139.",
+  "premise": "The meeting is scheduled for 11:30 AM on Wednesday in room 138.",
+  "label": false,
+  "type": "content",
+  "mutation": "room",
+  "template": "meeting",
+  "premise_extra": false,
+  "id": "V3-078"
+ },
+ {
+  "hypothesis": "Elena now owns ticket T-9699, which has low priority.",
+  "premise": "Ticket T-9699 was assigned to Elena with low priority.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "ticket",
+  "premise_extra": false,
+  "id": "V3-079"
+ },
+ {
+  "hypothesis": "The agent will read /srv/logs/app.log as requested.",
+  "premise": "The user asked the agent to read the file at /srv/logs/app.log.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "file",
+  "premise_extra": false,
+  "id": "V3-080"
+ },
+ {
+  "hypothesis": "The agent will copy /srv/logs/app.log as requested.",
+  "premise": "The user asked the agent to copy the file at /srv/logs/app.log. The previous report listed 250 items and was filed in March.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "file",
+  "premise_extra": true,
+  "id": "V3-081"
+ },
+ {
+  "hypothesis": "Ravi approved the $358 budget.",
+  "premise": "Ravi did not approve the budget of $358.",
+  "label": false,
+  "type": "negation",
+  "mutation": "negation_flip",
+  "template": "neg_budget",
+  "premise_extra": false,
+  "id": "V3-082"
+ },
+ {
+  "hypothesis": "Fatima paid Elena $2600 for the consulting invoice.",
+  "premise": "Elena paid Fatima $2600 for the consulting invoice. The office will be closed on the following Monday for maintenance.",
+  "label": false,
+  "type": "role_swap",
+  "mutation": "role_swap",
+  "template": "pay",
+  "premise_extra": true,
+  "id": "V3-083"
+ },
+ {
+  "hypothesis": "Fatima received $482 from Chen for the consulting invoice.",
+  "premise": "Chen paid Fatima $482 for the consulting invoice. The office will be closed on the following Monday for maintenance.",
+  "label": true,
+  "type": "role_swap",
+  "mutation": "consistent",
+  "template": "pay",
+  "premise_extra": true,
+  "id": "V3-084"
+ },
+ {
+  "hypothesis": "Thursday's meeting starts at 9 AM in room 390.",
+  "premise": "The meeting is scheduled for 9 AM on Thursday in room 389. The previous report listed 250 items and was filed in March.",
+  "label": false,
+  "type": "content",
+  "mutation": "room",
+  "template": "meeting",
+  "premise_extra": true,
+  "id": "V3-085"
+ },
+ {
+  "hypothesis": "Bob now owns ticket T-4597, which has medium priority.",
+  "premise": "Ticket T-4597 was assigned to Elena with medium priority.",
+  "label": false,
+  "type": "content",
+  "mutation": "assignee",
+  "template": "ticket",
+  "premise_extra": false,
+  "id": "V3-086"
+ },
+ {
+  "hypothesis": "Customer David received a $482 refund on order #164.",
+  "premise": "A refund of $482 was issued to customer David for order #164. A separate task for 14 other accounts is still pending review.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "refund",
+  "premise_extra": true,
+  "id": "V3-087"
+ },
+ {
+  "hypothesis": "David approved the $50 budget.",
+  "premise": "David did not approve the budget of $50. The office will be closed on the following Monday for maintenance.",
+  "label": false,
+  "type": "negation",
+  "mutation": "negation_flip",
+  "template": "neg_budget",
+  "premise_extra": true,
+  "id": "V3-088"
+ },
+ {
+  "hypothesis": "Ravi now owns ticket T-2183, which has high priority.",
+  "premise": "Ticket T-2183 was assigned to Ravi with high priority. A separate task for 14 other accounts is still pending review.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "ticket",
+  "premise_extra": true,
+  "id": "V3-089"
+ },
+ {
+  "hypothesis": "On Friday, Elena sent $2300 to Bob.",
+  "premise": "Elena transferred $2300 to Bob on Friday.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "transfer",
+  "premise_extra": false,
+  "id": "V3-090"
+ },
+ {
+  "hypothesis": "Order #632 has not been paid.",
+  "premise": "No payment was processed for order #632; it remains pending approval.",
+  "label": true,
+  "type": "negation",
+  "mutation": "consistent_neg",
+  "template": "neg_payment",
+  "premise_extra": false,
+  "id": "V3-091"
+ },
+ {
+  "hypothesis": "The agent will summarise /home/shared/budget.xlsx as requested.",
+  "premise": "The user asked the agent to summarise the file at /home/shared/budget.xlsx.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "file",
+  "premise_extra": false,
+  "id": "V3-092"
+ },
+ {
+  "hypothesis": "The deployment of version 1.0.9 to staging happened at 3 PM.",
+  "premise": "Version 1.0.9 was deployed to production at 3 PM. The office will be closed on the following Monday for maintenance.",
+  "label": false,
+  "type": "content",
+  "mutation": "env",
+  "template": "deploy",
+  "premise_extra": true,
+  "id": "V3-093"
+ },
+ {
+  "hypothesis": "On Thursday, Fatima sent $990 to Elena.",
+  "premise": "Fatima transferred $99 to Elena on Thursday. Version 1.9.2 of the client library was also released that week.",
+  "label": false,
+  "type": "content",
+  "mutation": "value",
+  "template": "transfer",
+  "premise_extra": true,
+  "id": "V3-094"
+ },
+ {
+  "hypothesis": "Order #520 has not been paid.",
+  "premise": "No payment was processed for order #520; it remains pending approval. Version 1.9.2 of the client library was also released that week.",
+  "label": true,
+  "type": "negation",
+  "mutation": "consistent_neg",
+  "template": "neg_payment",
+  "premise_extra": true,
+  "id": "V3-095"
+ },
+ {
+  "hypothesis": "The agent will open /srv/logs/app.log as requested.",
+  "premise": "The user asked the agent to open the file at /data/config.json.",
+  "label": false,
+  "type": "content",
+  "mutation": "path",
+  "template": "file",
+  "premise_extra": false,
+  "id": "V3-096"
+ },
+ {
+  "hypothesis": "On Friday, Elena sent $2300 to Omar.",
+  "premise": "Elena transferred $2300 to Bob on Friday.",
+  "label": false,
+  "type": "content",
+  "mutation": "entity",
+  "template": "transfer",
+  "premise_extra": false,
+  "id": "V3-097"
+ },
+ {
+  "hypothesis": "608 rows were returned from the sessions table.",
+  "premise": "The query returned 304 rows from table sessions. Version 1.9.2 of the client library was also released that week.",
+  "label": false,
+  "type": "content",
+  "mutation": "value",
+  "template": "query",
+  "premise_extra": true,
+  "id": "V3-098"
+ },
+ {
+  "hypothesis": "Thursday's meeting starts at 2 PM in room 458.",
+  "premise": "The meeting is scheduled for 2 PM on Thursday in room 458. The previous report listed 250 items and was filed in March.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "meeting",
+  "premise_extra": true,
+  "id": "V3-099"
+ },
+ {
+  "hypothesis": "Fatima now owns ticket T-2439, which has medium priority.",
+  "premise": "Ticket T-2439 was assigned to Fatima with medium priority.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "ticket",
+  "premise_extra": false,
+  "id": "V3-100"
+ },
+ {
+  "hypothesis": "Wednesday's meeting starts at 11:30 AM in room 138.",
+  "premise": "The meeting is scheduled for 11:30 AM on Wednesday in room 138.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "meeting",
+  "premise_extra": false,
+  "id": "V3-101"
+ },
+ {
+  "hypothesis": "The deployment of version 1.8.4 to staging happened at 9 AM.",
+  "premise": "Version 1.8.4 was deployed to staging at 9 AM. Another request, for $9,000, was escalated to the finance lead on Friday.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "deploy",
+  "premise_extra": true,
+  "id": "V3-102"
+ },
+ {
+  "hypothesis": "David approved Priya's request for auditor access to the billing database.",
+  "premise": "David requested auditor access to the billing database, and Priya approved the request. Support contacted the vendor twice about a 7-day delay on an unrelated shipment.",
+  "label": false,
+  "type": "role_swap",
+  "mutation": "role_swap",
+  "template": "access",
+  "premise_extra": true,
+  "id": "V3-103"
+ },
+ {
+  "hypothesis": "5 laptops from order #164 went out to Osaka.",
+  "premise": "Order #164 for 5 laptops was shipped to Berlin.",
+  "label": false,
+  "type": "content",
+  "mutation": "city",
+  "template": "order",
+  "premise_extra": false,
+  "id": "V3-104"
+ },
+ {
+  "hypothesis": "15 chairs from order #192 went out to Lyon.",
+  "premise": "Order #192 for 15 chairs was shipped to Lyon. Support contacted the vendor twice about a 7-day delay on an unrelated shipment.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "order",
+  "premise_extra": true,
+  "id": "V3-105"
+ },
+ {
+  "hypothesis": "Customer Chen received a $358 refund on order #659.",
+  "premise": "A refund of $358 was issued to customer Chen for order #659.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "refund",
+  "premise_extra": false,
+  "id": "V3-106"
+ },
+ {
+  "hypothesis": "On Friday, Ravi sent $716 to Carol.",
+  "premise": "Ravi transferred $358 to Carol on Friday. Version 1.9.2 of the client library was also released that week.",
+  "label": false,
+  "type": "content",
+  "mutation": "value",
+  "template": "transfer",
+  "premise_extra": true,
+  "id": "V3-107"
+ },
+ {
+  "hypothesis": "337 rows were returned from the customers table.",
+  "premise": "The query returned 337 rows from table customers. A separate task for 14 other accounts is still pending review.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "query",
+  "premise_extra": true,
+  "id": "V3-108"
+ },
+ {
+  "hypothesis": "At 2 PM, host db-02 hit 55% CPU.",
+  "premise": "CPU usage reached 95% on host db-02 at 2 PM. A separate task for 14 other accounts is still pending review.",
+  "label": false,
+  "type": "content",
+  "mutation": "value",
+  "template": "alert",
+  "premise_extra": true,
+  "id": "V3-109"
+ },
+ {
+  "hypothesis": "Payment for order #361 was processed successfully.",
+  "premise": "No payment was processed for order #361; it remains pending approval.",
+  "label": false,
+  "type": "negation",
+  "mutation": "negation_flip",
+  "template": "neg_payment",
+  "premise_extra": false,
+  "id": "V3-110"
+ },
+ {
+  "hypothesis": "45 keyboards from order #897 went out to Lagos.",
+  "premise": "Order #897 for 45 keyboards was shipped to Austin.",
+  "label": false,
+  "type": "content",
+  "mutation": "city",
+  "template": "order",
+  "premise_extra": false,
+  "id": "V3-111"
+ },
+ {
+  "hypothesis": "Customer Chen received a $900 refund on order #192.",
+  "premise": "A refund of $450 was issued to customer Chen for order #192.",
+  "label": false,
+  "type": "content",
+  "mutation": "value",
+  "template": "refund",
+  "premise_extra": false,
+  "id": "V3-112"
+ },
+ {
+  "hypothesis": "Chen now owns ticket T-2363, which has low priority.",
+  "premise": "Ticket T-2363 was assigned to Chen with medium priority. Version 1.9.2 of the client library was also released that week.",
+  "label": false,
+  "type": "content",
+  "mutation": "priority",
+  "template": "ticket",
+  "premise_extra": true,
+  "id": "V3-113"
+ },
+ {
+  "hypothesis": "278 rows were returned from the sessions table.",
+  "premise": "The query returned 278 rows from table sessions. The previous report listed 250 items and was filed in March.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "query",
+  "premise_extra": true,
+  "id": "V3-114"
+ },
+ {
+  "hypothesis": "Customer Chen received a $450 refund on order #192.",
+  "premise": "A refund of $450 was issued to customer Chen for order #192. A separate task for 14 other accounts is still pending review.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "refund",
+  "premise_extra": true,
+  "id": "V3-115"
+ },
+ {
+  "hypothesis": "Payment for order #897 was processed successfully.",
+  "premise": "No payment was processed for order #897; it remains pending approval. A separate task for 14 other accounts is still pending review.",
+  "label": false,
+  "type": "negation",
+  "mutation": "negation_flip",
+  "template": "neg_payment",
+  "premise_extra": true,
+  "id": "V3-116"
+ },
+ {
+  "hypothesis": "The $50 budget was not approved by David.",
+  "premise": "David did not approve the budget of $50.",
+  "label": true,
+  "type": "negation",
+  "mutation": "consistent_neg",
+  "template": "neg_budget",
+  "premise_extra": false,
+  "id": "V3-117"
+ },
+ {
+  "hypothesis": "The agent will overwrite /data/config.json as requested.",
+  "premise": "The user asked the agent to open the file at /data/config.json.",
+  "label": false,
+  "type": "content",
+  "mutation": "action",
+  "template": "file",
+  "premise_extra": false,
+  "id": "V3-118"
+ },
+ {
+  "hypothesis": "Wednesday's meeting starts at 3 PM in room 297.",
+  "premise": "The meeting is scheduled for 2 PM on Wednesday in room 297.",
+  "label": false,
+  "type": "content",
+  "mutation": "time",
+  "template": "meeting",
+  "premise_extra": false,
+  "id": "V3-119"
+ },
+ {
+  "hypothesis": "At 3 PM, host web-01 hit 94% CPU.",
+  "premise": "CPU usage reached 94% on host web-01 at 3 PM. Version 1.9.2 of the client library was also released that week.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "alert",
+  "premise_extra": true,
+  "id": "V3-120"
+ },
+ {
+  "hypothesis": "The deployment of version 1.4.0 to production happened at 9 AM.",
+  "premise": "Version 1.3.3 was deployed to production at 9 AM. A separate task for 14 other accounts is still pending review.",
+  "label": false,
+  "type": "content",
+  "mutation": "version",
+  "template": "deploy",
+  "premise_extra": true,
+  "id": "V3-121"
+ },
+ {
+  "hypothesis": "Chen approved Ravi's request for read-only access to the build server.",
+  "premise": "Ravi requested read-only access to the build server, and Chen approved the request.",
+  "label": true,
+  "type": "role_swap",
+  "mutation": "consistent",
+  "template": "access",
+  "premise_extra": false,
+  "id": "V3-122"
+ },
+ {
+  "hypothesis": "Payment for order #659 was processed successfully.",
+  "premise": "No payment was processed for order #659; it remains pending approval.",
+  "label": false,
+  "type": "negation",
+  "mutation": "negation_flip",
+  "template": "neg_payment",
+  "premise_extra": false,
+  "id": "V3-123"
+ },
+ {
+  "hypothesis": "The $2300 budget was not approved by Elena.",
+  "premise": "Elena did not approve the budget of $2300.",
+  "label": true,
+  "type": "negation",
+  "mutation": "consistent_neg",
+  "template": "neg_budget",
+  "premise_extra": false,
+  "id": "V3-124"
+ },
+ {
+  "hypothesis": "The deployment of version 1.0.2 to staging happened at 2 PM.",
+  "premise": "Version 1.0.2 was deployed to staging at 2 PM. Version 1.9.2 of the client library was also released that week.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "deploy",
+  "premise_extra": true,
+  "id": "V3-125"
+ },
+ {
+  "hypothesis": "Order #361 has not been paid.",
+  "premise": "No payment was processed for order #361; it remains pending approval. Support contacted the vendor twice about a 7-day delay on an unrelated shipment.",
+  "label": true,
+  "type": "negation",
+  "mutation": "consistent_neg",
+  "template": "neg_payment",
+  "premise_extra": true,
+  "id": "V3-126"
+ },
+ {
+  "hypothesis": "Elena approved Priya's request for admin access to the HR portal.",
+  "premise": "Elena requested admin access to the HR portal, and Priya approved the request.",
+  "label": false,
+  "type": "role_swap",
+  "mutation": "role_swap",
+  "template": "access",
+  "premise_extra": false,
+  "id": "V3-127"
+ },
+ {
+  "hypothesis": "468 rows were returned from the customers table.",
+  "premise": "The query returned 468 rows from table customers. A separate task for 14 other accounts is still pending review.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "query",
+  "premise_extra": true,
+  "id": "V3-128"
+ },
+ {
+  "hypothesis": "David approved Elena's request for write access to the billing database.",
+  "premise": "Elena requested write access to the billing database, and David approved the request. The office will be closed on the following Monday for maintenance.",
+  "label": true,
+  "type": "role_swap",
+  "mutation": "consistent",
+  "template": "access",
+  "premise_extra": true,
+  "id": "V3-129"
+ },
+ {
+  "hypothesis": "The $2600 budget was not approved by Elena.",
+  "premise": "Elena did not approve the budget of $2600.",
+  "label": true,
+  "type": "negation",
+  "mutation": "consistent_neg",
+  "template": "neg_budget",
+  "premise_extra": false,
+  "id": "V3-130"
+ },
+ {
+  "hypothesis": "David now owns ticket T-3145, which has critical priority.",
+  "premise": "Ticket T-3145 was assigned to David with critical priority. Support contacted the vendor twice about a 7-day delay on an unrelated shipment.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "ticket",
+  "premise_extra": true,
+  "id": "V3-131"
+ },
+ {
+  "hypothesis": "On Tuesday, Chen sent $482 to Bob.",
+  "premise": "Chen transferred $482 to Fatima on Tuesday.",
+  "label": false,
+  "type": "content",
+  "mutation": "entity",
+  "template": "transfer",
+  "premise_extra": false,
+  "id": "V3-132"
+ },
+ {
+  "hypothesis": "The $482 budget was not approved by Chen.",
+  "premise": "Chen did not approve the budget of $482. The previous report listed 250 items and was filed in March.",
+  "label": true,
+  "type": "negation",
+  "mutation": "consistent_neg",
+  "template": "neg_budget",
+  "premise_extra": true,
+  "id": "V3-133"
+ },
+ {
+  "hypothesis": "Payment for order #632 was processed successfully.",
+  "premise": "No payment was processed for order #632; it remains pending approval. A separate task for 14 other accounts is still pending review.",
+  "label": false,
+  "type": "negation",
+  "mutation": "negation_flip",
+  "template": "neg_payment",
+  "premise_extra": true,
+  "id": "V3-134"
+ },
+ {
+  "hypothesis": "Tuesday's meeting starts at 10 AM in room 107.",
+  "premise": "The meeting is scheduled for 10 AM on Tuesday in room 107.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "meeting",
+  "premise_extra": false,
+  "id": "V3-135"
+ },
+ {
+  "hypothesis": "At 10 AM, host cache-03 hit 47% CPU.",
+  "premise": "CPU usage reached 67% on host cache-03 at 10 AM. The office will be closed on the following Monday for maintenance.",
+  "label": false,
+  "type": "content",
+  "mutation": "value",
+  "template": "alert",
+  "premise_extra": true,
+  "id": "V3-136"
+ },
+ {
+  "hypothesis": "Priya approved David's request for read-only access to the billing database.",
+  "premise": "David requested auditor access to the billing database, and Priya approved the request.",
+  "label": false,
+  "type": "content",
+  "mutation": "level",
+  "template": "access",
+  "premise_extra": false,
+  "id": "V3-137"
+ },
+ {
+  "hypothesis": "Friday's meeting starts at 9 AM in room 405.",
+  "premise": "The meeting is scheduled for 9 AM on Friday in room 405.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "meeting",
+  "premise_extra": false,
+  "id": "V3-138"
+ },
+ {
+  "hypothesis": "At 2 PM, host db-02 hit 95% CPU.",
+  "premise": "CPU usage reached 95% on host db-02 at 2 PM.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "alert",
+  "premise_extra": false,
+  "id": "V3-139"
+ },
+ {
+  "hypothesis": "337 rows were returned from the sessions table.",
+  "premise": "The query returned 337 rows from table sessions.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "query",
+  "premise_extra": false,
+  "id": "V3-140"
+ },
+ {
+  "hypothesis": "Bob received $450 from Maria for the consulting invoice.",
+  "premise": "Maria paid Bob $450 for the consulting invoice. Another request, for $9,000, was escalated to the finance lead on Friday.",
+  "label": true,
+  "type": "role_swap",
+  "mutation": "consistent",
+  "template": "pay",
+  "premise_extra": true,
+  "id": "V3-141"
+ },
+ {
+  "hypothesis": "The agent will delete /srv/logs/app.log as requested.",
+  "premise": "The user asked the agent to read the file at /srv/logs/app.log. Support contacted the vendor twice about a 7-day delay on an unrelated shipment.",
+  "label": false,
+  "type": "content",
+  "mutation": "action",
+  "template": "file",
+  "premise_extra": true,
+  "id": "V3-142"
+ },
+ {
+  "hypothesis": "Maria approved the $450 budget.",
+  "premise": "Maria did not approve the budget of $450. Another request, for $9,000, was escalated to the finance lead on Friday.",
+  "label": false,
+  "type": "negation",
+  "mutation": "negation_flip",
+  "template": "neg_budget",
+  "premise_extra": true,
+  "id": "V3-143"
+ },
+ {
+  "hypothesis": "Fatima received $50 from David for the consulting invoice.",
+  "premise": "David paid Fatima $50 for the consulting invoice. The office will be closed on the following Monday for maintenance.",
+  "label": true,
+  "type": "role_swap",
+  "mutation": "consistent",
+  "template": "pay",
+  "premise_extra": true,
+  "id": "V3-144"
+ },
+ {
+  "hypothesis": "The deployment of version 2.3.4 to the demo environment happened at 2 PM.",
+  "premise": "Version 2.3.4 was deployed to the QA cluster at 2 PM.",
+  "label": false,
+  "type": "content",
+  "mutation": "env",
+  "template": "deploy",
+  "premise_extra": false,
+  "id": "V3-145"
+ },
+ {
+  "hypothesis": "Customer Elena received a $2300 refund on order #361.",
+  "premise": "A refund of $2300 was issued to customer Elena for order #361. A separate task for 14 other accounts is still pending review.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "refund",
+  "premise_extra": true,
+  "id": "V3-146"
+ },
+ {
+  "hypothesis": "Payment for order #384 was processed successfully.",
+  "premise": "No payment was processed for order #384; it remains pending approval.",
+  "label": false,
+  "type": "negation",
+  "mutation": "negation_flip",
+  "template": "neg_payment",
+  "premise_extra": false,
+  "id": "V3-147"
+ },
+ {
+  "hypothesis": "At 3 PM, host web-01 hit 54% CPU.",
+  "premise": "CPU usage reached 94% on host web-01 at 3 PM.",
+  "label": false,
+  "type": "content",
+  "mutation": "value",
+  "template": "alert",
+  "premise_extra": false,
+  "id": "V3-148"
+ },
+ {
+  "hypothesis": "59 routers from order #520 went out to Lagos.",
+  "premise": "Order #520 for 59 routers was shipped to Lagos. The previous report listed 250 items and was filed in March.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "order",
+  "premise_extra": true,
+  "id": "V3-149"
+ },
+ {
+  "hypothesis": "At 9 AM, host api-07 hit 70% CPU.",
+  "premise": "CPU usage reached 70% on host api-07 at 9 AM.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "alert",
+  "premise_extra": false,
+  "id": "V3-150"
+ },
+ {
+  "hypothesis": "The deployment of version 2.6.6 to the demo environment happened at 11:30 AM.",
+  "premise": "Version 2.6.6 was deployed to the demo environment at 11:30 AM.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "deploy",
+  "premise_extra": false,
+  "id": "V3-151"
+ },
+ {
+  "hypothesis": "Fatima received $2600 from Elena for the consulting invoice.",
+  "premise": "Elena paid Fatima $2600 for the consulting invoice.",
+  "label": true,
+  "type": "role_swap",
+  "mutation": "consistent",
+  "template": "pay",
+  "premise_extra": false,
+  "id": "V3-152"
+ },
+ {
+  "hypothesis": "On Monday, Elena sent $2600 to Fatima.",
+  "premise": "Elena transferred $2600 to Fatima on Friday.",
+  "label": false,
+  "type": "content",
+  "mutation": "day",
+  "template": "transfer",
+  "premise_extra": false,
+  "id": "V3-153"
+ },
+ {
+  "hypothesis": "On Friday, Elena sent $2600 to Fatima.",
+  "premise": "Elena transferred $2600 to Fatima on Friday.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "transfer",
+  "premise_extra": false,
+  "id": "V3-154"
+ },
+ {
+  "hypothesis": "Friday's meeting starts at 4:15 PM in room 414.",
+  "premise": "The meeting is scheduled for 10 AM on Friday in room 414. Support contacted the vendor twice about a 7-day delay on an unrelated shipment.",
+  "label": false,
+  "type": "content",
+  "mutation": "time",
+  "template": "meeting",
+  "premise_extra": true,
+  "id": "V3-155"
+ },
+ {
+  "hypothesis": "The $450 budget was not approved by Maria.",
+  "premise": "Maria did not approve the budget of $450. The office will be closed on the following Monday for maintenance.",
+  "label": true,
+  "type": "negation",
+  "mutation": "consistent_neg",
+  "template": "neg_budget",
+  "premise_extra": true,
+  "id": "V3-156"
+ },
+ {
+  "hypothesis": "David now owns ticket T-3145, which has medium priority.",
+  "premise": "Ticket T-3145 was assigned to David with critical priority. Support contacted the vendor twice about a 7-day delay on an unrelated shipment.",
+  "label": false,
+  "type": "content",
+  "mutation": "priority",
+  "template": "ticket",
+  "premise_extra": true,
+  "id": "V3-157"
+ },
+ {
+  "hypothesis": "Fatima paid Chen $482 for the consulting invoice.",
+  "premise": "Chen paid Fatima $482 for the consulting invoice. Version 1.9.2 of the client library was also released that week.",
+  "label": false,
+  "type": "role_swap",
+  "mutation": "role_swap",
+  "template": "pay",
+  "premise_extra": true,
+  "id": "V3-158"
+ },
+ {
+  "hypothesis": "On Wednesday, Maria sent $450 to Bob.",
+  "premise": "Maria transferred $450 to Bob on Wednesday. The previous report listed 250 items and was filed in March.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "transfer",
+  "premise_extra": true,
+  "id": "V3-159"
+ },
+ {
+  "hypothesis": "The deployment of version 3.2.1 to production happened at 10 AM.",
+  "premise": "Version 3.2.1 was deployed to production at 10 AM. Support contacted the vendor twice about a 7-day delay on an unrelated shipment.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "deploy",
+  "premise_extra": true,
+  "id": "V3-160"
+ },
+ {
+  "hypothesis": "At 11:30 AM, host web-01 hit 72% CPU.",
+  "premise": "CPU usage reached 72% on host web-01 at 11:30 AM. A separate task for 14 other accounts is still pending review.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "alert",
+  "premise_extra": true,
+  "id": "V3-161"
+ },
+ {
+  "hypothesis": "Carol approved Chen's request for write access to the build server.",
+  "premise": "Carol requested write access to the build server, and Chen approved the request. The office will be closed on the following Monday for maintenance.",
+  "label": false,
+  "type": "role_swap",
+  "mutation": "role_swap",
+  "template": "access",
+  "premise_extra": true,
+  "id": "V3-162"
+ },
+ {
+  "hypothesis": "Fatima now owns ticket T-9699, which has low priority.",
+  "premise": "Ticket T-9699 was assigned to Elena with low priority.",
+  "label": false,
+  "type": "content",
+  "mutation": "assignee",
+  "template": "ticket",
+  "premise_extra": false,
+  "id": "V3-163"
+ },
+ {
+  "hypothesis": "Elena paid Fatima $99 for the consulting invoice.",
+  "premise": "Fatima paid Elena $99 for the consulting invoice. The previous report listed 250 items and was filed in March.",
+  "label": false,
+  "type": "role_swap",
+  "mutation": "role_swap",
+  "template": "pay",
+  "premise_extra": true,
+  "id": "V3-164"
+ },
+ {
+  "hypothesis": "Maria approved Tom's request for write access to the build server.",
+  "premise": "Maria requested write access to the build server, and Tom approved the request. A separate task for 14 other accounts is still pending review.",
+  "label": false,
+  "type": "role_swap",
+  "mutation": "role_swap",
+  "template": "access",
+  "premise_extra": true,
+  "id": "V3-165"
+ },
+ {
+  "hypothesis": "Order #897 has not been paid.",
+  "premise": "No payment was processed for order #897; it remains pending approval.",
+  "label": true,
+  "type": "negation",
+  "mutation": "consistent_neg",
+  "template": "neg_payment",
+  "premise_extra": false,
+  "id": "V3-166"
+ },
+ {
+  "hypothesis": "The deployment of version 2.3.4 to the QA cluster happened at 2 PM.",
+  "premise": "Version 2.3.4 was deployed to the QA cluster at 2 PM. Support contacted the vendor twice about a 7-day delay on an unrelated shipment.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "deploy",
+  "premise_extra": true,
+  "id": "V3-167"
+ },
+ {
+  "hypothesis": "On Tuesday, Chen sent $482 to Fatima.",
+  "premise": "Chen transferred $482 to Fatima on Tuesday.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "transfer",
+  "premise_extra": false,
+  "id": "V3-168"
+ },
+ {
+  "hypothesis": "The deployment of version 1.5.0 to production happened at 10 AM.",
+  "premise": "Version 1.4.9 was deployed to production at 10 AM.",
+  "label": false,
+  "type": "content",
+  "mutation": "version",
+  "template": "deploy",
+  "premise_extra": false,
+  "id": "V3-169"
+ },
+ {
+  "hypothesis": "At 2 PM, host web-01 hit 96% CPU.",
+  "premise": "CPU usage reached 96% on host web-01 at 2 PM.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "alert",
+  "premise_extra": false,
+  "id": "V3-170"
+ },
+ {
+  "hypothesis": "304 rows were returned from the sessions table.",
+  "premise": "The query returned 304 rows from table sessions.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "query",
+  "premise_extra": false,
+  "id": "V3-171"
+ },
+ {
+  "hypothesis": "At 2 PM, host cache-03 hit 96% CPU.",
+  "premise": "CPU usage reached 96% on host web-01 at 2 PM. The previous report listed 250 items and was filed in March.",
+  "label": false,
+  "type": "content",
+  "mutation": "host",
+  "template": "alert",
+  "premise_extra": true,
+  "id": "V3-172"
+ },
+ {
+  "hypothesis": "Thursday's meeting starts at 9 AM in room 389.",
+  "premise": "The meeting is scheduled for 9 AM on Thursday in room 389.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "meeting",
+  "premise_extra": false,
+  "id": "V3-173"
+ },
+ {
+  "hypothesis": "The backup was deleted.",
+  "premise": "The backup was not deleted; it is retained for 14 days.",
+  "label": false,
+  "type": "negation",
+  "mutation": "negation_flip",
+  "template": "neg_backup",
+  "premise_extra": false,
+  "id": "V3-174"
+ },
+ {
+  "hypothesis": "Elena approved the $2600 budget.",
+  "premise": "Elena did not approve the budget of $2600. Support contacted the vendor twice about a 7-day delay on an unrelated shipment.",
+  "label": false,
+  "type": "negation",
+  "mutation": "negation_flip",
+  "template": "neg_budget",
+  "premise_extra": true,
+  "id": "V3-175"
+ },
+ {
+  "hypothesis": "Ravi approved Chen's request for read-only access to the build server.",
+  "premise": "Ravi requested read-only access to the build server, and Chen approved the request. The previous report listed 250 items and was filed in March.",
+  "label": false,
+  "type": "role_swap",
+  "mutation": "role_swap",
+  "template": "access",
+  "premise_extra": true,
+  "id": "V3-176"
+ },
+ {
+  "hypothesis": "Tom approved Maria's request for write access to the build server.",
+  "premise": "Maria requested write access to the build server, and Tom approved the request. The previous report listed 250 items and was filed in March.",
+  "label": true,
+  "type": "role_swap",
+  "mutation": "consistent",
+  "template": "access",
+  "premise_extra": true,
+  "id": "V3-177"
+ },
+ {
+  "hypothesis": "Friday's meeting starts at 10 AM in room 424.",
+  "premise": "The meeting is scheduled for 10 AM on Friday in room 414. Version 1.9.2 of the client library was also released that week.",
+  "label": false,
+  "type": "content",
+  "mutation": "room",
+  "template": "meeting",
+  "premise_extra": true,
+  "id": "V3-178"
+ },
+ {
+  "hypothesis": "On Thursday, David sent $50 to Bob.",
+  "premise": "David transferred $50 to Fatima on Thursday. Support contacted the vendor twice about a 7-day delay on an unrelated shipment.",
+  "label": false,
+  "type": "content",
+  "mutation": "entity",
+  "template": "transfer",
+  "premise_extra": true,
+  "id": "V3-179"
+ },
+ {
+  "hypothesis": "The deployment of version 1.1.0 to production happened at 3 PM.",
+  "premise": "Version 1.0.9 was deployed to production at 3 PM. Version 1.9.2 of the client library was also released that week.",
+  "label": false,
+  "type": "content",
+  "mutation": "version",
+  "template": "deploy",
+  "premise_extra": true,
+  "id": "V3-180"
+ },
+ {
+  "hypothesis": "The $379 budget was not approved by Carol.",
+  "premise": "Carol did not approve the budget of $379.",
+  "label": true,
+  "type": "negation",
+  "mutation": "consistent_neg",
+  "template": "neg_budget",
+  "premise_extra": false,
+  "id": "V3-181"
+ },
+ {
+  "hypothesis": "Ravi approved Fatima's request for read-only access to the HR portal.",
+  "premise": "Fatima requested read-only access to the HR portal, and Ravi approved the request. The previous report listed 250 items and was filed in March.",
+  "label": true,
+  "type": "role_swap",
+  "mutation": "consistent",
+  "template": "access",
+  "premise_extra": true,
+  "id": "V3-182"
+ },
+ {
+  "hypothesis": "Bob paid Maria $450 for the consulting invoice.",
+  "premise": "Maria paid Bob $450 for the consulting invoice.",
+  "label": false,
+  "type": "role_swap",
+  "mutation": "role_swap",
+  "template": "pay",
+  "premise_extra": false,
+  "id": "V3-183"
+ },
+ {
+  "hypothesis": "Chen approved Carol's request for write access to the build server.",
+  "premise": "Carol requested write access to the build server, and Chen approved the request.",
+  "label": true,
+  "type": "role_swap",
+  "mutation": "consistent",
+  "template": "access",
+  "premise_extra": false,
+  "id": "V3-184"
+ },
+ {
+  "hypothesis": "Tom paid Carol $379 for the consulting invoice.",
+  "premise": "Carol paid Tom $379 for the consulting invoice.",
+  "label": false,
+  "type": "role_swap",
+  "mutation": "role_swap",
+  "template": "pay",
+  "premise_extra": false,
+  "id": "V3-185"
+ },
+ {
+  "hypothesis": "Carol paid Ravi $358 for the consulting invoice.",
+  "premise": "Ravi paid Carol $358 for the consulting invoice. Support contacted the vendor twice about a 7-day delay on an unrelated shipment.",
+  "label": false,
+  "type": "role_swap",
+  "mutation": "role_swap",
+  "template": "pay",
+  "premise_extra": true,
+  "id": "V3-186"
+ },
+ {
+  "hypothesis": "The deployment of version 1.0.9 to production happened at 3 PM.",
+  "premise": "Version 1.0.9 was deployed to production at 3 PM. Version 1.9.2 of the client library was also released that week.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "deploy",
+  "premise_extra": true,
+  "id": "V3-187"
+ },
+ {
+  "hypothesis": "On Friday, Elena sent $26000 to Fatima.",
+  "premise": "Elena transferred $2600 to Fatima on Friday.",
+  "label": false,
+  "type": "content",
+  "mutation": "value",
+  "template": "transfer",
+  "premise_extra": false,
+  "id": "V3-188"
+ },
+ {
+  "hypothesis": "Order #659 has not been paid.",
+  "premise": "No payment was processed for order #659; it remains pending approval. The previous report listed 250 items and was filed in March.",
+  "label": true,
+  "type": "negation",
+  "mutation": "consistent_neg",
+  "template": "neg_payment",
+  "premise_extra": true,
+  "id": "V3-189"
+ },
+ {
+  "hypothesis": "Customer Carol received a $500 refund on order #897.",
+  "premise": "A refund of $50 was issued to customer Carol for order #897.",
+  "label": false,
+  "type": "content",
+  "mutation": "value",
+  "template": "refund",
+  "premise_extra": false,
+  "id": "V3-190"
+ },
+ {
+  "hypothesis": "Elena now owns ticket T-2439, which has medium priority.",
+  "premise": "Ticket T-2439 was assigned to Fatima with medium priority.",
+  "label": false,
+  "type": "content",
+  "mutation": "assignee",
+  "template": "ticket",
+  "premise_extra": false,
+  "id": "V3-191"
+ },
+ {
+  "hypothesis": "Customer Fatima received a $124 refund on order #520.",
+  "premise": "A refund of $99 was issued to customer Fatima for order #520.",
+  "label": false,
+  "type": "content",
+  "mutation": "value",
+  "template": "refund",
+  "premise_extra": false,
+  "id": "V3-192"
+ },
+ {
+  "hypothesis": "The backup is still being retained.",
+  "premise": "The backup was not deleted; it is retained for 7 days. The office will be closed on the following Monday for maintenance.",
+  "label": true,
+  "type": "negation",
+  "mutation": "consistent_neg",
+  "template": "neg_backup",
+  "premise_extra": true,
+  "id": "V3-193"
+ },
+ {
+  "hypothesis": "Order #192 has not been paid.",
+  "premise": "No payment was processed for order #192; it remains pending approval.",
+  "label": true,
+  "type": "negation",
+  "mutation": "consistent_neg",
+  "template": "neg_payment",
+  "premise_extra": false,
+  "id": "V3-194"
+ },
+ {
+  "hypothesis": "On Thursday, David sent $100 to Fatima.",
+  "premise": "David transferred $50 to Fatima on Thursday. Version 1.9.2 of the client library was also released that week.",
+  "label": false,
+  "type": "content",
+  "mutation": "value",
+  "template": "transfer",
+  "premise_extra": true,
+  "id": "V3-195"
+ },
+ {
+  "hypothesis": "The deployment of version 1.3.3 to the QA cluster happened at 9 AM.",
+  "premise": "Version 1.3.3 was deployed to production at 9 AM. Another request, for $9,000, was escalated to the finance lead on Friday.",
+  "label": false,
+  "type": "content",
+  "mutation": "env",
+  "template": "deploy",
+  "premise_extra": true,
+  "id": "V3-196"
+ },
+ {
+  "hypothesis": "Tom approved Chen's request for auditor access to the build server.",
+  "premise": "Chen requested auditor access to the build server, and Tom approved the request.",
+  "label": true,
+  "type": "role_swap",
+  "mutation": "consistent",
+  "template": "access",
+  "premise_extra": false,
+  "id": "V3-197"
+ },
+ {
+  "hypothesis": "64 rows were returned from the customers table.",
+  "premise": "The query returned 64 rows from table sessions.",
+  "label": false,
+  "type": "content",
+  "mutation": "table",
+  "template": "query",
+  "premise_extra": false,
+  "id": "V3-198"
+ },
+ {
+  "hypothesis": "On Wednesday, Carol sent $379 to Tom.",
+  "premise": "Carol transferred $379 to Tom on Wednesday. The previous report listed 250 items and was filed in March.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "transfer",
+  "premise_extra": true,
+  "id": "V3-199"
+ },
+ {
+  "hypothesis": "At 9 AM, host api-07 hit 66% CPU.",
+  "premise": "CPU usage reached 66% on host api-07 at 9 AM. The office will be closed on the following Monday for maintenance.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "alert",
+  "premise_extra": true,
+  "id": "V3-200"
+ },
+ {
+  "hypothesis": "At 2 PM, host web-01 hit 76% CPU.",
+  "premise": "CPU usage reached 96% on host web-01 at 2 PM. Support contacted the vendor twice about a 7-day delay on an unrelated shipment.",
+  "label": false,
+  "type": "content",
+  "mutation": "value",
+  "template": "alert",
+  "premise_extra": true,
+  "id": "V3-201"
+ },
+ {
+  "hypothesis": "The agent will open /data/config.json as requested.",
+  "premise": "The user asked the agent to open the file at /data/config.json.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "file",
+  "premise_extra": false,
+  "id": "V3-202"
+ },
+ {
+  "hypothesis": "Priya approved David's request for auditor access to the billing database.",
+  "premise": "David requested auditor access to the billing database, and Priya approved the request. A separate task for 14 other accounts is still pending review.",
+  "label": true,
+  "type": "role_swap",
+  "mutation": "consistent",
+  "template": "access",
+  "premise_extra": true,
+  "id": "V3-203"
+ },
+ {
+  "hypothesis": "57 chairs from order #384 went out to Pune.",
+  "premise": "Order #384 for 57 chairs was shipped to Pune.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "order",
+  "premise_extra": false,
+  "id": "V3-204"
+ },
+ {
+  "hypothesis": "Customer Carol received a $50 refund on order #897.",
+  "premise": "A refund of $50 was issued to customer Carol for order #897. A separate task for 14 other accounts is still pending review.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "refund",
+  "premise_extra": true,
+  "id": "V3-205"
+ },
+ {
+  "hypothesis": "The deployment of version 3.0.0 to the QA cluster happened at 2 PM.",
+  "premise": "Version 2.3.4 was deployed to the QA cluster at 2 PM.",
+  "label": false,
+  "type": "content",
+  "mutation": "version",
+  "template": "deploy",
+  "premise_extra": false,
+  "id": "V3-206"
+ },
+ {
+  "hypothesis": "Customer David received a $48 refund on order #164.",
+  "premise": "A refund of $482 was issued to customer David for order #164.",
+  "label": false,
+  "type": "content",
+  "mutation": "value",
+  "template": "refund",
+  "premise_extra": false,
+  "id": "V3-207"
+ },
+ {
+  "hypothesis": "At 10 AM, host cache-03 hit 67% CPU.",
+  "premise": "CPU usage reached 67% on host cache-03 at 10 AM.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "alert",
+  "premise_extra": false,
+  "id": "V3-208"
+ },
+ {
+  "hypothesis": "Fatima approved Ravi's request for read-only access to the HR portal.",
+  "premise": "Fatima requested read-only access to the HR portal, and Ravi approved the request.",
+  "label": false,
+  "type": "role_swap",
+  "mutation": "role_swap",
+  "template": "access",
+  "premise_extra": false,
+  "id": "V3-209"
+ },
+ {
+  "hypothesis": "The deployment of version 3.0.0 to the demo environment happened at 11:30 AM.",
+  "premise": "Version 2.6.6 was deployed to the demo environment at 11:30 AM. The office will be closed on the following Monday for maintenance.",
+  "label": false,
+  "type": "content",
+  "mutation": "version",
+  "template": "deploy",
+  "premise_extra": true,
+  "id": "V3-210"
+ },
+ {
+  "hypothesis": "The deployment of version 1.3.3 to production happened at 9 AM.",
+  "premise": "Version 1.3.3 was deployed to production at 9 AM. Another request, for $9,000, was escalated to the finance lead on Friday.",
+  "label": true,
+  "type": "content",
+  "mutation": "consistent",
+  "template": "deploy",
+  "premise_extra": true,
+  "id": "V3-211"
+ },
+ {
+  "hypothesis": "Chen approved Tom's request for auditor access to the build server.",
+  "premise": "Chen requested auditor access to the build server, and Tom approved the request. The previous report listed 250 items and was filed in March.",
+  "label": false,
+  "type": "role_swap",
+  "mutation": "role_swap",
+  "template": "access",
+  "premise_extra": true,
+  "id": "V3-212"
+ },
+ {
+  "hypothesis": "46 rows were returned from the customers table.",
+  "premise": "The query returned 468 rows from table customers.",
+  "label": false,
+  "type": "content",
+  "mutation": "value",
+  "template": "query",
+  "premise_extra": false,
+  "id": "V3-213"
+ },
+ {
+  "hypothesis": "Friday's meeting starts at 3 PM in room 147.",
+  "premise": "The meeting is scheduled for 3 PM on Friday in room 137. A separate task for 14 other accounts is still pending review.",
+  "label": false,
+  "type": "content",
+  "mutation": "room",
+  "template": "meeting",
+  "premise_extra": true,
+  "id": "V3-214"
+ }
+]

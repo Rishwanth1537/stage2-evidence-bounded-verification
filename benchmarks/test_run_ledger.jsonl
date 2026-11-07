@@ -1,0 +1,3 @@
+{"when": "2026-10-20T22:19:46", "script": "analyze_study.py paths (before the split guard existed)", "cases": "cases_fcrb.json", "split": "dev+test mixed", "note": "ACCIDENTAL: no --split filter, so argument-level flag rates of S1/S2 on all fcrb calls (both halves) were printed; no judge, no tuning; fcrb test-half deterministic rates are no longer unseen"}
+{"when": "2026-10-20T22:37:07", "script": "analyze_study.py h1", "cases": "cases_fcrb.json", "note": "e2e plumbing test with a fake judge (not a result)"}
+{"when": "2026-10-31T15:02:53", "script": "agenthallu confirmatory slice (Deviation 14)", "cases": "cases_eval.json sha256 c0b3ef1d76baf28a", "note": "registered before running judges"}

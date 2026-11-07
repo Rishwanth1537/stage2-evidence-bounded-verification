@@ -1,0 +1,17 @@
+[
+{"audit_id": "B098", "q1": "yes", "q2": "system state", "notes": "Rule 2: nonfree_baggages=0 rests on the agent's claim of an economy upgrade, but the reservation state still shows basic_economy, so the free-bag premise is unsupported."},
+{"audit_id": "B094", "q1": "yes", "q2": "tool definition", "notes": "Rule 1: 'San Ramon' lacks the required 'City, State' format."},
+{"audit_id": "B088", "q1": "yes", "q2": "tool definition", "notes": "Rule 1: 'San Francisco' lacks the required 'City, State' format."},
+{"audit_id": "B077", "q1": "acceptable alternative", "q2": "", "notes": "Rule 4: 'Beijing' is a sensible search query for 'where is beijing'."},
+{"audit_id": "B074", "q1": "yes", "q2": "tool definition", "notes": "Rule 1: 'Philadelphia' lacks the required 'City, State' format."},
+{"audit_id": "B070", "q1": "yes", "q2": "tool definition", "notes": "Rule 1: definition requires a two-letter state abbreviation; 'San Lorenzo' has none."},
+{"audit_id": "B065", "q1": "yes", "q2": "tool definition", "notes": "Rule 1: definition requires a two-letter state abbreviation; 'Burlingame' has none."},
+{"audit_id": "B063", "q1": "yes", "q2": "system state", "notes": "Rule 2: the system reports the order is not delivered, so this exchange call on that order_id is invalid."},
+{"audit_id": "B052", "q1": "acceptable alternative", "q2": "", "notes": "Rule 4: user gave album OR 2019 as alternatives; year 'dontcare' alongside the album is a sensible reading."},
+{"audit_id": "B040", "q1": "acceptable alternative", "q2": "", "notes": "Rule 4: end time equal to the requested slot, in the required format, is a sensible reading of 'available at 11:00 on March 20'."},
+{"audit_id": "B037", "q1": "acceptable alternative", "q2": "", "notes": "Rule 4: a 'tech stack' sensibly includes tools, so include_tools=true is a reasonable reading though not the default."},
+{"audit_id": "B019", "q1": "no", "q2": "", "notes": "Rule 5: 2,598,960 five-card hands is the correct total for a royal-flush probability; 52 is the deck size, not the outcome count."},
+{"audit_id": "B018", "q1": "yes", "q2": "tool definition", "notes": "Rule 1: 'Los Angeles' lacks the required 'City, State' format."},
+{"audit_id": "B012", "q1": "yes", "q2": "tool definition", "notes": "Rule 1: 'Berkeley' lacks the required 'City, State' format."},
+{"audit_id": "B003", "q1": "yes", "q2": "conversation", "notes": "Rule 2: user asked for child projects by tag with no inactive filter; excludeInactive=true is invented (definition and default not shown)."}
+]
