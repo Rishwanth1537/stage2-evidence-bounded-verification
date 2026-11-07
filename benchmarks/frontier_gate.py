@@ -222,7 +222,10 @@ def evaluate_dataset(
     return variant_rows
 
 
-def build_frontier_table(all_results: Dict[str, Dict[str, List[ResultRow]]]) -> str:
+def build_frontier_table(
+    all_results: Dict[str, Dict[str, List[ResultRow]]],
+    B: int = 10000,
+) -> str:
     """
     Build Markdown table comparing detection, hard-block, and interruption rates across variants.
     """
@@ -259,7 +262,7 @@ def build_frontier_table(all_results: Dict[str, Dict[str, List[ResultRow]]]) -> 
             ir_str = _format_ci(ir, ir_low, ir_high)
 
             # Youden's J
-            j_est, j_low, j_high = youden_j(rows, legacy_semantics=False, B=2000, seed=42)
+            j_est, j_low, j_high = youden_j(rows, legacy_semantics=False, B=B, seed=42)
             j_str = _format_ci(j_est, j_low, j_high)
 
             row_line = (
@@ -275,6 +278,8 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Evaluate Two-Tier Gate Policy across dev splits.")
     parser.add_argument("--out-dir", type=str, default=str(ROOT / "review" / "frontier_dev"),
                         help="Output directory for ResultRow JSONL files")
+    parser.add_argument("--B", type=int, default=10000,
+                        help="Bootstrap iterations for confidence intervals")
     args = parser.parse_args()
 
     out_dir = Path(args.out_dir)
@@ -286,7 +291,7 @@ def main() -> None:
         print(f"  Evaluating {ds} dev...")
         all_results[ds] = evaluate_dataset(ds, out_dir)
 
-    table_md = build_frontier_table(all_results)
+    table_md = build_frontier_table(all_results, B=args.B)
     summary_path = out_dir / "FRONTIER_REPORT.md"
     summary_path.write_text(table_md, encoding="utf-8")
 

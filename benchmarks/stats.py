@@ -183,6 +183,119 @@ def cluster_bootstrap_ci(
     return point_est, ci_lower, ci_upper
 
 
+def fast_cluster_bootstrap_ratio(
+    num_k: np.ndarray,
+    den_k: np.ndarray,
+    B: int = 10000,
+    confidence: float = 0.95,
+    seed: int = 0,
+) -> Tuple[float, float, float]:
+    """
+    Fast vectorized cluster-bootstrap for ratio metrics sum(num) / sum(den).
+    num_k and den_k are 1D arrays of per-cluster sums of length K.
+    Produces identical results to cluster_bootstrap_ci with massive speedup.
+    """
+    tot_num = float(np.sum(num_k))
+    tot_den = float(np.sum(den_k))
+    point_est = tot_num / tot_den if tot_den > 0 else 0.0
+
+    K = len(num_k)
+    if K <= 1 or tot_den == 0:
+        return point_est, point_est, point_est
+
+    rng = np.random.default_rng(seed)
+    sampled_indices = rng.choice(K, size=(B, K), replace=True)
+    boot_nums = np.sum(num_k[sampled_indices], axis=1)
+    boot_dens = np.sum(den_k[sampled_indices], axis=1)
+
+    valid = boot_dens > 0
+    boot_vals = np.where(valid, boot_nums / np.maximum(boot_dens, 1e-12), 0.0)
+
+    alpha = 1.0 - confidence
+    ci_lower = float(np.percentile(boot_vals, 100.0 * (alpha / 2.0)))
+    ci_upper = float(np.percentile(boot_vals, 100.0 * (1.0 - alpha / 2.0)))
+    return point_est, ci_lower, ci_upper
+
+
+def fast_cluster_bootstrap_youden(
+    tp_k: np.ndarray,
+    p_k: np.ndarray,
+    fp_k: np.ndarray,
+    n_k: np.ndarray,
+    B: int = 10000,
+    confidence: float = 0.95,
+    seed: int = 0,
+) -> Tuple[float, float, float]:
+    """
+    Fast vectorized cluster-bootstrap for Youden's J = TPR - FPR.
+    """
+    tot_p = float(np.sum(p_k))
+    tot_n = float(np.sum(n_k))
+    tpr = float(np.sum(tp_k)) / tot_p if tot_p > 0 else 0.0
+    fpr = float(np.sum(fp_k)) / tot_n if tot_n > 0 else 0.0
+    point_est = tpr - fpr
+
+    K = len(p_k)
+    if K <= 1 or tot_p == 0 or tot_n == 0:
+        return point_est, point_est, point_est
+
+    rng = np.random.default_rng(seed)
+    sampled_indices = rng.choice(K, size=(B, K), replace=True)
+    boot_tp = np.sum(tp_k[sampled_indices], axis=1)
+    boot_p = np.sum(p_k[sampled_indices], axis=1)
+    boot_fp = np.sum(fp_k[sampled_indices], axis=1)
+    boot_n = np.sum(n_k[sampled_indices], axis=1)
+
+    boot_tpr = np.where(boot_p > 0, boot_tp / np.maximum(boot_p, 1e-12), 0.0)
+    boot_fpr = np.where(boot_n > 0, boot_fp / np.maximum(boot_n, 1e-12), 0.0)
+    boot_j = boot_tpr - boot_fpr
+
+    alpha = 1.0 - confidence
+    ci_lower = float(np.percentile(boot_j, 100.0 * (alpha / 2.0)))
+    ci_upper = float(np.percentile(boot_j, 100.0 * (1.0 - alpha / 2.0)))
+    return point_est, ci_lower, ci_upper
+
+
+def fast_paired_cluster_bootstrap_ratio_diff(
+    num_a_k: np.ndarray,
+    den_a_k: np.ndarray,
+    num_b_k: np.ndarray,
+    den_b_k: np.ndarray,
+    B: int = 10000,
+    confidence: float = 0.95,
+    seed: int = 0,
+) -> Tuple[float, float, float]:
+    """
+    Fast vectorized paired cluster bootstrap for difference Delta = Ratio_A - Ratio_B.
+    """
+    tot_a_num, tot_a_den = float(np.sum(num_a_k)), float(np.sum(den_a_k))
+    tot_b_num, tot_b_den = float(np.sum(num_b_k)), float(np.sum(den_b_k))
+    est_a = tot_a_num / tot_a_den if tot_a_den > 0 else 0.0
+    est_b = tot_b_num / tot_b_den if tot_b_den > 0 else 0.0
+    point_diff = est_a - est_b
+
+    K = len(num_a_k)
+    if K <= 1:
+        return point_diff, point_diff, point_diff
+
+    rng = np.random.default_rng(seed)
+    sampled_indices = rng.choice(K, size=(B, K), replace=True)
+
+    boot_a_nums = np.sum(num_a_k[sampled_indices], axis=1)
+    boot_a_dens = np.sum(den_a_k[sampled_indices], axis=1)
+    boot_b_nums = np.sum(num_b_k[sampled_indices], axis=1)
+    boot_b_dens = np.sum(den_b_k[sampled_indices], axis=1)
+
+    boot_a = np.where(boot_a_dens > 0, boot_a_nums / np.maximum(boot_a_dens, 1e-12), 0.0)
+    boot_b = np.where(boot_b_dens > 0, boot_b_nums / np.maximum(boot_b_dens, 1e-12), 0.0)
+    boot_diffs = boot_a - boot_b
+
+    alpha = 1.0 - confidence
+    ci_lower = float(np.percentile(boot_diffs, 100.0 * (alpha / 2.0)))
+    ci_upper = float(np.percentile(boot_diffs, 100.0 * (1.0 - alpha / 2.0)))
+    return point_diff, ci_lower, ci_upper
+
+
 def paired_cluster_bootstrap_diff(
     rows_a: Sequence[Any],
     rows_b: Sequence[Any],
@@ -268,6 +381,7 @@ def detection_rate(
     cluster_key: str = "cluster_id",
     B: int = 10000,
     seed: int = 0,
+    use_fast: bool = True,
 ) -> Tuple[float, float, float]:
     """
     Detection Rate (Sensitivity / Recall on erroneous calls where label == 1).
@@ -283,6 +397,7 @@ def detection_rate(
         cluster_key: Field name for cluster ID.
         B: Bootstrap iterations.
         seed: Random seed.
+        use_fast: If True, uses fast vectorized cluster count resampling.
 
     Returns:
         (rate, ci_lower, ci_upper)
@@ -301,6 +416,20 @@ def detection_rate(
         low, high = wilson_ci(detected_count, n_pos)
         return est, low, high
 
+    if use_fast:
+        clusters: Dict[str, List[int]] = {}
+        for r in rows:
+            cid = str(_get_field(r, cluster_key, ""))
+            if cid not in clusters:
+                clusters[cid] = [0, 0]
+            if _get_field(r, "label") == 1:
+                clusters[cid][1] += 1
+                if _is_error_flagged(_get_field(r, "decision"), legacy_semantics):
+                    clusters[cid][0] += 1
+        num_arr = np.array([c[0] for c in clusters.values()], dtype=float)
+        den_arr = np.array([c[1] for c in clusters.values()], dtype=float)
+        return fast_cluster_bootstrap_ratio(num_arr, den_arr, B=B, seed=seed)
+
     def _metric(batch: List[Any]) -> float:
         b_pos = [r for r in batch if _get_field(r, "label") == 1]
         if not b_pos:
@@ -318,6 +447,7 @@ def false_block_rate(
     cluster_key: str = "cluster_id",
     B: int = 10000,
     seed: int = 0,
+    use_fast: bool = True,
 ) -> Tuple[float, float, float]:
     """
     False-Block Rate (Fall-out on clean calls where label == 0).
@@ -333,6 +463,7 @@ def false_block_rate(
         cluster_key: Field name for cluster ID.
         B: Bootstrap iterations.
         seed: Random seed.
+        use_fast: If True, uses fast vectorized cluster count resampling.
 
     Returns:
         (rate, ci_lower, ci_upper)
@@ -351,6 +482,20 @@ def false_block_rate(
         low, high = wilson_ci(flagged_count, n_neg)
         return est, low, high
 
+    if use_fast:
+        clusters: Dict[str, List[int]] = {}
+        for r in rows:
+            cid = str(_get_field(r, cluster_key, ""))
+            if cid not in clusters:
+                clusters[cid] = [0, 0]
+            if _get_field(r, "label") == 0:
+                clusters[cid][1] += 1
+                if _is_error_flagged(_get_field(r, "decision"), legacy_semantics):
+                    clusters[cid][0] += 1
+        num_arr = np.array([c[0] for c in clusters.values()], dtype=float)
+        den_arr = np.array([c[1] for c in clusters.values()], dtype=float)
+        return fast_cluster_bootstrap_ratio(num_arr, den_arr, B=B, seed=seed)
+
     def _metric(batch: List[Any]) -> float:
         b_neg = [r for r in batch if _get_field(r, "label") == 0]
         if not b_neg:
@@ -367,6 +512,7 @@ def interruption_rate(
     cluster_key: str = "cluster_id",
     B: int = 10000,
     seed: int = 0,
+    use_fast: bool = True,
 ) -> Tuple[float, float, float]:
     """
     Interruption Rate on clean calls: Fraction of clean calls (label == 0) receiving ASK or BLOCK.
@@ -381,6 +527,7 @@ def interruption_rate(
         cluster_key=cluster_key,
         B=B,
         seed=seed,
+        use_fast=use_fast,
     )
 
 
@@ -390,6 +537,7 @@ def hard_block_rate(
     cluster_key: str = "cluster_id",
     B: int = 10000,
     seed: int = 0,
+    use_fast: bool = True,
 ) -> Tuple[float, float, float]:
     """
     Hard-Block Rate on clean calls: Fraction of clean calls (label == 0) receiving strictly BLOCK.
@@ -404,6 +552,7 @@ def hard_block_rate(
         cluster_key=cluster_key,
         B=B,
         seed=seed,
+        use_fast=use_fast,
     )
 
 
@@ -413,6 +562,7 @@ def youden_j(
     cluster_key: str = "cluster_id",
     B: int = 10000,
     seed: int = 0,
+    use_fast: bool = True,
 ) -> Tuple[float, float, float]:
     """
     Youden's J statistic (Informedness):
@@ -422,6 +572,28 @@ def youden_j(
     Returns:
         (j_estimate, ci_lower, ci_upper) via cluster bootstrap.
     """
+    if use_fast:
+        clusters: Dict[str, List[int]] = {}
+        for r in rows:
+            cid = str(_get_field(r, cluster_key, ""))
+            if cid not in clusters:
+                clusters[cid] = [0, 0, 0, 0]
+            lbl = _get_field(r, "label")
+            flagged = _is_error_flagged(_get_field(r, "decision"), legacy_semantics)
+            if lbl == 1:
+                clusters[cid][1] += 1
+                if flagged:
+                    clusters[cid][0] += 1
+            elif lbl == 0:
+                clusters[cid][3] += 1
+                if flagged:
+                    clusters[cid][2] += 1
+        tp_k = np.array([c[0] for c in clusters.values()], dtype=float)
+        p_k = np.array([c[1] for c in clusters.values()], dtype=float)
+        fp_k = np.array([c[2] for c in clusters.values()], dtype=float)
+        n_k = np.array([c[3] for c in clusters.values()], dtype=float)
+        return fast_cluster_bootstrap_youden(tp_k, p_k, fp_k, n_k, B=B, seed=seed)
+
     def _metric(batch: List[Any]) -> float:
         pos = [r for r in batch if _get_field(r, "label") == 1]
         neg = [r for r in batch if _get_field(r, "label") == 0]

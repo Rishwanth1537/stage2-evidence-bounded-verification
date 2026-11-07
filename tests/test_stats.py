@@ -232,3 +232,38 @@ def test_build_report_table():
     md = build_report_table(rows)
     assert "| System | n_pos | n_neg |" in md
     assert "ModelA" in md
+
+
+def test_fast_vs_slow_cluster_bootstrap_agreement():
+    """Verify that fast count-vector cluster bootstrap matches slow row-looping reference path."""
+    rows = []
+    for cid in range(25):
+        for j in range(4):
+            rows.append(ResultRow(
+                run_id="test", dataset="test", split="dev", item_id=f"{cid}-{j}", cluster_id=str(cid),
+                system="test",
+                label=1 if (cid + j) % 2 == 0 else 0,
+                decision="BLOCK" if (cid * 3 + j) % 5 == 0 else ("ASK" if (cid + j) % 3 == 0 else "ALLOW"),
+                latency_ms=1.0, tokens_in=0, tokens_out=0, repeat_idx=0, seed=0,
+            ))
+
+    # 1. Detection rate
+    est_s, low_s, high_s = detection_rate(rows, B=2000, seed=42, use_fast=False)
+    est_f, low_f, high_f = detection_rate(rows, B=2000, seed=42, use_fast=True)
+    assert math.isclose(est_s, est_f)
+    assert abs(low_s - low_f) < 1e-10
+    assert abs(high_s - high_f) < 1e-10
+
+    # 2. Interruption rate
+    est_s, low_s, high_s = interruption_rate(rows, B=2000, seed=42, use_fast=False)
+    est_f, low_f, high_f = interruption_rate(rows, B=2000, seed=42, use_fast=True)
+    assert math.isclose(est_s, est_f)
+    assert abs(low_s - low_f) < 1e-10
+    assert abs(high_s - high_f) < 1e-10
+
+    # 3. Youden's J
+    est_s, low_s, high_s = youden_j(rows, B=2000, seed=42, use_fast=False)
+    est_f, low_f, high_f = youden_j(rows, B=2000, seed=42, use_fast=True)
+    assert math.isclose(est_s, est_f)
+    assert abs(low_s - low_f) < 1e-10
+    assert abs(high_s - high_f) < 1e-10
