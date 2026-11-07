@@ -38,6 +38,75 @@ _WS = re.compile(r"\s+")
 _ARG_GROUND_SKIPPED_NUMERIC: int = 0
 
 
+@dataclass(frozen=True)
+class GroundingConfig:
+    """
+    Configuration flags for typed normalizers in argument grounding.
+
+    Defaults preserve existing behavior exactly.
+    """
+    spelled_numbers: bool = True
+    numeric_formats: bool = True  # commas, exponents, percent, multiplier suffixes
+    iso_dates: bool = True
+    spoken_dates_times: bool = True
+    currency_equivalence: bool = True
+    stemming: bool = True
+    fuzzy_match: bool = True
+    fuzzy_threshold: float = 0.88
+    token_set_containment: bool = True
+
+    @classmethod
+    def all_on(cls, fuzzy_threshold: float = 0.88) -> GroundingConfig:
+        """All normalizers active (default behavior)."""
+        return cls(fuzzy_threshold=fuzzy_threshold)
+
+    @classmethod
+    def all_off(cls, fuzzy_threshold: float = 0.88) -> GroundingConfig:
+        """All normalizers disabled (exact string & digit match only)."""
+        return cls(
+            spelled_numbers=False,
+            numeric_formats=False,
+            iso_dates=False,
+            spoken_dates_times=False,
+            currency_equivalence=False,
+            stemming=False,
+            fuzzy_match=False,
+            fuzzy_threshold=fuzzy_threshold,
+            token_set_containment=False,
+        )
+
+    @classmethod
+    def leave_one_out(cls, disabled_switch: str, fuzzy_threshold: float = 0.88) -> GroundingConfig:
+        """All normalizers active except the specified disabled_switch."""
+        switches = [
+            "spelled_numbers", "numeric_formats", "iso_dates", "spoken_dates_times",
+            "currency_equivalence", "stemming", "fuzzy_match", "token_set_containment"
+        ]
+        if disabled_switch not in switches:
+            raise ValueError(f"Unknown switch: '{disabled_switch}'. Expected one of {switches}")
+        kwargs = {s: True for s in switches}
+        kwargs[disabled_switch] = False
+        kwargs["fuzzy_threshold"] = fuzzy_threshold
+        return cls(**kwargs)
+
+    @classmethod
+    def add_one_in(cls, enabled_switch: str, fuzzy_threshold: float = 0.88) -> GroundingConfig:
+        """All normalizers disabled except the specified enabled_switch."""
+        switches = [
+            "spelled_numbers", "numeric_formats", "iso_dates", "spoken_dates_times",
+            "currency_equivalence", "stemming", "fuzzy_match", "token_set_containment"
+        ]
+        if enabled_switch not in switches:
+            raise ValueError(f"Unknown switch: '{enabled_switch}'. Expected one of {switches}")
+        kwargs = {s: False for s in switches}
+        kwargs[enabled_switch] = True
+        kwargs["fuzzy_threshold"] = fuzzy_threshold
+        return cls(**kwargs)
+
+
+DEFAULT_GROUNDING_CONFIG = GroundingConfig()
+
+
 @dataclass
 class ArgVerdict:
     argument: str
@@ -83,35 +152,52 @@ def _spelled_numbers(text: str) -> set:
     return out
 
 
-def numbers_in_detailed(text: str) -> Tuple[set, int]:
+def numbers_in_detailed(text: str, config: Optional[GroundingConfig] = None) -> Tuple[set, int]:
     """
     Extract numbers from text and return (numbers_set, skipped_unparseable_count).
     Unparseable numeric regex matches are skipped, but counted to surface verifier degradation.
     """
+    cfg = config or DEFAULT_GROUNDING_CONFIG
     vals = set()
     skipped = 0
-    for m in _NUM_TOKEN.finditer(text):
-        try:
-            v = float(m.group(2).replace(",", ""))
-        except ValueError:
-            skipped += 1
-            continue
-        suf = (m.group(3) or "").lower()
-        if suf in ("k", "thousand"):
-            vals.add(v * 1e3)
-        elif suf in ("m", "million"):
-            vals.add(v * 1e6)
-        vals.add(v)
-        if suf == "%":
-            vals.add(v / 100.0)
-        if m.group(1):                       # explicit minus sign: also admit the negative value (latitudes, deltas, temperatures)
-            vals.update({-x for x in list(vals) if x > 0})
-    return (vals | _spelled_numbers(text), skipped)
+    if cfg.numeric_formats:
+        for m in _NUM_TOKEN.finditer(text):
+            try:
+                v = float(m.group(2).replace(",", ""))
+            except ValueError:
+                skipped += 1
+                continue
+            suf = (m.group(3) or "").lower()
+            if suf in ("k", "thousand"):
+                vals.add(v * 1e3)
+            elif suf in ("m", "million"):
+                vals.add(v * 1e6)
+            vals.add(v)
+            if suf == "%":
+                vals.add(v / 100.0)
+            if m.group(1):                       # explicit minus sign: also admit the negative value (latitudes, deltas, temperatures)
+                vals.update({-x for x in list(vals) if x > 0})
+    else:
+        # Exact numeric tokens only: pure digits / basic floats without commas, suffixes, or multipliers
+        for m in re.finditer(r"(?<![\w.])(?:(?<![\w])(-)(?=\d))?(\d+(?:\.\d+)?)\b", text):
+            try:
+                v = float(m.group(2))
+            except ValueError:
+                skipped += 1
+                continue
+            vals.add(v)
+            if m.group(1):
+                vals.add(-v)
+
+    if cfg.spelled_numbers:
+        vals = vals | _spelled_numbers(text)
+
+    return (vals, skipped)
 
 
-def numbers_in(text: str) -> set:
+def numbers_in(text: str, config: Optional[GroundingConfig] = None) -> set:
     global _ARG_GROUND_SKIPPED_NUMERIC
-    vals, skipped = numbers_in_detailed(text)
+    vals, skipped = numbers_in_detailed(text, config=config)
     if skipped > 0:
         _ARG_GROUND_SKIPPED_NUMERIC += skipped
     return vals
@@ -130,13 +216,16 @@ def get_arg_ground_degraded_status(context: str = "") -> Tuple[bool, List[str]]:
     return False, []
 
 
-def _fuzzy_score(value_norm: str, context_norm: str) -> float:
+def _fuzzy_score(value_norm: str, context_norm: str, config: Optional[GroundingConfig] = None) -> float:
     """1.0 if the value is contained (or its tokens are all present); otherwise the best difflib ratio over context windows."""
+    cfg = config or DEFAULT_GROUNDING_CONFIG
     if not value_norm or value_norm in context_norm:
         return 1.0
     vt, ct = value_norm.split(), context_norm.split()
-    if set(vt) <= set(ct):
+    if cfg.token_set_containment and set(vt) <= set(ct):
         return 1.0
+    if not cfg.fuzzy_match:
+        return 0.0
     n, best = len(vt), 0.0
     sm = SequenceMatcher(None, "", value_norm)          # seq2 = the value; seq1 = each window (difflib caches seq2 statistics)
     for w in range(max(1, n - 1), n + 2):
@@ -184,46 +273,55 @@ _CTX_TIME = re.compile(r"\b(\d{1,2})(?::(\d{2}))?\s*(am|pm|a\.m\.|p\.m\.)|\b(\d{
 _MONTHS = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
 
 
-def _context_times(context: str) -> set:
+def _context_times(context: str, spoken: bool = True) -> set:
     out = set()
-    for m in _CTX_TIME.finditer(context):
-        if m.group(3):
-            h, mi = int(m.group(1)) % 12, int(m.group(2) or 0)
-            if m.group(3).lower().startswith("p"):
-                h += 12
-            out.add((h, mi))
-        else:
-            out.add((int(m.group(4)), int(m.group(5))))
+    if spoken:
+        for m in _CTX_TIME.finditer(context):
+            if m.group(3):
+                h, mi = int(m.group(1)) % 12, int(m.group(2) or 0)
+                if m.group(3).lower().startswith("p"):
+                    h += 12
+                out.add((h, mi))
+            else:
+                out.add((int(m.group(4)), int(m.group(5))))
     for m in re.finditer(r"T(\d{2}):(\d{2})", context):
         out.add((int(m.group(1)), int(m.group(2))))
     return out
 
 
-def _date_in(context: str, y: int, mo: int, d: int) -> bool:
+def _date_in(context: str, y: int, mo: int, d: int, spoken: bool = True) -> bool:
     c = context.lower()
     forms = [f"{y:04d}-{mo:02d}-{d:02d}", f"{mo}/{d}/{y}", f"{mo:02d}/{d:02d}/{y}", f"{d}/{mo}/{y}"]
     if any(f in c for f in forms):
         return True
+    if not spoken:
+        return False
     mn = _MONTHS[mo - 1]
     pat = rf"({mn}|{mn[:3]})\.?\s+{d}(st|nd|rd|th)?,?\s+{y}|{d}(st|nd|rd|th)?\s+(of\s+)?({mn}|{mn[:3]})\.?,?\s+{y}"
     return re.search(pat, c) is not None
 
 
-def _check_iso(argument: str, value: str, context: str):
+def _check_iso(argument: str, value: str, context: str, config: Optional[GroundingConfig] = None) -> Optional[ArgVerdict]:
+    cfg = config or DEFAULT_GROUNDING_CONFIG
+    if not cfg.iso_dates:
+        return None
     m = _ISO.match(value)
     if not m:
         return None
     y, mo, d = int(m.group(1)), int(m.group(2)), int(m.group(3))
-    if not _date_in(context, y, mo, d):
+    if not _date_in(context, y, mo, d, spoken=cfg.spoken_dates_times):
         return ArgVerdict(argument, value, "UNGROUNDED", f"date {y:04d}-{mo:02d}-{d:02d} not found in context", 0.0)
     if m.group(4) is not None:
         t = (int(m.group(4)), int(m.group(5)))
-        if t != (0, 0) and t not in _context_times(context):
+        if t != (0, 0) and t not in _context_times(context, spoken=cfg.spoken_dates_times):
             return ArgVerdict(argument, value, "UNGROUNDED", f"time {t[0]:02d}:{t[1]:02d} not found in context", 0.0)
     return ArgVerdict(argument, value, "GROUNDED", "")
 
 
-def _check_currency(argument: str, value: str, context: str):
+def _check_currency(argument: str, value: str, context: str, config: Optional[GroundingConfig] = None) -> Optional[ArgVerdict]:
+    cfg = config or DEFAULT_GROUNDING_CONFIG
+    if not cfg.currency_equivalence:
+        return None
     key = value.strip().lower()
     if key not in _CURRENCY:
         return None
@@ -234,28 +332,37 @@ def _check_currency(argument: str, value: str, context: str):
     return ArgVerdict(argument, value, "UNGROUNDED", f"currency {value} not mentioned in context", 0.0)
 
 
-def check_value(argument: str, value: Any, context: str) -> ArgVerdict:
+def check_value(argument: str, value: Any, context: str, config: Optional[GroundingConfig] = None) -> ArgVerdict:
+    cfg = config or DEFAULT_GROUNDING_CONFIG
     if isinstance(value, bool) or value is None:
         return ArgVerdict(argument, value, "UNCHECKABLE", "boolean or null value")
     if isinstance(value, (int, float)):
-        ok = float(value) in numbers_in(context) or any(abs(float(value) - x) < 1e-9 for x in numbers_in(context))
+        nums = numbers_in(context, config=cfg)
+        ok = float(value) in nums or any(abs(float(value) - x) < 1e-9 for x in nums)
         return ArgVerdict(argument, value, "GROUNDED" if ok else "UNGROUNDED", "" if ok else f"number {value} not found in context", 1.0 if ok else 0.0)
     if isinstance(value, str):
         if not value.strip():
             return ArgVerdict(argument, value, "UNCHECKABLE", "empty string")
         # a purely numeric string is a number
         if re.fullmatch(r"\s*[\d,]+(?:\.\d+)?\s*", value):
-            return check_value(argument, float(value.replace(",", "")), context)
+            if cfg.numeric_formats:
+                return check_value(argument, float(value.replace(",", "")), context, config=cfg)
+            else:
+                if "," not in value:
+                    return check_value(argument, float(value), context, config=cfg)
         for special in (_check_iso, _check_currency):
-            v = special(argument, value, context)
+            v = special(argument, value, context, config=cfg)
             if v is not None:
                 return v
         vn, cn = _norm_text(value), _norm_text(context)
-        sc = 1.0 if (bool(vn) and _stems(vn) <= _stems(cn)) else _fuzzy_score(vn, cn)
-        ok = sc >= FUZZY
+        if cfg.stemming and bool(vn) and (_stems(vn) <= _stems(cn)):
+            sc = 1.0
+        else:
+            sc = _fuzzy_score(vn, cn, config=cfg)
+        ok = sc >= cfg.fuzzy_threshold
         return ArgVerdict(argument, value, "GROUNDED" if ok else "UNGROUNDED", "" if ok else f"'{value}' not found in context", round(sc, 4))
     if isinstance(value, (list, tuple)):
-        verdicts = [check_value(argument, v, context) for v in value]
+        verdicts = [check_value(argument, v, context, config=cfg) for v in value]
         bad = [v for v in verdicts if v.verdict == "UNGROUNDED"]
         if bad:
             return ArgVerdict(argument, value, "UNGROUNDED", bad[0].reason, min(v.score for v in bad))
@@ -263,31 +370,38 @@ def check_value(argument: str, value: Any, context: str) -> ArgVerdict:
     return ArgVerdict(argument, value, "UNCHECKABLE", f"unsupported type {type(value).__name__}")
 
 
-def check_arguments(arguments: Dict[str, Any], context: str) -> List[ArgVerdict]:
-    _, skipped = numbers_in_detailed(context)
-    verdicts = [check_value(k, v, context) for k, v in arguments.items()]
+def check_arguments(arguments: Dict[str, Any], context: str, config: Optional[GroundingConfig] = None) -> List[ArgVerdict]:
+    cfg = config or DEFAULT_GROUNDING_CONFIG
+    _, skipped = numbers_in_detailed(context, config=cfg)
+    verdicts = [check_value(k, v, context, config=cfg) for k, v in arguments.items()]
     degraded = skipped > 0
     reasons = [f"unparseable numeric token(s) skipped: {skipped}"] if degraded else []
     return VerdictList(verdicts, skipped_numeric_tokens=skipped, degraded=degraded, degraded_reasons=reasons)
 
 
-def call_is_grounded(arguments: Dict[str, Any], context: str, schema: Dict[str, Any] | None = None, policy: str = "strict") -> bool:
+def call_is_grounded(
+    arguments: Dict[str, Any],
+    context: str,
+    schema: Dict[str, Any] | None = None,
+    policy: str = "strict",
+    config: Optional[GroundingConfig] = None,
+) -> bool:
     """
     policy "strict":        every checkable argument must be grounded.
     policy "required_only": only arguments the tool schema marks as required can block a call; an ungrounded OPTIONAL argument
                             (usually a model-chosen default such as a size or a category) is reported but does not block.
                             Needs `schema` = {"required": [...], "optional": [...]}; falls back to "strict" without it.
     """
-    verdicts = check_arguments(arguments, context)
+    verdicts = check_arguments(arguments, context, config=config)
     if policy == "required_only" and schema:
         optional = set(schema.get("optional", []))
         return not any(v.verdict == "UNGROUNDED" and v.argument not in optional for v in verdicts)
     return not any(v.verdict == "UNGROUNDED" for v in verdicts)
 
 
-def call_score(arguments: Dict[str, Any], context: str) -> float:
+def call_score(arguments: Dict[str, Any], context: str, config: Optional[GroundingConfig] = None) -> float:
     """Call-level grounding score in [0, 1]: the weakest match among the checkable arguments (1.0 if none are checkable)."""
-    scores = [v.score for v in check_arguments(arguments, context) if v.verdict != "UNCHECKABLE"]
+    scores = [v.score for v in check_arguments(arguments, context, config=config) if v.verdict != "UNCHECKABLE"]
     return min(scores) if scores else 1.0
 
 
