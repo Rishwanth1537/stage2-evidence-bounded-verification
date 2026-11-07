@@ -23,6 +23,7 @@ from ..models.schemas import (
     CheckTier,
     ClarificationRequest,
     Decision,
+    OraclePolicy,
 )
 
 
@@ -41,6 +42,14 @@ class GatePolicy(BaseModel):
     oracle_fail_decision: Decision = Field(
         default=Decision.BLOCK,
         description="Decision when an ORACLE_EXACT check fails (default: BLOCK).",
+    )
+    coercible_fail_decision: Decision = Field(
+        default=Decision.WARN,
+        description="Decision when a COERCIBLE check fails (default: WARN, never BLOCK).",
+    )
+    oracle_policy: OraclePolicy = Field(
+        default=OraclePolicy.COERCIBLE,
+        description="Oracle policy tier: 'coercible' (separates coercible type mismatches) or 'legacy_strict'.",
     )
 
     def evaluate(
@@ -77,6 +86,9 @@ class GatePolicy(BaseModel):
         for c in failed_checks:
             if c.tier == CheckTier.ORACLE_EXACT:
                 decisions.append(self.oracle_fail_decision)
+            elif c.tier == CheckTier.COERCIBLE:
+                # COERCIBLE check failure (WARN by default, never BLOCK)
+                decisions.append(self.coercible_fail_decision)
             elif c.tier == CheckTier.COVERAGE_BOUNDED:
                 decisions.append(self.coverage_fail_decision)
                 if c.arg_path:
@@ -144,8 +156,22 @@ def load_gate_policy() -> GatePolicy:
     else:
         oracle_fail = Decision(gp_dict.get("oracle_fail_decision", "BLOCK").upper())
 
+    coercible_env = os.environ.get("GATE_POLICY_COERCIBLE_FAIL_DECISION")
+    if coercible_env is not None:
+        coercible_fail = Decision(coercible_env.strip().upper())
+    else:
+        coercible_fail = Decision(gp_dict.get("coercible_fail_decision", "WARN").upper())
+
+    oracle_pol_env = os.environ.get("GATE_POLICY_ORACLE_POLICY")
+    if oracle_pol_env is not None:
+        oracle_pol = OraclePolicy(oracle_pol_env.strip().lower())
+    else:
+        oracle_pol = OraclePolicy(gp_dict.get("oracle_policy", "coercible").lower())
+
     return GatePolicy(
         legacy_blocking=legacy_blocking,
         coverage_fail_decision=coverage_fail,
         oracle_fail_decision=oracle_fail,
+        coercible_fail_decision=coercible_fail,
+        oracle_policy=oracle_pol,
     )

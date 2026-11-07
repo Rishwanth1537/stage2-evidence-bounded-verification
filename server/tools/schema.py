@@ -20,6 +20,7 @@ from ..models.schemas import (
     Decision,
     HallucinationType,
     MismatchedSpan,
+    OraclePolicy,
     SchemaAlignmentRequest,
     SchemaAlignmentResponse,
 )
@@ -53,12 +54,61 @@ def _check_type(value: Any, declared_type: str) -> bool:
     return isinstance(value, py_type)
 
 
+def _is_coercible_type(val: Any, declared_type: str, is_required: bool) -> bool:
+    """
+    Check if a type mismatch is coercible under Prompt 5D:
+    - Explicit null for an optional parameter
+    - A numeric string where an integer or number is required and the string parses cleanly
+    - A boolean-like string ("true", "false") where a boolean is required
+
+    Whether a real server would reject these depends on the server's own validation;
+    this project cannot know it, and `legacy_strict` exists for that reason.
+    """
+    if not is_required and val is None:
+        return True
+
+    if declared_type == "integer" and isinstance(val, str):
+        try:
+            int(val)
+            return True
+        except ValueError:
+            return False
+
+    if declared_type == "number" and isinstance(val, str):
+        try:
+            float(val)
+            return True
+        except ValueError:
+            return False
+
+    if declared_type == "boolean" and isinstance(val, str):
+        if val.strip().lower() in ("true", "false", "1", "0"):
+            return True
+        return False
+
+    return False
+
+
+def _is_coercible_enum(val: Any, allowed_enums: List[Any]) -> bool:
+    """
+    Check if an enum mismatch is coercible under Prompt 5D:
+    - Enum casing differences (the value matches case-insensitively but not exactly).
+
+    Whether a real server would reject these depends on the server's own validation;
+    this project cannot know it, and `legacy_strict` exists for that reason.
+    """
+    val_str = str(val).strip().lower()
+    return any(val_str == str(e).strip().lower() for e in allowed_enums)
+
+
 def _validate_field(
     field: str,
     value: Any,
     prop_schema: Dict[str, Any],
     mismatches: List[MismatchedSpan],
     check_results: List[CheckResult],
+    is_required: bool = True,
+    oracle_policy: Union[OraclePolicy, str] = OraclePolicy.COERCIBLE,
 ) -> bool:
     """
     Run all applicable constraints on a single field value.
@@ -67,8 +117,9 @@ def _validate_field(
     """
     ok = True
     declared_type = prop_schema.get("type")
+    pol = OraclePolicy(oracle_policy) if isinstance(oracle_policy, str) else oracle_policy
 
-    # 1. Type check (ORACLE_EXACT)
+    # 1. Type check (ORACLE_EXACT vs COERCIBLE)
     if declared_type:
         if not _check_type(value, declared_type):
             issue = (
@@ -80,14 +131,21 @@ def _validate_field(
                 issue=issue,
                 hallucination_type=HallucinationType.FORMAT,
             ))
+            # Whether a real server would reject these depends on the server's own validation;
+            # this project cannot know it, and legacy_strict exists for that reason.
+            if pol != OraclePolicy.LEGACY_STRICT and _is_coercible_type(value, declared_type, is_required):
+                tier = CheckTier.COERCIBLE
+            else:
+                tier = CheckTier.ORACLE_EXACT
+
             check_results.append(CheckResult(
                 check_id=f"schema_type:{field}",
-                tier=CheckTier.ORACLE_EXACT,
+                tier=tier,
                 outcome=CheckOutcome.FAIL,
                 evidence_tier="E2",
                 arg_path=field,
                 reason=issue,
-                details={"declared_type": declared_type, "actual_type": type(value).__name__},
+                details={"declared_type": declared_type, "actual_type": type(value).__name__, "value": value},
             ))
             return False  # further checks on wrong type would be misleading
         else:
@@ -100,7 +158,7 @@ def _validate_field(
                 reason=f"Type '{declared_type}' matched.",
             ))
 
-    # 2. Enum constraint (ORACLE_EXACT)
+    # 2. Enum constraint (ORACLE_EXACT vs COERCIBLE)
     enum_vals = prop_schema.get("enum")
     if enum_vals is not None:
         if value not in enum_vals:
@@ -113,9 +171,16 @@ def _validate_field(
                 issue=issue,
                 hallucination_type=HallucinationType.FORMAT,
             ))
+            # Whether a real server would reject these depends on the server's own validation;
+            # this project cannot know it, and legacy_strict exists for that reason.
+            if pol != OraclePolicy.LEGACY_STRICT and _is_coercible_enum(value, enum_vals):
+                tier = CheckTier.COERCIBLE
+            else:
+                tier = CheckTier.ORACLE_EXACT
+
             check_results.append(CheckResult(
                 check_id=f"schema_enum:{field}",
-                tier=CheckTier.ORACLE_EXACT,
+                tier=tier,
                 outcome=CheckOutcome.FAIL,
                 evidence_tier="E2",
                 arg_path=field,
@@ -310,7 +375,14 @@ def run_schema_alignment(
     tool_schema: Dict[str, Any],
     session_id: Optional[str] = None,
     threshold: float = 0.35,
+    oracle_policy: Optional[Union[OraclePolicy, str]] = None,
 ) -> SchemaAlignmentResponse:
+    policy = load_gate_policy()
+    if oracle_policy is None:
+        effective_oracle_policy = policy.oracle_policy
+    else:
+        effective_oracle_policy = OraclePolicy(oracle_policy) if isinstance(oracle_policy, str) else oracle_policy
+
     required_fields: List[str] = tool_schema.get("required", [])
     properties: Dict[str, Any] = tool_schema.get("properties", {})
 
@@ -338,7 +410,7 @@ def run_schema_alignment(
             ))
         else:
             prop_schema = properties.get(field, {})
-            if _validate_field(field, agent_args[field], prop_schema, mismatches, check_results):
+            if _validate_field(field, agent_args[field], prop_schema, mismatches, check_results, is_required=True, oracle_policy=effective_oracle_policy):
                 matched += 1
                 check_results.append(CheckResult(
                     check_id=f"schema_required:{field}",
@@ -353,11 +425,12 @@ def run_schema_alignment(
     for field in optional_fields:
         if field in agent_args:
             prop_schema = properties[field]
-            _validate_field(field, agent_args[field], prop_schema, mismatches, check_results)
+            _validate_field(field, agent_args[field], prop_schema, mismatches, check_results, is_required=False, oracle_policy=effective_oracle_policy)
 
-    # --- 3. Undeclared argument checks (ORACLE_EXACT) ---
+    # --- 3. Undeclared argument checks (ORACLE_EXACT vs COERCIBLE) ---
     if properties:
         declared_set = set(properties.keys())
+        additional_props = tool_schema.get("additionalProperties", True)
         for arg_key in agent_args:
             if arg_key not in declared_set:
                 issue = f"Argument '{arg_key}' is not declared in tool schema properties."
@@ -366,13 +439,21 @@ def run_schema_alignment(
                     issue=issue,
                     hallucination_type=HallucinationType.SCHEMA,
                 ))
+                # Whether a real server would reject these depends on the server's own validation;
+                # this project cannot know it, and legacy_strict exists for that reason.
+                if effective_oracle_policy == OraclePolicy.LEGACY_STRICT or additional_props is False:
+                    tier = CheckTier.ORACLE_EXACT
+                else:
+                    tier = CheckTier.COERCIBLE
+
                 check_results.append(CheckResult(
                     check_id=f"schema_undeclared:{arg_key}",
-                    tier=CheckTier.ORACLE_EXACT,
+                    tier=tier,
                     outcome=CheckOutcome.FAIL,
                     evidence_tier="E2",
                     arg_path=arg_key,
                     reason=issue,
+                    details={"additionalProperties": additional_props},
                 ))
 
     schema_drift_score = matched / total if total > 0 else 1.0
@@ -386,7 +467,6 @@ def run_schema_alignment(
         drift_alert = session_module.tracker.is_drifting(session_id)
 
     # Evaluate decision using GatePolicy
-    policy = load_gate_policy()
     decision, _, _ = policy.evaluate(check_results, agent_args=agent_args)
 
     return SchemaAlignmentResponse(

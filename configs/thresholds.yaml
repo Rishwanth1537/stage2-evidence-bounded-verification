@@ -13,11 +13,15 @@ ged_fast_mode_node_limit: 80
 # Fail-closed policy: verifier degradation triggers a block on required gates
 fail_closed_on_degraded: true
 
-# Two-tier gate policy (Prompt 4):
+# Two-tier gate policy (Prompt 4, 5D):
 # - legacy_blocking: true reproduces previous strict blocking behavior exactly.
 # - coverage_fail_decision: decision when an imperfect reference check fails (ASK, WARN, BLOCK).
 # - oracle_fail_decision: decision when authoritative contract schema check fails (BLOCK).
+# - oracle_policy: "coercible" (default) separates genuine violations from coercible type mismatches; "legacy_strict" reproduces old strict behavior.
+# - coercible_fail_decision: decision when a COERCIBLE check fails (default: WARN).
 gate_policy:
   legacy_blocking: false
   coverage_fail_decision: "ASK"
   oracle_fail_decision: "BLOCK"
+  oracle_policy: "coercible"
+  coercible_fail_decision: "WARN"

@@ -1,5 +1,5 @@
 """
-Frontier Gate Evaluation across Two-Tier Gate Policy Variants (Prompt 4).
+Frontier Gate Evaluation across Two-Tier Gate Policy Variants and Oracle Policies (Prompt 4 and Prompt 5D).
 
 Evaluates dev splits only:
 - ArgGround dev
@@ -12,12 +12,18 @@ Across 4 gate policy variants:
 3. WARN-on-coverage: Non-blocking coverage (Oracle FAIL -> BLOCK, Coverage FAIL -> WARN).
 4. block-on-oracle-only: Contract only (Oracle FAIL -> BLOCK, Coverage FAIL -> ALLOW).
 
-Reports with 95% Wilson / Cluster-bootstrap CIs:
+Across 2 Oracle Policies (Prompt 5D):
+1. legacy_strict: All schema mismatches trigger ORACLE_EXACT FAIL (legacy behavior).
+2. coercible (default): Implementation-strict type mismatches (numeric strings, enum casing,
+   null for optional params, undeclared keys when allowed) become COERCIBLE -> WARN, not BLOCK.
+
+Reports with 95% Wilson / Fast Cluster-bootstrap CIs:
 - Detection rate (ASK or BLOCK)
 - Detection rate (BLOCK only)
 - Hard-block rate on clean calls (BLOCK on label=0)
 - Interruption rate on clean calls (ASK or BLOCK on label=0)
 - Youden's J statistic
+- Share of detection from COERCIBLE checks
 
 Strict adherence to Prompt 0:
 - Dev splits only via load_split.
@@ -51,6 +57,7 @@ from server.models.schemas import (
     CheckResult,
     CheckTier,
     Decision,
+    OraclePolicy,
 )
 from server.pipeline.arg_ground import check_arguments, check_value
 from server.proxy.gate_policy import GatePolicy
@@ -60,6 +67,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def _format_ci(val: float, low: float, high: float, decimals: int = 3) -> str:
+    """Format metric with 95% confidence interval."""
     return f"{val:.{decimals}f} [{low:.{decimals}f}, {high:.{decimals}f}]"
 
 
@@ -82,7 +90,6 @@ def _load_deref_schema_notes(dataset_name: str) -> Dict[str, Dict[str, Any]]:
                     try:
                         s_obj = json.loads(m.group(1))
                         params = s_obj.get("parameters", {})
-                        # Convert to standard JSON Schema properties dict
                         if "properties" in params:
                             schemas[cid] = params
                     except Exception:
@@ -96,6 +103,7 @@ def extract_checks_for_case(
     case: Dict[str, Any],
     dataset_name: str,
     deref_schemas: Dict[str, Dict[str, Any]],
+    oracle_policy: OraclePolicy = OraclePolicy.COERCIBLE,
 ) -> List[CheckResult]:
     """
     Run argument grounding and schema alignment checks on a test case,
@@ -137,11 +145,11 @@ def extract_checks_for_case(
                 reason=v.reason or f"Argument '{v.argument}' value {v.value!r} not supported by context.",
             ))
 
-    # 2. Schema / Contract Check (ORACLE_EXACT E2)
+    # 2. Schema / Contract Check (ORACLE_EXACT E2 vs COERCIBLE)
     case_id = case.get("id", "")
     schema = deref_schemas.get(case_id)
     if schema:
-        schema_res = run_schema_alignment(agent_args=args, tool_schema=schema)
+        schema_res = run_schema_alignment(agent_args=args, tool_schema=schema, oracle_policy=oracle_policy)
         check_results.extend(schema_res.check_results)
 
     return check_results
@@ -150,18 +158,19 @@ def extract_checks_for_case(
 def evaluate_dataset(
     dataset_name: str,
     output_dir: Path,
+    oracle_policy: OraclePolicy = OraclePolicy.COERCIBLE,
 ) -> Dict[str, List[ResultRow]]:
     """
-    Evaluate dev split for a dataset across 4 policy variants.
+    Evaluate dev split for a dataset across 4 policy variants under a given OraclePolicy.
     """
     cases = load_split(dataset_name, "dev")
     deref_schemas = _load_deref_schema_notes("fcrb" if "fcrb" in dataset_name else "cfb")
 
     policies = {
-        "legacy_blocking": GatePolicy(legacy_blocking=True),
-        "ASK-on-coverage": GatePolicy(legacy_blocking=False, coverage_fail_decision=Decision.ASK, oracle_fail_decision=Decision.BLOCK),
-        "WARN-on-coverage": GatePolicy(legacy_blocking=False, coverage_fail_decision=Decision.WARN, oracle_fail_decision=Decision.BLOCK),
-        "block-on-oracle-only": GatePolicy(legacy_blocking=False, coverage_fail_decision=Decision.ALLOW, oracle_fail_decision=Decision.BLOCK),
+        "legacy_blocking": GatePolicy(legacy_blocking=True, oracle_policy=oracle_policy),
+        "ASK-on-coverage": GatePolicy(legacy_blocking=False, coverage_fail_decision=Decision.ASK, oracle_fail_decision=Decision.BLOCK, coercible_fail_decision=Decision.WARN, oracle_policy=oracle_policy),
+        "WARN-on-coverage": GatePolicy(legacy_blocking=False, coverage_fail_decision=Decision.WARN, oracle_fail_decision=Decision.BLOCK, coercible_fail_decision=Decision.WARN, oracle_policy=oracle_policy),
+        "block-on-oracle-only": GatePolicy(legacy_blocking=False, coverage_fail_decision=Decision.ALLOW, oracle_fail_decision=Decision.BLOCK, coercible_fail_decision=Decision.WARN, oracle_policy=oracle_policy),
     }
 
     variant_rows: Dict[str, List[ResultRow]] = {v: [] for v in policies}
@@ -169,7 +178,6 @@ def evaluate_dataset(
     for idx, case in enumerate(cases):
         item_id = str(case.get("id") or f"{dataset_name}_dev_{idx}")
 
-        # Compute cluster_id (trajectory/query/dialogue grouping)
         if "query_id" in case and case["query_id"]:
             cluster_id = str(case["query_id"]).strip()
         elif "premise_id" in case and case["premise_id"]:
@@ -178,32 +186,28 @@ def evaluate_dataset(
             premise_text = case.get("premise", "")
             cluster_id = hashlib.md5(premise_text.encode("utf-8")).hexdigest()[:12]
 
-        # In ArgGround, DeRef fcrb, and DeRef cfb:
-        # label=True is genuine/clean call (0); label=False is mutated/error call (1)
         raw_lbl = case.get("label")
         if isinstance(raw_lbl, bool):
             is_error = 1 if not raw_lbl else 0
         else:
             is_error = 1 if raw_lbl in (0, "0", False) else 0
 
-        # Run checks once per case
-        check_results = extract_checks_for_case(case, dataset_name, deref_schemas)
+        check_results = extract_checks_for_case(case, dataset_name, deref_schemas, oracle_policy=oracle_policy)
         call = case.get("call") or (case.get("calls", [{}])[0])
         args = call.get("arguments", {})
 
-        # Evaluate decisions under each policy variant
         for v_name, policy in policies.items():
             decision, clarification, reasons = policy.evaluate(check_results, agent_args=args)
 
             row = ResultRow(
-                run_id=f"frontier_{dataset_name}_{v_name}",
+                run_id=f"frontier_{dataset_name}_{oracle_policy.value}_{v_name}",
                 dataset=dataset_name,
                 split="dev",
                 item_id=item_id,
                 cluster_id=cluster_id,
                 label=is_error,
-                system=v_name,
-                system_version="p4_frontier",
+                system=f"{v_name}_{oracle_policy.value}",
+                system_version="p5d_frontier",
                 decision=decision.value,
                 latency_ms=0.5,
                 tokens_in=0,
@@ -213,69 +217,107 @@ def evaluate_dataset(
             )
             variant_rows[v_name].append(row)
 
-    # Save rows
     output_dir.mkdir(parents=True, exist_ok=True)
     for v_name, rows in variant_rows.items():
-        out_file = output_dir / f"frontier_{dataset_name}_{v_name}.jsonl"
+        out_file = output_dir / f"frontier_{dataset_name}_{oracle_policy.value}_{v_name}.jsonl"
         write_rows(out_file, rows)
 
     return variant_rows
 
 
-def build_frontier_table(
-    all_results: Dict[str, Dict[str, List[ResultRow]]],
+def compute_coercible_share(
+    dataset_name: str,
+    v_name: str,
+    rows_legacy: List[ResultRow],
+    rows_coercible: List[ResultRow],
+) -> str:
+    """
+    Compute share of detected errors that were driven by COERCIBLE checks.
+    For block-on-oracle-only, this is the share of legacy oracle blocks that were
+    coercible type mismatches rather than genuine contract violations.
+    """
+    err_leg = [r for r in rows_legacy if r.label == 1]
+    err_coer = [r for r in rows_coercible if r.label == 1]
+    if not err_leg:
+        return "N/A"
+
+    if v_name == "block-on-oracle-only":
+        det_leg = sum(1 for r in err_leg if r.decision == "BLOCK")
+        det_coer = sum(1 for r in err_coer if r.decision == "BLOCK")
+        if det_leg == 0:
+            return "0.0% (0/0)"
+        coercible_drop = det_leg - det_coer
+        share = coercible_drop / det_leg
+        return f"{share:.1%} ({coercible_drop}/{det_leg})"
+    else:
+        det_leg = sum(1 for r in err_leg if r.decision in ("ASK", "BLOCK"))
+        det_coer = sum(1 for r in err_coer if r.decision in ("ASK", "BLOCK"))
+        diff = det_leg - det_coer
+        if det_leg == 0:
+            return "0.0% (0/0)"
+        return f"{diff / det_leg:.1%} ({diff}/{det_leg})"
+
+
+def build_side_by_side_table(
+    results_legacy: Dict[str, Dict[str, List[ResultRow]]],
+    results_coercible: Dict[str, Dict[str, List[ResultRow]]],
     B: int = 10000,
 ) -> str:
     """
-    Build Markdown table comparing detection, hard-block, and interruption rates across variants.
+    Build Markdown table comparing both oracle policies side by side with CIs.
     """
     headers = [
         "Dataset",
-        "Policy Variant",
+        "Oracle Policy",
+        "Gate Policy Variant",
         "Detection (ASK/BLOCK) [95% CI]",
         "Detection (BLOCK-only) [95% CI]",
         "Hard-Block Rate (Clean) [95% CI]",
         "Interruption Rate (Clean) [95% CI]",
         "Youden J [95% CI]",
+        "Coercible Detection Share",
     ]
 
     header_line = "| " + " | ".join(headers) + " |"
     sep_line = "| " + " | ".join(["---"] * len(headers)) + " |"
     lines = [header_line, sep_line]
 
-    for ds_name, variant_map in all_results.items():
-        for v_name, rows in variant_map.items():
-            # Detection (ASK or BLOCK)
-            det_all, det_all_low, det_all_high = detection_rate(rows, legacy_semantics=False, ci_method="wilson")
-            det_all_str = _format_ci(det_all, det_all_low, det_all_high)
+    datasets = list(results_legacy.keys())
+    for ds_name in datasets:
+        for pol_label, res_map in [("legacy_strict", results_legacy[ds_name]), ("coercible", results_coercible[ds_name])]:
+            for v_name, rows in res_map.items():
+                det_all, det_all_low, det_all_high = detection_rate(rows, legacy_semantics=False, ci_method="wilson")
+                det_all_str = _format_ci(det_all, det_all_low, det_all_high)
 
-            # Detection (BLOCK only)
-            det_blk, det_blk_low, det_blk_high = detection_rate(rows, legacy_semantics=True, ci_method="wilson")
-            det_blk_str = _format_ci(det_blk, det_blk_low, det_blk_high)
+                det_blk, det_blk_low, det_blk_high = detection_rate(rows, legacy_semantics=True, ci_method="wilson")
+                det_blk_str = _format_ci(det_blk, det_blk_low, det_blk_high)
 
-            # Hard-block rate on clean calls (BLOCK on label=0)
-            hb, hb_low, hb_high = hard_block_rate(rows, ci_method="wilson")
-            hb_str = _format_ci(hb, hb_low, hb_high)
+                hb, hb_low, hb_high = hard_block_rate(rows, ci_method="wilson")
+                hb_str = _format_ci(hb, hb_low, hb_high)
 
-            # Interruption rate on clean calls (ASK or BLOCK on label=0)
-            ir, ir_low, ir_high = interruption_rate(rows, ci_method="wilson")
-            ir_str = _format_ci(ir, ir_low, ir_high)
+                ir, ir_low, ir_high = interruption_rate(rows, ci_method="wilson")
+                ir_str = _format_ci(ir, ir_low, ir_high)
 
-            # Youden's J
-            j_est, j_low, j_high = youden_j(rows, legacy_semantics=False, B=B, seed=42)
-            j_str = _format_ci(j_est, j_low, j_high)
+                j_est, j_low, j_high = youden_j(rows, legacy_semantics=False, B=B, seed=42)
+                j_str = _format_ci(j_est, j_low, j_high)
 
-            row_line = (
-                f"| {ds_name} | {v_name} | {det_all_str} | {det_blk_str} | "
-                f"{hb_str} | {ir_str} | {j_str} |"
-            )
-            lines.append(row_line)
+                c_share = compute_coercible_share(
+                    ds_name, v_name,
+                    results_legacy[ds_name][v_name],
+                    results_coercible[ds_name][v_name],
+                )
+
+                row_line = (
+                    f"| {ds_name} | {pol_label} | {v_name} | {det_all_str} | {det_blk_str} | "
+                    f"{hb_str} | {ir_str} | {j_str} | {c_share} |"
+                )
+                lines.append(row_line)
 
     return "\n".join(lines)
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Evaluate Two-Tier Gate Policy across dev splits.")
+    parser = argparse.ArgumentParser(description="Evaluate Two-Tier Gate Policy across dev splits and oracle policies.")
     parser.add_argument("--out-dir", type=str, default=str(ROOT / "review" / "frontier_dev"),
                         help="Output directory for ResultRow JSONL files")
     parser.add_argument("--B", type=int, default=10000,
@@ -284,14 +326,18 @@ def main() -> None:
 
     out_dir = Path(args.out_dir)
     datasets = ["argground", "deref_fcrb", "deref_cfb"]
-    all_results: Dict[str, Dict[str, List[ResultRow]]] = {}
 
-    print(f"Evaluating Two-Tier Frontier Gate on dev splits: {datasets}...")
+    results_legacy: Dict[str, Dict[str, List[ResultRow]]] = {}
+    results_coercible: Dict[str, Dict[str, List[ResultRow]]] = {}
+
+    print(f"Evaluating Frontier Gate on dev splits: {datasets} at B={args.B}...")
     for ds in datasets:
-        print(f"  Evaluating {ds} dev...")
-        all_results[ds] = evaluate_dataset(ds, out_dir)
+        print(f"  Evaluating {ds} dev under legacy_strict...")
+        results_legacy[ds] = evaluate_dataset(ds, out_dir, oracle_policy=OraclePolicy.LEGACY_STRICT)
+        print(f"  Evaluating {ds} dev under coercible...")
+        results_coercible[ds] = evaluate_dataset(ds, out_dir, oracle_policy=OraclePolicy.COERCIBLE)
 
-    table_md = build_frontier_table(all_results, B=args.B)
+    table_md = build_side_by_side_table(results_legacy, results_coercible, B=args.B)
     summary_path = out_dir / "FRONTIER_REPORT.md"
     summary_path.write_text(table_md, encoding="utf-8")
 

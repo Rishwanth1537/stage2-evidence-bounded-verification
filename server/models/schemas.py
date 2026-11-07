@@ -24,12 +24,27 @@ class CheckTier(str, Enum):
     """
     Tier of authority for an individual verification check:
     - ORACLE_EXACT: Outcome decided by an authoritative contract; a failure is definitely wrong.
+    - COERCIBLE: Implementation-strict type mismatch (e.g. numeric string, enum casing) that
+      might be coerced by the downstream tool implementation. Never blocks.
     - COVERAGE_BOUNDED: Compared against an imperfect reference; failure means unsupported, not wrong.
     - UNCHECKABLE: Value cannot be checked against reference or contract (e.g. booleans, nulls).
     """
     ORACLE_EXACT = "ORACLE_EXACT"
+    COERCIBLE = "COERCIBLE"
     COVERAGE_BOUNDED = "COVERAGE_BOUNDED"
     UNCHECKABLE = "UNCHECKABLE"
+
+
+class OraclePolicy(str, Enum):
+    """
+    Policy for oracle/schema verification tiering (Prompt 5D):
+    - COERCIBLE (default): Distinguishes genuine contract violations (ORACLE_EXACT)
+      from coercible type mismatches (COERCIBLE).
+    - LEGACY_STRICT: Legacy behavior where all schema mismatches fail under ORACLE_EXACT.
+    """
+    COERCIBLE = "coercible"
+    LEGACY_STRICT = "legacy_strict"
+
 
 
 class CheckOutcome(str, Enum):
