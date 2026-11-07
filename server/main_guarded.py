@@ -171,6 +171,8 @@ class GuardedToolResponse(BaseModel):
     feedback:     str
     result:       Optional[str] = None
     factual_score: Optional[float] = None
+    degraded:     bool = Field(default=False, description="True if verifier ran in degraded mode.")
+    degraded_reasons: list[str] = Field(default_factory=list, description="Reasons for degradation.")
 
 
 # ── MCP tool definitions ─────────────────────────────────────────────────────
@@ -203,6 +205,8 @@ async def execute_financial_transfer(request: GuardedTransferRequest) -> Guarded
         feedback=result.feedback,
         result=str(result.tool_output) if result.tool_output else None,
         factual_score=result.factual_score,
+        degraded=result.degraded,
+        degraded_reasons=result.degraded_reasons,
     )
 
 
@@ -234,6 +238,8 @@ async def execute_service_deploy(request: GuardedDeployRequest) -> GuardedToolRe
         feedback=result.feedback,
         result=str(result.tool_output) if result.tool_output else None,
         factual_score=result.factual_score,
+        degraded=result.degraded,
+        degraded_reasons=result.degraded_reasons,
     )
 
 
@@ -264,6 +270,8 @@ async def execute_database_delete(request: GuardedDeleteRequest) -> GuardedToolR
         feedback=result.feedback,
         result=str(result.tool_output) if result.tool_output else None,
         factual_score=result.factual_score,
+        degraded=result.degraded,
+        degraded_reasons=result.degraded_reasons,
     )
 
 

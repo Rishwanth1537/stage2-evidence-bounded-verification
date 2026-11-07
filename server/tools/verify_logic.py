@@ -6,11 +6,12 @@ from __future__ import annotations
 from typing import List, Optional
 
 from ..pipeline.graph_builder import build_semantic_graph
-from ..pipeline.ged import compute_ged
+from ..pipeline.ged import compute_ged, get_ged_degraded_status
 from ..pipeline.entailment import score_spans
-from ..pipeline.srl import extract_frames, _VALUE_ENT_LABELS
+from ..pipeline.srl import extract_frames, _VALUE_ENT_LABELS, get_srl_degraded_status
+from ..pipeline.dep_parser import get_dep_parser_degraded_status
 from ..pipeline.taxonomy import classify_all
-from ..pipeline.constraints import extract_constraints, compute_constraint_score
+from ..pipeline.constraints import extract_constraints, compute_constraint_score, get_constraints_degraded_status
 from ..models.schemas import HallucinationType, MismatchedSpan, VerifyResponse
 from .. import session as session_module
 from ..config import GED_THRESHOLD, ENTAILMENT_THRESHOLD
@@ -99,7 +100,39 @@ def run_verification(
         drift_alert = session_module.tracker.is_drifting(session_id)
         session_mean = round(session_mean_raw, 4) if session_mean_raw is not None else None
 
-    # 7. Feedback & Final consistency verification
+    # 7. Collect degraded mode status
+    degraded_reasons: List[str] = []
+    srl_deg, srl_reasons = get_srl_degraded_status()
+    if srl_deg:
+        degraded_reasons.extend(srl_reasons)
+
+    dep_deg, dep_reasons = get_dep_parser_degraded_status()
+    if dep_deg:
+        degraded_reasons.extend(dep_reasons)
+
+    # GED degradation
+    if hasattr(raw_ged, "degraded") and raw_ged.degraded:
+        degraded_reasons.extend(raw_ged.degraded_reasons)
+    else:
+        ged_deg, ged_reasons = get_ged_degraded_status()
+        if ged_deg:
+            degraded_reasons.extend(ged_reasons)
+
+    if user_query:
+        c_deg, c_reasons = get_constraints_degraded_status()
+        if c_deg:
+            degraded_reasons.extend(c_reasons)
+
+    # Deduplicate preserving order
+    seen_reasons = set()
+    deduped_reasons = []
+    for r in degraded_reasons:
+        if r not in seen_reasons:
+            seen_reasons.add(r)
+            deduped_reasons.append(r)
+    degraded = len(deduped_reasons) > 0
+
+    # 8. Feedback & Final consistency verification
     if mismatched:
         is_consistent = False
         lines = [f'- "{m.span}" [{m.hallucination_type}]: {m.issue}' for m in mismatched]
@@ -116,9 +149,11 @@ def run_verification(
         is_consistent=is_consistent,
         mismatched_spans=mismatched,
         feedback=feedback,
-        ged_raw=raw_ged,
-        ged_normalised=round(norm_ged, 4),
+        ged_raw=float(raw_ged),
+        ged_normalised=round(float(norm_ged), 4),
         constraint_score=constraint_score,
         drift_alert=drift_alert,
         session_mean_score=session_mean,
+        degraded=degraded,
+        degraded_reasons=deduped_reasons,
     )

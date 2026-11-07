@@ -16,15 +16,31 @@ _TEMPORAL_RE = re.compile(
     re.IGNORECASE,
 )
 
+_SPACY_DEGRADED: bool = False
+_SPACY_DEGRADED_REASON: str = ""
+
 
 @functools.lru_cache(maxsize=1)
 def _load_nlp():
+    global _SPACY_DEGRADED, _SPACY_DEGRADED_REASON
     import spacy
     # Mirror srl.py: fall back to sm model if trf not available
     try:
-        return spacy.load("en_core_web_trf")
+        nlp = spacy.load("en_core_web_trf")
+        _SPACY_DEGRADED = False
+        _SPACY_DEGRADED_REASON = ""
+        return nlp
     except OSError:
-        return spacy.load("en_core_web_sm")
+        nlp = spacy.load("en_core_web_sm")
+        _SPACY_DEGRADED = True
+        _SPACY_DEGRADED_REASON = "spaCy model downgraded to en_core_web_sm (en_core_web_trf unavailable)"
+        return nlp
+
+
+def get_constraints_degraded_status() -> Tuple[bool, List[str]]:
+    """Returns (degraded, reasons) for the constraints extractor."""
+    _load_nlp()
+    return (_SPACY_DEGRADED, [_SPACY_DEGRADED_REASON] if _SPACY_DEGRADED else [])
 
 
 def extract_constraints(user_query: str) -> List[str]:

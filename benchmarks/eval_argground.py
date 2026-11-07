@@ -7,7 +7,7 @@ Methods (all deterministic unless noted):
 Reported: false-block rate (consistent calls blocked), detection rate (injected errors blocked), accuracy, balanced accuracy,
 per-mutation detection, bootstrap 95% CIs, and the 'legitimately ungrounded' share of gold calls.
 
-Usage:  PYTHONPATH=. python benchmarks/eval_argground.py [--split test]
+Usage:  PYTHONPATH=. python benchmarks/eval_argground.py [--split dev]
 """
 from __future__ import annotations
 
@@ -25,6 +25,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from server.pipeline.arg_ground import call_is_grounded, call_score, conformal_threshold  # noqa: E402
+from benchmarks.splits import load_split  # noqa: E402
 
 
 def exact_ok(args, context):
@@ -92,12 +93,20 @@ def conformal_eval(dev, test, alphas=(0.02, 0.05, 0.10, 0.15)):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--bench", default=str(ROOT / "benchmarks" / "argground_bench.json"))
-    ap.add_argument("--split", default="test", choices=["dev", "test", "all"])
+    ap.add_argument("--split", default="dev", choices=["dev", "test", "all"])
+    ap.add_argument("--allow-test", action="store_true", help="required for --split test (pre-registration guard)")
+    ap.add_argument("--note", default="", help="reason/purpose for loading test split")
     ap.add_argument("--output", default=str(ROOT / "benchmarks" / "argground_results.json"))
     a = ap.parse_args()
-    cases = json.loads(Path(a.bench).read_text())["cases"]
-    dev, test = split_cases(cases)
-    use = {"dev": dev, "test": test, "all": cases}[a.split]
+
+    use = load_split(
+        dataset="argground",
+        split=a.split,
+        purpose="eval_argground evaluation",
+        reason=a.note,
+        allow_test=a.allow_test,
+    )
+
     methods = {"exact": lambda c: exact_ok(c["call"]["arguments"], c["premise"]),
                "arg_ground": lambda c: call_is_grounded(c["call"]["arguments"], c["premise"]),
                "arg_ground+schema": lambda c: call_is_grounded(c["call"]["arguments"], c["premise"], c["call"].get("schema"), "required_only")}
@@ -115,7 +124,8 @@ def main():
               f"acc={m['accuracy']:.3f} bal={m['balanced_accuracy']:.3f}  by mutation: {m['detection_by_mutation']}")
     if a.split == "test":
         print("conformal calibration (tau from DEV genuine calls, evaluated on TEST):")
-        out["conformal"] = conformal_eval(dev, test)
+        dev = load_split("argground", split="dev")
+        out["conformal"] = conformal_eval(dev, use)
     Path(a.output).write_text(json.dumps(out, indent=2))
     print("n =", len(use), "(consistent", sum(c['label'] for c in use), ")  wrote", a.output)
 

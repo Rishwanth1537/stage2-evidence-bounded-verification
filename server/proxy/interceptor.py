@@ -49,6 +49,8 @@ from dataclasses import dataclass, field
 from enum import Enum
 from typing import Any, Callable, Dict, List, Optional
 
+from server.config import FAIL_CLOSED_ON_DEGRADED
+
 logger = logging.getLogger(__name__)
 
 
@@ -63,6 +65,12 @@ class BlockReason(str, Enum):
     SCHEMA_MISMATCH    = "schema_mismatch"
     LOGIC_INCONSISTENT = "logic_inconsistent"
     BOTH               = "schema_and_logic"
+    VERIFIER_DEGRADED  = "verifier_degraded"
+
+    def __eq__(self, other):
+        if self is BlockReason.VERIFIER_DEGRADED and other in ("verifier degraded", "verifier_degraded"):
+            return True
+        return super().__eq__(other)
 
 
 @dataclass
@@ -76,6 +84,8 @@ class InterceptionResult:
     ged_normalised: Optional[float] = None
     tool_output: Optional[Any] = None
     feedback: str = ""
+    degraded: bool = False
+    degraded_reasons: List[str] = field(default_factory=list)
 
 
 class InterceptingToolProxy:
@@ -161,6 +171,8 @@ class InterceptingToolProxy:
         logic_mismatches: List[Any] = []
         factual_score: Optional[float] = None
         ged_norm: Optional[float] = None
+        degraded: bool = False
+        degraded_reasons: List[str] = []
 
         # ── Step 1: Schema alignment check ───────────────────────────────────
         if self.tool_schema:
@@ -170,6 +182,12 @@ class InterceptingToolProxy:
                 tool_schema=self.tool_schema,
                 session_id=self.session_id,
             )
+            schema_deg = getattr(schema_result, "degraded", False)
+            schema_deg_reasons = getattr(schema_result, "degraded_reasons", [])
+            if schema_deg:
+                degraded = True
+                degraded_reasons.extend(schema_deg_reasons)
+
             if not schema_result.is_aligned:
                 schema_mismatches = schema_result.mismatches
                 feedback = (
@@ -186,6 +204,27 @@ class InterceptingToolProxy:
                     block_reason=BlockReason.SCHEMA_MISMATCH,
                     schema_mismatches=schema_mismatches,
                     feedback=feedback,
+                    degraded=degraded,
+                    degraded_reasons=degraded_reasons,
+                )
+
+            # Fail-closed check on degraded schema verification
+            if FAIL_CLOSED_ON_DEGRADED and schema_deg:
+                feedback = (
+                    "Tool call blocked: verifier degraded (schema alignment).\n"
+                    + "\n".join(f"  - {r}" for r in schema_deg_reasons)
+                )
+                logger.warning(
+                    "InterceptingToolProxy: blocked %s — verifier degraded in schema alignment: %s",
+                    self.tool_fn.__name__,
+                    schema_deg_reasons,
+                )
+                return InterceptionResult(
+                    blocked=True,
+                    block_reason=BlockReason.VERIFIER_DEGRADED,
+                    feedback=feedback,
+                    degraded=True,
+                    degraded_reasons=schema_deg_reasons,
                 )
 
         # ── Step 2: Logic chain verification (HIGH risk only) ─────────────────
@@ -195,6 +234,9 @@ class InterceptingToolProxy:
                 premise=source_context,
                 session_id=self.session_id,
             )
+            arg_result = None
+            logic_result = None
+
             if self.logic_mode == "arguments":
                 from server.models.schemas import ArgumentGroundingRequest
                 from server.tools.verify_arguments import run_argument_grounding
@@ -202,12 +244,16 @@ class InterceptingToolProxy:
                     arguments=agent_args, context=source_context, schema_hint=self.tool_schema_hint(),
                     tau=self.arg_tau, session_id=self.session_id))
                 factual_score = arg_result.call_score
+                if getattr(arg_result, "degraded", False):
+                    degraded = True
+                    degraded_reasons.extend(arg_result.degraded_reasons)
+
                 if not arg_result.is_grounded:
                     return InterceptionResult(
                         blocked=True, block_reason=BlockReason.LOGIC_INCONSISTENT,
                         logic_mismatches=arg_result.mismatched_spans, factual_score=factual_score,
-                        feedback="Tool call blocked: argument values not supported by the context.\n" + arg_result.feedback)
-                logic_result = None
+                        feedback="Tool call blocked: argument values not supported by the context.\n" + arg_result.feedback,
+                        degraded=degraded, degraded_reasons=degraded_reasons)
             elif self.logic_mode == "grounded":
                 from server.tools.verify_grounded import run_grounded_verification
                 logic_result = run_grounded_verification(**kwargs)
@@ -216,9 +262,35 @@ class InterceptingToolProxy:
                 if self.ged_threshold is not None:
                     kwargs["threshold"] = self.ged_threshold
                 logic_result = run_verification(**kwargs)
+
             if logic_result is not None:
                 factual_score = logic_result.factual_consistency_score
                 ged_norm = logic_result.ged_normalised
+                if getattr(logic_result, "degraded", False):
+                    degraded = True
+                    degraded_reasons.extend(logic_result.degraded_reasons)
+
+            # Fail-closed check on degraded verifier for HIGH risk gate
+            if FAIL_CLOSED_ON_DEGRADED and degraded:
+                feedback = (
+                    "Tool call blocked: verifier degraded.\n"
+                    + "\n".join(f"  - {r}" for r in degraded_reasons)
+                )
+                logger.warning(
+                    "InterceptingToolProxy: blocked %s — verifier degraded: %s",
+                    self.tool_fn.__name__,
+                    degraded_reasons,
+                )
+                return InterceptionResult(
+                    blocked=True,
+                    block_reason=BlockReason.VERIFIER_DEGRADED,
+                    logic_mismatches=logic_mismatches,
+                    factual_score=factual_score,
+                    ged_normalised=ged_norm,
+                    feedback=feedback,
+                    degraded=True,
+                    degraded_reasons=degraded_reasons,
+                )
 
             if logic_result is not None and not logic_result.is_consistent:
                 logic_mismatches = logic_result.mismatched_spans
@@ -239,6 +311,8 @@ class InterceptingToolProxy:
                     factual_score=factual_score,
                     ged_normalised=ged_norm,
                     feedback=feedback,
+                    degraded=degraded,
+                    degraded_reasons=degraded_reasons,
                 )
 
         # ── Step 3: Execute downstream tool ──────────────────────────────────
@@ -254,6 +328,8 @@ class InterceptingToolProxy:
                 ged_normalised=ged_norm,
                 tool_output=output,
                 feedback="Verification passed. Tool executed.",
+                degraded=degraded,
+                degraded_reasons=degraded_reasons,
             )
         except Exception as exc:
             logger.error(

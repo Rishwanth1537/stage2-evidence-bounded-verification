@@ -21,7 +21,7 @@ from .. import session as session_module
 from ..config import ENTAILMENT_THRESHOLD
 from ..models.schemas import HallucinationType, MismatchedSpan, VerifyResponse
 from ..pipeline import entailment
-from ..pipeline.constraints import compute_constraint_score, extract_constraints
+from ..pipeline.constraints import compute_constraint_score, extract_constraints, get_constraints_degraded_status
 from ..pipeline.value_check import unmatched_values
 
 
@@ -51,6 +51,9 @@ def run_grounded_verification(
         ))
 
     constraint_score: Optional[float] = None
+    degraded = False
+    degraded_reasons: List[str] = []
+
     if user_query:
         constraints = extract_constraints(user_query)
         score, missing = compute_constraint_score(constraints, hypothesis)
@@ -61,6 +64,10 @@ def run_grounded_verification(
                 issue=f"Constraint '{c}' from user query is absent from the hypothesis.",
                 hallucination_type=HallucinationType.CONTENT,
             ))
+        c_deg, c_reasons = get_constraints_degraded_status()
+        if c_deg:
+            degraded = True
+            degraded_reasons.extend(c_reasons)
 
     is_consistent = not mismatched and ent >= entailment_threshold
     factual_score = 0.0 if bad_values else round(float(ent), 4)
@@ -90,4 +97,6 @@ def run_grounded_verification(
         constraint_score=constraint_score,
         drift_alert=drift_alert,
         session_mean_score=session_mean,
+        degraded=degraded,
+        degraded_reasons=degraded_reasons,
     )

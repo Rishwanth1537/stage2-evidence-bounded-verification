@@ -18,7 +18,10 @@ hallucinations (e.g. "$50 vs $500", "v2.4.0 vs v2.4.1").
 """
 from __future__ import annotations
 import functools
-from typing import List, Dict
+from typing import List, Dict, Tuple
+
+_SPACY_DEGRADED: bool = False
+_SPACY_DEGRADED_REASON: str = ""
 
 
 @functools.lru_cache(maxsize=1)
@@ -33,12 +36,25 @@ def _load_ner():
 
 @functools.lru_cache(maxsize=1)
 def _load_nlp():
+    global _SPACY_DEGRADED, _SPACY_DEGRADED_REASON
     import spacy
     # fall back to sm model if trf not available
     try:
-        return spacy.load("en_core_web_trf")
+        nlp = spacy.load("en_core_web_trf")
+        _SPACY_DEGRADED = False
+        _SPACY_DEGRADED_REASON = ""
+        return nlp
     except OSError:
-        return spacy.load("en_core_web_sm")
+        nlp = spacy.load("en_core_web_sm")
+        _SPACY_DEGRADED = True
+        _SPACY_DEGRADED_REASON = "spaCy model downgraded to en_core_web_sm (en_core_web_trf unavailable)"
+        return nlp
+
+
+def get_srl_degraded_status() -> Tuple[bool, List[str]]:
+    """Returns (degraded, reasons) for the SRL extractor."""
+    _load_nlp()
+    return (_SPACY_DEGRADED, [_SPACY_DEGRADED_REASON] if _SPACY_DEGRADED else [])
 
 
 def _find_governing_verb(token, max_depth: int = 5) -> str:

@@ -36,8 +36,18 @@ def run_argument_grounding(req: ArgumentGroundingRequest) -> ArgumentGroundingRe
     else:
         feedback = ("These argument values are not supported by the context; confirm or correct them before executing:\n"
                     + "\n".join(f"- {m.span}: {m.issue}" for m in mismatched))
+
+    degraded = getattr(verdicts, "degraded", False)
+    degraded_reasons = list(getattr(verdicts, "degraded_reasons", []))
+
     return ArgumentGroundingResponse(
-        is_grounded=is_grounded, call_score=round(call_score, 4), tau=req.tau,
+        is_grounded=is_grounded,
+        call_score=round(call_score, 4),
+        tau=req.tau,
         per_argument=[ArgumentVerdictModel(argument=v.argument, value=v.value, verdict=v.verdict, score=round(v.score, 4), reason=v.reason)
                       for v in verdicts],
-        mismatched_spans=mismatched, feedback=feedback)
+        mismatched_spans=mismatched,
+        feedback=feedback,
+        degraded=degraded,
+        degraded_reasons=degraded_reasons,
+    )

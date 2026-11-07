@@ -37,45 +37,63 @@ of a degree-sequence structural approximation.
 from __future__ import annotations
 import re
 import networkx as nx
-from typing import Tuple
+from typing import Tuple, List, Optional
 from ..config import GED_FAST_MODE_NODE_LIMIT
 
 _FAST_MODE_LIMIT = GED_FAST_MODE_NODE_LIMIT
 
-# Node kinds that represent concrete measured values.
-# Two nodes of these kinds with *different* IDs must never match cheaply —
-# "$50" and "$500" are not interchangeable just because both are MONEY.
 _VALUE_KINDS = frozenset({
     "MONEY", "CARDINAL", "ORDINAL", "PERCENT",
     "QUANTITY", "DATE", "TIME", "VERSION",
 })
 
-# Regex that matches version-string node IDs (e.g. "v2.4.0", "2.4.1")
-_VERSION_RE = re.compile(r"^v?\d+\.\d+(\.\d+)*$")
+_VERSION_RE = re.compile(r"^v?\d+\.\d+(?:\.\d+)?(?:-[a-zA-Z0-9]+)?$")
+
+_GED_DEGRADED: bool = False
+_GED_DEGRADED_REASONS: List[str] = []
 
 
-def _is_value_node(node_id, attrs: dict) -> bool:
-    """Return True if this node represents a concrete measurable value."""
-    kind = attrs.get("kind", "")
-    if kind in _VALUE_KINDS:
+class GedResult(tuple):
+    """
+    Subclass of tuple (raw, normalised) for backward compatibility,
+    with attached degraded flags.
+    """
+    raw: float
+    normalised: float
+    degraded: bool
+    degraded_reasons: List[str]
+
+    def __new__(cls, raw: float, normalised: float, degraded: bool = False, degraded_reasons: Optional[List[str]] = None):
+        instance = super().__new__(cls, (raw, normalised))
+        instance.raw = raw
+        instance.normalised = normalised
+        instance.degraded = degraded
+        instance.degraded_reasons = list(degraded_reasons or [])
+        return instance
+
+
+def get_ged_degraded_status() -> Tuple[bool, List[str]]:
+    """Returns (degraded, reasons) for the GED module."""
+    return (_GED_DEGRADED, list(_GED_DEGRADED_REASONS))
+
+
+def _is_value_node(node_id: str, attrs: dict) -> bool:
+    """Return True if this node represents a concrete measured value."""
+    if attrs.get("kind") in _VALUE_KINDS:
         return True
-    # Token/argument nodes that look like numeric or version strings
-    if _VERSION_RE.match(str(node_id)):
+    if _VERSION_RE.match(str(node_id).strip()):
         return True
     return False
 
 
-def _node_subst_cost(n1, a1: dict, n2, a2: dict) -> float:
+def _node_subst_cost(n1: str, a1: dict, n2: str, a2: dict) -> float:
     """
-    Cost of substituting node n1 (attrs a1) with node n2 (attrs a2).
-
-    Cost tiers (ascending):
-      0.0 — identical node ID and identical attributes (exact match)
-      0.3 — same node ID but different attributes (e.g. kind changed)
-      1.0 — same ID but negation flip ("not transfer" vs "transfer")
-      1.0 — different IDs and EITHER node is a value kind (exact-match required)
-      0.5 — different IDs, same non-value kind (structural match)
-      1.0 — different IDs and different kind
+    Substitution cost between two nodes:
+      0.0 → identical ID and attributes
+      0.3 → identical ID (lemma), minor attribute drift (not negated)
+      0.5 → different ID, same syntactic kind (e.g. both ARG, both VERB)
+            UNLESS either node is a value node — value nodes require exact match!
+      1.0 → different kind, or value-node mutation ($50 vs $500), or negation mismatch
 
     The negation penalty ensures that a negated predicate node is
     treated as maximally distant from its non-negated counterpart even
@@ -104,7 +122,7 @@ def _edge_subst_cost(a: dict, b: dict) -> float:
     return 0.0 if a.get("label") == b.get("label") else 0.5
 
 
-def _greedy_ged(G1: nx.DiGraph, G2: nx.DiGraph) -> float:
+def _greedy_ged(G1: nx.DiGraph, G2: nx.DiGraph) -> Tuple[float, bool, List[str]]:
     """
     O(n³) optimal bipartite node matching via scipy's linear_sum_assignment
     (true Hungarian algorithm), with fallback to greedy O(n²) if scipy is
@@ -120,7 +138,7 @@ def _greedy_ged(G1: nx.DiGraph, G2: nx.DiGraph) -> float:
     n, m = len(nodes1), len(nodes2)
 
     if n == 0 and m == 0:
-        return 0.0
+        return 0.0, False, []
 
     # Build cost matrix (pad the smaller dimension with insertion/deletion costs)
     size = max(n, m)
@@ -130,14 +148,19 @@ def _greedy_ged(G1: nx.DiGraph, G2: nx.DiGraph) -> float:
         for j, (n2, a2) in enumerate(nodes2):
             cost_matrix[i][j] = _node_subst_cost(n1, a1, n2, a2)
 
+    degraded = False
+    degraded_reasons: List[str] = []
+
     # Solve assignment problem
     try:
         import numpy as np
         from scipy.optimize import linear_sum_assignment
         row_ind, col_ind = linear_sum_assignment(np.array(cost_matrix))
         assignment = list(zip(row_ind.tolist(), col_ind.tolist()))
-    except ImportError:
+    except (ImportError, Exception):
         # Fallback: greedy sort-based matching (original behaviour)
+        degraded = True
+        degraded_reasons.append("scipy.optimize.linear_sum_assignment unavailable; fell back to greedy matching")
         costs = []
         for i in range(size):
             for j in range(size):
@@ -175,7 +198,7 @@ def _greedy_ged(G1: nx.DiGraph, G2: nx.DiGraph) -> float:
             else:
                 total_cost += 1.0  # insertion or deletion
 
-    return total_cost
+    return total_cost, degraded, degraded_reasons
 
 
 def _fast_approx_ged(G1: nx.DiGraph, G2: nx.DiGraph) -> float:
@@ -210,7 +233,7 @@ def _fast_approx_ged(G1: nx.DiGraph, G2: nx.DiGraph) -> float:
 
 def compute_ged(G_hyp: nx.DiGraph, G_prem: nx.DiGraph) -> Tuple[float, float]:
     """
-    Returns (raw_ged, normalised_ged).
+    Returns (raw_ged, normalised_ged) as a GedResult tuple.
     normalised_ged is always in [0, 1].
 
     Canonical ordering (smaller graph first) is applied so that
@@ -223,6 +246,7 @@ def compute_ged(G_hyp: nx.DiGraph, G_prem: nx.DiGraph) -> Tuple[float, float]:
         cannot be diluted by a large number of structural non-value nodes.
         The final score is clamped to [0, 1].
     """
+    global _GED_DEGRADED, _GED_DEGRADED_REASONS
     # Weight applied per unmatched value node AFTER normalisation.
     # Each unmatched value node adds this fraction to the normalised score,
     # making numeric mutations impossible to hide in a large graph.
@@ -238,8 +262,13 @@ def compute_ged(G_hyp: nx.DiGraph, G_prem: nx.DiGraph) -> Tuple[float, float]:
 
     if total_nodes > _FAST_MODE_LIMIT:
         raw = _fast_approx_ged(G_hyp, G_prem)
+        ged_degraded = False
+        ged_reasons: List[str] = []
     else:
-        raw = _greedy_ged(G_hyp, G_prem)
+        raw, ged_degraded, ged_reasons = _greedy_ged(G_hyp, G_prem)
+
+    _GED_DEGRADED = ged_degraded
+    _GED_DEGRADED_REASONS = ged_reasons
 
     normalised = raw / denom if denom > 0 else 0.0
     normalised = max(0.0, min(1.0, normalised))
@@ -251,4 +280,4 @@ def compute_ged(G_hyp: nx.DiGraph, G_prem: nx.DiGraph) -> Tuple[float, float]:
     value_bonus = unmatched_values * _VALUE_MISMATCH_WEIGHT
 
     normalised = min(1.0, normalised + value_bonus)
-    return raw, normalised
+    return GedResult(raw, normalised, degraded=ged_degraded, degraded_reasons=ged_reasons)

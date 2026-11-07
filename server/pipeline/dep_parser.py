@@ -35,15 +35,31 @@ _DEP_TO_ROLE: dict = {
     "pobj":      "OBLIQUE",   # prepositional object
 }
 
+_SPACY_DEGRADED: bool = False
+_SPACY_DEGRADED_REASON: str = ""
+
 
 @functools.lru_cache(maxsize=1)
 def _load_nlp():
+    global _SPACY_DEGRADED, _SPACY_DEGRADED_REASON
     import spacy
     # Fall back to sm model if trf not available
     try:
-        return spacy.load("en_core_web_trf")
+        nlp = spacy.load("en_core_web_trf")
+        _SPACY_DEGRADED = False
+        _SPACY_DEGRADED_REASON = ""
+        return nlp
     except OSError:
-        return spacy.load("en_core_web_sm")
+        nlp = spacy.load("en_core_web_sm")
+        _SPACY_DEGRADED = True
+        _SPACY_DEGRADED_REASON = "spaCy model downgraded to en_core_web_sm (en_core_web_trf unavailable)"
+        return nlp
+
+
+def get_dep_parser_degraded_status() -> Tuple[bool, List[str]]:
+    """Returns (degraded, reasons) for the dependency parser."""
+    _load_nlp()
+    return (_SPACY_DEGRADED, [_SPACY_DEGRADED_REASON] if _SPACY_DEGRADED else [])
 
 
 DepTriple = Tuple[str, str, str]  # (head_lemma, semantic_role, child_lemma)

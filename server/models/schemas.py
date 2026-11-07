@@ -37,6 +37,8 @@ class VerifyResponse(BaseModel):
     constraint_score: Optional[float] = Field(default=None, ge=0.0, le=1.0)
     drift_alert: Optional[bool] = None
     session_mean_score: Optional[float] = None
+    degraded: bool = Field(default=False, description="True if any verification step ran in degraded mode.")
+    degraded_reasons: List[str] = Field(default_factory=list, description="Reasons for degradation.")
 
 
 class SchemaAlignmentRequest(BaseModel):
@@ -52,6 +54,8 @@ class SchemaAlignmentResponse(BaseModel):
     mismatches: List[MismatchedSpan]
     drift_alert: Optional[bool] = None
     session_mean_score: Optional[float] = None
+    degraded: bool = Field(default=False, description="True if any verification step ran in degraded mode.")
+    degraded_reasons: List[str] = Field(default_factory=list, description="Reasons for degradation.")
 
 
 class ArgumentGroundingRequest(BaseModel):
@@ -78,3 +82,5 @@ class ArgumentGroundingResponse(BaseModel):
     per_argument: List[ArgumentVerdictModel]
     mismatched_spans: List[MismatchedSpan]
     feedback: str
+    degraded: bool = Field(default=False, description="True if any verification step ran in degraded mode.")
+    degraded_reasons: List[str] = Field(default_factory=list, description="Reasons for degradation.")

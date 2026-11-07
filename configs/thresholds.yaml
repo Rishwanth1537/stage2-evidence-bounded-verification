@@ -9,3 +9,6 @@ entailment_threshold: 0.40
 
 # Max nodes in a graph before switching to faster GED approximation
 ged_fast_mode_node_limit: 80
+
+# Fail-closed policy: verifier degradation triggers a block on required gates
+fail_closed_on_degraded: true

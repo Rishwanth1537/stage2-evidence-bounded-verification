@@ -37,7 +37,8 @@ _SIMPLE_SCHEMA = {
 }
 
 _ALIGNED_RESULT = MagicMock(
-    is_aligned=True, mismatches=[], schema_drift_score=1.0
+    is_aligned=True, mismatches=[], schema_drift_score=1.0,
+    degraded=False, degraded_reasons=[],
 )
 _SCHEMA_FAIL_RESULT = MagicMock(
     is_aligned=False,
@@ -49,6 +50,7 @@ _SCHEMA_FAIL_RESULT = MagicMock(
         )
     ],
     schema_drift_score=0.5,
+    degraded=False, degraded_reasons=[],
 )
 _LOGIC_PASS_RESULT = MagicMock(
     is_consistent=True,
@@ -56,6 +58,7 @@ _LOGIC_PASS_RESULT = MagicMock(
     factual_consistency_score=0.92,
     ged_normalised=0.08,
     feedback="Reasoning chain is structurally consistent.",
+    degraded=False, degraded_reasons=[],
 )
 _LOGIC_FAIL_RESULT = MagicMock(
     is_consistent=False,
@@ -69,6 +72,7 @@ _LOGIC_FAIL_RESULT = MagicMock(
     factual_consistency_score=0.12,
     ged_normalised=0.88,
     feedback="Reasoning chain inconsistent.",
+    degraded=False, degraded_reasons=[],
 )
 
 

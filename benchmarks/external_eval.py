@@ -359,7 +359,9 @@ def main() -> None:
         "--local-dir", default=".",
         help="Directory containing <split>-*.parquet files when --source=local.",
     )
-    parser.add_argument("--split", default="test", choices=("dev", "test"))
+    parser.add_argument("--split", default="dev", choices=("dev", "test"))
+    parser.add_argument("--allow-test", action="store_true", help="required for --split test (pre-registration guard)")
+    parser.add_argument("--note", default="", help="reason/purpose for loading test split")
     parser.add_argument(
         "--limit", type=int, default=None,
         help="Optional deterministic sample size for the public dataset.",
@@ -369,6 +371,16 @@ def main() -> None:
     parser.add_argument("--output", default=None, type=str, help="Optional JSON output path")
     parser.add_argument("--verbose", action="store_true")
     args = parser.parse_args()
+
+    if args.split == "test" and args.source in ("hf", "local"):
+        from benchmarks.splits import load_split
+        load_split(
+            dataset="external",
+            split="test",
+            purpose=f"external_eval ({args.source})",
+            reason=args.note,
+            allow_test=args.allow_test,
+        )
 
     if args.source == "hf":
         pairs, source_metadata = load_public_pairs(

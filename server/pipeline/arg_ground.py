@@ -24,7 +24,7 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass
 from difflib import SequenceMatcher
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Optional, Tuple
 
 FUZZY = 0.88
 
@@ -35,6 +35,8 @@ _NUM_TOKEN = re.compile(r"(?<![\w.])(?:(?<![\w])(-)(?=\d))?(\d[\d,]*(?:\.\d+)?)\
 _PUNCT = re.compile(r"[^\w\s]")
 _WS = re.compile(r"\s+")
 
+_ARG_GROUND_SKIPPED_NUMERIC: int = 0
+
 
 @dataclass
 class ArgVerdict:
@@ -43,6 +45,18 @@ class ArgVerdict:
     verdict: str          # GROUNDED | UNGROUNDED | UNCHECKABLE
     reason: str = ""
     score: float = 1.0    # match strength in [0, 1]; strings use the best fuzzy ratio, numbers and typed values are 0 or 1
+
+
+class VerdictList(list):
+    """
+    Subclass of list for check_arguments results that preserves backward-compatible list
+    behavior while exposing degraded mode flags.
+    """
+    def __init__(self, items=(), skipped_numeric_tokens: int = 0, degraded: bool = False, degraded_reasons: Optional[List[str]] = None):
+        super().__init__(items)
+        self.skipped_numeric_tokens = skipped_numeric_tokens
+        self.degraded = degraded
+        self.degraded_reasons = list(degraded_reasons or [])
 
 
 def _norm_text(s: str) -> str:
@@ -69,12 +83,18 @@ def _spelled_numbers(text: str) -> set:
     return out
 
 
-def numbers_in(text: str) -> set:
+def numbers_in_detailed(text: str) -> Tuple[set, int]:
+    """
+    Extract numbers from text and return (numbers_set, skipped_unparseable_count).
+    Unparseable numeric regex matches are skipped, but counted to surface verifier degradation.
+    """
     vals = set()
+    skipped = 0
     for m in _NUM_TOKEN.finditer(text):
         try:
             v = float(m.group(2).replace(",", ""))
         except ValueError:
+            skipped += 1
             continue
         suf = (m.group(3) or "").lower()
         if suf in ("k", "thousand"):
@@ -86,7 +106,28 @@ def numbers_in(text: str) -> set:
             vals.add(v / 100.0)
         if m.group(1):                       # explicit minus sign: also admit the negative value (latitudes, deltas, temperatures)
             vals.update({-x for x in list(vals) if x > 0})
-    return vals | _spelled_numbers(text)
+    return (vals | _spelled_numbers(text), skipped)
+
+
+def numbers_in(text: str) -> set:
+    global _ARG_GROUND_SKIPPED_NUMERIC
+    vals, skipped = numbers_in_detailed(text)
+    if skipped > 0:
+        _ARG_GROUND_SKIPPED_NUMERIC += skipped
+    return vals
+
+
+def get_arg_ground_degraded_status(context: str = "") -> Tuple[bool, List[str]]:
+    """Returns (degraded, reasons) for argument grounding."""
+    skipped = 0
+    if context:
+        _, skipped = numbers_in_detailed(context)
+    else:
+        global _ARG_GROUND_SKIPPED_NUMERIC
+        skipped = _ARG_GROUND_SKIPPED_NUMERIC
+    if skipped > 0:
+        return True, [f"unparseable numeric token(s) skipped: {skipped}"]
+    return False, []
 
 
 def _fuzzy_score(value_norm: str, context_norm: str) -> float:
@@ -223,7 +264,11 @@ def check_value(argument: str, value: Any, context: str) -> ArgVerdict:
 
 
 def check_arguments(arguments: Dict[str, Any], context: str) -> List[ArgVerdict]:
-    return [check_value(k, v, context) for k, v in arguments.items()]
+    _, skipped = numbers_in_detailed(context)
+    verdicts = [check_value(k, v, context) for k, v in arguments.items()]
+    degraded = skipped > 0
+    reasons = [f"unparseable numeric token(s) skipped: {skipped}"] if degraded else []
+    return VerdictList(verdicts, skipped_numeric_tokens=skipped, degraded=degraded, degraded_reasons=reasons)
 
 
 def call_is_grounded(arguments: Dict[str, Any], context: str, schema: Dict[str, Any] | None = None, policy: str = "strict") -> bool:
