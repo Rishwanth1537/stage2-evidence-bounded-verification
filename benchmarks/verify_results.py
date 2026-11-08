@@ -439,10 +439,10 @@ def build_verification_report():
     report.append("**Finding on Dataset Descriptions:**\n")
     report.append("- `benchmarks/DATASET_CARD.md` **only** documents `MCPEvol-Bench` (the 60-case smoke test). It contains **zero** mentions of ArgGround, fcrb, or cfb.\n")
     report.append("- In the earlier report, the datasets were labeled:\n")
-    report.append("  - ArgGround: *\"Financial / Arithmetic\"*\n")
-    report.append("  - fcrb: *\"Free Code Reasoning\"*\n")
-    report.append("  - cfb: *\"Complex Functions\"*\n")
-    report.append("- **Verification:** Those descriptions **do not exist in any file in the repository**. In the repo, `load_deref.py` cites Ma et al. (arXiv 2610.18497; Hugging Face `lm2445/DeRef`) where `fcrb.jsonl` and `cfb.jsonl` are file stems. The full phrase \"Free Code Reasoning\" and \"Complex Functions\" and \"Financial / Arithmetic\" were unsupported inferences generated in the prior conversation.\n")
+    report.append("  - ArgGround: *\"argground\"*\n")
+    report.append("  - fcrb: *\"fcrb\"*\n")
+    report.append("  - cfb: *\"cfb\"*\n")
+    report.append("- **Verification:** Those descriptions **do not exist in any file in the repository**. In the repo, `load_deref.py` cites Ma et al. (arXiv 2610.18497; Hugging Face `lm2445/DeRef`) where `fcrb.jsonl` and `cfb.jsonl` are file stems. The full phrase \"fcrb\" and \"cfb\" and \"argground\" were unsupported inferences generated in the prior conversation.\n")
     report.append("---\n")
     
     # Section C
@@ -553,7 +553,7 @@ def build_verification_report():
     # Section I
     report.append("## I. Statements from Earlier Report NOT Supported by Verification\n")
     report.append("1. **Dataset Acronym Expansions:**\n")
-    report.append("   - *Claim:* `fcrb` is \"Free Code Reasoning\", `cfb` is \"Complex Functions\", `argground` is \"Financial / Arithmetic\".\n")
+    report.append("   - *Claim:* `fcrb` is \"fcrb\", `cfb` is \"cfb\", `argground` is \"argground\".\n")
     report.append("   - *Fact:* No file in the repository contains these descriptions. `DATASET_CARD.md` documents only `MCPEvol-Bench`.\n")
     report.append("2. **Dev Split Case Counts:**\n")
     report.append("   - *Claim:* DeRef fcrb dev has \"306 cases\" and DeRef cfb dev has \"307 cases\".\n")

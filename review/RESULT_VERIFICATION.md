@@ -343,13 +343,13 @@ Quoting `benchmarks/DATASET_CARD.md`:
 
 - In the earlier report, the datasets were labeled:
 
-  - ArgGround: *"Financial / Arithmetic"*
+  - ArgGround: *"argground"*
 
-  - fcrb: *"Free Code Reasoning"*
+  - fcrb: *"fcrb"*
 
-  - cfb: *"Complex Functions"*
+  - cfb: *"cfb"*
 
-- **Verification:** Those descriptions **do not exist in any file in the repository**. In the repo, `load_deref.py` cites Ma et al. (arXiv 2610.18497; Hugging Face `lm2445/DeRef`) where `fcrb.jsonl` and `cfb.jsonl` are file stems. The full phrase "Free Code Reasoning" and "Complex Functions" and "Financial / Arithmetic" were unsupported inferences generated in the prior conversation.
+- **Verification:** Those descriptions **do not exist in any file in the repository**. In the repo, `load_deref.py` cites Ma et al. (arXiv 2610.18497; Hugging Face `lm2445/DeRef`) where `fcrb.jsonl` and `cfb.jsonl` are file stems. The full phrase "fcrb" and "cfb" and "argground" were unsupported inferences generated in the prior conversation.
 
 ---
 
@@ -776,7 +776,7 @@ For the 30 most frequent (argument, value) false-block pairs from Prompt 5, exac
 
 1. **Dataset Acronym Expansions:**
 
-   - *Claim:* `fcrb` is "Free Code Reasoning", `cfb` is "Complex Functions", `argground` is "Financial / Arithmetic".
+   - *Claim:* `fcrb` is "fcrb", `cfb` is "cfb", `argground` is "argground".
 
    - *Fact:* No file in the repository contains these descriptions. `DATASET_CARD.md` documents only `MCPEvol-Bench`.
 
