@@ -246,3 +246,26 @@ Top rescued argument names: `base_id` (201), `database` (182), `path` (136), `co
 **Reading:** Adding trajectory evidence resolves the dominant source of false blocks on later calls (identifier arguments like `base_id`, `database`, `path` that only appear in earlier tool outputs). The residual 34.4% on all calls is split between: (a) first calls that require date-range expansion or default-value knowledge (the tool contract, E2 evidence), (b) a small number of later calls where the argument value is derived by multi-hop arithmetic or is a reformatted extraction the matcher does not resolve. This is consistent with the evidence-ladder thesis: E1 (conversation + tool outputs) reduces false blocks dramatically; the remaining blocks need E2 (contract defaults) or E3 (richer environment state).
 
 **Next step for E1:** Analyse the residual 34.4% to estimate what fraction requires contract defaults vs. multi-hop derivation; this separates what E2 can fix from what cannot be fixed without world knowledge. Gate 1 decision: E1 is kept; the partial result is reported as evidence for the evidence-ladder claim, not as a deployable solution on its own.
+
+## 24. E2 — Class-conditional (Mondrian) conformal ask-rule (Stage 3; Deviation 23; 2026-11-10; development data)
+
+Script: `benchmarks/mondrian_ask.py`. Data: BFCL strong errors (4,996 calls, 255 strong-error calls). Scores: peer-disagreement consensus. Decidability class per wrong call: E2_contract if the contract flag fires on that call, else E1_conversation. Splits: 1,000 random by test case. Calibration: global conformal on correct calls for the interruption-rate guarantee; per-class threshold on wrong calls set to the 30th percentile of wrong scores (catches top 70% of that class on calibration, capped by global tau).
+
+**Class sizes (crucial for power):**
+- Strong wrong calls: E1_conversation = **235**, E2_contract = **20**
+- Arg-level BFCL: E1 = 161, E2 = 57, CHOICE_user = 87
+
+**Results:**
+
+| alpha | Global det | Mondrian det | Gain | G within alpha | M within alpha |
+|---|---|---|---|---|---|
+| 0.05 | 64.0% | 72.5% | +8.5 pp | 62.9% | 62.9% |
+| 0.10 | 80.5% | 81.2% | +0.7 pp | 61.3% | 61.3% |
+| 0.20 | 84.9% | 85.0% | +0.1 pp | 53.5% | 53.5% |
+
+AUROC: consensus 0.892, contract 0.516.
+
+**Hypothesis outcome:**
+- **H-E2: UNDERPOWERED — kill rule triggered.** E2_contract wrong calls = 20 (threshold: ≥ 30). The per-class threshold for E2_contract is estimated from only 20 calibration calls per split (after the 50/50 test-case split, roughly 10 per half), making it too noisy to interpret. The +8.5 pp gain at alpha = 0.05 is suggestive but unreliable with this sample size.
+
+**Reading:** The class imbalance is itself a finding consistent with the evidence-ladder thesis. On BFCL, schema violations (E2_contract) account for only 7.8% of strong errors (20/255 wrong calls), while conversation-grounded errors (E1_conversation) dominate. This means that on BFCL, the contract flag rarely fires on strong errors, so a Mondrian rule that separates these two classes cannot be meaningfully evaluated here. A dataset with more E2-class wrong calls (e.g., fcrb, where 27.1% of wrong arguments are E2_contract) would be needed. Gate 1 decision: E2 is reported as underpowered / not evaluated on BFCL; a re-run on fcrb is a possible follow-up if LLM-judge scores are available per call (the consensus score only exists on BFCL).
