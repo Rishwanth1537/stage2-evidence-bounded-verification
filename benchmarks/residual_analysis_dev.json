@@ -1,0 +1,119 @@
+{
+ "meta": {
+  "script": "benchmarks/residual_analysis.py",
+  "data": "benchmarks/data/mcpatlas/cases_v2.json",
+  "method": "Fast substring heuristic (no spaCy). Outcome analysis of E1 (Deviation 22); no new deviation."
+ },
+ "residual_blocked_calls": 1410,
+ "total_calls_with_args": 2114,
+ "residual_rate": 0.667,
+ "total_ungrounded_args_after_provenance": 1913,
+ "arg_level_categories": {
+  "URL_DERIVED": 16,
+  "MULTI_HOP_ARITH": 198,
+  "PARAPHRASE": 622,
+  "DATE_RANGE": 261,
+  "NUMERIC_DEFAULT": 94,
+  "OTHER": 722
+ },
+ "arg_level_shares": {
+  "DATE_RANGE": 0.136,
+  "NUMERIC_DEFAULT": 0.049,
+  "MULTI_HOP_ARITH": 0.104,
+  "PARAPHRASE": 0.325,
+  "URL_DERIVED": 0.008,
+  "OTHER": 0.377
+ },
+ "call_level_dominant_category": {
+  "URL_DERIVED": 16,
+  "MULTI_HOP_ARITH": 159,
+  "DATE_RANGE": 162,
+  "PARAPHRASE": 552,
+  "OTHER": 490,
+  "NUMERIC_DEFAULT": 31
+ },
+ "first_call_dominant_category": {
+  "DATE_RANGE": 7,
+  "PARAPHRASE": 177,
+  "MULTI_HOP_ARITH": 10,
+  "OTHER": 46,
+  "NUMERIC_DEFAULT": 6,
+  "URL_DERIVED": 3
+ },
+ "later_call_dominant_category": {
+  "URL_DERIVED": 13,
+  "MULTI_HOP_ARITH": 149,
+  "PARAPHRASE": 375,
+  "OTHER": 444,
+  "DATE_RANGE": 155,
+  "NUMERIC_DEFAULT": 25
+ },
+ "top_still_ungrounded_arg_names": [
+  [
+   "query",
+   365
+  ],
+  [
+   "table_name",
+   126
+  ],
+  [
+   "code",
+   108
+  ],
+  [
+   "path",
+   103
+  ],
+  [
+   "value",
+   86
+  ],
+  [
+   "filter",
+   79
+  ],
+  [
+   "command",
+   66
+  ],
+  [
+   "params",
+   63
+  ],
+  [
+   "q",
+   58
+  ],
+  [
+   "interval",
+   53
+  ],
+  [
+   "endTime",
+   48
+  ],
+  [
+   "startTime",
+   45
+  ],
+  [
+   "expression",
+   42
+  ],
+  [
+   "text",
+   40
+  ],
+  [
+   "repo_path",
+   36
+  ]
+ ],
+ "interpretive_buckets": {
+  "e2_fixable": 355,
+  "fuzzy_fixable": 638,
+  "undecidable": 198,
+  "other": 722
+ }
+}

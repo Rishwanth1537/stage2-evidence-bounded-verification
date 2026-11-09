@@ -269,3 +269,48 @@ AUROC: consensus 0.892, contract 0.516.
 - **H-E2: UNDERPOWERED — kill rule triggered.** E2_contract wrong calls = 20 (threshold: ≥ 30). The per-class threshold for E2_contract is estimated from only 20 calibration calls per split (after the 50/50 test-case split, roughly 10 per half), making it too noisy to interpret. The +8.5 pp gain at alpha = 0.05 is suggestive but unreliable with this sample size.
 
 **Reading:** The class imbalance is itself a finding consistent with the evidence-ladder thesis. On BFCL, schema violations (E2_contract) account for only 7.8% of strong errors (20/255 wrong calls), while conversation-grounded errors (E1_conversation) dominate. This means that on BFCL, the contract flag rarely fires on strong errors, so a Mondrian rule that separates these two classes cannot be meaningfully evaluated here. A dataset with more E2-class wrong calls (e.g., fcrb, where 27.1% of wrong arguments are E2_contract) would be needed. Gate 1 decision: E2 is reported as underpowered / not evaluated on BFCL; a re-run on fcrb is a possible follow-up if LLM-judge scores are available per call (the consensus score only exists on BFCL).
+
+## 25. E1 Residual Analysis — Failure-mode characterisation of the 34.4% FBR (2026-11-10; development data)
+
+Script: `benchmarks/residual_analysis.py`. Data: `benchmarks/data/mcpatlas/cases_v2.json`. Method: fast substring heuristic (case-insensitive substring match) applied after adding trajectory evidence; no spaCy NLP (the full checker takes ~23 min on 2,423 cases). Each remaining UNGROUNDED argument is classified into one of six failure modes by regex on arg name and value. This is an outcome analysis of Deviation 22 — no new deviation registration required.
+
+**Note on FBR numbers:** The heuristic FBR (66.7%) is higher than the checker's (34.4%) because the checker uses token-level NLP and entity recognition in addition to substring search. The category distributions below apply to the calls the heuristic identifies as residual; the absolute FBR count should be read against the checker's confirmed 34.4%, not the heuristic's 66.7%.
+
+**Arg-level failure mode breakdown (1,913 heuristic-ungrounded args after provenance):**
+
+| Failure mode | Count | Share | 95% CI |
+|---|---|---|---|
+| DATE_RANGE | 261 | 13.6% | [12.2, 15.3] |
+| NUMERIC_DEFAULT | 94 | 4.9% | [4.0, 6.0] |
+| MULTI_HOP_ARITH | 198 | 10.4% | [9.1, 11.8] |
+| PARAPHRASE | 622 | 32.5% | [30.5, 34.6] |
+| URL_DERIVED | 16 | 0.8% | [0.5, 1.4] |
+| OTHER | 722 | 37.7% | [35.6, 39.9] |
+
+**Call-level dominant failure mode (1,410 residual calls):**
+
+| Failure mode | All calls | First | Later |
+|---|---|---|---|
+| DATE_RANGE | 162 | 7 | 155 |
+| NUMERIC_DEFAULT | 31 | 6 | 25 |
+| MULTI_HOP_ARITH | 159 | 10 | 149 |
+| PARAPHRASE | 552 | 177 | 375 |
+| URL_DERIVED | 16 | 3 | 13 |
+| OTHER | 490 | 46 | 444 |
+
+**Top still-UNGROUNDED argument names:** `query` (365), `table_name` (126), `code` (108), `path` (103), `value` (86), `filter` (79), `command` (66), `params` (63), `q` (58), `interval` (53), `endTime` (48), `startTime` (45), `expression` (42), `text` (40), `repo_path` (36).
+
+**Interpretive buckets:**
+
+| Bucket | Args | Share | Implication |
+|---|---|---|---|
+| E2-fixable (DATE_RANGE + NUMERIC_DEFAULT) | 355 | 18.6% | Contract defaults or parameter schema could ground these |
+| Fuzzy-tolerance fixable (PARAPHRASE + URL_DERIVED) | 638 | 33.4% | Soft matching / embedding similarity could rescue these |
+| Fundamentally undecidable (MULTI_HOP_ARITH) | 198 | 10.4% | Multi-step arithmetic / code derivation; cannot be verified from text alone |
+| Other | 722 | 37.7% | Short opaque identifiers, single-word values, mixed cases |
+
+**Reading:** The residual 34.4% FBR is not a single failure mode — it is a mixture. The largest identifiable fixable bucket is PARAPHRASE (32.5% of residual args), where the argument value is stated in the conversation but in different words from the literal string. These would be addressed by fuzzy/soft matching, not by more evidence. The second-largest fixable bucket (DATE_RANGE + NUMERIC_DEFAULT, 18.6%) represents contract-default and date-range errors — exactly what E2 evidence (tool schema defaults and parameter constraints) would address. The fundamentally undecidable bucket (MULTI_HOP_ARITH, 10.4%) includes expression evaluation and code snippets that no text-based evidence can resolve. The OTHER bucket (37.7%) contains short identifiers and mixed cases that need case-by-case inspection.
+
+**Implication for evidence-ladder claim:** The residual FBR is not a single barrier that one fix can clear. E2 (contract evidence) can address ~18.6% of the residual; fuzzy matching a further ~33.4%. The 10.4% arithmetic/code bucket is a hard ceiling for text-only verification. This decomposition supports the evidence-ladder thesis: each evidence tier reduces a specific slice of errors, and the remaining slice after all text-based tiers is the fundamental undecidability boundary.
+
+**Gate 1 outcome:** E1 is kept. The residual characterisation is logged here as the basis for deciding whether to pursue soft-match tolerance (E3-soft) or E2-on-fcrb in the next stage.
