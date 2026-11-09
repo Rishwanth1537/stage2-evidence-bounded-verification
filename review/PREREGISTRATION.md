@@ -133,3 +133,18 @@ Trigger: In Prompt 5B, 40 of 315 clean DeRef fcrb dev calls (12.7%) failed ORACL
 Change: ORACLE_EXACT tier redefined to separate genuine contract violations (omitted required parameters, undeclared keys when additionalProperties=false, unparseable wrong types, enum mismatches after case-insensitive check) from COERCIBLE type mismatches (explicit null for optional parameters, parseable numeric strings, boolean strings, case-insensitive enum matches).
 Scope: Motivated strictly by examining dev-split false blocks. No locked split or test split was loaded, evaluated, or touched. Both the old policy (`legacy_strict`) and the new policy (`coercible` tier) are retained in the codebase and evaluated side by side in all reported tables.
 
+
+### Deviation 24 (2026-11-10): E3-soft — Fuzzy tolerance threshold sweep (registered before any run)
+
+Experiment: Stage 3 candidate E3-soft from residual analysis (section 25 of PAPER_PLAN_V2.md). The residual analysis showed 32.5% of remaining UNGROUNDED args after provenance (Deviation 22) are PARAPHRASE — multi-word strings present in the conversation in paraphrased form. The checker uses difflib fuzzy matching at FUZZY=0.88. This experiment asks: does lowering the threshold rescue a meaningful share of paraphrase residuals without inflating false blocks on correct calls?
+
+Script: enchmarks/fuzzy_sweep.py (new). Writes enchmarks/fuzzy_sweep_dev.json. Development data only (MCP-Atlas has no test split separate from the dev data already used in Deviation 22). No test half is loaded. Evaluation is string-only (no spaCy), provenance evidence (premise + earlier tool outputs).
+
+Thresholds evaluated: 0.88 (baseline), 0.82, 0.76, 0.70, 0.65.
+
+Hypothesis:
+- **H-E3soft**: At threshold 0.76, the false-block rate on MCP-Atlas calls drops by >= 5pp compared to threshold 0.88, without increasing the false-block rate on confirmed-correct calls by more than 5pp.
+
+Kill rule: if lowering the threshold below 0.82 rescues < 2pp FBR, do not pursue soft matching as a contribution; report as a negative result. If FBR on correct calls rises > 5pp at the rescue threshold, report the threshold as unsafe and park.
+
+Note: this experiment measures FBR reduction on the full MCP-Atlas case set (which includes both correct and incorrect calls). False-block rate on confirmed-correct calls requires a separate labelled split and is logged as a limitation if unavailable.

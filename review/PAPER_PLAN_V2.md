@@ -314,3 +314,25 @@ Script: `benchmarks/residual_analysis.py`. Data: `benchmarks/data/mcpatlas/cases
 **Implication for evidence-ladder claim:** The residual FBR is not a single barrier that one fix can clear. E2 (contract evidence) can address ~18.6% of the residual; fuzzy matching a further ~33.4%. The 10.4% arithmetic/code bucket is a hard ceiling for text-only verification. This decomposition supports the evidence-ladder thesis: each evidence tier reduces a specific slice of errors, and the remaining slice after all text-based tiers is the fundamental undecidability boundary.
 
 **Gate 1 outcome:** E1 is kept. The residual characterisation is logged here as the basis for deciding whether to pursue soft-match tolerance (E3-soft) or E2-on-fcrb in the next stage.
+
+
+## 26. E3-soft — Fuzzy/token-recall threshold sweep (Stage 3; Deviation 24; 2026-11-10; development data)
+
+Script: `benchmarks/fuzzy_sweep.py`. Data: `benchmarks/data/mcpatlas/cases_v2.json` (1,946 calls with string args). Method: unigram token recall (fraction of value tokens present in evidence token set, O(n+m)). SequenceMatcher not used — pathological `code` args (embedded JSON blobs >80 tokens) make it hang. Provenance evidence (premise + earlier tool outputs). ISO date and currency special handlers applied first. Thresholds swept: [0.88, 0.82, 0.76, 0.70, 0.65].
+
+**Results:**
+
+| Threshold | Blocked | FBR | 95% CI | Rescued vs 0.88 |
+|---|---|---|---|---|
+| 0.88 (baseline) | 659 | 33.9% | [31.8, 36.0] | — |
+| 0.82 | 608 | 31.2% | [29.2, 33.3] | +51 (7.7%) |
+| 0.76 | 575 | 29.5% | [27.6, 31.6] | +84 (12.7%) |
+| 0.70 | 512 | 26.3% | [24.4, 28.3] | +147 (22.3%) |
+| 0.65 | 463 | 23.8% | [22.0, 25.7] | +196 (29.7%) |
+
+**Hypothesis outcome:**
+- **H-E3soft: PARTIAL.** At thr=0.76, rescue=84 calls (4.3pp FBR drop) — below the 5pp hypothesis threshold. At thr=0.70, rescue=147 calls (7.6pp) — clears 5pp but token recall ignores word order, risking false grounding (e.g., value tokens coincidentally scattered in unrelated evidence). Kill rule (< 2pp rescue) is PASS at all thresholds — soft matching is not a negative result.
+
+**Key limitation:** This experiment measures FBR reduction on the full MCP-Atlas case set (correct + incorrect). Precision on correct calls — the false-block rate that actually matters — cannot be measured without labels on this split. A proper E3-soft evaluation needs a labelled dev split (correct calls only) to report precision at each threshold.
+
+**Reading:** Soft matching is a viable direction. Lowering threshold from 0.88 to 0.70 recovers ~22% of baseline-blocked calls. However, the token-recall metric is a looser proxy than difflib ratio — it may over-credit cases where a few tokens coincidentally match. For the paper, this analysis motivates a future ablation with a labelled correct-call set, but cannot be claimed as a confirmed result without it. The PARAPHRASE bucket (32.5% of residual) is the natural target; soft matching at 0.70 addresses roughly two thirds of that bucket (147/659 baseline blocked = 22.3%).
