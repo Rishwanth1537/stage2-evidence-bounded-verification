@@ -1,0 +1,141 @@
+{
+ "meta": {
+  "script": "benchmarks/provenance_grounding.py",
+  "data": "benchmarks/data/mcpatlas/cases_v2.json",
+  "max_output_chars_per_turn": 2000,
+  "deviation": 22
+ },
+ "n_calls_total": 2423,
+ "n_calls_with_args": 2114,
+ "calls_rescued_at_call_level": 939,
+ "args_ungrounded_baseline": 2593,
+ "args_rescued": 1621,
+ "rescue_pct": 62.5,
+ "top_rescued_argument_names": [
+  [
+   "base_id",
+   201
+  ],
+  [
+   "database",
+   182
+  ],
+  [
+   "path",
+   136
+  ],
+  [
+   "collection",
+   94
+  ],
+  [
+   "field_name",
+   85
+  ],
+  [
+   "command",
+   84
+  ],
+  [
+   "query",
+   75
+  ],
+  [
+   "value",
+   53
+  ],
+  [
+   "table_name",
+   52
+  ],
+  [
+   "objectId",
+   40
+  ],
+  [
+   "q",
+   37
+  ],
+  [
+   "repo_path",
+   36
+  ],
+  [
+   "target",
+   30
+  ],
+  [
+   "database_id",
+   28
+  ],
+  [
+   "title",
+   26
+  ]
+ ],
+ "argument_verdicts_provenance": {
+  "GROUNDED": 2310,
+  "UNGROUNDED": 972,
+  "UNCHECKABLE": 256
+ },
+ "all_calls_with_args": {
+  "baseline": {
+   "n": 2114,
+   "blocked": 1666,
+   "rate": 0.788,
+   "wilson95": [
+    0.77,
+    0.805
+   ]
+  },
+  "provenance": {
+   "n": 2114,
+   "blocked": 727,
+   "rate": 0.344,
+   "wilson95": [
+    0.324,
+    0.364
+   ]
+  }
+ },
+ "first_call_of_task": {
+  "baseline": {
+   "n": 357,
+   "blocked": 149,
+   "rate": 0.417,
+   "wilson95": [
+    0.367,
+    0.469
+   ]
+  },
+  "provenance": {
+   "n": 357,
+   "blocked": 149,
+   "rate": 0.417,
+   "wilson95": [
+    0.367,
+    0.469
+   ]
+  }
+ },
+ "later_calls": {
+  "baseline": {
+   "n": 1757,
+   "blocked": 1517,
+   "rate": 0.863,
+   "wilson95": [
+    0.847,
+    0.879
+   ]
+  },
+  "provenance": {
+   "n": 1757,
+   "blocked": 578,
+   "rate": 0.329,
+   "wilson95": [
+    0.307,
+    0.351
+   ]
+  }
+ }
+}

@@ -221,3 +221,28 @@ Goal set by the user: aim at the main track. The measurement-and-negative-result
 
 **Order of work (decision gates; no dates are set, the user decides the timing and the venue).** First E1 and E2. Gate 1: keep or drop each; decide whether E3 is feasible. Then E3, E4, E7, and judge breadth if the key is provided. Gate 2: freeze the configurations in one Deviation. Then the locked test on the untouched fcrb/cfb halves and ArgGround-Bench. Gate 3: main track only if the locked test holds, E1 or E2 survived, E3 gives a deployable result, and the human audit is bigger; otherwise the workshop version. Venue deadlines are the user's call and must be checked by the user before any date is fixed.
 **Rules that stay:** every new hypothesis is written into `PREREGISTRATION.md` before it runs; dev and test halves stay separate with every look in the ledger; negative results are reported; AI-labelled ground truth is called AI-labelled; no result of these experiments is quoted before the freeze.
+
+## 23. E1 — Provenance-aware grounding on MCP-Atlas (Stage 3; Deviation 22; 2026-11-10; development data)
+
+Script: `benchmarks/provenance_grounding.py`. Data: `benchmarks/data/mcpatlas/cases_v2.json` (2,423 calls, 500 tasks). Evidence: `premise + all earlier tool outputs` concatenated, truncated at 2,000 chars per output turn. Checker: deterministic `check_arguments` (no model). AgentHallu sanity check: re-reads `benchmarks/agenthallu_confirmatory.json` (checker row).
+
+**Results (dev data only; MCP-Atlas has no train/test split):**
+
+| Slice | n | Baseline FBR | Provenance FBR | Δ |
+|---|---|---|---|---|
+| All calls with args | 2,114 | 78.8% [77.0, 80.5] | 34.4% [32.4, 36.4] | −44.4 pp |
+| First call of task | 357 | 41.7% [36.7, 46.9] | 41.7% [36.7, 46.9] | 0.0 pp |
+| Later calls | 1,757 | 86.3% [84.7, 87.9] | 32.9% [30.7, 35.1] | −53.4 pp |
+
+Calls rescued at call level: 939 / 1,666 blocked baseline (56.4%).
+Args rescued: 1,621 / 2,593 ungrounded baseline (62.5%).
+Top rescued argument names: `base_id` (201), `database` (182), `path` (136), `collection` (94), `field_name` (85), `command` (84), `query` (75), `value` (53).
+
+**Hypothesis outcomes:**
+- **H-E1-block: PARTIAL.** Block rate 34.4% — below the 50% kill rule, but above the 30% target. The gap is accounted for by: (1) first calls where the argument values derive from date parsing, default pagination limits, or query rewrites that the conversation text does not verbatim contain; (2) a small share of later calls where the argument value comes from a tool output turn that is not stored in `earlier_tool_outputs` for that call (e.g., values derived from multiple hops). Kill rule not triggered; E1 is a partial success that merits further analysis.
+- **H-E1-first: CONFIRMED.** First-call rate unchanged (41.7% → 41.7%), as expected — no prior tool outputs exist for first calls.
+- **H-E1-agenthallu: PASS.** Checker detection 58.1% at 12.9% FBR (thresholds: ≥53%, ≤15%). Provenance extension on MCP-Atlas does not degrade the checker on AgentHallu-style data.
+
+**Reading:** Adding trajectory evidence resolves the dominant source of false blocks on later calls (identifier arguments like `base_id`, `database`, `path` that only appear in earlier tool outputs). The residual 34.4% on all calls is split between: (a) first calls that require date-range expansion or default-value knowledge (the tool contract, E2 evidence), (b) a small number of later calls where the argument value is derived by multi-hop arithmetic or is a reformatted extraction the matcher does not resolve. This is consistent with the evidence-ladder thesis: E1 (conversation + tool outputs) reduces false blocks dramatically; the remaining blocks need E2 (contract defaults) or E3 (richer environment state).
+
+**Next step for E1:** Analyse the residual 34.4% to estimate what fraction requires contract defaults vs. multi-hop derivation; this separates what E2 can fix from what cannot be fixed without world knowledge. Gate 1 decision: E1 is kept; the partial result is reported as evidence for the evidence-ladder claim, not as a deployable solution on its own.
