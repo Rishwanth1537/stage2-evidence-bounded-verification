@@ -1,0 +1,637 @@
+{
+  "step1": {
+    "full": {
+      "all_calls_baseline": {
+        "n": 2423,
+        "k": 1666,
+        "rate": 0.6876,
+        "ci95": [
+          0.6706,
+          0.7041
+        ]
+      },
+      "all_calls_provenance": {
+        "n": 2423,
+        "k": 727,
+        "rate": 0.3,
+        "ci95": [
+          0.2788,
+          0.3215
+        ]
+      },
+      "with_args_baseline": {
+        "n": 2114,
+        "k": 1666,
+        "rate": 0.7881,
+        "ci95": [
+          0.7688,
+          0.8069
+        ]
+      },
+      "with_args_provenance": {
+        "n": 2114,
+        "k": 727,
+        "rate": 0.3439,
+        "ci95": [
+          0.32,
+          0.3677
+        ]
+      }
+    },
+    "x1_dev": {
+      "all_calls_baseline": {
+        "n": 1697,
+        "k": 1159,
+        "rate": 0.683,
+        "ci95": [
+          0.6629,
+          0.7028
+        ]
+      },
+      "all_calls_provenance": {
+        "n": 1697,
+        "k": 505,
+        "rate": 0.2976,
+        "ci95": [
+          0.2732,
+          0.3226
+        ]
+      },
+      "with_args_baseline": {
+        "n": 1480,
+        "k": 1159,
+        "rate": 0.7831,
+        "ci95": [
+          0.7593,
+          0.8057
+        ]
+      },
+      "with_args_provenance": {
+        "n": 1480,
+        "k": 505,
+        "rate": 0.3412,
+        "ci95": [
+          0.3142,
+          0.3687
+        ]
+      }
+    }
+  },
+  "step3": {
+    "n_with_args": 1480,
+    "n_residual_calls": 980,
+    "total_residual_args": 1301,
+    "taxonomy": {
+      "DATE_RANGE": {
+        "args": 168,
+        "share": 0.1291,
+        "wilson95": [
+          0.112,
+          0.1485
+        ],
+        "calls_dom": 109
+      },
+      "NUMERIC_DEFAULT": {
+        "args": 62,
+        "share": 0.0477,
+        "wilson95": [
+          0.0374,
+          0.0606
+        ],
+        "calls_dom": 21
+      },
+      "MULTI_HOP_ARITH": {
+        "args": 138,
+        "share": 0.1061,
+        "wilson95": [
+          0.0905,
+          0.124
+        ],
+        "calls_dom": 113
+      },
+      "PARAPHRASE": {
+        "args": 439,
+        "share": 0.3374,
+        "wilson95": [
+          0.3123,
+          0.3636
+        ],
+        "calls_dom": 391
+      },
+      "URL_DERIVED": {
+        "args": 11,
+        "share": 0.0085,
+        "wilson95": [
+          0.0047,
+          0.0151
+        ],
+        "calls_dom": 11
+      },
+      "OTHER": {
+        "args": 483,
+        "share": 0.3713,
+        "wilson95": [
+          0.3454,
+          0.3978
+        ],
+        "calls_dom": 335
+      }
+    },
+    "top_names": [
+      [
+        "query",
+        256
+      ],
+      [
+        "table_name",
+        87
+      ],
+      [
+        "code",
+        81
+      ],
+      [
+        "path",
+        81
+      ],
+      [
+        "value",
+        60
+      ],
+      [
+        "filter",
+        55
+      ],
+      [
+        "command",
+        47
+      ],
+      [
+        "params",
+        42
+      ],
+      [
+        "q",
+        36
+      ],
+      [
+        "interval",
+        30
+      ]
+    ],
+    "fuzzy_sweep_clean": [
+      {
+        "threshold": 0.88,
+        "n": 1362,
+        "k": 461,
+        "rate": 0.3385,
+        "ci95": [
+          0.311,
+          0.3657
+        ]
+      },
+      {
+        "threshold": 0.82,
+        "n": 1362,
+        "k": 424,
+        "rate": 0.3113,
+        "ci95": [
+          0.2851,
+          0.3374
+        ]
+      },
+      {
+        "threshold": 0.76,
+        "n": 1362,
+        "k": 397,
+        "rate": 0.2915,
+        "ci95": [
+          0.2656,
+          0.3169
+        ]
+      },
+      {
+        "threshold": 0.7,
+        "n": 1362,
+        "k": 346,
+        "rate": 0.254,
+        "ci95": [
+          0.2296,
+          0.279
+        ]
+      },
+      {
+        "threshold": 0.65,
+        "n": 1362,
+        "k": 313,
+        "rate": 0.2298,
+        "ci95": [
+          0.2063,
+          0.2534
+        ]
+      }
+    ]
+  },
+  "step4": {
+    "absent_eligible": 1126,
+    "visible_eligible": 1327,
+    "absent_check_arguments": {
+      "cfg_i_clean_fbr": {
+        "n": 1126,
+        "k": 884,
+        "rate": 0.7851,
+        "ci95": [
+          0.7595,
+          0.8095
+        ]
+      },
+      "cfg_i_det": {
+        "n": 1126,
+        "k": 1122,
+        "rate": 0.9964,
+        "ci95": [
+          0.9927,
+          0.9991
+        ]
+      },
+      "cfg_ii_clean_fbr": {
+        "n": 1126,
+        "k": 416,
+        "rate": 0.3694,
+        "ci95": [
+          0.3368,
+          0.4025
+        ]
+      },
+      "cfg_ii_det": {
+        "n": 1126,
+        "k": 994,
+        "rate": 0.8828,
+        "ci95": [
+          0.8596,
+          0.9046
+        ]
+      }
+    },
+    "visible_check_arguments": {
+      "cfg_i_clean_fbr": {
+        "n": 1327,
+        "k": 1085,
+        "rate": 0.8176,
+        "ci95": [
+          0.7953,
+          0.8384
+        ]
+      },
+      "cfg_i_det": {
+        "n": 1327,
+        "k": 961,
+        "rate": 0.7242,
+        "ci95": [
+          0.703,
+          0.7447
+        ]
+      },
+      "cfg_ii_clean_fbr": {
+        "n": 1327,
+        "k": 441,
+        "rate": 0.3323,
+        "ci95": [
+          0.303,
+          0.3621
+        ]
+      },
+      "cfg_ii_det": {
+        "n": 1327,
+        "k": 523,
+        "rate": 0.3941,
+        "ci95": [
+          0.361,
+          0.4279
+        ]
+      }
+    },
+    "fuzzy_sweep_cost": [
+      {
+        "config": "(i) User text only",
+        "threshold": 0.88,
+        "clean_fbr": {
+          "n": 1362,
+          "k": 1105,
+          "rate": 0.8113,
+          "ci95": [
+            0.7885,
+            0.8325
+          ]
+        },
+        "absent_det": {
+          "n": 1000,
+          "k": 997,
+          "rate": 0.997,
+          "ci95": [
+            0.9931,
+            1.0
+          ]
+        },
+        "visible_det": {
+          "n": 1222,
+          "k": 862,
+          "rate": 0.7054,
+          "ci95": [
+            0.6831,
+            0.7273
+          ]
+        },
+        "precision_balanced": 0.5513
+      },
+      {
+        "config": "(i) User text only",
+        "threshold": 0.82,
+        "clean_fbr": {
+          "n": 1362,
+          "k": 1082,
+          "rate": 0.7944,
+          "ci95": [
+            0.7703,
+            0.8171
+          ]
+        },
+        "absent_det": {
+          "n": 1000,
+          "k": 996,
+          "rate": 0.996,
+          "ci95": [
+            0.9918,
+            0.999
+          ]
+        },
+        "visible_det": {
+          "n": 1222,
+          "k": 862,
+          "rate": 0.7054,
+          "ci95": [
+            0.6831,
+            0.7273
+          ]
+        },
+        "precision_balanced": 0.5563
+      },
+      {
+        "config": "(i) User text only",
+        "threshold": 0.76,
+        "clean_fbr": {
+          "n": 1362,
+          "k": 1063,
+          "rate": 0.7805,
+          "ci95": [
+            0.7554,
+            0.8039
+          ]
+        },
+        "absent_det": {
+          "n": 1000,
+          "k": 995,
+          "rate": 0.995,
+          "ci95": [
+            0.9901,
+            0.999
+          ]
+        },
+        "visible_det": {
+          "n": 1222,
+          "k": 862,
+          "rate": 0.7054,
+          "ci95": [
+            0.6831,
+            0.7273
+          ]
+        },
+        "precision_balanced": 0.5604
+      },
+      {
+        "config": "(i) User text only",
+        "threshold": 0.7,
+        "clean_fbr": {
+          "n": 1362,
+          "k": 1023,
+          "rate": 0.7511,
+          "ci95": [
+            0.7253,
+            0.7753
+          ]
+        },
+        "absent_det": {
+          "n": 1000,
+          "k": 994,
+          "rate": 0.994,
+          "ci95": [
+            0.9888,
+            0.998
+          ]
+        },
+        "visible_det": {
+          "n": 1222,
+          "k": 862,
+          "rate": 0.7054,
+          "ci95": [
+            0.6831,
+            0.7273
+          ]
+        },
+        "precision_balanced": 0.5696
+      },
+      {
+        "config": "(i) User text only",
+        "threshold": 0.65,
+        "clean_fbr": {
+          "n": 1362,
+          "k": 1001,
+          "rate": 0.7349,
+          "ci95": [
+            0.7092,
+            0.7591
+          ]
+        },
+        "absent_det": {
+          "n": 1000,
+          "k": 994,
+          "rate": 0.994,
+          "ci95": [
+            0.9888,
+            0.998
+          ]
+        },
+        "visible_det": {
+          "n": 1222,
+          "k": 861,
+          "rate": 0.7046,
+          "ci95": [
+            0.6822,
+            0.7265
+          ]
+        },
+        "precision_balanced": 0.5749
+      },
+      {
+        "config": "(ii) + Earlier outputs",
+        "threshold": 0.88,
+        "clean_fbr": {
+          "n": 1362,
+          "k": 461,
+          "rate": 0.3385,
+          "ci95": [
+            0.311,
+            0.3657
+          ]
+        },
+        "absent_det": {
+          "n": 1000,
+          "k": 868,
+          "rate": 0.868,
+          "ci95": [
+            0.8414,
+            0.8933
+          ]
+        },
+        "visible_det": {
+          "n": 1222,
+          "k": 472,
+          "rate": 0.3863,
+          "ci95": [
+            0.3516,
+            0.4209
+          ]
+        },
+        "precision_balanced": 0.7194
+      },
+      {
+        "config": "(ii) + Earlier outputs",
+        "threshold": 0.82,
+        "clean_fbr": {
+          "n": 1362,
+          "k": 424,
+          "rate": 0.3113,
+          "ci95": [
+            0.2851,
+            0.3374
+          ]
+        },
+        "absent_det": {
+          "n": 1000,
+          "k": 863,
+          "rate": 0.863,
+          "ci95": [
+            0.8363,
+            0.8886
+          ]
+        },
+        "visible_det": {
+          "n": 1222,
+          "k": 469,
+          "rate": 0.3838,
+          "ci95": [
+            0.3495,
+            0.4185
+          ]
+        },
+        "precision_balanced": 0.7349
+      },
+      {
+        "config": "(ii) + Earlier outputs",
+        "threshold": 0.76,
+        "clean_fbr": {
+          "n": 1362,
+          "k": 397,
+          "rate": 0.2915,
+          "ci95": [
+            0.2656,
+            0.3169
+          ]
+        },
+        "absent_det": {
+          "n": 1000,
+          "k": 862,
+          "rate": 0.862,
+          "ci95": [
+            0.8355,
+            0.8876
+          ]
+        },
+        "visible_det": {
+          "n": 1222,
+          "k": 468,
+          "rate": 0.383,
+          "ci95": [
+            0.3485,
+            0.418
+          ]
+        },
+        "precision_balanced": 0.7473
+      },
+      {
+        "config": "(ii) + Earlier outputs",
+        "threshold": 0.7,
+        "clean_fbr": {
+          "n": 1362,
+          "k": 346,
+          "rate": 0.254,
+          "ci95": [
+            0.2296,
+            0.279
+          ]
+        },
+        "absent_det": {
+          "n": 1000,
+          "k": 855,
+          "rate": 0.855,
+          "ci95": [
+            0.828,
+            0.8809
+          ]
+        },
+        "visible_det": {
+          "n": 1222,
+          "k": 463,
+          "rate": 0.3789,
+          "ci95": [
+            0.3447,
+            0.4137
+          ]
+        },
+        "precision_balanced": 0.771
+      },
+      {
+        "config": "(ii) + Earlier outputs",
+        "threshold": 0.65,
+        "clean_fbr": {
+          "n": 1362,
+          "k": 313,
+          "rate": 0.2298,
+          "ci95": [
+            0.2063,
+            0.2534
+          ]
+        },
+        "absent_det": {
+          "n": 1000,
+          "k": 838,
+          "rate": 0.838,
+          "ci95": [
+            0.8099,
+            0.8653
+          ]
+        },
+        "visible_det": {
+          "n": 1222,
+          "k": 456,
+          "rate": 0.3732,
+          "ci95": [
+            0.3387,
+            0.4078
+          ]
+        },
+        "precision_balanced": 0.7848
+      }
+    ]
+  }
+}

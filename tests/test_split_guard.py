@@ -118,6 +118,24 @@ def test_external_eval_defaults_to_dev():
     assert args.allow_test is False
 
 
+def test_mcpatlas_x1_heldout_locked(monkeypatch):
+    """mcpatlas_x1 heldout must raise LockedSplitError without LOCKED_RUN=1."""
+    monkeypatch.delenv("LOCKED_RUN", raising=False)
+    with pytest.raises(LockedSplitError, match="requires LOCKED_RUN=1"):
+        load_split("mcpatlas_x1", split="heldout", purpose="unit test", reason="testing guard")
+
+
+def test_mcpatlas_x1_dev_loads_without_ledger(tmp_path, monkeypatch):
+    """mcpatlas_x1 dev loads freely and never writes to the ledger."""
+    monkeypatch.delenv("LOCKED_RUN", raising=False)
+    test_ledger = tmp_path / "test_ledger.jsonl"
+    dev_cases = load_split("mcpatlas_x1", split="dev", ledger_path=test_ledger)
+    assert len(dev_cases) == 1697
+    assert all(c.get("split") == "dev" for c in dev_cases)
+    assert not test_ledger.exists()
+
+
+
 def test_agenthallu_confirmatory_slice_is_locked(monkeypatch):
     """The frozen agenthallu confirmatory slice must raise LockedSplitError without LOCKED_RUN=1."""
     monkeypatch.delenv("LOCKED_RUN", raising=False)

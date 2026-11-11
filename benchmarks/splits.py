@@ -113,7 +113,7 @@ def check_test_guard(
     Enforce test split access restrictions.
     Raises LockedSplitError if authorization is missing.
     """
-    is_locked = (split == "test") or (dataset in ("agenthallu_confirmatory", "confirmatory"))
+    is_locked = (split in ("test", "heldout", "all")) or (dataset in ("agenthallu_confirmatory", "confirmatory"))
     if not is_locked:
         return
 
@@ -189,9 +189,49 @@ def load_split(
     clean_split = split.lower().strip()
     ds_name = dataset.lower().strip()
 
-    # Guard check for test splits or confirmatory slices
-    if clean_split == "test" or ds_name in ("agenthallu_confirmatory", "confirmatory"):
+    # Guard check for test splits, heldout splits, or confirmatory slices
+    if clean_split in ("test", "heldout") or ds_name in ("agenthallu_confirmatory", "confirmatory"):
         check_test_guard(dataset=dataset, split=clean_split, purpose=purpose, reason=reason, allow_test=allow_test)
+
+    # 0. MCP-Atlas X1 split (cluster = task)
+    if ds_name in ("mcpatlas_x1", "mcpatlas-x1"):
+        data_path = ROOT / "benchmarks" / "data" / "mcpatlas" / "cases_v2.json"
+        file_sha256 = compute_file_sha256(data_path)
+        dev_clusters, heldout_clusters = _get_mcpatlas_x1_clusters()
+        data = json.loads(data_path.read_text(encoding="utf-8"))
+        all_cases = data["cases"] if isinstance(data, dict) else data
+
+        def _cid(c: Dict[str, Any]) -> str:
+            return c.get("cluster_id") or c.get("task_id") or c["id"].rsplit("-", 1)[0]
+
+        if clean_split == "dev":
+            return [dict(c, split="dev") for c in all_cases if _cid(c) in dev_clusters]
+        elif clean_split in ("heldout", "test"):
+            append_ledger_entry(
+                dataset_name="mcpatlas_x1",
+                split="heldout",
+                file_sha256=file_sha256,
+                purpose=purpose,
+                reason=reason or purpose,
+                ledger_path=ledger_path,
+            )
+            return [dict(c, split="heldout") for c in all_cases if _cid(c) in heldout_clusters]
+        elif clean_split == "all":
+            check_test_guard(dataset=dataset, split="heldout", purpose=purpose, reason=reason, allow_test=allow_test)
+            append_ledger_entry(
+                dataset_name="mcpatlas_x1",
+                split="all (dev+heldout)",
+                file_sha256=file_sha256,
+                purpose=purpose,
+                reason=reason or purpose,
+                ledger_path=ledger_path,
+            )
+            return [
+                dict(c, split="dev" if _cid(c) in dev_clusters else "heldout")
+                for c in all_cases
+            ]
+        else:
+            raise ValueError(f"Unknown split '{split}' for mcpatlas_x1")
 
     # 1. ArgGround benchmark
     if ds_name in ("argground", "argground_bench", "argground_bench.json") or ds_name.endswith("argground_bench.json"):
@@ -302,3 +342,78 @@ def load_split(
         return p
 
     raise ValueError(f"Unknown dataset '{dataset}'")
+
+
+# ---------------------------------------------------------------------------
+# mcpatlas_x1: cluster-level deterministic dev/held-out split (Prompt 6C)
+# ---------------------------------------------------------------------------
+import hashlib as _hashlib
+from collections import defaultdict as _defaultdict
+
+_MCPATLAS_X1_DEV_FRACTION = 0.70
+
+
+def _cluster_hash_fraction(cluster_id: str) -> float:
+    """Return deterministic float in [0, 1) based on SHA-256 of the cluster id."""
+    h = _hashlib.sha256(cluster_id.encode()).hexdigest()
+    return int(h[:8], 16) / 0xFFFFFFFF
+
+
+def _get_mcpatlas_x1_clusters() -> tuple:
+    """Return (dev_clusters, heldout_clusters) sets, deterministically."""
+    data_path = ROOT / "benchmarks" / "data" / "mcpatlas" / "cases_v2.json"
+    data = json.loads(data_path.read_text(encoding="utf-8"))
+    cases = data["cases"] if isinstance(data, dict) else data
+
+    clusters: Dict[str, List] = _defaultdict(list)
+    for c in cases:
+        cid = c.get("cluster_id") or c.get("task_id") or c["id"].rsplit("-", 1)[0]
+        clusters[cid].append(c)
+
+    dev_clusters: set = set()
+    heldout_clusters: set = set()
+    for cid in sorted(clusters.keys()):
+        if _cluster_hash_fraction(cid) < _MCPATLAS_X1_DEV_FRACTION:
+            dev_clusters.add(cid)
+        else:
+            heldout_clusters.add(cid)
+    return dev_clusters, heldout_clusters
+
+
+def load_mcpatlas_x1(
+    split: str,
+    purpose: str = "mcpatlas_x1 evaluation",
+    reason: str = "",
+    allow_test: bool = True,
+    ledger_path: Optional[Path] = None,
+) -> List[Dict[str, Any]]:
+    """
+    Load MCP-Atlas cases filtered to the mcpatlas_x1 split via load_split.
+
+    Parameters
+    ----------
+    split : "dev" | "heldout"
+        "dev" loads the exploratory portion (~70% of clusters).
+        "heldout" is LOCKED — raises LockedSplitError unless LOCKED_RUN=1
+        and a reason is provided. Access is logged to the test run ledger.
+
+    Notes
+    -----
+    Cluster = task (cluster_id field). Split is deterministic SHA-256 hash.
+    Created 2026-11-10 after exploratory analysis (Prompt 6C). The residual
+    taxonomy and fuzzy threshold sweep were examined on the FULL MCP-Atlas set
+    before this split existed; therefore X1-HELDOUT is NOT pristine with
+    respect to those design choices. It protects only against further tuning
+    from this point on.
+    """
+    clean_split = split.lower().strip()
+    if clean_split not in ("dev", "heldout"):
+        raise ValueError(f"mcpatlas_x1 split must be 'dev' or 'heldout', got '{split}'")
+    return load_split(
+        "mcpatlas_x1",
+        split=clean_split,
+        purpose=purpose,
+        reason=reason or os.environ.get("LOCKED_RUN_REASON", ""),
+        allow_test=allow_test,
+        ledger_path=ledger_path,
+    )

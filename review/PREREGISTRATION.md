@@ -148,3 +148,22 @@ Hypothesis:
 Kill rule: if lowering the threshold below 0.82 rescues < 2pp FBR, do not pursue soft matching as a contribution; report as a negative result. If FBR on correct calls rises > 5pp at the rescue threshold, report the threshold as unsafe and park.
 
 Note: this experiment measures FBR reduction on the full MCP-Atlas case set (which includes both correct and incorrect calls). False-block rate on confirmed-correct calls requires a separate labelled split and is logged as a limitation if unavailable.
+
+
+### Deviation 25 (2026-11-11): X1 held-out created after exploratory analysis (Prompt 6C)
+
+Split created: `mcpatlas_x1` registered in `benchmarks/splits.py` (deterministic SHA-256 hash of task `cluster_id`, threshold 0.70):
+- `X1-DEV`: 346 clusters (69.2%), 1,697 calls (1,480 with arguments).
+- `X1-HELDOUT`: 154 clusters (30.8%), 726 calls (locked via `load_split("mcpatlas_x1", split="heldout")`, requires `LOCKED_RUN=1` and reason).
+
+**In-sample / non-pristine status:** The residual taxonomy (Deviation 22 outcome / `benchmarks/residual_analysis.py`) and the fuzzy threshold sweep (Deviation 24 / `benchmarks/fuzzy_sweep.py`) were examined on the FULL 2,423-call MCP-Atlas dataset before this split existed. Therefore `X1-HELDOUT` is **NOT pristine** with respect to those design choices; it protects only against further tuning from 2026-11-11 onward.
+
+**Step 4 (cost-side synthetic injection on X1-DEV) pre-registered decision rule (fixed before running):**
+- Success if clean false-block on X1-DEV is at or below 30% under the pre-registered denominator AND absent-value detection stays within 5 points (absolute) of configuration (i) (user text only).
+- Kill if clean false-block is above 50%.
+
+**Step 3/4 outcome & frozen threshold record (2026-11-11):**
+- Token-recall sweep threshold frozen at `thr = 0.76` (same as Deviation 24; X1-DEV string-call clean FBR 29.1% [26.6%, 31.7%], absent-value string detection 86.2% [83.5%, 88.8%], visible-but-wrong string detection 38.3% [34.8%, 41.8%]).
+- Full `check_arguments` (`FUZZY = 0.88`) on X1-DEV with `(ii) + earlier tool outputs`: D2 clean FBR = 34.1% [31.4%, 36.9%] (> 30% target, < 50% kill rule), D1 clean FBR = 29.8% [27.3%, 32.3%]. Absent-value detection falls from 99.6% [99.3%, 99.9%] (`(i) user text only`) to 88.3% [86.0%, 90.5%] (`(ii) + earlier tool outputs`), a -11.3 pp drop (fails the <= 5 pp decision rule). Visible-but-wrong detection falls from 72.4% [70.3%, 74.5%] to 39.4% [36.1%, 42.8%].
+- Configs `(iii) + schema defaults`, `(iv) + derivation rules`, and `(v) all` remain UNTESTED because Prompt 6 v2 (`EvidenceItem`, defaults, derivation rules) is not implemented.
+- `X1-HELDOUT` (154 clusters, 726 calls) was NOT loaded or inspected.
